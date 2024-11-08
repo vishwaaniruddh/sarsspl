@@ -1,0 +1,11 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2024-10-11 07:41:27 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1959
+ERROR - 2024-10-11 07:41:56 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1959
+ERROR - 2024-10-11 07:43:25 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1959
+ERROR - 2024-10-11 07:44:11 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1959
+ERROR - 2024-10-11 07:51:40 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1959
+ERROR - 2024-10-11 07:52:55 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1959
+ERROR - 2024-10-11 08:00:56 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1959
+ERROR - 2024-10-11 08:01:28 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1959
+ERROR - 2024-10-11 08:34:24 --> Severity: error --> Exception: count(): Argument #1 ($value) must be of type Countable|array, null given /home/u444388293/domains/sarsspl.com/public_html/captainIndia/backend/application/controllers/Api.php 1996

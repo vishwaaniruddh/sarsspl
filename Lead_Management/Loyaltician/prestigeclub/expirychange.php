@@ -1,0 +1,383 @@
+<?php session_start();
+include ('config.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php include ("header.php") ?>
+    <!-- Additional library for page -->
+
+
+    <!-- jQuery library -->
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script>
+        function expfunc() { //alert("hii")
+
+            $('#formf').attr('action', 'delegation.php').attr('target', '_self');
+            $('#formf').submit();
+
+
+        }
+
+
+        function toggle(source) {
+
+            chkboxes = document.getElementsByName('check[]');
+            for (var i = 0, n = chkboxes.length; i < n; i++) {
+                chkboxes[i].checked = source.checked;
+
+            }
+
+        }
+    </script>
+
+</head>
+
+<body class="sidebar-pinned" id="rightclick">
+
+
+    <?php include ("vertical_menu.php") ?>
+    <main class="admin-main">
+        <?php include ('navbar.php'); ?>
+        <!--site header ends -->
+        <section class="admin-content">
+            <div class="bg-dark">
+                <div class="container  m-b-30">
+                    <div class="row">
+                        <div class="col-12 text-white p-t-40 p-b-90">
+
+                            <h4 class=""> <span class="btn btn-white-translucent">
+                                    <i class="mdi mdi-table "></i></span> View Prospect
+                            </h4>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <?php
+
+            if (isset($_POST['submit'])) {
+
+                $phoneno = $_POST['contact'];
+
+                // echo $phoneno; die;
+            
+                if ($_SESSION['usertype'] == 'Admin' || $_SESSION['usertype'] == 'Fulfillment Team') {
+                    $View = "select * from Leads_table where Status!='3' and MobileNumber = '" . $phoneno . "'  ";
+                } else {
+                    $View = "select * from Leads_table where Status!='3' and leadEntryef='" . $_SESSION['id'] . "' and MobileNumber = '" . $phoneno . "' ";
+                }
+
+                echo $View;
+                $qrys = mysqli_query($conn, $View);
+            }
+            ?>
+
+
+            <div class="container  pull-up">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="contact_form">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-3">
+                                            <label for="contact">Contact</label>
+                                            <input type="text" name="contact" class="form-control"
+                                                value="<?php echo $_POST['contact']; ?>" id="contact">
+                                            <br>
+                                            <input type="submit" class="btn btn-primary" name="submit" value="Search">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <form method="post" id="formf" action="delegation.php">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="form-group col-md-3">
+                                        <label for="inputAddress2">Lead Source</label>
+                                        <select class="form-control" name="Leadfilter" id="Leadfilter">
+                                            <option value="">Select Source</option>
+                                            <?php
+                                            $QuryLead_Sources = mysqli_query($conn, "SELECT * FROM `Lead_Sources` where Active='YES'");
+                                            while ($fetchLead_Sources = mysqli_fetch_array($QuryLead_Sources)) {
+                                                ?>
+                                                <option value="<?php echo $fetchLead_Sources['SourceId']; ?>">
+                                                    <?php echo $fetchLead_Sources['Name']; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+
+                                    <input type="button" class="btn btn-primary" name="submit" onclick="searchfiltter()"
+                                        value="Search">
+                                </div>
+
+                            </div>
+                            <br>
+
+                            <div class="table-responsive p-t-10">
+                                <table id="example" class="table" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>srno</th>
+                                            <th>Full Name</th>
+                                            <th>Email-Id</th>
+                                            <th>Mobile Number</th>
+                                            <th>Office Number</th>
+                                            <th>State</th>
+                                            <th>City</th>
+                                            <th>Lead Source</th>
+
+
+
+                                            <?php if ($_SESSION['usertype'] == 'Admin' || $_SESSION['usertype'] == 'HOTEL MANGER') { ?>
+                                                <th>Associate Name</th><?php } ?>
+
+                                            <?php if ($_SESSION['usertype'] == 'Admin') { ?>
+                                                <th>Associate Status</th><?php } ?>
+                                            <th>
+                                                Created At
+                                            </th>
+                                            <th>Expiry Date</th>
+                                            <th>Edit</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="setTable">
+                                        <?php
+                                        $srn = 1;
+                                        while ($_row = mysqli_fetch_array($qrys)) {
+
+                                            $leadid = $_row['Lead_id'];
+
+                                            $member_detail = mysqli_query($conn, "select ExpiryDate from Members where Static_LeadId = '" . $leadid . "' ");
+                                            $mem_detail_res = mysqli_fetch_assoc($member_detail);
+
+
+
+                                            $sql3 = "select Name from Lead_Sources where SourceId='" . $_row['LeadSource'] . "'";
+                                            $runsql3 = mysqli_query($conn, $sql3);
+                                            $sql2fetch3 = mysqli_fetch_array($runsql3);
+
+
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $srn; ?></td>
+                                                <td><?php echo $_row['FirstName'] . " " . $_row['LastName']; ?></td>
+                                                <td><?php echo $_row['EmailId']; ?></td>
+                                                <td><?php echo $_row['MobileNumber']; ?></td>
+                                                <td><?php echo $_row['ContactNo1']; ?></td>
+                                                <td><?php echo $_row['State']; ?></td>
+                                                <td><?php echo $_row['City']; ?></td>
+                                                <td><?php echo $sql2fetch3['Name']; ?></td>
+
+                                                <?php if ($_SESSION['usertype'] == 'Admin' || $_SESSION['usertype'] == 'HOTEL MANGER') { ?>
+                                                    <td>
+                                                        <?php
+
+                                                        $sql5 = "select FirstName, LastName from SalesAssociate where SalesmanId like (select SalesmanId from LeadDelegation where LeadId='" . $_row['Lead_id'] . "' order by DelegationId desc limit 1)";
+                                                        $runsql5 = mysqli_query($conn, $sql5);
+                                                        if ($runsql5 == false) {
+                                                            echo "";
+                                                        } else {
+
+                                                            $sql2fetch5 = mysqli_fetch_assoc($runsql5);
+                                                            echo $sql2fetch5["FirstName"] . " " . $sql2fetch5["LastName"];
+                                                        }
+
+                                                        ?>
+                                                    </td><?php } ?>
+                                                <?php if ($_SESSION['usertype'] == 'Admin') { ?>
+                                                    <td>
+                                                        <?php
+
+                                                        if ($_row['Status'] == '1') {
+                                                            echo "Open";
+                                                        }
+                                                        if ($_row['Status'] == '2') {
+                                                            echo "Closed";
+                                                        }
+                                                        if ($_row['Status'] == '3') {
+                                                            echo "Suspense";
+                                                        }
+                                                        if ($_row['Status'] == '4') {
+                                                            echo "Payment Received";
+                                                        }
+                                                        if ($_row['Status'] == '5') {
+                                                            echo "Member";
+                                                        }
+                                                        if ($_row['Status'] == '6') {
+                                                            echo "Payment in Process..";
+                                                        }
+                                                        if ($_row['Status'] == '7') {
+                                                            echo "Ready For Payment";
+                                                        }
+                                                        ?>
+
+                                                    </td><?php } ?>
+
+                                                <td><?php echo date('d-m-Y H:i:s ', strtotime($_row['Creation'])); ?></td>
+
+                                                <td><?php echo date('d-m-Y', strtotime($mem_detail_res['ExpiryDate'])); ?>
+                                                </td>
+
+                                                <td><?php if ($_SESSION['usertype'] == 'Admin') { ?><input type="button"
+                                                            class="btn btn-primary"
+                                                            onclick="window.open('update_expirydate.php?id=<?php echo $_row['Lead_id']; ?>&excelid=0','_self');"
+                                                            value="Edit"><?php } ?> </td>
+
+
+                                            </tr>
+
+                                            <?php
+
+                                            $srn++;
+                                        }
+                                        ?>
+
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>srno</th>
+                                            <th>Full Name</th>
+                                            <th>Email-Id</th>
+                                            <th>Mobile Number</th>
+                                            <th>Office Number</th>
+                                            <th>State</th>
+                                            <th>City</th>
+                                            <th>Lead Source</th>
+
+
+                                            <?php if ($_SESSION['usertype'] == 'Admin' || $_SESSION['usertype'] == 'HOTEL MANGER') { ?>
+                                                <th>Associate Name</th><?php } ?>
+                                            <?php if ($_SESSION['usertype'] == 'Admin') { ?>
+                                                <th>Associate Status</th><?php } ?>
+                                            <th>
+                                                Created At
+                                            </th>
+                                            <th>Expiry Date</th>
+                                            <th>Edit</th>
+
+
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div> <?php if ($_SESSION['usertype'] == 'Admin') { ?>
+                                <div align="center"> <button id="myButtonControlID" class="btn btn-primary"
+                                        onClick="expfunc();">Delegate</button></div><?php } ?>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <?php include ('belowScript.php'); ?>
+    <!--page specific scripts for demo-->
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/datatable-data.js"></script>
+
+
+    <script>
+
+        function custom_datetime(date) {
+            const options = {
+                day: 'numeric',
+                month: 'numeric',
+                year: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true
+            };
+
+            const formattedDate = date.toLocaleString('en-US', options);
+            return formattedDate;
+        }
+        function searchfiltter() {
+            var Leadfilter = document.getElementById('Leadfilter').value;
+            // alert(Leadfilter)
+
+
+            $.ajax({
+
+                type: 'POST',
+                url: 'search_Filtter.php',
+                data: 'Leadfilter=' + Leadfilter,
+
+                success: function (msg) {
+                    // alert(msg);
+                    $('#setTable').empty();
+                    var json = $.parseJSON(msg);
+                    for (var i = 0; i < json.length; ++i) {
+                        //  alert(json[i].FirstName)
+
+                        var fullName = json[i].FirstName + " " + json[i].LastName;
+                        var srno = i + 1;
+                        var DelStatus = '';
+                        if (json[i].Status != '0') {
+                            DelStatus = 'Delegated';
+                        } else {
+                            DelStatus = 'Pending';
+                        }
+                        var d = "";
+                        if (json[i].Status == "0") {
+                            d = '<input type="checkbox" name="check[]" id="check" />';
+                        }
+
+                        var convrt = "";
+                        if (json[i].Status == '4') {
+                            convrt = '<input type="button" class="btn btn-primary" onclick="window.open("MemberCreation.php?id=<?php echo $_row['Lead_id']; ?>","_self");" value="Convert To Member">';
+                        }
+
+
+                        $('#setTable').append('<tr role="row" class="odd" ><td class="sorting_1">' + srno + '</td><td>' + fullName + '</td><td>' + json[i].EmailId + '</td><td>' + json[i].MobileNumber + '</td><td>' + json[i].ContactNo1 + '</td><td>' + json[i].State + '</td><td>' + json[i].City + '</td><td>' + json[i].LeadSource + '</td><td>' + json[i].Company + '</td><td>' + json[i].Designation + '</td><td>' + json[i].Status + '</td><td>' + DelStatus + '</td><td style="white-space: pre;">' + custom_datetime(json[i].Creation) + '</td> <td>' + d + '</td> </tr>');
+                    }
+
+                    test();
+
+                }
+            })
+
+
+
+        }
+
+
+
+        function prospect_filter() {
+            $("#contact_form").submit()
+        }
+
+        function test() {
+
+
+
+            $('#example').DataTable();
+
+        }
+    </script>
+</body>
+
+</html>

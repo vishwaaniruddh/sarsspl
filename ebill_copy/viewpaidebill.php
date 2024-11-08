@@ -1,0 +1,380 @@
+<?php ini_set( "display_errors", 0);
+session_start();
+//include("access.php");
+if(!$_SESSION['user'])
+{
+?>
+<script type="text/javascript">
+alert("Sorry Your session has Expired");
+window.location="index.php";
+</script>
+<?php
+}
+
+// header('Location:managesite1.php?id='.$id); 
+ 
+
+		
+//$result2 = mysqli_query($con,"SELECT DISTINCT bank FROM sites");		
+ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Update Paid Bills</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="menu.css" rel="stylesheet" type="text/css" />
+<!--datepicker-->
+<link href="datepicker/date_css.css" rel="stylesheet" type="text/css" />
+<script src="datepicker/datepick_js.js" type="text/javascript"></script>
+<script type="text/javascript">
+ function Editdata(cnt,reqid)
+  {
+// alert(cnt+" "+reqid);
+  if (confirm('Are you Update this field?')) {
+    // Save it!
+
+  	if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		
+//alert(xmlhttp.responseText);
+if(xmlhttp.responseText=='1')
+document.getElementById('edited'+cnt).innerHTML="Edited Successfully";
+else{
+if(xmlhttp.responseText!='0'){
+alert(xmlhttp.responseText);
+}
+else
+alert("Some Error Occurred. Please Refresh your page and try again");
+
+}	
+	
+    }
+  }
+var billdt=document.getElementById('billdt'+cnt).value;
+var stdt=document.getElementById('startdt'+cnt).value;
+var edt=document.getElementById('enddt'+cnt).value;
+var duedt = document.getElementById('duedt'+cnt).value;
+
+
+//var paid=document.getElementById('paid'+cnt).value;
+ // alert("approveebill.php?id="+id+"&stat="+stat);
+// alert("getcustbank.php?val="+val);
+//alert("updatepaidebilldet.php?billdt="+billdt+"&stdt="+stdt+"&edt="+edt+"&reqid="+reqid+"&duedt="+duedt);
+xmlhttp.open("GET","updatepaidebilldet.php?billdt="+billdt+"&stdt="+stdt+"&edt="+edt+"&reqid="+reqid+"&duedt="+duedt,true);
+xmlhttp.send();
+}
+  }
+function getbank(val)
+{
+	if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		
+//alert(xmlhttp.responseText);
+document.getElementById('bank').innerHTML='';
+	document.getElementById('bank').innerHTML=xmlhttp.responseText;
+	
+	
+    }
+  }
+// alert("getcustbank.php?val="+val);
+xmlhttp.open("GET","getcustbank.php?val="+val+"&type=ebill",true);
+xmlhttp.send();
+
+	
+}
+function searchById(a,b,perpg) {
+//alert(a+" "+b+" "+perpg);
+var ppg='';
+if(perpg=='')
+ppg='20';
+else
+ppg=document.getElementById(perpg).value;
+document.getElementById("search").innerHTML ="<center><img src=loader.gif></center>";
+		  HttPRequest = false;
+		  if (window.XMLHttpRequest) { // Mozilla, Safari,...
+			 HttPRequest = new XMLHttpRequest();
+			 if (HttPRequest.overrideMimeType) {
+				HttPRequest.overrideMimeType('text/html');
+			 }
+		  } else if (window.ActiveXObject) { // IE
+			 try {
+				HttPRequest = new ActiveXObject("Msxml2.XMLHTTP");
+			 } catch (e) {
+				try {
+				   HttPRequest = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {}
+			 }
+		  } 
+ 
+		  if (!HttPRequest) {
+			 alert('Cannot create XMLHTTP instance');
+			 return false;
+		  }
+		 // var br=document.getElementById('br').value;
+		  var cid=document.getElementById('cid').value;//alert(cid);
+		//  var calltype=document.getElementById('calltype').value;
+	
+			 if(a!="Loading"){
+			 ///var id=document.getElementById('atmid').value;//alert(id);
+			 var atm=document.getElementById('atm').value;
+			 var bank=document.getElementById('bank').value;//alert(bank);
+			// var service=document.getElementById('service').value;
+			 
+			 
+			 //var comp=document.getElementById('comp').value;
+			  var dt=document.getElementById('date').value;
+			 var dt2=document.getElementById('date2').value;
+			  }
+			 // alert(br);
+			//alert("gg"); 
+			var url = 'searchsiteebill.php'; 
+		//  }
+ 	//alert(br);
+		    var pmeters="";
+			//alert(url);
+			//var pmeters = 'mode='+Mode+'&Page='+Page+'&bank='+bank; 
+			if(a!="Loading"){ 
+			 pmeters = 'cid='+cid+'&bank='+bank+'&Page='+b+'&perpg='+ppg+"&dt="+dt+"&dt2="+dt2+"&atm="+atm;
+			// alert(pmeters);
+			}
+			else
+			{
+				 pmeters = 'Page='+b+'&perpg='+ppg+'&cid='+cid;
+			}
+			//alert(pmeters);
+			HttPRequest.open('POST',url,true);
+
+			HttPRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			HttPRequest.setRequestHeader("Content-length", pmeters.length);
+			HttPRequest.setRequestHeader("Connection", "close");
+			HttPRequest.send(pmeters);
+ 
+//alert(pmeters); 
+			HttPRequest.onreadystatechange = function()
+			{
+ 
+				 if(HttPRequest.readyState == 4) // Return Request
+				  {
+		var response = HttPRequest.responseText;
+ 
+//alert(response);
+				  document.getElementById("search").innerHTML = response;
+			  }
+		}
+  }
+  
+  function edtpay(cnt,reqid)
+  {
+  //alert(id+" "+stat);
+  if (confirm('Are you sure you want to Proceed?')) {
+    // Save it!
+	if(document.getElementById('pdt'+cnt).value!="" && document.getElementById('pamt'+cnt).value!="")
+	{
+  	if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		
+//alert(xmlhttp.responseText);
+//document.getElementById('here').innerHTML=xmlhttp.responseText;
+if(xmlhttp.responseText=='1')
+document.getElementById('out'+cnt).innerHTML="Edited Successfully";
+else
+alert(xmlhttp.responseText);
+//alert("Some Error Occurred. Please Refresh your page and try again");
+	
+	
+    }
+  }
+var pamt=document.getElementById('pamt'+cnt).value;
+var recon_chrg=document.getElementById('recon_chrg'+cnt).value;
+var discon_chrg=document.getElementById('discon_chrg'+cnt).value;
+var sd=document.getElementById('sd'+cnt).value;
+var after_duedt_chrg=document.getElementById('after_duedt_chrg'+cnt).value;
+var pdt=document.getElementById('pdt'+cnt).value;
+var memo=document.getElementById('memo'+cnt).value;
+var radios = document.getElementsByName('paid'+cnt);
+var paid
+for (var i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked) {
+        // do whatever you want with the checked radio
+      //  alert(radios[i].value);
+ paid=radios[i].value;
+        // only one radio can be logically checked, don't check the rest
+        break;
+    }}
+//var paid=document.getElementById('paid'+cnt).value;
+ // alert("approveebill.php?id="+id+"&stat="+stat);
+// alert("getcustbank.php?val="+val);
+//alert("updatepaidebill.php?pamt="+pamt+"&pdt="+pdt+"&memo="+memo+"&reqid="+reqid+"&paid="+paid);
+xmlhttp.open("GET","updatepaidebill.php?pamt="+pamt+"&pdt="+pdt+"&memo="+memo+"&reqid="+reqid+"&paid="+paid+"&recon_chrg="+recon_chrg+"&discon_chrg="+discon_chrg+"&sd="+sd+"&after_duedt_chrg="+after_duedt_chrg,true);
+xmlhttp.send();
+}
+else
+{
+	alert("Paid date and paid amount is compulsory")
+}
+  }
+  }
+
+function reject(cnt,reqid)
+  {
+  //alert(cnt+" "+reqid);
+  if (confirm('Are you sure you want to Proceed?')) {
+    // Save it!
+
+  	if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		
+//alert(xmlhttp.responseText);
+document.getElementById('search1').innerHTML=xmlhttp.responseText;
+/*if(xmlhttp.responseText=='1')
+document.getElementById('out'+cnt).innerHTML="Edited Successfully";
+else
+alert("Some Error Occurred. Please Refresh your page and try again");
+	*/
+	
+    }
+  }
+document.getElementById('edtrej'+cnt).style.display='none';
+var rejemail=document.getElementById('rejemail'+cnt).value;
+var ccemail=document.getElementById('rejccemail'+cnt).value;
+var rejccemail=ccemail.replace('\n', ',');
+var reason1=document.getElementById('reason1'+cnt).value;
+var radios = document.getElementsByName('rejradio'+cnt);
+var rejradio
+for (var i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked) {
+        // do whatever you want with the checked radio
+      //  alert(radios[i].value);
+ rejradio=radios[i].value;
+        // only one radio can be logically checked, don't check the rest
+        break;
+    }}
+//var paid=document.getElementById('paid'+cnt).value;
+ // alert("approveebill.php?id="+id+"&stat="+stat);
+// alert("getcustbank.php?val="+val);
+alert("reject_frm_updatepaidebill.php?reqid="+reqid+"&rejemail="+rejemail+"&rejccemail="+rejccemail+"&reason1="+reason1+"&rejradio="+rejradio);
+xmlhttp.open("GET","reject_frm_updatepaidebill.php?reqid="+reqid+"&rejemail="+rejemail+"&rejccemail="+rejccemail+"&reason1="+reason1+"&rejradio="+rejradio,true);
+xmlhttp.send();
+}
+  }
+function newwin(url,winname,w,h)
+{
+//alert("hi");
+var left = (screen.width/2)-(w/2);
+var top = (screen.height/2)-(h/2);
+var targetWin = window.open (url, winname, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=1, resizable=yes, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+ }
+function show(id)
+{
+if(document.getElementById(id).style.display=='none'){
+document.getElementById(id).style.display='block';
+document.getElementById(id).focus();
+}
+else{
+document.getElementById(id).style.display='none'; }
+
+document.getElementById(id).focus();
+}
+function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : event.keyCode;
+if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
+return false;
+ 
+return true;
+}
+</script>
+</head>
+
+<body <?php if(isset($_GET['cid'])){ ?> onLoad="searchById('Listing','1','');getbank('<?php echo $_GET['cid']; ?>');"<?php } ?>>
+<div id="here"></div>
+<center>
+<?php include("menubar.php");
+//echo $_SESSION['branch'];
+include("config.php");
+
+//echo $_SESSION['custid'];
+ $sql="select short_name,contact_first from contacts where type='c' and short_name in (select distinct(cust_id) from ebillfundrequests)";
+          if($_SESSION['custid']!='all'){
+$cu=str_replace(",","','",$_SESSION['custid']);
+$cu="'".$cu."'";
+//$sql.=" and short_name in (".$cu.")";
+}
+   //echo $sql;
+ ?>
+ </center>
+
+
+<p align="center">
+           <select name="cid" id="cid" onChange="searchById('Listing','1','');getbank(this.value);" ><option value="">select Client</option>
+           <?php
+//echo $sql;
+           $result1 = mysqli_query($con,$sql);
+		   if(!$result)
+		   echo mysqli_error();
+            while($row1 = mysqli_fetch_row($result1)){
+            //$custname=mysqli_query($con,"select contact_first from contacts where short_name='".$row1[0]."' and type='c'");
+            //$name=mysqli_fetch_row($custname);
+           
+             ?>
+                                           <option value="<?php echo $row1[0]; ?>" <?php if($_GET['cid']==$row1[0]){ ?> selected="selected" <?php } ?> ><?php echo $row1[1]; ?></option>
+           <?php } ?>   </select>
+          
+          
+          <select name="bank" id="bank" onChange="searchById('Listing','1','');" ><option value="">select Bank</option>
+           </select>
+                <input type="text" name="atm" id="atm" placeholder="ATM ID" onKeyUp="searchById('Listing','1','');" value="<?php if(isset($_GET['atmid'])){ echo $_GET['atmid']; } ?>"  />
+    
+    <input type="text" name="date" id="date" placeholder="From date" onClick="displayDatePicker('date');"  />
+      <input type="text" name="date2" id="date2" placeholder="To date" onClick="displayDatePicker('date2');"  />  
+      <input type="button" onClick="searchById('Listing','1','');" value="Search by Date">
+</p>
+<div id="search1">  </div>
+<div id="search">  </div>
+
+<script type="text/javascript" src="https://cssmumbai.sarmicrosystems.com/operations/1.7.2.jquery.min.js"></script>
+<script type="text/javascript" src="https://cssmumbai.sarmicrosystems.com/operations/script.js"></script>
+
+</body>
+</html>

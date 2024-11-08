@@ -1,0 +1,178 @@
+<?php include($_SERVER['DOCUMENT_ROOT'].'/quiztest_general/api/config.php');
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
+
+
+$topic=$_POST['topicid'];
+$desiredLength=10;
+$json=json_encode($topic);
+$player1=$_POST['player1'];
+
+$testid=$_POST['testid'];
+
+
+
+
+
+
+// for testing
+// $topic=533;
+// $desiredLength=10;
+// $json=json_encode($topic);
+// $player1=88;
+
+// $testid=2516;
+// $topic_in=str_replace( array('[',']','"') , ''  , $json);
+// end testing
+
+
+
+
+
+
+ $sqlm=mysqli_query($con,"SELECT id,name FROM `project_catT` where id='".$topic."'");
+ 
+
+$row=mysqli_fetch_assoc($sqlm);
+$topic_name=$row['name'];
+
+
+
+
+
+$topic_in=str_replace( array('[',']','"') , ''  , $topic);
+
+$select_subtopic_sql=mysqli_query($con,"SELECT distinct(sub_topic) from quiztest where topic='".$topic_in."'");  
+
+while ($select_subtopic_sql_result=mysqli_fetch_assoc($select_subtopic_sql)) {
+    $main_subtopicArray[] =  $select_subtopic_sql_result['sub_topic'];  
+}
+
+$newArray = array();
+// create a new array with AT LEAST the desired number of elements by joining the array at the end of the new array
+while(count($newArray) <= $desiredLength){
+    $newArray = array_merge($newArray, $main_subtopicArray);
+}
+
+$main_subtopicArray = array_slice($newArray,1, $desiredLength);
+
+// $data[]=['share_url'=>"https:www.sarmicrosystems.in/quiztest_general/api/player/player2q.php?testid=$testid"];
+
+
+
+
+$questions_ids=array();
+$subtopic_id=array();
+
+$sr=array();
+
+
+
+
+
+
+for($i=0;$i<$desiredLength;$i++){
+    
+    
+ $check_questions=$sr;
+
+$check_questions=json_encode($sr);
+$check_questions=str_replace( array('[',']','"') , ''  , $check_questions);
+
+$arr=explode(',',$check_questions);
+
+$result_ar = "'" . implode ( "', '", $arr ) . "'";
+
+
+    $sub_topic_appeard=json_encode($subtopic_id);
+        
+    $sub_topic_appeard=str_replace( array('[',']') , ''  , $sub_topic_appeard);
+            
+    $sub_topic_appeard = implode(',',array_unique(explode(',', $sub_topic_appeard)));
+        
+        $query="select * from quiztest WHERE sub_topic='".$main_subtopicArray[$i]."' and srno not in(".$result_ar.")  order by rand() ASC LIMIT 1";
+        
+    $sql=mysqli_query($con,$query);    
+    
+    $result=mysqli_fetch_assoc($sql);
+    
+
+
+$sr[]= $result['srno'];
+array_push($questions_ids,$sr);
+            
+            
+            
+      if($result['imgf']){
+      $mcq="https://smartscoreanalytics.com/qstn_img/".$std."_".strtoupper($topic_name)."/".$result["imgf"];
+
+      
+      $is_image='1';
+}
+else{
+    $mcq=$result['mcq'];
+          $is_image='0';
+}
+
+
+     $options=array("a"=>$result["a"],"b"=>$result["b"],"c"=>$result["c"],"d"=>$result["d"]);
+     
+            
+                if($options["a"]==$result['final_ans']){
+                    $final_ans="a";
+                }
+                elseif($options["b"]==$result['final_ans']){
+                    $final_ans="b";
+                }
+                elseif($options["c"]==$result['final_ans']){
+                    $final_ans="c";
+                }
+                elseif($options["d"]==$result['final_ans']){
+                    $final_ans="d";
+                }
+                
+                
+                        $ideal_time='30';
+            
+                  
+                
+            $ans[]=$result['final_ans'];
+            
+            $sub[]= $result['sub_topic'];
+            
+            
+            
+            array_push($subtopic_id,$sub);
+
+            if($total_topic_count == count($subtopic_id)){
+                $subtopic_id=array();
+                $sub_topic_appeard=array();
+
+
+            }
+            
+                  
+     $data[]= ['data'=>['test_id'=>$testid,'player1'=>$player1,'question_id'=>$result['srno'],'topic'=>$result['topic'],'sub_topic'=>$result['sub_topic'],'is_image'=>$is_image,'mcq' => $result['mcq'],'final_ans'=>$result['final_ans'],'options'=>$options,'ideal_time'=>$ideal_time]];
+  
+  
+}
+
+
+$sr=json_encode($sr);      
+$sr=str_replace( array('[',']','"') , ''  , $sr);
+
+$ans=json_encode($ans);
+$ans=str_replace( array('[',']','"') , ''  , $ans);
+
+$sub=json_encode($sub);      
+$sub=str_replace( array('[',']','"') , ''  , $sub);
+
+  $update_sql="update quiz_result set p1='".$player1."',questions_ids='".$sr."',topic_ids='".$topic."',subtopic_ids='".$sub."',total_questions='".$desiredLength."',answers='".$ans."' where id='".$testid."'";
+//  echo $update_sql;
+  
+    mysqli_query($con,$update_sql );      
+    
+    
+
+
+?>

@@ -1,0 +1,1 @@
+INSERT into `grocery_img`(product_id,category,img,thumbs,midsize,largeSize) values(61,247,'userfiles/496/img/2020/08/CHOCOLATE_MODAK_BOX_1.jpg','userfiles/496/thumbs/2020/08/CHOCOLATE_MODAK_BOX_1.jpg','userfiles/496/midsize/2020/08/CHOCOLATE_MODAK_BOX_1.jpg','userfiles/496/largeSize/2020/08/CHOCOLATE_MODAK_BOX_1.jpg');

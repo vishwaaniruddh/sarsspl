@@ -1,0 +1,104 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php include ("header.php") ?>
+    <!-- Additional library for page -->
+    <link rel="stylesheet" href="assets/vendor/DataTables/datatables.min.css">
+    <link rel="stylesheet" href="assets/vendor/DataTables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+</head>
+
+<body class="sidebar-pinned" id="rightclick">
+
+    <?php include ("vertical_menu.php") ?>
+    <main class="admin-main">
+        <?php include ('navbar.php'); ?>
+
+        <section class="admin-content">
+            <div class="bg-dark">
+                <div class="container  m-b-30">
+                    <div class="row">
+                        <div class="col-12 text-white p-t-40 p-b-90">
+
+                            <h4 class=""> <span class="btn btn-white-translucent">
+                                    <i class="mdi mdi-table "></i></span> View Top 10 Members visited
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container  pull-up">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <?php include ("config.php");
+                            $View = "SELECT DISTINCT (CertificateNumber) as certificate,City,Time,BillDate,CheckNo FROM `POS_table` where City='PUNE'  order by BillDate DESC limit 10";
+                            $qrys = mysqli_query($conn, $View);
+
+                            ?>
+                            <div class="card-body">
+                                <div class="table-responsive p-t-10">
+                                    <table id="example" class="table   " style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>srno</th>
+                                                <th>certificate</th>
+                                                <th> City</th>
+                                                <th>Time</th>
+                                                <th> BillDate</th>
+                                                <th> CheckNo</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $srn = 1;
+                                            while ($_row = mysqli_fetch_array($qrys)) {
+
+                                                ?>
+                                                <tr>
+                                                    <td><?php echo $srn; ?></td>
+                                                    <td><?php echo $_row['certificate']; ?></td>
+                                                    <td><?php echo $_row['City']; ?></td>
+                                                    <td><?php echo $_row['Time']; ?></td>
+                                                    <td><?php echo $_row['BillDate']; ?></td>
+                                                    <td><?php echo $_row['CheckNo']; ?></td>
+
+                                                </tr>
+
+                                                <?php
+
+                                                $srn++;
+                                            }
+                                            ?>
+
+
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>srno</th>
+                                                <th>certificate</th>
+                                                <th> City</th>
+                                                <th>Time</th>
+                                                <th> BillDate</th>
+                                                <th> CheckNo</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <?php include ('belowScript.php'); ?>
+    <script src="assets/vendor/DataTables/datatables.min.js"></script>
+    <script src="assets/js/datatable-data.js"></script>
+</body>
+
+</html>

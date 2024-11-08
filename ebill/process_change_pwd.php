@@ -1,0 +1,35 @@
+<?php
+
+session_start();
+
+include("config.php");
+mysqli_
+if(!$mysqli_ON['user'])
+
+	header('location:index.php');
+mysqli_
+$pwd_qry=mysql_query("select password from login where username='".$_SESSION['user']."'");
+
+$pwd=mysql_fetch_array($pwd_qry);
+
+if($pwd[0] == $_REQUEST['cur_pwd'] && $_REQUEST['new_pwd1']==$_REQUEST['new_pwd2'])
+
+{
+
+	$update_pwd=mysql_query("update login set password='".$_REQUEST['new_pwd1']."' where username='".$_SESSION['user']."'");
+
+	if($update_pwd)
+
+		header('location:change_pwd.php?success=1');
+
+	else
+
+		header('location:change_pwd.php?success=2');
+
+}
+
+else
+
+	header('location:change_pwd.php?success=0');
+
+?>

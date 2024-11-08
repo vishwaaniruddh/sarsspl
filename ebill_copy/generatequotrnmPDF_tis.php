@@ -1,0 +1,245 @@
+<?php session_start();
+if(!isset($_SESSION['user']))
+{
+echo "<script type='text/javascript'>alert('Sorry, your session has Expired'); window.location='index.php';</script>";
+}
+else
+{
+/*
+$dbt=$_POST['dbtacc'];
+$mbd=$_POST['mbody'];
+$maby=$_POST['mby'];*/
+
+$dbt=$_POST['dbno'];
+$mbd=$_POST['mb'];
+$maby=$_POST['mailby'];
+
+
+$paytyps=$_POST['paytyps'];
+$chqname=$_POST['chqname'];
+$chqno=$_POST['chqno'];
+$tdt=$_POST['tdt'];
+$trdt='0000-00-00';
+if($tdt!="")
+{
+$dt1=str_replace("/","-",$tdt);
+	$trdt=date('Y-m-d', strtotime($dt1));
+}
+/*
+echo $dbt."<br>";
+echo $mbd."<br>";
+echo $maby."<br>";
+*/
+
+
+$reqs1=$_POST['quotidt'];
+$reqs=explode(',',$reqs1);
+echo "total=".count($reqs)."<br>";
+//print_r($reqs);
+
+//echo count($reqs);
+include('config.php');
+$nwords = array("Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty", 30 => "Thirty", 40 => "Forty", 50 => "Fifty", 60 => "Sixty", 70 => "Seventy", 80 => "Eighty", 90 => "Ninety" ); 
+function int_to_words($x)
+       {
+           global $nwords;
+           if(!is_numeric($x))
+           {
+               $w = '#';
+           }else if(fmod($x, 1) != 0)
+           {
+               $w = '#'; 
+           }else{
+               if($x < 0)
+               {
+                   $w = 'minus ';
+                   $x = -$x;
+               }else{
+                   $w = '';
+               } 
+               if($x < 21)
+               {
+                   $w .= $nwords[$x];
+               }else if($x < 100)
+               {
+                   $w .= $nwords[10 * floor($x/10)];
+                   $r = fmod($x, 10); 
+                   if($r > 0)
+                   {
+                       $w .= ' '. $nwords[$r];
+                   }
+               } else if($x < 1000)
+               {
+                   $w .= $nwords[floor($x/100)] .' Hundred'; 
+                   $r = fmod($x, 100);
+                   if($r > 0)
+                   {
+                       $w .= ' and '. int_to_words($r);
+                   }
+               } else if($x < 100000) 
+               {
+                   $w .= int_to_words(floor($x/1000)) .' Thousand';
+                   $r = fmod($x, 1000);
+                   if($r > 0)
+                   {
+                       $w .= ' '; 
+                       if($r < 100)
+                       {
+                           $w .= 'and ';
+                       }
+                       $w .= int_to_words($r);
+                   } 
+               } else if($x < 10000000){
+                   $w .= int_to_words(floor($x/100000)) .' Lakh';
+                   $r = fmod($x, 100000);
+                   if($r > 0)
+                   {
+                       $w .= ' '; 
+                       if($r < 100)
+                       {
+                           $word .= 'and ';
+                       }
+                       $w .= int_to_words($r);
+                   } 
+               }else {
+                   $w .= int_to_words(floor($x/10000000)) .' Crore';
+                   $r = fmod($x, 10000000);
+                   if($r > 0)
+                   {
+                       $w .= ' '; 
+                       if($r < 100)
+                       {
+                           $word .= 'and ';
+                       }
+                       $w .= int_to_words($r);
+                   } 
+               }
+           }
+           return $w;
+       }
+?>
+<html>
+<head>
+<script type="text/javascript">     
+        function PrintDiv(id) {   
+       <!-- document.getElementById('hide').style.display='none';--> 
+           var divToPrint = document.getElementById(id);
+           
+           var popupWin = window.open('', '_blank', 'width=800,height=400');
+           popupWin.document.open();
+           popupWin.document.write('<html><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
+            popupWin.document.close();
+                }
+</script>
+</head>
+<body>
+<center>
+<div id="ppdf" ><br><br><br><br><br><br><br><br><br>
+<table width="995" border="0" cellpadding="2" cellspacing="0"  id="custtable" style="margin-top:5px;"> 
+<tr><td width="600" >TO	</td><td>			<B>DATE :- <?php echo date('d-m-Y'); ?></B>	</td></tr>
+<tr><td width="600" >ICICI BANK LTD.</td><td>			</td></tr>
+<tr><td width="600" >SION BRANCH </td><td>			</td></tr>					
+<tr><td width="600" >MUMBAI</td><td>			</td></tr>								
+<tr><td width="600" ></td><td>			</td></tr>								
+<tr><td width="600" ></td><td>			</td></tr>												
+					
+<tr><td width="600" >Respected Sir / Madam,</td><td>			</td></tr>	
+<tr><td width="600" ></td><td>			</td></tr>																				
+<tr><td width="600" >Please debit  on my a/c No. <?php echo $dbt; ?> & my account recognised as</td><td>			</td></tr>													
+<tr><td width="600" >Clear Secured Services Pvt. Ltd. Kindly credit to following accounts.	</td><td>			</td></tr>																					
+</table>
+<table width="995" border="1" cellpadding="2" cellspacing="0"  id="custtable" style="margin-top:5px;"> 
+<th width="10">Sr NO</th>
+<th width="200px">Account Name</th>	
+<th width="180px" align="center">Account No.</th>	
+<th width="60">Amount</th>
+<th width="200">Location</th>
+<th width="200">Remarks</th>
+<?php	
+        $total=0;
+$qry1=mysqli_query($con,"select max(tid) from quotation1ftransfers_tis");        
+$qrrow=mysqli_fetch_row($qry1);
+     if($qrrow!=null){ $tid=$qrrow[0]+1; //echo $tid;
+      }
+     else $tid=1;
+
+//echo count($reqs)." ".$tid;
+	for($x=0;$x<count($reqs);$x++){
+	//echo $reqs[$x];
+	
+	$supvc=mysqli_query($con,"select supervisor from quotation1_tis where id='".$reqs[$x]."'");
+            $supvca=mysqli_fetch_array($supvc);
+	
+	
+	$dt=date('Y-m-d H:i:s');
+	$userid=$_SESSION['user'];
+	
+	$greamt=mysqli_query($con,"select req_amt from quotation1_req_tis where qid='".$reqs[$x]."'");
+            $reqamtw=mysqli_fetch_array($greamt);
+	
+	
+	$sql="insert into quotation1ftransfers_tis(tid,qid,accid,dbtaccno,tamount,entrydt,email_body,mail_by,pdate,chq_name,chqno,pay_typ) values('$tid','$reqs[$x]','".$supvca[0]."','".$dbt."','". $reqamtw[0]."','$dt','".$mbd."','".$maby."','".$trdt."','".$chqname."','".$chqno."','".$paytyps."')";	
+//echo $sql."<br>";
+        $table=mysqli_query($con,$sql); 
+
+        $sql1="insert into quotation1pproval_tis(qid,appby,entrydt,level) values('$reqs[$x]','$userid','$dt','2')";		
+//echo $sql1."<br>";
+        $table1=mysqli_query($con,$sql1);
+ 
+        $sql3="update quotation1_tis set p_stat='2' where id='$reqs[$x]'";	
+//echo $sql3."<br>";	
+        $table2=mysqli_query($con,$sql3);
+      
+        }  
+         //echo "select distinct(accid) from rnmfundtransfers where tid='$tid'";   
+
+    
+$qry1=mysqli_query($con,"select distinct(accid) from quotation1ftransfers_tis where tid='$tid'");
+$ct=1;
+while($qrrow=mysqli_fetch_array($qry1))
+{
+$branch=mysqli_query($con,"select * from fundaccounts where aid='$qrrow[0]'");
+$brro=mysqli_fetch_row($branch);
+//echo "select sum(approvedamt) from quotation where quotid in(select reqid from rnmfundtransfers where tid='$tid' and accid='$qrrow[0]')";
+//$qry2=mysqli_query($con,"select sum(req_amt) from quotation1_req where qid in(select qid from quotation1ftransfers where tid='$tid' and accid='$qrrow[0]')");
+$qry2=mysqli_query($con,"select sum(tamount) from quotation1ftransfers_tis where tid='$tid' and accid='$qrrow[0]' and status!=0");
+$qrrow2=mysqli_fetch_array($qry2);
+?><div class=article>
+<div class=title><tr>
+<td width="10" align='center'><?php echo $ct++; ?></td>
+<td width="200" align='left'><?php echo $brro[5]; ?></td>
+<td width="180px"  align="center"><?php echo $brro[2]; ?></td>
+<td width="60" align='right' style='padding-right:15px'><?php echo number_format($qrrow2[0],2); $total=$total+$qrrow2[0]; ?></td>
+<td width="200" align='left'><?php echo $brro[4]; ?></td>
+<td align='left' width="200">Approval Work (RNM)</td>
+</tr></div></div>
+<?php
+ }
+?>
+<tr><td colspan=3 align='right' ><B>TOTAL AMOUNT</B></td><td align='right'  style='padding-right:15px'><B><?php echo number_format($total,2); ?></B></td><td></td><td></td></tr>
+</table>
+<table width="995" border="0" cellpadding="2" cellspacing="0"  id="custtable" style="margin-top:5px;"> 
+<tr><td width="600" ><B><?php echo '(Rupees : '.int_to_words($total).' Only.)'; ?></B>	</td><td>				</td></tr>
+<tr><td width="600" ></td><td>			</td></tr>
+<tr><td width="600" ><B>Thanking You,</B></td><td>			</td></tr>					
+<tr><td width="600" ><B>Yours Faithfully</B></td><td>			</td></tr>								
+<tr><td width="600" >For Clear Secured Services Pvt. Ltd.</td><td>			</td></tr>								
+<tr><td width="600" >&nbsp;</td><td>			</td></tr>																	
+<tr><td width="600" >&nbsp;</td><td>			</td></tr>	
+<tr><td width="600" ><B>Authorised Signatory</B></td><td>			</td></tr>													
+<tr><td width="600" ></td><td>			</td></tr>																					
+</table>										
+</div><input type="button" name="GENERATE" id="GENERATE" value="PRINT PDF" onclick="PrintDiv('ppdf');" />
+<input type="button" name="excl" id="excl" value="Export to Excel" onclick="window.open('cmsexp_tis.php?tid=<?php echo $tid; ?>','_blank');" />
+<br><br>
+      <a href="view_quot_fr_tis.php" >HOME</a>   
+
+   
+</center></body>
+</head>
+</html>
+
+
+<?php
+}
+?>

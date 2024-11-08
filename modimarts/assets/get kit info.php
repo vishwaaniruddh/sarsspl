@@ -1,0 +1,1 @@
+get kit info	
