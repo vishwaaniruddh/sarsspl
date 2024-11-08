@@ -1,0 +1,3124 @@
+
+<!-- saved from url=(0044)http://192.168.100.23:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				   
+				  <a id="1" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php#">Add Site</a>
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsite.php">View Site</a>
+                                    <a id="21" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Project_Add.php">Project Add</a>
+				  				<!-- <a   class="dropdown-item" href="addDvrSite.php">Add DVR Site</a>
+                 <a   class="dropdown-item" href="ViewDvrSite.php">View DVR Site</a>-->
+                  <a id="22" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/customerDataMaintain.php">Customer Data Maintain</a>
+				                    <a id="23" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewcustomerDataMaintain.php">View Customer Data Maintain</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                  <a id="3" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addusers.php">Add user</a>
+				                    <a id="4" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewusers.php">View user</a>
+				                   
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                   
+                 <a id="6" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/lastcommunication.php">Last Communication</a>
+				                     <a id="7" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/ebmisnew.php">Count call close by</a>
+					                    <a id="8" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/newview.php">HZ /HL View</a>
+					                    <a id="9" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/panelcount.php">Description Count</a>
+										<a id="10" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/useralertreport.php">call alert report</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertviewAsc.php">View Alert Report</a>
+					                    <a id="11" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Mains_UPS_Fail.php">Mains &amp; UPS Fail</a>
+					                    <a id="13" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/graph.php">view Graph</a> 
+					                      <a id="14" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/qrtsites.php">QRT Excel upload</a>
+					                        <a id="15" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/mailcount.php">Mail Count</a>
+					                   <a id="16" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="19" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/bypass.php">By Pass Alert</a>
+					 					   <a id="20" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/old_alert_SendIP.php">Archive Alert SendIP</a>
+					  					 <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewemp.php">View Emp Details</a>
+				  				  <a id="24" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/logoutByAdmin.php">User Logout</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Rohit Bhardwaj				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.23:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.23:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.19.114&#39; and b.receivedtime between &#39;2023-05-27 00:00:00&#39; and &#39;2023-05-27 23:59:59&#39;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:70</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>58251953</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-05-27 00:00:00</td>
+		<td>2023-05-27 00:00:14</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>58252045</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>008</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-05-27 00:00:00</td>
+		<td>2023-05-27 00:00:20</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>58327557</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-05-27 04:41:24</td>
+		<td>2023-05-27 04:41:39</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>salmans</td>
+        <td>2023-05-27 04:43:38</td>
+	    <td>2023-05-27 04:43:38*As per live no one present at site,*salmans</td>
+		<td>192.168.100.79</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>58366673</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-05-27 07:10:40</td>
+		<td>2023-05-27 07:10:55</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present on site,</td>-->
+        <td>Reactive</td>
+        <td>sharvari</td>
+        <td>2023-05-27 07:16:45</td>
+	    <td>2023-05-27 07:16:45*As per live no one present on site,*sharvari</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>58366705</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 07:10:40</td>
+		<td>2023-05-27 07:11:02</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>58366736</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 07:10:43</td>
+		<td>2023-05-27 07:11:08</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present on site,</td>-->
+        <td>Reactive</td>
+        <td>sharvari</td>
+        <td>2023-05-27 07:16:45</td>
+	    <td>2023-05-27 07:16:45*As per live no one present on site,*sharvari</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>58366764</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 07:10:43</td>
+		<td>2023-05-27 07:11:14</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>58366825</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 07:11:13</td>
+		<td>2023-05-27 07:11:28</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>58394237</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-05-27 09:00:00</td>
+		<td>2023-05-27 09:00:15</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>58429385</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-05-27 12:00:00</td>
+		<td>2023-05-27 12:00:15</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>58429525</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>007</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-05-27 12:00:00</td>
+		<td>2023-05-27 12:00:33</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>58437529</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-05-27 13:34:24</td>
+		<td>2023-05-27 13:34:43</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:37:59</td>
+	    <td>2023-05-27 13:37:59*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>58437533</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:34:24</td>
+		<td>2023-05-27 13:34:50</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>58437543</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:34:24</td>
+		<td>2023-05-27 13:34:56</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>58437549</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:34:27</td>
+		<td>2023-05-27 13:35:02</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:37:59</td>
+	    <td>2023-05-27 13:37:59*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>58437561</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:34:27</td>
+		<td>2023-05-27 13:35:11</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:37:59</td>
+	    <td>2023-05-27 13:37:59*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>58437565</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:34:27</td>
+		<td>2023-05-27 13:35:17</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>58437575</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-05-27 13:35:18</td>
+		<td>2023-05-27 13:35:31</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:37:59</td>
+	    <td>2023-05-27 13:37:59*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>58437581</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:35:18</td>
+		<td>2023-05-27 13:35:37</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>58437592</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:35:18</td>
+		<td>2023-05-27 13:35:46</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>58437598</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:35:19</td>
+		<td>2023-05-27 13:35:59</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:38:09</td>
+	    <td>2023-05-27 13:38:09*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>58437602</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:35:19</td>
+		<td>2023-05-27 13:36:05</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>58437615</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Removal Sensor</td>
+	 	<td>ATM Removal Sensor</td>
+        <td>2023-05-27 13:35:53</td>
+		<td>2023-05-27 13:36:21</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:38:09</td>
+	    <td>2023-05-27 13:38:09*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>58437621</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:35:53</td>
+		<td>2023-05-27 13:36:27</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>58437633</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:35:54</td>
+		<td>2023-05-27 13:36:33</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>58437645</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:35:56</td>
+		<td>2023-05-27 13:36:39</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:38:09</td>
+	    <td>2023-05-27 13:38:09*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>58437654</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:35:56</td>
+		<td>2023-05-27 13:36:45</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>58437687</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-05-27 13:37:05</td>
+		<td>2023-05-27 13:37:21</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:38:36</td>
+	    <td>2023-05-27 13:38:36*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>58437692</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:37:05</td>
+		<td>2023-05-27 13:37:30</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>58437706</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:37:26</td>
+		<td>2023-05-27 13:37:41</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:38:36</td>
+	    <td>2023-05-27 13:38:36*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>58437715</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:37:26</td>
+		<td>2023-05-27 13:37:51</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>58437974</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-05-27 13:42:04</td>
+		<td>2023-05-27 13:42:20</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:44:12</td>
+	    <td>2023-05-27 13:44:12*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>58437977</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:42:04</td>
+		<td>2023-05-27 13:42:26</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>58437982</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:42:04</td>
+		<td>2023-05-27 13:42:32</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>58437984</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:42:04</td>
+		<td>2023-05-27 13:42:38</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>58437991</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:42:08</td>
+		<td>2023-05-27 13:42:45</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>mnpr engineer person persent at site id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:44:12</td>
+	    <td>2023-05-27 13:44:12*mnpr engineer person persent at site id card shown 2way done*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>58438000</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:42:08</td>
+		<td>2023-05-27 13:42:54</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>58438006</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:42:16</td>
+		<td>2023-05-27 13:43:00</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>58438028</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Removal Sensor</td>
+	 	<td>ATM Removal Sensor</td>
+        <td>2023-05-27 13:43:17</td>
+		<td>2023-05-27 13:43:32</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one persent at site</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:46:44</td>
+	    <td>2023-05-27 13:46:44*as per live no one persent at site*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>58438042</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:43:17</td>
+		<td>2023-05-27 13:43:47</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>58438056</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:43:19</td>
+		<td>2023-05-27 13:44:10</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>58438071</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:43:21</td>
+		<td>2023-05-27 13:44:31</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one persent at site</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:46:44</td>
+	    <td>2023-05-27 13:46:44*as per live no one persent at site*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>58438078</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:43:21</td>
+		<td>2023-05-27 13:44:43</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>58438103</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Smoke Tamper</td>
+	 	<td>Smoke Tamper</td>
+        <td>2023-05-27 13:44:47</td>
+		<td>2023-05-27 13:45:06</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one persent at site</td>-->
+        <td>Reactive</td>
+        <td>Sanjana prajapati</td>
+        <td>2023-05-27 13:46:44</td>
+	    <td>2023-05-27 13:46:44*as per live no one persent at site*Sanjana prajapati</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>58438123</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Smoke Tamper</td>
+	 	<td>Smoke Tamper</td>
+        <td>2023-05-27 13:44:47</td>
+		<td>2023-05-27 13:45:13</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>58438129</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Smoke Tamper</td>
+	 	<td>Smoke Tamper</td>
+        <td>2023-05-27 13:44:47</td>
+		<td>2023-05-27 13:45:19</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>58438138</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:44:47</td>
+		<td>2023-05-27 13:45:28</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>58438146</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:44:47</td>
+		<td>2023-05-27 13:45:34</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>58438154</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>016</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:44:47</td>
+		<td>2023-05-27 13:45:40</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>58438159</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>016</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:44:47</td>
+		<td>2023-05-27 13:45:46</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>58438163</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:44:50</td>
+		<td>2023-05-27 13:45:55</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>58438220</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:44:50</td>
+		<td>2023-05-27 13:47:05</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>58438233</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:44:50</td>
+		<td>2023-05-27 13:47:11</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>58438241</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>016</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Smoke Sense</td>
+	 	<td>Smoke Sense</td>
+        <td>2023-05-27 13:44:53</td>
+		<td>2023-05-27 13:47:17</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>58438255</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 13:44:53</td>
+		<td>2023-05-27 13:47:28</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>58438265</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 13:44:55</td>
+		<td>2023-05-27 13:47:35</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>58438270</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 13:44:55</td>
+		<td>2023-05-27 13:47:41</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>58441861</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-05-27 14:20:30</td>
+		<td>2023-05-27 14:20:45</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>MNPR engineer at site mr.houji id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sharvari</td>
+        <td>2023-05-27 14:22:39</td>
+	    <td>2023-05-27 14:22:39*MNPR engineer at site mr.houji id shown 2 way done,*sharvari</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>58441872</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 14:20:30</td>
+		<td>2023-05-27 14:20:51</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>58441882</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 14:20:34</td>
+		<td>2023-05-27 14:20:58</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td>MNPR engineer at site mr.houji id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sharvari</td>
+        <td>2023-05-27 14:22:48</td>
+	    <td>2023-05-27 14:22:48*MNPR engineer at site mr.houji id shown 2 way done,*sharvari</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>58441891</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 14:20:34</td>
+		<td>2023-05-27 14:21:04</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>58443534</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 14:33:19</td>
+		<td>2023-05-27 14:33:35</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>58443579</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 14:33:47</td>
+		<td>2023-05-27 14:34:03</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>58443597</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-05-27 14:33:56</td>
+		<td>2023-05-27 14:34:12</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>58443613</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-05-27 14:33:56</td>
+		<td>2023-05-27 14:34:18</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>58443626</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-05-27 14:33:58</td>
+		<td>2023-05-27 14:34:24</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>58443640</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 14:33:58</td>
+		<td>2023-05-27 14:34:30</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>58443731</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-05-27 14:35:08</td>
+		<td>2023-05-27 14:35:24</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>58447249</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-05-27 15:00:00</td>
+		<td>2023-05-27 15:00:15</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>58447284</td>
+     <td>North</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>-->
+    <td>P3ENAP62</td>
+    <td>D.no. 3-20-23/1, ward 3, opp ncc canteen, syamala nagar, Guntur, Andhra Pradesh 522006.</td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>007</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-05-27 15:00:00</td>
+		<td>2023-05-27 15:00:21</td>
+		<td>27-May-2023</td>
+		<td>172.55.19.114</td>
+		<td>smarti_hdfc32</td>	
+		<td>092125</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.19.114' and b.receivedtime between '2023-05-27 00:00:00' and '2023-05-27 23:59:59'" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

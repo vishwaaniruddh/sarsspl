@@ -1,0 +1,4212 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                  	
+                  <a class="dropdown-item" href="http://192.168.100.21:8080/css/allalert_data.php">All Alert</a>
+
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="multifix">multifix</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.51.13.131' and b.receivedtime between '2023-10-07 00:00:00' and '2023-10-07 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.51.13.131&#39; and b.receivedtime between &#39;2023-10-07 00:00:00&#39; and &#39;2023-10-07 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:100</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Hitachi</td>
+     <td>140056260</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:39:12</td>
+		<td>2023-10-07 21:39:03</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Hitachi</td>
+     <td>140054410</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:36:53</td>
+		<td>2023-10-07 21:36:45</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Hitachi</td>
+     <td>140054379</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:36:51</td>
+		<td>2023-10-07 21:36:43</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,as per live</td>-->
+        <td>Reactive</td>
+        <td>saching</td>
+        <td>2023-10-07 21:41:47</td>
+	    <td>2023-10-07 21:41:47*as per live no one present at site,as per live*saching</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Hitachi</td>
+     <td>140054163</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:36:34</td>
+		<td>2023-10-07 21:36:26</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Hitachi</td>
+     <td>140054138</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:36:32</td>
+		<td>2023-10-07 21:36:24</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,as per live</td>-->
+        <td>Reactive</td>
+        <td>saching</td>
+        <td>2023-10-07 21:41:47</td>
+	    <td>2023-10-07 21:41:47*as per live no one present at site,as per live*saching</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Hitachi</td>
+     <td>140054027</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:36:23</td>
+		<td>2023-10-07 21:36:15</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Hitachi</td>
+     <td>140053967</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:36:19</td>
+		<td>2023-10-07 21:36:10</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,as per live</td>-->
+        <td>Reactive</td>
+        <td>saching</td>
+        <td>2023-10-07 21:41:47</td>
+	    <td>2023-10-07 21:41:47*as per live no one present at site,as per live*saching</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Hitachi</td>
+     <td>140053914</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:36:14</td>
+		<td>2023-10-07 21:36:06</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Hitachi</td>
+     <td>140053402</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Sensor</td>
+	 	<td>ATM 1 Hood Door Sensor</td>
+        <td>2023-10-07 21:35:31</td>
+		<td>2023-10-07 21:35:22</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Hitachi</td>
+     <td>140053271</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:35:20</td>
+		<td>2023-10-07 21:35:11</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Hitachi</td>
+     <td>140053243</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:35:17</td>
+		<td>2023-10-07 21:35:09</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Hitachi</td>
+     <td>140053045</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>034</td>
+	<td>TR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:34:58</td>
+		<td>2023-10-07 21:34:52</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Hitachi</td>
+     <td>140053020</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-07 21:34:58</td>
+		<td>2023-10-07 21:34:50</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Hitachi</td>
+     <td>140052993</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:34:56</td>
+		<td>2023-10-07 21:34:48</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Hitachi</td>
+     <td>140052966</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:34:54</td>
+		<td>2023-10-07 21:34:46</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Hitachi</td>
+     <td>140052919</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:34:51</td>
+		<td>2023-10-07 21:34:43</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Hitachi</td>
+     <td>140052809</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:34:43</td>
+		<td>2023-10-07 21:34:35</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Hitachi</td>
+     <td>140052784</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-10-07 21:34:41</td>
+		<td>2023-10-07 21:34:33</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Hitachi</td>
+     <td>140052706</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-07 21:34:27</td>
+		<td>2023-10-07 21:34:27</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Hitachi</td>
+     <td>140052675</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:34:23</td>
+		<td>2023-10-07 21:34:25</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Hitachi</td>
+     <td>140052649</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-07 21:34:11</td>
+		<td>2023-10-07 21:34:23</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Hitachi</td>
+     <td>140052625</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:34:10</td>
+		<td>2023-10-07 21:34:21</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Hitachi</td>
+     <td>140052595</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:34:09</td>
+		<td>2023-10-07 21:34:19</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Hitachi</td>
+     <td>140052567</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:34:08</td>
+		<td>2023-10-07 21:34:17</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Hitachi</td>
+     <td>140052545</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:34:00</td>
+		<td>2023-10-07 21:34:15</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Hitachi</td>
+     <td>140052516</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-10-07 21:33:58</td>
+		<td>2023-10-07 21:34:13</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Hitachi</td>
+     <td>140052487</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:33:56</td>
+		<td>2023-10-07 21:34:11</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Hitachi</td>
+     <td>140052230</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:33:53</td>
+		<td>2023-10-07 21:33:46</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:36:51</td>
+	    <td>2023-10-07 21:36:51*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Hitachi</td>
+     <td>140052126</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:33:45</td>
+		<td>2023-10-07 21:33:37</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Hitachi</td>
+     <td>140052100</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:33:43</td>
+		<td>2023-10-07 21:33:35</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:33:53</td>
+	    <td>2023-10-07 21:33:53*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Hitachi</td>
+     <td>140051781</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:33:18</td>
+		<td>2023-10-07 21:33:10</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Hitachi</td>
+     <td>140051740</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:33:15</td>
+		<td>2023-10-07 21:33:07</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:33:53</td>
+	    <td>2023-10-07 21:33:53*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Hitachi</td>
+     <td>140051702</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:33:12</td>
+		<td>2023-10-07 21:33:04</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Hitachi</td>
+     <td>140051616</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:33:05</td>
+		<td>2023-10-07 21:32:57</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:33:53</td>
+	    <td>2023-10-07 21:33:53*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Hitachi</td>
+     <td>140051575</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:33:02</td>
+		<td>2023-10-07 21:32:54</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Hitachi</td>
+     <td>140051547</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:32:59</td>
+		<td>2023-10-07 21:32:52</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:33:53</td>
+	    <td>2023-10-07 21:33:53*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Hitachi</td>
+     <td>140051485</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:32:55</td>
+		<td>2023-10-07 21:32:47</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Hitachi</td>
+     <td>140051397</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:32:48</td>
+		<td>2023-10-07 21:32:40</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:33:53</td>
+	    <td>2023-10-07 21:33:53*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Hitachi</td>
+     <td>140051016</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:32:18</td>
+		<td>2023-10-07 21:32:10</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Hitachi</td>
+     <td>140050978</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:32:15</td>
+		<td>2023-10-07 21:32:07</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:33:53</td>
+	    <td>2023-10-07 21:33:53*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Hitachi</td>
+     <td>140050934</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:32:12</td>
+		<td>2023-10-07 21:32:04</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Hitachi</td>
+     <td>140050905</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:32:10</td>
+		<td>2023-10-07 21:32:02</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:32:43</td>
+	    <td>2023-10-07 21:32:43*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Hitachi</td>
+     <td>140050812</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:32:03</td>
+		<td>2023-10-07 21:31:55</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Hitachi</td>
+     <td>140050607</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:31:47</td>
+		<td>2023-10-07 21:31:39</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:32:43</td>
+	    <td>2023-10-07 21:32:43*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Hitachi</td>
+     <td>140050567</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:31:43</td>
+		<td>2023-10-07 21:31:36</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Hitachi</td>
+     <td>140050541</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:31:41</td>
+		<td>2023-10-07 21:31:34</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:32:43</td>
+	    <td>2023-10-07 21:32:43*Cash loading person present on site .,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Hitachi</td>
+     <td>140050171</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:31:14</td>
+		<td>2023-10-07 21:31:06</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Hitachi</td>
+     <td>140050142</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:31:12</td>
+		<td>2023-10-07 21:31:04</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 21:31:26</td>
+	    <td>2023-10-07 21:31:26*Cash loading person present on site,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Hitachi</td>
+     <td>140050059</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:31:05</td>
+		<td>2023-10-07 21:30:57</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Hitachi</td>
+     <td>140049962</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:30:57</td>
+		<td>2023-10-07 21:30:49</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Hitachi</td>
+     <td>140049405</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-07 21:30:13</td>
+		<td>2023-10-07 21:30:05</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Hitachi</td>
+     <td>140049354</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:30:10</td>
+		<td>2023-10-07 21:30:02</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Hitachi</td>
+     <td>140049285</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:30:04</td>
+		<td>2023-10-07 21:29:56</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Hitachi</td>
+     <td>140049259</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-10-07 21:30:01</td>
+		<td>2023-10-07 21:29:54</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Hitachi</td>
+     <td>140049190</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-07 21:29:57</td>
+		<td>2023-10-07 21:29:49</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Hitachi</td>
+     <td>140049135</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:29:53</td>
+		<td>2023-10-07 21:29:45</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Hitachi</td>
+     <td>140049093</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-07 21:29:49</td>
+		<td>2023-10-07 21:29:42</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Hitachi</td>
+     <td>140049052</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:29:47</td>
+		<td>2023-10-07 21:29:39</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Hitachi</td>
+     <td>140049010</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-07 21:29:44</td>
+		<td>2023-10-07 21:29:36</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Hitachi</td>
+     <td>140048968</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 21:29:40</td>
+		<td>2023-10-07 21:29:33</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Hitachi</td>
+     <td>140048647</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:29:17</td>
+		<td>2023-10-07 21:29:08</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Hitachi</td>
+     <td>140048605</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:29:13</td>
+		<td>2023-10-07 21:29:05</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Hitachi</td>
+     <td>140048500</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:29:06</td>
+		<td>2023-10-07 21:28:58</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Hitachi</td>
+     <td>140048459</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:29:03</td>
+		<td>2023-10-07 21:28:54</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Hitachi</td>
+     <td>140046977</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:27:07</td>
+		<td>2023-10-07 21:26:59</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Hitachi</td>
+     <td>140046938</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:27:04</td>
+		<td>2023-10-07 21:26:55</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Hitachi</td>
+     <td>140046803</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:26:54</td>
+		<td>2023-10-07 21:26:45</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Hitachi</td>
+     <td>140046776</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:26:52</td>
+		<td>2023-10-07 21:26:43</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Hitachi</td>
+     <td>140046642</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:26:41</td>
+		<td>2023-10-07 21:26:33</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Hitachi</td>
+     <td>140046595</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:26:39</td>
+		<td>2023-10-07 21:26:30</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Hitachi</td>
+     <td>140046526</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:26:33</td>
+		<td>2023-10-07 21:26:25</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Hitachi</td>
+     <td>140046485</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:26:31</td>
+		<td>2023-10-07 21:26:22</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Hitachi</td>
+     <td>140046439</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:26:28</td>
+		<td>2023-10-07 21:26:19</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Hitachi</td>
+     <td>140046417</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:26:26</td>
+		<td>2023-10-07 21:26:18</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:18</td>
+	    <td>2023-10-07 21:40:18*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Hitachi</td>
+     <td>140046271</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:26:15</td>
+		<td>2023-10-07 21:26:06</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Hitachi</td>
+     <td>140046229</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:26:12</td>
+		<td>2023-10-07 21:26:03</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:19</td>
+	    <td>2023-10-07 21:40:19*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Hitachi</td>
+     <td>140046191</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:26:09</td>
+		<td>2023-10-07 21:26:00</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Hitachi</td>
+     <td>140046121</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:26:03</td>
+		<td>2023-10-07 21:25:55</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:19</td>
+	    <td>2023-10-07 21:40:19*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Hitachi</td>
+     <td>140046083</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:26:01</td>
+		<td>2023-10-07 21:25:52</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Hitachi</td>
+     <td>140046040</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:25:58</td>
+		<td>2023-10-07 21:25:50</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site,</td>-->
+        <td>Reactive</td>
+        <td>vishalg</td>
+        <td>2023-10-07 21:40:19</td>
+	    <td>2023-10-07 21:40:19*Cash loading person present on site,*vishalg</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Hitachi</td>
+     <td>140046003</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 21:25:54</td>
+		<td>2023-10-07 21:25:47</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Hitachi</td>
+     <td>140044899</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-07 21:24:34</td>
+		<td>2023-10-07 21:24:26</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>writers person present at site id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Fahad</td>
+        <td>2023-10-07 21:25:05</td>
+	    <td>2023-10-07 21:25:05*writers person present at site id shown 2way done,*Fahad</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Hitachi</td>
+     <td>140044854</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 21:24:31</td>
+		<td>2023-10-07 21:24:23</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>writers person present at site id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Fahad</td>
+        <td>2023-10-07 21:25:05</td>
+	    <td>2023-10-07 21:25:05*writers person present at site id shown 2way done,*Fahad</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Hitachi</td>
+     <td>140042109</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-10-07 21:20:46</td>
+		<td>2023-10-07 21:20:47</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Hitachi</td>
+     <td>140042087</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 21:20:46</td>
+		<td>2023-10-07 21:20:45</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>writers person present at site id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Fahad</td>
+        <td>2023-10-07 21:22:41</td>
+	    <td>2023-10-07 21:22:41*writers person present at site id shown 2way done,*Fahad</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Hitachi</td>
+     <td>140042063</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2023-10-07 21:20:39</td>
+		<td>2023-10-07 21:20:43</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>writers person present at site id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Fahad</td>
+        <td>2023-10-07 21:22:41</td>
+	    <td>2023-10-07 21:22:41*writers person present at site id shown 2way done,*Fahad</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Hitachi</td>
+     <td>140042030</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 21:20:49</td>
+		<td>2023-10-07 21:20:41</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>writers person present at site id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Fahad</td>
+        <td>2023-10-07 21:22:41</td>
+	    <td>2023-10-07 21:22:41*writers person present at site id shown 2way done,*Fahad</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Hitachi</td>
+     <td>140041959</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 21:20:44</td>
+		<td>2023-10-07 21:20:36</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>writers person present at site id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Fahad</td>
+        <td>2023-10-07 21:22:41</td>
+	    <td>2023-10-07 21:22:41*writers person present at site id shown 2way done,*Fahad</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Hitachi</td>
+     <td>140041898</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2023-10-07 21:20:39</td>
+		<td>2023-10-07 21:20:31</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>writers person present at site id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Fahad</td>
+        <td>2023-10-07 21:22:41</td>
+	    <td>2023-10-07 21:22:41*writers person present at site id shown 2way done,*Fahad</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Hitachi</td>
+     <td>140041850</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 21:20:36</td>
+		<td>2023-10-07 21:20:28</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>writers person present at site id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Fahad</td>
+        <td>2023-10-07 21:22:41</td>
+	    <td>2023-10-07 21:22:41*writers person present at site id shown 2way done,*Fahad</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Hitachi</td>
+     <td>139982164</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2023-10-07 19:50:54</td>
+		<td>2023-10-07 19:50:46</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>bharat pardeshi present at site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sameer</td>
+        <td>2023-10-07 19:54:18</td>
+	    <td>2023-10-07 19:54:18*bharat pardeshi present at site 2way done,*sameer</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Hitachi</td>
+     <td>139981618</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Removal </td>
+	 	<td>ATM 1 Removal </td>
+        <td>2023-10-07 19:50:06</td>
+		<td>2023-10-07 19:49:58</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-10-07 19:52:18</td>
+	    <td>2023-10-07 19:52:18*Comfort engineer at site,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Hitachi</td>
+     <td>139978703</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 19:45:37</td>
+		<td>2023-10-07 19:45:31</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Comfort engineer at site mr ganjandra id show 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-10-07 19:48:54</td>
+	    <td>2023-10-07 19:48:54*Comfort engineer at site mr ganjandra id show 2 way done,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Hitachi</td>
+     <td>139978671</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 19:45:35</td>
+		<td>2023-10-07 19:45:28</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>Comfort engineer at site mr ganjandra id show 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-10-07 19:48:54</td>
+	    <td>2023-10-07 19:48:54*Comfort engineer at site mr ganjandra id show 2 way done,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Hitachi</td>
+     <td>139978565</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>923</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 19:45:26</td>
+		<td>2023-10-07 19:45:19</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Hitachi</td>
+     <td>139967201</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-10-07 18:19:26</td>
+		<td>2023-10-07 19:32:15</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Hitachi</td>
+     <td>139967169</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-10-07 19:32:19</td>
+		<td>2023-10-07 19:32:13</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2023-10-07 20:44:10</td>
+	    <td>2023-10-07 20:44:10*As per live no one present at site,*TeamLead</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Hitachi</td>
+     <td>139877081</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 15:57:31</td>
+		<td>2023-10-07 15:57:27</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Hitachi</td>
+     <td>139830162</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-10-07 14:46:13</td>
+		<td>2023-10-07 14:46:11</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Hitachi</td>
+     <td>139728676</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td> ashwin nagar near cidco nashik -422009</td>-->
+    <td>MC014204</td>
+    <td>shop no 03,rushabh apartment ashwin nagar near cidco nashik -422009</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-07 12:15:07</td>
+		<td>2023-10-07 12:15:07</td>
+		<td>07-October-2023</td>
+		<td>172.51.13.131</td>
+		<td>RASS</td>	
+		<td>080491</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.51.13.131' and b.receivedtime between '2023-10-07 00:00:00' and '2023-10-07 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

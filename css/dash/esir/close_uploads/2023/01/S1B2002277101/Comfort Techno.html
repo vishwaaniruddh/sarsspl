@@ -1,0 +1,2656 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.126.36.68' and b.receivedtime between '2023-01-11 00:00:00' and '2023-01-11 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;10.126.36.68&#39; and b.receivedtime between &#39;2023-01-11 00:00:00&#39; and &#39;2023-01-11 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:58</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>FSS</td>
+     <td>42027702</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 18:39:48</td>
+		<td>2023-01-11 18:39:44</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>FSS</td>
+     <td>42027676</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Attendance Switch House Keeping</td>
+	 	<td>Attendance Switch House Keeping</td>
+        <td>2023-01-11 18:39:47</td>
+		<td>2023-01-11 18:39:41</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>FSS</td>
+     <td>42027383</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 18:39:15</td>
+		<td>2023-01-11 18:39:11</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>FSS</td>
+     <td>42027356</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Attendance Switch Guard Attendance</td>
+	 	<td>Attendance Switch Guard Attendance</td>
+        <td>2023-01-11 18:39:15</td>
+		<td>2023-01-11 18:39:09</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>FSS</td>
+     <td>42027325</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 18:39:11</td>
+		<td>2023-01-11 18:39:06</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>FSS</td>
+     <td>42027305</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Attendance Switch House Keeping</td>
+	 	<td>Attendance Switch House Keeping</td>
+        <td>2023-01-11 18:39:09</td>
+		<td>2023-01-11 18:39:04</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>FSS</td>
+     <td>42026485</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 18:37:38</td>
+		<td>2023-01-11 18:37:40</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>FSS</td>
+     <td>42026468</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Attendance Switch Guard Attendance</td>
+	 	<td>Attendance Switch Guard Attendance</td>
+        <td>2023-01-11 18:37:35</td>
+		<td>2023-01-11 18:37:38</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>FSS</td>
+     <td>42026448</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 18:37:30</td>
+		<td>2023-01-11 18:37:36</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>FSS</td>
+     <td>42026418</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 18:37:30</td>
+		<td>2023-01-11 18:37:33</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>FSS</td>
+     <td>42026394</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Sensor</td>
+	 	<td>ATM1 Chest Door Sensor</td>
+        <td>2023-01-11 18:37:29</td>
+		<td>2023-01-11 18:37:31</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 18:36:59</td>
+	    <td>2023-01-11 18:36:59*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>FSS</td>
+     <td>42026363</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Attendance Switch House Keeping</td>
+	 	<td>Attendance Switch House Keeping</td>
+        <td>2023-01-11 18:37:29</td>
+		<td>2023-01-11 18:37:29</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 18:36:59</td>
+	    <td>2023-01-11 18:36:59*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>FSS</td>
+     <td>42026330</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Emergency Switch
+Panic Switch</td>
+	 	<td>Emergency Switch
+Panic Switch</td>
+        <td>2023-01-11 18:37:29</td>
+		<td>2023-01-11 18:37:26</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 18:36:59</td>
+	    <td>2023-01-11 18:36:59*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>FSS</td>
+     <td>42026305</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal Sensor</td>
+	 	<td>ATM1 Removal Sensor</td>
+        <td>2023-01-11 18:37:25</td>
+		<td>2023-01-11 18:37:24</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 18:36:59</td>
+	    <td>2023-01-11 18:36:59*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>FSS</td>
+     <td>42026283</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Vibration Sensor</td>
+	 	<td>ATM1 Vibration Sensor</td>
+        <td>2023-01-11 18:37:23</td>
+		<td>2023-01-11 18:37:22</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 18:36:59</td>
+	    <td>2023-01-11 18:36:59*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>FSS</td>
+     <td>42026261</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 18:37:23</td>
+		<td>2023-01-11 18:37:20</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>FSS</td>
+     <td>42026236</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Thermal Sensor</td>
+	 	<td>ATM1 Thermal Sensor</td>
+        <td>2023-01-11 18:37:21</td>
+		<td>2023-01-11 18:37:17</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 18:36:59</td>
+	    <td>2023-01-11 18:36:59*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>FSS</td>
+     <td>42026213</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 18:37:16</td>
+		<td>2023-01-11 18:37:15</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>FSS</td>
+     <td>42026192</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 18:37:14</td>
+		<td>2023-01-11 18:37:13</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>FSS</td>
+     <td>42026169</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 18:37:14</td>
+		<td>2023-01-11 18:37:11</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>FSS</td>
+     <td>42026145</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>047</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Door Tamper</td>
+	 	<td>Panel Door Tamper</td>
+        <td>2023-01-11 18:37:14</td>
+		<td>2023-01-11 18:37:09</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 18:36:59</td>
+	    <td>2023-01-11 18:36:59*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>FSS</td>
+     <td>42024802</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-01-11 18:34:56</td>
+		<td>2023-01-11 18:34:50</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 18:36:59</td>
+	    <td>2023-01-11 18:36:59*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>FSS</td>
+     <td>41980157</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 17:17:31</td>
+		<td>2023-01-11 17:17:28</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>FSS</td>
+     <td>41980139</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 17:17:31</td>
+		<td>2023-01-11 17:17:26</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>FSS</td>
+     <td>41979895</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 17:17:02</td>
+		<td>2023-01-11 17:16:58</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>FSS</td>
+     <td>41979876</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 17:17:02</td>
+		<td>2023-01-11 17:16:56</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>FSS</td>
+     <td>41977247</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 17:12:05</td>
+		<td>2023-01-11 17:12:07</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>FSS</td>
+     <td>41977228</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 17:12:04</td>
+		<td>2023-01-11 17:12:05</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>FSS</td>
+     <td>41977210</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Thermal Sensor</td>
+	 	<td>ATM1 Thermal Sensor</td>
+        <td>2023-01-11 17:12:02</td>
+		<td>2023-01-11 17:12:03</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 17:11:53</td>
+	    <td>2023-01-11 17:11:53*Person doing transaction,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>FSS</td>
+     <td>41977195</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 17:12:02</td>
+		<td>2023-01-11 17:12:01</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>FSS</td>
+     <td>41977175</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 17:12:02</td>
+		<td>2023-01-11 17:11:59</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>FSS</td>
+     <td>41977156</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Vibration Sensor</td>
+	 	<td>ATM1 Vibration Sensor</td>
+        <td>2023-01-11 17:12:02</td>
+		<td>2023-01-11 17:11:56</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 17:11:53</td>
+	    <td>2023-01-11 17:11:53*Person doing transaction,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>FSS</td>
+     <td>41895860</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 14:41:29</td>
+		<td>2023-01-11 14:41:30</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>FSS</td>
+     <td>41895846</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 14:41:29</td>
+		<td>2023-01-11 14:41:28</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>FSS</td>
+     <td>41895827</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 14:41:29</td>
+		<td>2023-01-11 14:41:26</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>FSS</td>
+     <td>41895805</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 14:41:29</td>
+		<td>2023-01-11 14:41:24</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>FSS</td>
+     <td>41893402</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 14:36:32</td>
+		<td>2023-01-11 14:36:35</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>FSS</td>
+     <td>41893372</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 14:36:31</td>
+		<td>2023-01-11 14:36:32</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>FSS</td>
+     <td>41893352</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Thermal Sensor</td>
+	 	<td>ATM1 Thermal Sensor</td>
+        <td>2023-01-11 14:36:29</td>
+		<td>2023-01-11 14:36:30</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>as per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-01-11 14:37:08</td>
+	    <td>2023-01-11 14:37:08*as per live no one present at site*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>FSS</td>
+     <td>41893333</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 14:36:29</td>
+		<td>2023-01-11 14:36:28</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>FSS</td>
+     <td>41893310</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 14:36:29</td>
+		<td>2023-01-11 14:36:26</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>FSS</td>
+     <td>41893289</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Vibration Sensor</td>
+	 	<td>ATM1 Vibration Sensor</td>
+        <td>2023-01-11 14:36:29</td>
+		<td>2023-01-11 14:36:24</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>as per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-01-11 14:37:08</td>
+	    <td>2023-01-11 14:37:08*as per live no one present at site*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>FSS</td>
+     <td>41868242</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 13:49:31</td>
+		<td>2023-01-11 13:49:26</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>FSS</td>
+     <td>41868079</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Sensor</td>
+	 	<td>ATM1 Chest Door Sensor</td>
+        <td>2023-01-11 13:49:14</td>
+		<td>2023-01-11 13:49:09</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2023-01-11 17:11:53</td>
+	    <td>2023-01-11 17:11:53*Person doing transaction,*deepakp</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>FSS</td>
+     <td>41867952</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 13:49:01</td>
+		<td>2023-01-11 13:48:56</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>FSS</td>
+     <td>41865635</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Sensor</td>
+	 	<td>ATM1 Chest Door Sensor</td>
+        <td>2023-01-11 13:44:38</td>
+		<td>2023-01-11 13:44:33</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>Cash loading person present on site .,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-01-11 13:44:02</td>
+	    <td>2023-01-11 13:44:02*Cash loading person present on site .,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>FSS</td>
+     <td>41727023</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>504</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 09:27:34</td>
+		<td>2023-01-11 09:31:25</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>FSS</td>
+     <td>41726982</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>504</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 09:27:44</td>
+		<td>2023-01-11 09:31:21</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>FSS</td>
+     <td>41719412</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>554</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Battery Physical Status</td>
+	 	<td>Battery Physical Status</td>
+        <td>2023-01-11 09:17:25</td>
+		<td>2023-01-11 09:17:20</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>as per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-01-11 09:16:56</td>
+	    <td>2023-01-11 09:16:56*as per live no one present at site*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>FSS</td>
+     <td>41713847</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>554</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 09:06:37</td>
+		<td>2023-01-11 09:06:32</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>FSS</td>
+     <td>41556148</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>504</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 04:55:26</td>
+		<td>2023-01-11 04:58:36</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>FSS</td>
+     <td>41556117</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>504</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-11 04:55:36</td>
+		<td>2023-01-11 04:58:33</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>FSS</td>
+     <td>41546695</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>554</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Battery Physical Status</td>
+	 	<td>Battery Physical Status</td>
+        <td>2023-01-11 04:44:14</td>
+		<td>2023-01-11 04:44:15</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>AS per live No issue found after video verification</td>-->
+        <td>Reactive</td>
+        <td>govindaj</td>
+        <td>2023-01-11 04:43:25</td>
+	    <td>2023-01-11 04:43:25*AS per live No issue found after video verification*govindaj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>FSS</td>
+     <td>41543157</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>554</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 04:38:50</td>
+		<td>2023-01-11 04:38:54</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>FSS</td>
+     <td>41539931</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>554</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Battery Physical Status</td>
+	 	<td>Battery Physical Status</td>
+        <td>2023-01-11 04:33:56</td>
+		<td>2023-01-11 04:34:02</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td>AS per live No issue found after video verification</td>-->
+        <td>Reactive</td>
+        <td>govindaj</td>
+        <td>2023-01-11 04:33:23</td>
+	    <td>2023-01-11 04:33:23*AS per live No issue found after video verification*govindaj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>FSS</td>
+     <td>41536393</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>554</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-11 04:28:32</td>
+		<td>2023-01-11 04:28:28</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>FSS</td>
+     <td>41353240</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>504</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-10 23:56:50</td>
+		<td>2023-01-11 00:00:09</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>FSS</td>
+     <td>41353115</td>
+     <td>South</td>
+     <!-- <td>THENI,Tamil Nadu</td>
+     <td>JIVAN THEATRE BODINAYAKAN</td>-->
+    <td>S1B2002277101</td>
+    <td>JIVAN THEATRE BODINAYAKAN</td>
+	<td>THENI</td>
+	<td>Tamil Nadu</td>
+	<td>504</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-10 23:56:40</td>
+		<td>2023-01-11 00:00:06</td>
+		<td>11-January-2023</td>
+		<td>10.126.36.68</td>
+		<td>sec_sbi</td>	
+		<td>090168</td>
+        <td>SBI BANK</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.126.36.68' and b.receivedtime between '2023-01-11 00:00:00' and '2023-01-11 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

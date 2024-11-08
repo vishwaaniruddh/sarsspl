@@ -1,0 +1,7522 @@
+
+<!-- saved from url=(0044)http://192.168.100.23:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min(1).js.download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				   
+				  <a id="1" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php#">Add Site</a>
+				  				<!-- <a   class="dropdown-item" href="addDvrSite.php">Add DVR Site</a>
+                 <a   class="dropdown-item" href="ViewDvrSite.php">View DVR Site</a>-->
+                  <a id="22" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/customerDataMaintain.php">Customer Data Maintain</a>
+				                    <a id="23" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewcustomerDataMaintain.php">View Customer Data Maintain</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                  <a id="3" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addusers.php">Add user</a>
+				                    <a id="4" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewusers.php">View user</a>
+				                   
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                     <a id="8" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/newview.php">HZ /HL View</a>
+					                    <a id="9" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/panelcount.php">Description Count</a>
+										<a id="10" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/useralertreport.php">call alert report</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertviewAsc.php">View Alert Report</a>
+					                    <a id="11" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Mains_UPS_Fail.php">Mains &amp; UPS Fail</a>
+					                    <a id="13" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/graph.php">view Graph</a> 
+					                      <a id="14" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/qrtsites.php">QRT Excel upload</a>
+					                        <a id="15" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/mailcount.php">Mail Count</a>
+					                   <a id="16" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/vm_alert.php">View Monitoring Alert</a>
+                                        <a id="18" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/old_alert.php">Archive Alert</a>
+					 					 <a id="19" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/bypass.php">By Pass Alert</a>
+					 					   <a id="20" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/old_alert_SendIP.php">Archive Alert SendIP</a>
+					  					 <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewemp.php">View Emp Details</a>
+				  				  <a id="24" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/logoutByAdmin.php">User Logout</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Rohit Bhardwaj				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.23:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min(1).js.download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.23:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="PNB">PNB</option>
+ <option value="EPS">EPS</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;10.126.36.192&#39; and b.receivedtime between &#39;2023-11-23 00:00:00&#39; and &#39;2023-12-01 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:189</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>7835120</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-01 10:30:35</td>
+		<td>2023-12-01 10:31:44</td>
+		<td>01-December-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>7833056</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-12-01 10:25:31</td>
+		<td>2023-12-01 10:25:26</td>
+		<td>01-December-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>7833042</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-12-01 10:25:30</td>
+		<td>2023-12-01 10:25:23</td>
+		<td>01-December-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>7525640</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-30 20:39:53</td>
+		<td>2023-11-30 20:39:42</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>7525628</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-30 20:39:53</td>
+		<td>2023-11-30 20:39:40</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-11-30 20:45:14</td>
+	    <td>2023-11-30 20:45:14*as per live no one present at site,*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>7515949</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-30 20:10:54</td>
+		<td>2023-11-30 20:10:07</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>7515784</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-30 20:10:20</td>
+		<td>2023-11-30 20:09:34</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>7515776</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-30 20:10:19</td>
+		<td>2023-11-30 20:09:32</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>7336687</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-30 12:16:08</td>
+		<td>2023-11-30 12:15:26</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>7335147</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open ATM1</td>
+	 	<td>Chest Door Open ATM1</td>
+        <td>2023-11-30 12:12:03</td>
+		<td>2023-11-30 12:11:22</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>7309771</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-30 11:06:40</td>
+		<td>2023-11-30 11:06:33</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>7309743</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-30 11:06:40</td>
+		<td>2023-11-30 11:06:30</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>jyotij</td>
+        <td>2023-11-30 11:09:27</td>
+	    <td>2023-11-30 11:09:27*As per live no one present at site*jyotij</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>7300633</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-30 10:42:21</td>
+		<td>2023-11-30 10:41:42</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>7298752</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-30 10:37:18</td>
+		<td>2023-11-30 10:36:39</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-30 10:39:15</td>
+	    <td>2023-11-30 10:39:15*as per live no one present at site*vinita</td>
+		<td>192.168.100.80</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>7298740</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-30 10:37:16</td>
+		<td>2023-11-30 10:36:36</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-30 10:39:15</td>
+	    <td>2023-11-30 10:39:15*as per live no one present at site*vinita</td>
+		<td>192.168.100.80</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>7263963</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-30 08:50:16</td>
+		<td>2023-11-30 08:49:37</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>7261994</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-30 08:45:19</td>
+		<td>2023-11-30 08:44:40</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>7261860</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-30 08:44:57</td>
+		<td>2023-11-30 08:44:18</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>7250619</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-30 08:15:24</td>
+		<td>2023-11-30 08:14:46</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>7233596</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-30 07:30:24</td>
+		<td>2023-11-30 07:29:47</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>7230099</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-30 07:20:53</td>
+		<td>2023-11-30 07:20:15</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>7083439</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-30 01:06:46</td>
+		<td>2023-11-30 01:06:13</td>
+		<td>30-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>RahulGH</td>
+        <td>2023-11-30 01:08:57</td>
+	    <td>2023-11-30 01:08:57*as per live no one present at site,*RahulGH</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>6969538</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-29 20:15:20</td>
+		<td>2023-11-29 20:14:52</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>6969520</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-29 20:15:20</td>
+		<td>2023-11-29 20:14:50</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>6962564</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-29 19:54:42</td>
+		<td>2023-11-29 19:54:12</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>6959869</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-29 19:45:37</td>
+		<td>2023-11-29 19:45:54</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-11-29 20:16:49</td>
+	    <td>2023-11-29 20:16:49*as per live no one present at site,*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>6959853</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-29 19:45:36</td>
+		<td>2023-11-29 19:45:52</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-11-29 20:16:49</td>
+	    <td>2023-11-29 20:16:49*as per live no one present at site,*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>6932082</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-29 18:23:28</td>
+		<td>2023-11-29 18:23:00</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>6925205</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-29 18:03:07</td>
+		<td>2023-11-29 18:02:38</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>6820801</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-29 12:44:16</td>
+		<td>2023-11-29 12:43:52</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>6816247</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-29 12:26:45</td>
+		<td>2023-11-29 12:26:23</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>6815764</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open ATM1</td>
+	 	<td>Chest Door Open ATM1</td>
+        <td>2023-11-29 12:25:05</td>
+		<td>2023-11-29 12:24:41</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>6811653</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-11-29 12:10:54</td>
+		<td>2023-11-29 12:10:41</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>6797605</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-29 11:22:08</td>
+		<td>2023-11-29 11:21:47</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>6797593</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-29 11:22:08</td>
+		<td>2023-11-29 11:21:44</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>6789517</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-29 10:55:03</td>
+		<td>2023-11-29 10:54:41</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>6789063</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-29 10:53:00</td>
+		<td>2023-11-29 10:52:41</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,As per live</td>-->
+        <td>Reactive</td>
+        <td>jyotij</td>
+        <td>2023-11-29 10:59:32</td>
+	    <td>2023-11-29 10:59:32*Person doing transaction,As per live*jyotij</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>6789041</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-29 10:52:59</td>
+		<td>2023-11-29 10:52:37</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,As per live</td>-->
+        <td>Reactive</td>
+        <td>jyotij</td>
+        <td>2023-11-29 10:59:32</td>
+	    <td>2023-11-29 10:59:32*Person doing transaction,As per live*jyotij</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>6763238</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-29 09:24:33</td>
+		<td>2023-11-29 09:24:10</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>6722537</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-29 07:21:24</td>
+		<td>2023-11-29 07:21:03</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>6693924</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-29 05:59:51</td>
+		<td>2023-11-29 05:59:30</td>
+		<td>29-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>6490831</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-28 21:12:49</td>
+		<td>2023-11-28 21:12:36</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>6490818</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 21:12:49</td>
+		<td>2023-11-28 21:12:34</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>6481346</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-28 20:44:14</td>
+		<td>2023-11-28 20:43:59</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>6480848</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 20:42:51</td>
+		<td>2023-11-28 20:42:37</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-11-28 20:52:54</td>
+	    <td>2023-11-28 20:52:54*as per live no one present at site,*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>6480837</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 20:42:49</td>
+		<td>2023-11-28 20:42:35</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-11-28 20:52:54</td>
+	    <td>2023-11-28 20:52:54*as per live no one present at site,*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>7496850</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>022</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 3 Thermal/ Heat</td>
+	 	<td>ATM 3 Thermal/ Heat</td>
+        <td>2023-11-28 18:36:50</td>
+		<td>2023-11-28 18:36:54</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>172.55.22.86</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>7496799</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 18:31:30</td>
+		<td>2023-11-28 18:31:34</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>172.55.29.214</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>7496610</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 18:10:10</td>
+		<td>2023-11-28 18:10:14</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>172.55.30.147</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>7496602</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 18:09:30</td>
+		<td>2023-11-28 18:09:34</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>10.236.40.61</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>7496514</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 17:58:40</td>
+		<td>2023-11-28 17:58:44</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>10.236.40.104</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>7495799</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 16:43:10</td>
+		<td>2023-11-28 16:43:14</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>172.55.30.62</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>6341461</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-28 13:32:38</td>
+		<td>2023-11-28 13:32:35</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>6341420</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 13:32:38</td>
+		<td>2023-11-28 13:32:31</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>6332984</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-28 13:05:05</td>
+		<td>2023-11-28 13:04:56</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>6332723</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 13:03:05</td>
+		<td>2023-11-28 13:04:06</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>6332253</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open ATM1</td>
+	 	<td>Chest Door Open ATM1</td>
+        <td>2023-11-28 13:02:48</td>
+		<td>2023-11-28 13:02:39</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>6299665</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-28 11:17:35</td>
+		<td>2023-11-28 11:17:30</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>6299655</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 11:17:35</td>
+		<td>2023-11-28 11:17:28</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>6293357</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-28 10:56:24</td>
+		<td>2023-11-28 10:56:18</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>6291182</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 10:48:00</td>
+		<td>2023-11-28 10:47:54</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>QRT person on site mr dattha sardar,</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-28 10:55:19</td>
+	    <td>2023-11-28 10:55:19*QRT person on site mr dattha sardar,*vinita</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>6291169</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 10:47:58</td>
+		<td>2023-11-28 10:47:52</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>QRT person on site mr dattha sardar,</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-28 10:55:19</td>
+	    <td>2023-11-28 10:55:19*QRT person on site mr dattha sardar,*vinita</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>7494904</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>022</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 3 Thermal/ Heat</td>
+	 	<td>ATM 3 Thermal/ Heat</td>
+        <td>2023-11-28 09:36:50</td>
+		<td>2023-11-28 09:36:54</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>172.55.22.86</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>7494847</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 09:31:30</td>
+		<td>2023-11-28 09:31:34</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>172.55.29.214</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>7494651</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 09:10:10</td>
+		<td>2023-11-28 09:10:14</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>172.55.30.147</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>7494647</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 09:09:30</td>
+		<td>2023-11-28 09:09:34</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>10.236.40.61</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>7494546</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 08:58:40</td>
+		<td>2023-11-28 08:58:44</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>10.236.40.104</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>7493821</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-11-28 07:43:10</td>
+		<td>2023-11-28 07:43:14</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>-</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>172.55.30.62</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>6195702</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-28 05:45:48</td>
+		<td>2023-11-28 05:45:45</td>
+		<td>28-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.72</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>5991009</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-27 20:14:15</td>
+		<td>2023-11-27 20:14:23</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>5990994</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-27 20:14:15</td>
+		<td>2023-11-27 20:14:18</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>karans</td>
+        <td>2023-11-27 20:17:50</td>
+	    <td>2023-11-27 20:17:50*As Per Live No One Present At Site,*karans</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>5983554</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-27 19:49:40</td>
+		<td>2023-11-27 19:49:42</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>5982319</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-27 19:45:16</td>
+		<td>2023-11-27 19:45:19</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>someone present at site 2way not working,</td>-->
+        <td>Reactive</td>
+        <td>yuvanraj</td>
+        <td>2023-11-27 19:50:19</td>
+	    <td>2023-11-27 19:50:19*someone present at site 2way not working,*yuvanraj</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>5982306</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-27 19:45:13</td>
+		<td>2023-11-27 19:45:16</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>someone present at site 2way not working,</td>-->
+        <td>Reactive</td>
+        <td>yuvanraj</td>
+        <td>2023-11-27 19:50:19</td>
+	    <td>2023-11-27 19:50:19*someone present at site 2way not working,*yuvanraj</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>5965328</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-27 18:40:58</td>
+		<td>2023-11-27 18:40:12</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>5961314</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-27 18:26:30</td>
+		<td>2023-11-27 18:25:46</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>5917940</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-27 15:33:10</td>
+		<td>2023-11-27 15:32:27</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>5914845</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-27 15:21:39</td>
+		<td>2023-11-27 15:20:54</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>5888791</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-27 13:35:28</td>
+		<td>2023-11-27 13:34:46</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>5888772</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-27 13:35:22</td>
+		<td>2023-11-27 13:34:41</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>5873629</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-27 12:38:55</td>
+		<td>2023-11-27 12:38:15</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>5873624</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-27 12:38:55</td>
+		<td>2023-11-27 12:38:13</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>AS Per Live No one person Present At Site</td>-->
+        <td>Reactive</td>
+        <td>Chandani</td>
+        <td>2023-11-27 12:40:53</td>
+	    <td>2023-11-27 12:40:53*AS Per Live No one person Present At Site*Chandani</td>
+		<td>192.168.100.79</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>5868613</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-27 12:19:42</td>
+		<td>2023-11-27 12:19:01</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>5867837</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-27 12:16:52</td>
+		<td>2023-11-27 12:16:09</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>5866449</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-27 12:11:45</td>
+		<td>2023-11-27 12:11:02</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>5865762</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-27 12:09:09</td>
+		<td>2023-11-27 12:08:27</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>5865745</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-27 12:09:08</td>
+		<td>2023-11-27 12:08:25</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>5842779</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-27 10:40:12</td>
+		<td>2023-11-27 10:39:31</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>ruby</td>
+        <td>2023-11-27 11:42:56</td>
+	    <td>2023-11-27 11:42:56*As Per Live No One Present At Site,*ruby</td>
+		<td>192.168.100.80</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>5831480</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-27 09:45:13</td>
+		<td>2023-11-27 09:44:44</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>5831174</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-27 09:44:04</td>
+		<td>2023-11-27 09:43:24</td>
+		<td>27-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>5713906</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-26 22:34:55</td>
+		<td>2023-11-26 22:35:18</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>5713895</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 22:34:52</td>
+		<td>2023-11-26 22:35:16</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>5711831</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-26 22:29:52</td>
+		<td>2023-11-26 22:29:20</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>5711814</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 22:29:50</td>
+		<td>2023-11-26 22:29:17</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>5699806</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-26 21:57:05</td>
+		<td>2023-11-26 21:56:32</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>5676341</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 20:48:00</td>
+		<td>2023-11-26 20:47:37</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>5675536</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-26 20:44:07</td>
+		<td>2023-11-26 20:44:46</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>5563557</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 14:16:12</td>
+		<td>2023-11-26 14:15:46</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>5561958</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-26 14:11:11</td>
+		<td>2023-11-26 14:10:43</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>5556413</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 13:53:59</td>
+		<td>2023-11-26 13:53:34</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>5554558</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-26 13:48:06</td>
+		<td>2023-11-26 13:47:41</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>5497512</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 10:22:52</td>
+		<td>2023-11-26 10:22:30</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>5497505</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-26 10:22:52</td>
+		<td>2023-11-26 10:22:28</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>swetha</td>
+        <td>2023-11-26 10:25:39</td>
+	    <td>2023-11-26 10:25:39*As per live no one present at site,*swetha</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>5492775</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 10:04:16</td>
+		<td>2023-11-26 10:03:52</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>5490312</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 09:55:55</td>
+		<td>2023-11-26 09:55:39</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>5489772</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-26 09:53:41</td>
+		<td>2023-11-26 09:53:44</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.79</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>5489759</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-26 09:53:40</td>
+		<td>2023-11-26 09:53:40</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.79</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>5486156</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-26 09:42:19</td>
+		<td>2023-11-26 09:41:54</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>5272305</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-26 00:08:59</td>
+		<td>2023-11-26 00:08:41</td>
+		<td>26-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>5267862</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 23:57:26</td>
+		<td>2023-11-25 23:57:10</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>5209439</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 21:14:34</td>
+		<td>2023-11-25 21:14:21</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>5209429</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 21:14:34</td>
+		<td>2023-11-25 21:14:19</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-11-25 21:17:45</td>
+	    <td>2023-11-25 21:17:45*as per live no one present at site,*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>5200879</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 20:46:49</td>
+		<td>2023-11-25 20:46:34</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>5200518</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 20:45:25</td>
+		<td>2023-11-25 20:45:10</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>5200510</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 20:45:23</td>
+		<td>2023-11-25 20:45:08</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>5150653</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 17:48:39</td>
+		<td>2023-11-25 17:48:27</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>5150613</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 17:48:30</td>
+		<td>2023-11-25 17:48:20</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>5150602</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 17:48:30</td>
+		<td>2023-11-25 17:48:17</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>5142479</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 17:19:22</td>
+		<td>2023-11-25 17:19:09</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>yash</td>
+        <td>2023-11-25 19:06:56</td>
+	    <td>2023-11-25 19:06:56*Person doing transaction,*yash</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>5142472</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 17:19:21</td>
+		<td>2023-11-25 17:19:07</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>yash</td>
+        <td>2023-11-25 19:06:56</td>
+	    <td>2023-11-25 19:06:56*Person doing transaction,*yash</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>5019540</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 10:41:20</td>
+		<td>2023-11-25 10:41:16</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>5019522</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 10:41:20</td>
+		<td>2023-11-25 10:41:12</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2023-11-25 10:52:39</td>
+	    <td>2023-11-25 10:52:39*as per live no one present at site,*sanjana sonawane</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>5014626</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 10:18:10</td>
+		<td>2023-11-25 10:18:02</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>5013247</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 10:11:46</td>
+		<td>2023-11-25 10:11:39</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2023-11-25 10:18:31</td>
+	    <td>2023-11-25 10:18:31*HK person on site,*sanjana sonawane</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>5013237</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-25 10:11:44</td>
+		<td>2023-11-25 10:11:37</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2023-11-25 10:18:31</td>
+	    <td>2023-11-25 10:18:31*HK person on site,*sanjana sonawane</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>4975049</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 07:47:42</td>
+		<td>2023-11-25 07:47:35</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>4974614</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 07:46:12</td>
+		<td>2023-11-25 07:46:06</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>4960398</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 06:56:35</td>
+		<td>2023-11-25 06:56:30</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>4960356</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 06:56:26</td>
+		<td>2023-11-25 06:56:22</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>4960344</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 06:56:23</td>
+		<td>2023-11-25 06:56:19</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>4954192</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 06:33:06</td>
+		<td>2023-11-25 06:33:00</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>4952992</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 06:28:59</td>
+		<td>2023-11-25 06:28:53</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>4952111</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 06:25:10</td>
+		<td>2023-11-25 06:25:07</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>4952094</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 06:25:07</td>
+		<td>2023-11-25 06:25:04</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>4951981</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 06:24:46</td>
+		<td>2023-11-25 06:24:42</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>4951968</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 06:24:43</td>
+		<td>2023-11-25 06:24:39</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>4951932</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 06:24:35</td>
+		<td>2023-11-25 06:24:32</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>4951911</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 06:24:33</td>
+		<td>2023-11-25 06:24:27</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>4951883</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 06:24:24</td>
+		<td>2023-11-25 06:24:22</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>4951874</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 06:24:22</td>
+		<td>2023-11-25 06:24:19</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>4951672</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 06:23:45</td>
+		<td>2023-11-25 06:23:39</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>4950664</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-25 06:20:28</td>
+		<td>2023-11-25 06:20:22</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Euronet</td>
+     <td>4941825</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-25 05:50:18</td>
+		<td>2023-11-25 05:50:13</td>
+		<td>25-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Euronet</td>
+     <td>4721667</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 19:38:00</td>
+		<td>2023-11-24 19:38:06</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Euronet</td>
+     <td>4721650</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 19:38:00</td>
+		<td>2023-11-24 19:38:03</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Euronet</td>
+     <td>4712491</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 19:10:07</td>
+		<td>2023-11-24 19:10:10</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Euronet</td>
+     <td>4711911</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 19:08:30</td>
+		<td>2023-11-24 19:08:33</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Euronet</td>
+     <td>4711900</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 19:08:28</td>
+		<td>2023-11-24 19:08:31</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Euronet</td>
+     <td>4645783</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 15:52:44</td>
+		<td>2023-11-24 15:53:26</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Euronet</td>
+     <td>4645254</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 15:52:44</td>
+		<td>2023-11-24 15:52:02</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Euronet</td>
+     <td>4635022</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 15:25:01</td>
+		<td>2023-11-24 15:24:18</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Euronet</td>
+     <td>4634525</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 15:23:44</td>
+		<td>2023-11-24 15:23:00</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Euronet</td>
+     <td>4634463</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 15:23:30</td>
+		<td>2023-11-24 15:22:51</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Euronet person  present at site  mr Nitin  id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-24 15:27:01</td>
+	    <td>2023-11-24 15:27:01*Euronet person  present at site  mr Nitin  id card shown 2way done*vinita</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Euronet</td>
+     <td>4634450</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-11-24 15:23:30</td>
+		<td>2023-11-24 15:22:48</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Euronet person  present at site  mr Nitin  id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-24 15:27:01</td>
+	    <td>2023-11-24 15:27:01*Euronet person  present at site  mr Nitin  id card shown 2way done*vinita</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Euronet</td>
+     <td>4634435</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 15:23:29</td>
+		<td>2023-11-24 15:22:45</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Euronet person  present at site  mr Nitin  id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-24 15:27:01</td>
+	    <td>2023-11-24 15:27:01*Euronet person  present at site  mr Nitin  id card shown 2way done*vinita</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Euronet</td>
+     <td>4634319</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 15:22:41</td>
+		<td>2023-11-24 15:22:27</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Euronet</td>
+     <td>4633350</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 15:20:33</td>
+		<td>2023-11-24 15:19:49</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Euronet person  present at site  mr Nitin  id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-24 15:26:03</td>
+	    <td>2023-11-24 15:26:03*Euronet person  present at site  mr Nitin  id card shown 2way done*vinita</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Euronet</td>
+     <td>4633337</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 15:20:30</td>
+		<td>2023-11-24 15:19:46</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>Euronet person  present at site  mr Nitin  id card shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vinita</td>
+        <td>2023-11-24 15:26:03</td>
+	    <td>2023-11-24 15:26:03*Euronet person  present at site  mr Nitin  id card shown 2way done*vinita</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Euronet</td>
+     <td>4600893</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 13:44:16</td>
+		<td>2023-11-24 13:43:34</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Euronet</td>
+     <td>4600114</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open ATM1</td>
+	 	<td>Chest Door Open ATM1</td>
+        <td>2023-11-24 13:41:49</td>
+		<td>2023-11-24 13:41:07</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Euronet</td>
+     <td>4545636</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 11:04:37</td>
+		<td>2023-11-24 11:03:58</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Euronet</td>
+     <td>4545626</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 11:04:37</td>
+		<td>2023-11-24 11:03:56</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Euronet</td>
+     <td>4537000</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 10:39:06</td>
+		<td>2023-11-24 10:38:27</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Euronet</td>
+     <td>4535655</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 10:35:07</td>
+		<td>2023-11-24 10:34:28</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>165</td>-->
+    <td>Euronet</td>
+     <td>4535629</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-24 10:35:05</td>
+		<td>2023-11-24 10:34:25</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>166</td>-->
+    <td>Euronet</td>
+     <td>4517099</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 09:35:11</td>
+		<td>2023-11-24 09:34:30</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>167</td>-->
+    <td>Euronet</td>
+     <td>4515802</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-24 09:30:21</td>
+		<td>2023-11-24 09:29:42</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>168</td>-->
+    <td>Euronet</td>
+     <td>4317841</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-24 00:30:34</td>
+		<td>2023-11-24 00:29:59</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>169</td>-->
+    <td>Euronet</td>
+     <td>4314014</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-24 00:20:41</td>
+		<td>2023-11-24 00:20:06</td>
+		<td>24-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>170</td>-->
+    <td>Euronet</td>
+     <td>4226638</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 21:11:19</td>
+		<td>2023-11-23 21:10:49</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>171</td>-->
+    <td>Euronet</td>
+     <td>4226629</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-23 21:11:19</td>
+		<td>2023-11-23 21:10:47</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>172</td>-->
+    <td>Euronet</td>
+     <td>4215718</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 20:42:30</td>
+		<td>2023-11-23 20:42:23</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>173</td>-->
+    <td>Euronet</td>
+     <td>4215707</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-23 20:42:06</td>
+		<td>2023-11-23 20:42:21</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>174</td>-->
+    <td>Euronet</td>
+     <td>4215697</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-23 20:42:04</td>
+		<td>2023-11-23 20:42:19</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>175</td>-->
+    <td>Euronet</td>
+     <td>4028213</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 12:25:57</td>
+		<td>2023-11-23 12:25:31</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>176</td>-->
+    <td>Euronet</td>
+     <td>4027633</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open ATM1</td>
+	 	<td>Chest Door Open ATM1</td>
+        <td>2023-11-23 12:24:23</td>
+		<td>2023-11-23 12:23:56</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>Gautami</td>
+        <td>2023-11-23 13:04:00</td>
+	    <td>2023-11-23 13:04:00*As Per Live No One Present At Site,*Gautami</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>177</td>-->
+    <td>Euronet</td>
+     <td>4011886</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 11:44:56</td>
+		<td>2023-11-23 11:44:30</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>178</td>-->
+    <td>Euronet</td>
+     <td>4009368</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-23 11:38:49</td>
+		<td>2023-11-23 11:38:24</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>179</td>-->
+    <td>Euronet</td>
+     <td>4004932</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 11:27:06</td>
+		<td>2023-11-23 11:26:49</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>180</td>-->
+    <td>Euronet</td>
+     <td>4004915</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-23 11:27:06</td>
+		<td>2023-11-23 11:26:45</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>181</td>-->
+    <td>Euronet</td>
+     <td>3994245</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 11:00:36</td>
+		<td>2023-11-23 11:00:11</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>182</td>-->
+    <td>Euronet</td>
+     <td>3993179</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-23 10:57:57</td>
+		<td>2023-11-23 10:57:32</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>183</td>-->
+    <td>Euronet</td>
+     <td>3993166</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-11-23 10:57:55</td>
+		<td>2023-11-23 10:57:30</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>184</td>-->
+    <td>Euronet</td>
+     <td>3966739</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 09:50:44</td>
+		<td>2023-11-23 09:50:19</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>185</td>-->
+    <td>Euronet</td>
+     <td>3926808</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-23 08:05:28</td>
+		<td>2023-11-23 08:06:09</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>186</td>-->
+    <td>Euronet</td>
+     <td>3924825</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 08:01:36</td>
+		<td>2023-11-23 08:01:14</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>187</td>-->
+    <td>Euronet</td>
+     <td>3877479</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-23 06:07:26</td>
+		<td>2023-11-23 06:07:04</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>188</td>-->
+    <td>Euronet</td>
+     <td>3877095</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-11-23 06:06:31</td>
+		<td>2023-11-23 06:06:09</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>189</td>-->
+    <td>Euronet</td>
+     <td>3874524</td>
+     <td>West</td>
+     <!-- <td>Aurangabad,Maharashtra</td>
+     <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>-->
+    <td>P3ENNZ27</td>
+    <td>Gut No 150 Balkrishna Petrolium Ranjangaon S Tal Gangapur Dist Aurangabad Maharashtra 431136</td>
+	<td>Aurangabad</td>
+	<td>Maharashtra</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2023-11-23 06:00:52</td>
+		<td>2023-11-23 06:00:32</td>
+		<td>23-November-2023</td>
+		<td>10.126.36.192</td>
+		<td>RASS</td>	
+		<td>091090</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.126.36.192' and b.receivedtime between '2023-11-23 00:00:00' and '2023-12-01 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

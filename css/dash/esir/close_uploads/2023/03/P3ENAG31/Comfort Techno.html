@@ -1,0 +1,3653 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.205' and b.receivedtime between '2023-03-17 00:00:00' and '2023-03-18 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.25.205&#39; and b.receivedtime between &#39;2023-03-17 00:00:00&#39; and &#39;2023-03-18 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:85</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>104844806</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-18 06:58:05</td>
+		<td>2023-03-18 06:58:16</td>
+		<td>18-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>104677060</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-18 02:58:01</td>
+		<td>2023-03-18 02:58:13</td>
+		<td>18-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>104579292</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-18 00:31:00</td>
+		<td>2023-03-18 00:38:14</td>
+		<td>18-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>104579252</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-18 00:31:00</td>
+		<td>2023-03-18 00:38:12</td>
+		<td>18-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>104512662</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-17 22:57:56</td>
+		<td>2023-03-17 22:58:11</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>104395224</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:44:53</td>
+		<td>2023-03-17 19:44:57</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>104395205</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 19:44:53</td>
+		<td>2023-03-17 19:44:55</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:45:19</td>
+	    <td>2023-03-17 19:45:19*No Issue found after video verification,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>104379168</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:17:53</td>
+		<td>2023-03-17 19:17:57</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>104379145</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:17:53</td>
+		<td>2023-03-17 19:17:55</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>104379082</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 19:17:46</td>
+		<td>2023-03-17 19:17:48</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:18:14</td>
+	    <td>2023-03-17 19:18:14*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>104379063</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-17 19:17:44</td>
+		<td>2023-03-17 19:17:46</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>104379042</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:17:40</td>
+		<td>2023-03-17 19:17:44</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>104379017</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:17:39</td>
+		<td>2023-03-17 19:17:42</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>104378520</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>034</td>
+	<td>TR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:16:50</td>
+		<td>2023-03-17 19:16:52</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>104377653</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 19:15:33</td>
+		<td>2023-03-17 19:15:35</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:16:05</td>
+	    <td>2023-03-17 19:16:05*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>104377626</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-17 19:15:31</td>
+		<td>2023-03-17 19:15:33</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>104377601</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 19:15:29</td>
+		<td>2023-03-17 19:15:31</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:16:05</td>
+	    <td>2023-03-17 19:16:05*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>104377384</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:15:06</td>
+		<td>2023-03-17 19:15:10</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>104377363</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:15:05</td>
+		<td>2023-03-17 19:15:08</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>104377268</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:14:57</td>
+		<td>2023-03-17 19:14:59</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>104377218</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-03-17 19:14:52</td>
+		<td>2023-03-17 19:14:54</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:15:22</td>
+	    <td>2023-03-17 19:15:22*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>104373834</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 19:09:33</td>
+		<td>2023-03-17 19:09:35</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>104373815</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-03-17 19:09:31</td>
+		<td>2023-03-17 19:09:33</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:10:02</td>
+	    <td>2023-03-17 19:10:02*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>104371947</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2000-01-01 00:08:29</td>
+		<td>2023-03-17 19:06:32</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:06:57</td>
+	    <td>2023-03-17 19:06:57*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>104371669</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:08:04</td>
+		<td>2023-03-17 19:06:06</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>104371650</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:08:02</td>
+		<td>2023-03-17 19:06:04</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:06:29</td>
+	    <td>2023-03-17 19:06:29*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>104371598</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:07:56</td>
+		<td>2023-03-17 19:05:58</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>104371577</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:07:54</td>
+		<td>2023-03-17 19:05:56</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:06:16</td>
+	    <td>2023-03-17 19:06:16*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>104371414</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:07:38</td>
+		<td>2023-03-17 19:05:40</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>104371348</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:07:32</td>
+		<td>2023-03-17 19:05:34</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:06:00</td>
+	    <td>2023-03-17 19:06:00*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>104371263</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:07:22</td>
+		<td>2023-03-17 19:05:25</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>104371207</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:07:17</td>
+		<td>2023-03-17 19:05:19</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:05:41</td>
+	    <td>2023-03-17 19:05:41*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>104371133</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:07:10</td>
+		<td>2023-03-17 19:05:12</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>104371113</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:07:07</td>
+		<td>2023-03-17 19:05:10</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:05:36</td>
+	    <td>2023-03-17 19:05:36*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>104371080</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:07:05</td>
+		<td>2023-03-17 19:05:07</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>104371056</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:07:02</td>
+		<td>2023-03-17 19:05:05</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:05:28</td>
+	    <td>2023-03-17 19:05:28*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>104371010</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:06:58</td>
+		<td>2023-03-17 19:05:01</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>104370952</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:06:53</td>
+		<td>2023-03-17 19:04:56</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:05:20</td>
+	    <td>2023-03-17 19:05:20*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>104370922</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:06:51</td>
+		<td>2023-03-17 19:04:53</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>104370895</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:06:49</td>
+		<td>2023-03-17 19:04:51</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:05:17</td>
+	    <td>2023-03-17 19:05:17*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>104370784</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:06:39</td>
+		<td>2023-03-17 19:04:41</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>104370759</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:06:36</td>
+		<td>2023-03-17 19:04:39</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:05:12</td>
+	    <td>2023-03-17 19:05:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>104370723</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:06:34</td>
+		<td>2023-03-17 19:04:36</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>104370689</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:06:30</td>
+		<td>2023-03-17 19:04:33</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:04:55</td>
+	    <td>2023-03-17 19:04:55*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>104370653</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:06:28</td>
+		<td>2023-03-17 19:04:30</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>104370602</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:06:24</td>
+		<td>2023-03-17 19:04:26</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:04:49</td>
+	    <td>2023-03-17 19:04:49*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>104370566</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:06:20</td>
+		<td>2023-03-17 19:04:23</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>104370339</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:06:01</td>
+		<td>2023-03-17 19:04:04</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:04:25</td>
+	    <td>2023-03-17 19:04:25*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>104370308</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:05:58</td>
+		<td>2023-03-17 19:04:01</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>104370224</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:05:52</td>
+		<td>2023-03-17 19:03:54</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:04:25</td>
+	    <td>2023-03-17 19:04:25*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>104370127</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:05:44</td>
+		<td>2023-03-17 19:03:46</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>104370093</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:05:40</td>
+		<td>2023-03-17 19:03:43</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:04:03</td>
+	    <td>2023-03-17 19:04:03*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>104370056</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:05:37</td>
+		<td>2023-03-17 19:03:40</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>104369912</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:05:25</td>
+		<td>2023-03-17 19:03:28</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:03:48</td>
+	    <td>2023-03-17 19:03:48*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>104369879</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:05:23</td>
+		<td>2023-03-17 19:03:25</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>104369517</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:04:48</td>
+		<td>2023-03-17 19:02:51</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 19:03:15</td>
+	    <td>2023-03-17 19:03:15*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>104369486</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2000-01-01 00:04:46</td>
+		<td>2023-03-17 19:02:48</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>104366533</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2000-01-01 00:00:16</td>
+		<td>2023-03-17 18:58:27</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:58:53</td>
+	    <td>2023-03-17 18:58:53*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>104366512</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2000-01-01 00:00:16</td>
+		<td>2023-03-17 18:58:25</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:58:53</td>
+	    <td>2023-03-17 18:58:53*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>104366488</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2000-01-01 00:00:16</td>
+		<td>2023-03-17 18:58:23</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:58:53</td>
+	    <td>2023-03-17 18:58:53*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>104366468</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2000-01-01 00:00:09</td>
+		<td>2023-03-17 18:58:21</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>104366447</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2000-01-01 00:00:09</td>
+		<td>2023-03-17 18:58:19</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>104366422</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2000-01-01 00:00:09</td>
+		<td>2023-03-17 18:58:17</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>104366399</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2000-01-01 00:00:12</td>
+		<td>2023-03-17 18:58:15</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:58:53</td>
+	    <td>2023-03-17 18:58:53*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>104363753</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2023-03-17 18:54:44</td>
+		<td>2023-03-17 18:54:12</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>comfort enginer at site mr sonu id shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:58:37</td>
+	    <td>2023-03-17 18:58:37*comfort enginer at site mr sonu id shown 2way done*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>104363545</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-03-17 18:54:07</td>
+		<td>2023-03-17 18:53:51</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>comfort enginer at site mr sonu id shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:58:34</td>
+	    <td>2023-03-17 18:58:34*comfort enginer at site mr sonu id shown 2way done*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>104363522</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 18:54:02</td>
+		<td>2023-03-17 18:53:49</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>104363498</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 18:53:32</td>
+		<td>2023-03-17 18:53:47</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>comfort enginer at site mr sonu id shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:58:31</td>
+	    <td>2023-03-17 18:58:31*comfort enginer at site mr sonu id shown 2way done*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>104362956</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-03-17 18:53:17</td>
+		<td>2023-03-17 18:52:46</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:53:17</td>
+	    <td>2023-03-17 18:53:17*No Issue found,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>104362929</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 18:53:14</td>
+		<td>2023-03-17 18:52:43</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>104362741</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 18:52:54</td>
+		<td>2023-03-17 18:52:23</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:53:17</td>
+	    <td>2023-03-17 18:53:17*No Issue found,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>104362565</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-03-17 18:52:35</td>
+		<td>2023-03-17 18:52:03</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:53:17</td>
+	    <td>2023-03-17 18:53:17*No Issue found,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>104362473</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 18:52:23</td>
+		<td>2023-03-17 18:51:52</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:53:17</td>
+	    <td>2023-03-17 18:53:17*No Issue found,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>104353867</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 18:38:11</td>
+		<td>2023-03-17 18:37:40</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>comfort enginer at site id shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:38:45</td>
+	    <td>2023-03-17 18:38:45*comfort enginer at site id shown 2way done*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>104353790</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-03-17 18:38:02</td>
+		<td>2023-03-17 18:37:33</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td>comfort enginer at site id shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-17 18:38:45</td>
+	    <td>2023-03-17 18:38:45*comfort enginer at site id shown 2way done*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>104353770</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-17 18:38:01</td>
+		<td>2023-03-17 18:37:31</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>104352551</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-17 18:30:00</td>
+		<td>2023-03-17 18:35:34</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>104352525</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-17 18:30:00</td>
+		<td>2023-03-17 18:35:32</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>104258494</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 16:05:48</td>
+		<td>2023-03-17 16:05:30</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>104121880</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-17 12:05:44</td>
+		<td>2023-03-17 12:05:27</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>103974294</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 08:05:39</td>
+		<td>2023-03-17 08:05:24</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>103796500</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-17 04:05:35</td>
+		<td>2023-03-17 04:05:21</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>103639445</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 00:31:00</td>
+		<td>2023-03-17 00:35:21</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>103639420</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 00:31:00</td>
+		<td>2023-03-17 00:35:19</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>103617199</td>
+     <td>North</td>
+     <!-- <td>Aligarh,Uttar Pradesh</td>
+     <td>KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH</td>-->
+    <td>P3ENAG31</td>
+    <td>13/20 KABAR KUTTA OPP RUBY HOTEL MAIN ROADWAYS OLD BUS STAND G.T ROAD ALIGARH UP 202001</td>
+	<td>Aligarh</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-17 00:05:30</td>
+		<td>2023-03-17 00:05:18</td>
+		<td>17-March-2023</td>
+		<td>172.55.25.205</td>
+		<td>RASS</td>	
+		<td>065545</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.205' and b.receivedtime between '2023-03-17 00:00:00' and '2023-03-18 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

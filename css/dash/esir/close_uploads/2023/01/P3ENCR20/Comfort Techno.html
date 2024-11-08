@@ -1,0 +1,6232 @@
+
+<!-- saved from url=(0044)http://192.168.100.23:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				   
+				  <a id="1" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php#">Add Site</a>
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsite.php">View Site</a>
+                                    <a id="21" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Project_Add.php">Project Add</a>
+				  				<!-- <a   class="dropdown-item" href="addDvrSite.php">Add DVR Site</a>
+                 <a   class="dropdown-item" href="ViewDvrSite.php">View DVR Site</a>-->
+                  <a id="22" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/customerDataMaintain.php">Customer Data Maintain</a>
+				                    <a id="23" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewcustomerDataMaintain.php">View Customer Data Maintain</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                  <a id="3" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addusers.php">Add user</a>
+				                    <a id="4" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewusers.php">View user</a>
+				                   
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                   
+                 <a id="6" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/lastcommunication.php">Last Communication</a>
+				                     <a id="7" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/ebmisnew.php">Count call close by</a>
+					                    <a id="8" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/newview.php">HZ /HL View</a>
+					                    <a id="9" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/panelcount.php">Description Count</a>
+										<a id="10" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/useralertreport.php">call alert report</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertviewAsc.php">View Alert Report</a>
+					                    <a id="11" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Mains_UPS_Fail.php">Mains &amp; UPS Fail</a>
+					                    <a id="13" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/graph.php">view Graph</a> 
+					                      <a id="14" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/qrtsites.php">QRT Excel upload</a>
+					                        <a id="15" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/mailcount.php">Mail Count</a>
+					                   <a id="16" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="19" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/bypass.php">By Pass Alert</a>
+					 					   <a id="20" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/old_alert_SendIP.php">Archive Alert SendIP</a>
+					  					 <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewemp.php">View Emp Details</a>
+				  				  <a id="24" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/logoutByAdmin.php">User Logout</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Rohit Bhardwaj				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.23:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.23:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.23.139&#39; and b.receivedtime between &#39;2023-01-19 00:00:00&#39; and &#39;2023-01-19 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:154</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>14520605</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:10:50</td>
+		<td>2023-01-19 18:12:25</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>14520586</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-19 18:10:22</td>
+		<td>2023-01-19 18:12:19</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>14520568</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-19 18:10:22</td>
+		<td>2023-01-19 18:12:13</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>14520548</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:10:20</td>
+		<td>2023-01-19 18:12:06</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>14520524</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door</td>
+	 	<td>ATM1 Chest Door</td>
+        <td>2023-01-19 18:10:20</td>
+		<td>2023-01-19 18:12:00</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>14520506</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:10:20</td>
+		<td>2023-01-19 18:11:54</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>14520488</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Thermal Sensor</td>
+	 	<td>ATM1 Thermal Sensor</td>
+        <td>2023-01-19 18:10:20</td>
+		<td>2023-01-19 18:11:48</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>14520472</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:10:14</td>
+		<td>2023-01-19 18:11:42</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>14520455</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:10:14</td>
+		<td>2023-01-19 18:11:36</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>14520431</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:09:46</td>
+		<td>2023-01-19 18:11:30</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>14520414</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:09:46</td>
+		<td>2023-01-19 18:11:24</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>14520390</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:09:39</td>
+		<td>2023-01-19 18:11:17</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>14520369</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:09:39</td>
+		<td>2023-01-19 18:11:11</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>14520349</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:09:35</td>
+		<td>2023-01-19 18:11:05</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>14520327</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>017</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Main Door Shutter Sensor</td>
+	 	<td>ATM Main Door Shutter Sensor</td>
+        <td>2023-01-19 18:09:35</td>
+		<td>2023-01-19 18:10:59</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>14520306</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-19 18:09:30</td>
+		<td>2023-01-19 18:10:53</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>14520289</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-01-19 18:09:30</td>
+		<td>2023-01-19 18:10:47</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>14520274</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:09:29</td>
+		<td>2023-01-19 18:10:41</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>14520257</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-01-19 18:09:29</td>
+		<td>2023-01-19 18:10:35</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>14520244</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:09:13</td>
+		<td>2023-01-19 18:10:29</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>14520226</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:09:13</td>
+		<td>2023-01-19 18:10:22</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>14520210</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:09:12</td>
+		<td>2023-01-19 18:10:16</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>14520192</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:09:12</td>
+		<td>2023-01-19 18:10:10</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>14520175</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:09:12</td>
+		<td>2023-01-19 18:10:04</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>14520160</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:09:12</td>
+		<td>2023-01-19 18:09:58</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>14520145</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:08:56</td>
+		<td>2023-01-19 18:09:52</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>14520130</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:09:46</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>14520116</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 HOOD SENSOR</td>
+	 	<td>ATM1 HOOD SENSOR</td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:09:40</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>14520100</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:09:33</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>14520078</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV1 + CCTV2+ CCTV3 Removal Sensor</td>
+	 	<td>CCTV1 + CCTV2+ CCTV3 Removal Sensor</td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:09:27</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>14520057</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter sense</td>
+	 	<td>Hooter sense</td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:09:21</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>14520043</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:09:15</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>14520029</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:09:09</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>14520013</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fails (DI) </td>
+	 	<td>AC Mains Fails (DI) </td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:09:03</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>14519999</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>CG</td>
+ 	
+    	 
+
+	 
+	 	<td>System Arm for AC Maintenance</td>
+	 	<td>System Arm for AC Maintenance</td>
+        <td>2023-01-19 18:08:25</td>
+		<td>2023-01-19 18:08:57</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>14519953</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:07:49</td>
+		<td>2023-01-19 18:08:35</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>14519934</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:07:43</td>
+		<td>2023-01-19 18:08:29</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>14519913</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>OG</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:07:43</td>
+		<td>2023-01-19 18:08:23</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>14519897</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 18:07:43</td>
+		<td>2023-01-19 18:08:17</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>14519882</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:07:32</td>
+		<td>2023-01-19 18:08:11</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>14519863</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 18:07:29</td>
+		<td>2023-01-19 18:08:05</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>14519841</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:07:26</td>
+		<td>2023-01-19 18:07:58</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>14519748</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-01-19 18:06:48</td>
+		<td>2023-01-19 18:07:22</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>14519734</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 18:04:14</td>
+		<td>2023-01-19 18:07:16</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:12:54</td>
+	    <td>2023-01-19 18:12:54*Comfort engineer at site mr sonu id showing 2way done,*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>14519719</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:04:11</td>
+		<td>2023-01-19 18:07:09</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>14519702</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 18:04:10</td>
+		<td>2023-01-19 18:07:03</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:12:54</td>
+	    <td>2023-01-19 18:12:54*Comfort engineer at site mr sonu id showing 2way done,*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>14519686</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:04:07</td>
+		<td>2023-01-19 18:06:57</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:12:54</td>
+	    <td>2023-01-19 18:12:54*Comfort engineer at site mr sonu id showing 2way done,*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>14519669</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:04:03</td>
+		<td>2023-01-19 18:06:51</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:12:54</td>
+	    <td>2023-01-19 18:12:54*Comfort engineer at site mr sonu id showing 2way done,*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>14519654</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:03:42</td>
+		<td>2023-01-19 18:06:45</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>14519635</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>007</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:03:42</td>
+		<td>2023-01-19 18:06:39</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>14519615</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:03:42</td>
+		<td>2023-01-19 18:06:33</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>14519597</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:06:26</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>14519578</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 HOOD SENSOR</td>
+	 	<td>ATM1 HOOD SENSOR</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:06:20</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:12:54</td>
+	    <td>2023-01-19 18:12:54*Comfort engineer at site mr sonu id showing 2way done,*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>14519557</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:06:14</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>14519542</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV1 + CCTV2+ CCTV3 Removal Sensor</td>
+	 	<td>CCTV1 + CCTV2+ CCTV3 Removal Sensor</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:06:08</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:12:54</td>
+	    <td>2023-01-19 18:12:54*Comfort engineer at site mr sonu id showing 2way done,*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>14519522</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:06:02</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>14519504</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:56</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:12:54</td>
+	    <td>2023-01-19 18:12:54*Comfort engineer at site mr sonu id showing 2way done,*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>14519486</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter sense</td>
+	 	<td>Hooter sense</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:50</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:12:54</td>
+	    <td>2023-01-19 18:12:54*Comfort engineer at site mr sonu id showing 2way done,*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>14519465</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:44</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>14519447</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:38</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:48</td>
+	    <td>2023-01-19 18:07:48*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>14519426</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:31</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>14519407</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:25</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:48</td>
+	    <td>2023-01-19 18:07:48*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>14519392</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fails (DI) </td>
+	 	<td>AC Mains Fails (DI) </td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:19</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>14519377</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>CF</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:13</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>14519360</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Restarted (Power On)</td>
+	 	<td>System Restarted (Power On)</td>
+        <td>2023-01-19 18:03:35</td>
+		<td>2023-01-19 18:05:07</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>14519342</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:03:18</td>
+		<td>2023-01-19 18:05:01</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>14519324</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 18:03:15</td>
+		<td>2023-01-19 18:04:55</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:48</td>
+	    <td>2023-01-19 18:07:48*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>14519307</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:03:07</td>
+		<td>2023-01-19 18:04:49</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>14519291</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:02:47</td>
+		<td>2023-01-19 18:04:42</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>14519274</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-01-19 18:02:47</td>
+		<td>2023-01-19 18:04:36</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:48</td>
+	    <td>2023-01-19 18:07:48*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>14519249</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:02:47</td>
+		<td>2023-01-19 18:04:30</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>14519234</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:04:24</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>14519221</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 HOOD SENSOR</td>
+	 	<td>ATM1 HOOD SENSOR</td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:04:18</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:48</td>
+	    <td>2023-01-19 18:07:48*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>14519161</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:03:57</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>14519145</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV1 + CCTV2+ CCTV3 Removal Sensor</td>
+	 	<td>CCTV1 + CCTV2+ CCTV3 Removal Sensor</td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:03:50</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:48</td>
+	    <td>2023-01-19 18:07:48*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>14519127</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter sense</td>
+	 	<td>Hooter sense</td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:03:44</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:48</td>
+	    <td>2023-01-19 18:07:48*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>14519113</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:03:38</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>14519096</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:03:32</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>14519070</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fails (DI) </td>
+	 	<td>AC Mains Fails (DI) </td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:03:26</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>14519055</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>CG</td>
+ 	
+    	 
+
+	 
+	 	<td>System Arm for AC Maintenance</td>
+	 	<td>System Arm for AC Maintenance</td>
+        <td>2023-01-19 18:02:19</td>
+		<td>2023-01-19 18:03:20</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>14519039</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:01:24</td>
+		<td>2023-01-19 18:03:14</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>14519024</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:01:21</td>
+		<td>2023-01-19 18:03:08</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>14519008</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:01:20</td>
+		<td>2023-01-19 18:03:01</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>14518991</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:01:14</td>
+		<td>2023-01-19 18:02:55</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>14518975</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:01:10</td>
+		<td>2023-01-19 18:02:49</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>14518961</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:01:07</td>
+		<td>2023-01-19 18:02:43</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>14518943</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 18:00:51</td>
+		<td>2023-01-19 18:02:37</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>14518920</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>017</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Main Door Shutter Sensor</td>
+	 	<td>ATM Main Door Shutter Sensor</td>
+        <td>2023-01-19 18:00:51</td>
+		<td>2023-01-19 18:02:31</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>14518897</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:00:44</td>
+		<td>2023-01-19 18:02:25</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>14518879</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:00:41</td>
+		<td>2023-01-19 18:02:19</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr sonu id showing 2way done,as per live</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-01-19 18:07:09</td>
+	    <td>2023-01-19 18:07:09*Comfort engineer at site mr sonu id showing 2way done,as per live*lallan</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>14518860</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:00:32</td>
+		<td>2023-01-19 18:02:12</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>14518841</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:00:29</td>
+		<td>2023-01-19 18:02:06</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>14518821</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:00:25</td>
+		<td>2023-01-19 18:02:00</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>14518800</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 18:00:16</td>
+		<td>2023-01-19 18:01:54</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>14518783</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:00:15</td>
+		<td>2023-01-19 18:01:48</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>14518765</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:00:13</td>
+		<td>2023-01-19 18:01:42</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>14518747</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:00:10</td>
+		<td>2023-01-19 18:01:36</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>14518727</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 18:00:06</td>
+		<td>2023-01-19 18:01:30</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>14518712</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>007</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:00:00</td>
+		<td>2023-01-19 18:01:23</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>14518693</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 18:00:00</td>
+		<td>2023-01-19 18:01:17</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>14518676</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 17:59:59</td>
+		<td>2023-01-19 18:01:11</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>14518653</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:01:05</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>14518637</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 HOOD SENSOR</td>
+	 	<td>ATM1 HOOD SENSOR</td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:00:59</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>14518620</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:00:53</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>14518597</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV1 + CCTV2+ CCTV3 Removal Sensor</td>
+	 	<td>CCTV1 + CCTV2+ CCTV3 Removal Sensor</td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:00:47</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>14518574</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter sense</td>
+	 	<td>Hooter sense</td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:00:41</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>14518552</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:00:34</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>14518519</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:00:28</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>14518472</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fails (DI) </td>
+	 	<td>AC Mains Fails (DI) </td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:00:22</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>14518413</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>CG</td>
+ 	
+    	 
+
+	 
+	 	<td>System Arm for AC Maintenance</td>
+	 	<td>System Arm for AC Maintenance</td>
+        <td>2023-01-19 17:59:45</td>
+		<td>2023-01-19 18:00:16</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>14518051</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:57:55</td>
+		<td>2023-01-19 17:58:56</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:36</td>
+	    <td>2023-01-19 18:00:36*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>14518034</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:57:52</td>
+		<td>2023-01-19 17:58:50</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:36</td>
+	    <td>2023-01-19 18:00:36*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>14518016</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 17:57:47</td>
+		<td>2023-01-19 17:58:44</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:36</td>
+	    <td>2023-01-19 18:00:36*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>14518003</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 17:57:42</td>
+		<td>2023-01-19 17:58:38</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:36</td>
+	    <td>2023-01-19 18:00:36*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>14517991</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 17:57:38</td>
+		<td>2023-01-19 17:58:32</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:36</td>
+	    <td>2023-01-19 18:00:36*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>14517976</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 17:57:34</td>
+		<td>2023-01-19 17:58:26</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>14517963</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 17:57:27</td>
+		<td>2023-01-19 17:58:20</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>14517949</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:57:21</td>
+		<td>2023-01-19 17:58:13</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>14517934</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 17:57:16</td>
+		<td>2023-01-19 17:58:07</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>14517917</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:57:12</td>
+		<td>2023-01-19 17:58:01</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>14517900</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:57:08</td>
+		<td>2023-01-19 17:57:55</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>14517876</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:57:04</td>
+		<td>2023-01-19 17:57:49</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>14517862</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:57:02</td>
+		<td>2023-01-19 17:57:43</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>14517845</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:56:59</td>
+		<td>2023-01-19 17:57:37</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>14517832</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 17:56:55</td>
+		<td>2023-01-19 17:57:31</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>14517809</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:56:52</td>
+		<td>2023-01-19 17:57:24</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>14517793</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 17:56:46</td>
+		<td>2023-01-19 17:57:18</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,as pere live no issue</td>-->
+        <td>Reactive</td>
+        <td>premm</td>
+        <td>2023-01-19 18:00:13</td>
+	    <td>2023-01-19 18:00:13*Person doing transaction,as pere live no issue*premm</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>14513928</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 17:30:00</td>
+		<td>2023-01-19 17:30:38</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>14513914</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 17:30:00</td>
+		<td>2023-01-19 17:30:31</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>14488416</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>007</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 15:00:00</td>
+		<td>2023-01-19 15:00:37</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>14488395</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 15:00:00</td>
+		<td>2023-01-19 15:00:31</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>14473627</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-19 13:31:37</td>
+		<td>2023-01-19 13:32:09</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>14471463</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 13:18:12</td>
+		<td>2023-01-19 13:19:04</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>14471446</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-01-19 13:18:08</td>
+		<td>2023-01-19 13:18:57</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>14471430</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 13:18:07</td>
+		<td>2023-01-19 13:18:51</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>14471415</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>OG</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 13:18:07</td>
+		<td>2023-01-19 13:18:45</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>14471397</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 13:18:07</td>
+		<td>2023-01-19 13:18:39</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction as per live,</td>-->
+        <td>Reactive</td>
+        <td>Rashmi</td>
+        <td>2023-01-19 13:22:54</td>
+	    <td>2023-01-19 13:22:54*Person doing transaction as per live,*Rashmi</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>14471350</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 13:17:51</td>
+		<td>2023-01-19 13:18:23</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction as per live,</td>-->
+        <td>Reactive</td>
+        <td>Rashmi</td>
+        <td>2023-01-19 13:22:54</td>
+	    <td>2023-01-19 13:22:54*Person doing transaction as per live,*Rashmi</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>14471298</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 13:17:32</td>
+		<td>2023-01-19 13:18:03</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction as per live,</td>-->
+        <td>Reactive</td>
+        <td>Rashmi</td>
+        <td>2023-01-19 13:22:54</td>
+	    <td>2023-01-19 13:22:54*Person doing transaction as per live,*Rashmi</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>14471272</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 13:17:18</td>
+		<td>2023-01-19 13:17:54</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>guard present at site as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Rashmi</td>
+        <td>2023-01-19 13:19:25</td>
+	    <td>2023-01-19 13:19:25*guard present at site as per live 2way done,*Rashmi</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>14471255</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 13:17:16</td>
+		<td>2023-01-19 13:17:48</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>guard present at site as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Rashmi</td>
+        <td>2023-01-19 13:19:25</td>
+	    <td>2023-01-19 13:19:25*guard present at site as per live 2way done,*Rashmi</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>14471200</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 13:16:58</td>
+		<td>2023-01-19 13:17:30</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>guard present at site as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Rashmi</td>
+        <td>2023-01-19 13:19:25</td>
+	    <td>2023-01-19 13:19:25*guard present at site as per live 2way done,*Rashmi</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Euronet</td>
+     <td>14471172</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-01-19 13:16:48</td>
+		<td>2023-01-19 13:17:19</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td>guard present at site as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Rashmi</td>
+        <td>2023-01-19 13:19:25</td>
+	    <td>2023-01-19 13:19:25*guard present at site as per live 2way done,*Rashmi</td>
+		<td>192.168.100.78</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Euronet</td>
+     <td>14470335</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-01-19 13:12:23</td>
+		<td>2023-01-19 13:12:55</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Euronet</td>
+     <td>14467239</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 12:54:09</td>
+		<td>2023-01-19 12:55:00</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Euronet</td>
+     <td>14467221</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-01-19 12:54:06</td>
+		<td>2023-01-19 12:54:54</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Euronet</td>
+     <td>14467197</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 12:54:04</td>
+		<td>2023-01-19 12:54:48</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Euronet</td>
+     <td>14467180</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>OG</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 12:54:04</td>
+		<td>2023-01-19 12:54:42</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Euronet</td>
+     <td>14467163</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-01-19 12:54:04</td>
+		<td>2023-01-19 12:54:36</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Euronet</td>
+     <td>14459066</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>007</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 12:00:00</td>
+		<td>2023-01-19 12:00:37</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Euronet</td>
+     <td>14459045</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 12:00:00</td>
+		<td>2023-01-19 12:00:31</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Euronet</td>
+     <td>14433572</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 09:00:00</td>
+		<td>2023-01-19 09:00:30</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Euronet</td>
+     <td>14401672</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 06:01:00</td>
+		<td>2023-01-19 06:01:36</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Euronet</td>
+     <td>14401647</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 3/133, BDO Office Road, padappai - 601301</td>-->
+    <td>H07260</td>
+    <td>No: 3/133, BDO Office Road, padappai - 601301</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-01-19 06:01:00</td>
+		<td>2023-01-19 06:01:30</td>
+		<td>19-January-2023</td>
+		<td>172.55.23.139</td>
+		<td>smarti_hdfc32</td>	
+		<td>092046</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.23.139' and b.receivedtime between '2023-01-19 00:00:00' and '2023-01-19 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

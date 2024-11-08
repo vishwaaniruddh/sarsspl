@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://103.141.218.26/comforttechnonew/ticketview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button[not:disabled]:hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel[not:disabled]:hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger[not:disabled]:hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button:not([disabled]):hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel:not([disabled]):hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger:not([disabled]):hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+        <!-- Required meta tags -->
+        
+            <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+                <title>
+                    Comfort Techno Services Pvt Ltd - admin                </title>
+                <!-- plugins:css -->
+                <link href="./Comfort Techno Services Pvt Ltd - admin_files/all.min.css" rel="stylesheet">
+                    <link href="./Comfort Techno Services Pvt Ltd - admin_files/vendor.bundle.base.css" rel="stylesheet">
+                        <link href="./Comfort Techno Services Pvt Ltd - admin_files/vendor.bundle.addons.css" rel="stylesheet">
+                            <!-- endinject -->
+                            <!-- plugin css for this page -->
+                            <!-- End plugin css for this page -->
+                            <!-- inject:css -->
+							<link rel="stylesheet" href="./Comfort Techno Services Pvt Ltd - admin_files/lightgallery.css">
+                            <link href="./Comfort Techno Services Pvt Ltd - admin_files/style.css" rel="stylesheet">
+                                <!-- endinject -->
+                               <!-- <link href="media/comfort.ico" rel="shortcut icon"/>-->
+                                <link rel="shortcut icon" href="https://103.141.218.26/comforttechnonew/images/favicon.png">
+                            
+                        
+                    
+                
+				<style>
+				.content-wrapper{padding: 5.5rem 1.7rem !important;}
+				</style>
+				<!--<link href="sweetalert/sweetalert.css" rel="stylesheet">-->
+                <script src="./Comfort Techno Services Pvt Ltd - admin_files/sweetalert.min.js.download"></script><style>@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('chrome-extension://egopeokecbgdiiofbemdgbofafjepang/public/fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2') format('woff2');
+}
+  
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}  
+</style>      
+            
+        
+    <style>
+		.bt{
+				border-top: 1px solid #1e1f33;
+		  }
+		  .br
+		  {
+				border-right: 1px solid #282844;
+		  }
+		   div.card-body {
+		/*	margin:4px, 4px;
+			padding:4px;
+			background-color: green;
+			width: 500px;  
+			height: 210px;
+			overflow-x: hidden;
+			overflow-y: scroll; */
+			text-align:justify;
+		}
+	</style><style>
+		.menu-icon
+		{
+			width: 33px;
+			margin-right: 7%;
+		}
+		th, td {
+			white-space: nowrap;
+		}
+	</style><style>
+      #load{
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    z-index:9999;
+   /* background:url("image/Circle.svg") no-repeat center center rgba(0,0,0,0.25) */
+}
+    </style><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><style type="text/css">span.im-caret {
+    -webkit-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+span.im-static {
+    color: grey;
+}
+
+div.im-colormask {
+    display: inline-block;
+    border-style: inset;
+    border-width: 2px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+div.im-colormask > input {
+    position: absolute;
+    display: inline-block;
+    background-color: transparent;
+    color: transparent;
+    -webkit-appearance: caret;
+    -moz-appearance: caret;
+    appearance: caret;
+    border-style: none;
+    left: 0; /*calculated*/
+}
+
+div.im-colormask > input:focus {
+    outline: none;
+}
+
+div.im-colormask > input::-moz-selection{
+    background: none;
+}
+
+div.im-colormask > input::selection{
+    background: none;
+}
+div.im-colormask > input::-moz-selection{
+    background: none;
+}
+
+div.im-colormask > div {
+    color: black;
+    display: inline-block;
+    width: 100px; /*calculated*/
+}</style><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head><search-panel><template shadowrootmode="open"><style>@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('chrome-extension://egopeokecbgdiiofbemdgbofafjepang/public/fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2') format('woff2');
+}
+  
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}  
+</style><style>.search-tool {
+    width: 885px;
+    margin: auto;
+    margin-top: 47px;
+}
+
+i {
+    font-size: 1.69em !important;
+}
+
+.lite-search-bar__input {
+    font-size: 1.334em !important;
+}
+
+.background-cover {
+    position: absolute !important;
+}
+
+.modal *,.search-tool *{box-sizing:border-box;outline:none}.background-cover{background:rgba(0,0,0,.5)}.customized-fadeIn{animation-fill-mode:none;animation-duration:.1s}.lds-dual-ring{display:inline-block;width:80px;height:80px}.lds-dual-ring:after{content:" ";display:block;width:64px;height:64px;border-radius:50%;border-color:hsla(0,0%,100%,.9) transparent;border-style:solid;border-width:6px;animation:lds-dual-ring 1.2s linear infinite}@keyframes lds-dual-ring{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.menu-block{position:absolute;right:15px;top:45px;width:345px;background-color:#181c1f;border-radius:12px;padding:25px 0;box-shadow:0 4px 8px 0 rgba(0,0,0,.32);z-index:1}.menu-context{z-index:1;top:unset;width:110px;right:-32px;padding:5px 0}.context-menu-list{padding:0;margin:0;list-style-type:none}.context-menu-list__item{display:flex;align-items:center;padding:10px;cursor:pointer}.context-menu-list__item:hover{background-color:hsla(0,0%,100%,.04)}.context-menu-list__text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-left:5px}.context-menu-list__icon{font-size:15px!important}.search-tool{position:relative;color:hsla(0,0%,100%,.9);z-index:10001}.sections__button_focusable:focus{box-shadow:0 2px 8px 0 #027aff}.search-panel{background-color:#181c1f;border-radius:25px;overflow:hidden;padding-bottom:17px}.search-panel__container{padding:0 11px 0 17px}.lite-search-bar{display:flex;height:50px;margin-bottom:5px}.circle-button{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:none;cursor:pointer;border-radius:20px}.spinner{width:50px;height:40px;text-align:center}.spinner>div{background-color:#fff;height:100%;width:6px;display:inline-block;margin:0 3px 0 0;-webkit-animation:sk-stretchdelay 1.2s ease-in-out infinite;animation:sk-stretchdelay 1.2s ease-in-out infinite}.spinner .rect2{-webkit-animation-delay:-1.1s;animation-delay:-1.1s}.spinner .rect3{-webkit-animation-delay:-1s;animation-delay:-1s}.spinner .rect4{-webkit-animation-delay:-.9s;animation-delay:-.9s}.spinner .rect5{-webkit-animation-delay:-.8s;animation-delay:-.8s}@-webkit-keyframes sk-stretchdelay{0%,40%,to{-webkit-transform:scaleY(.4)}20%{-webkit-transform:scaleY(1)}}@keyframes sk-stretchdelay{0%,40%,to{transform:scaleY(.4);-webkit-transform:scaleY(.4)}20%{transform:scaleY(1);-webkit-transform:scaleY(1)}}.sections{display:flex;flex-wrap:wrap;list-style-type:none;margin:0;padding:0}.sections__button{border:none;display:flex;align-items:center;cursor:pointer;background-color:#171b1f;border-radius:14px;padding:1px 5px;color:hsla(0,0%,84.7%,.56);font-size:inherit;font-family:inherit;box-shadow:0 0 10px rgba(0,0,0,.3);max-width:140px}.info-list-title{color:#fff;font-size:1.5em;font-weight:500;padding:8px 17px}.sections__button_gray{background-color:#282e32;color:#d6d6d6;box-shadow:0 0 10px rgba(0,0,0,.3)}.search-panel-sections__tab:hover,.sections__button_active{background-color:#027aff;color:#fff}.search-panel-sections{margin-bottom:10px}.sections__button_hoverable:hover .sections__text:before{content:"";width:100%;background-color:#027aff;height:2px;position:absolute;bottom:0;left:0}.sections__item{margin-right:8px}.circle-sm{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border:none;cursor:pointer;border-radius:50%;font-size:14.32px;flex:0 0 auto}.circle-sm_active{background-color:#027aff;color:#000}.sections__text{position:relative;color:hsla(0,0%,100%,.9);padding:6px 6px 6px 2px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.sections__text_active:before{content:"";width:90%;background-color:#027aff;height:2px;position:absolute;bottom:0;left:5%}.section__context:hover{color:#fff}.section__context{display:flex;align-items:center;justify-content:center;border-bottom-right-radius:12px;border-top-right-radius:12px;width:1%;margin-left:auto;position:absolute;right:8px;opacity:0}.section__context-button{position:relative;padding-right:15px}.sections__item_add{display:flex;align-items:center;margin-right:0}.sections__add-button{border:none;display:flex;align-items:center;cursor:pointer;background-color:rgba(23,27,31,.64);border-radius:12px;padding:0;color:hsla(0,0%,84.7%,.56)}.circle-sm_regular{background-color:hsla(0,0%,84.7%,.56);color:#000}.circle-sm_regular:hover{background-color:#fff}.circle-sm__icon{font-size:120%!important}.circle-button_bg-transparent{background-color:transparent}.lite-search-bar__icon{padding:0;width:auto;height:auto}.lite-search-bar__side-element{flex:0 1 auto;align-self:center}.circle-button__icon{color:hsla(0,0%,84.7%,.56)}.circle-button__icon:hover{color:#fff}.lite-search-bar__input{flex:1 1 auto;padding:0 11.8px;border:0;background:transparent;color:#fff;font-size:1.35em;min-width:0;font-family:inherit}.lite-search-bar__nav{display:flex;align-items:center}.lite-search-bar__info{margin-right:10px}.lite-search-bar__tab{padding:5px 10px;border:1px solid #979797;border-radius:4px;margin-left:3px}.lite-search-bar__search-button{background-color:#282e32;color:#fff;border-radius:14px;border:none;padding:7px 12px;cursor:pointer;font-size:inherit}.lite-search-bar__search-button:hover{box-shadow:0 2px 8px 0 #027aff}.search-panel__engines{display:flex;justify-content:space-between;align-items:center;height:74px;margin-top:-5px}.search-panel__engines .cards-focusable{position:relative}.search-panel__engines .cards-focusable:after{content:" ";position:absolute;top:-9px;bottom:-11px;right:-12px;width:58px;background:linear-gradient(270deg,#181c1f 10.42%,rgba(24,28,31,0));border-radius:13px;pointer-events:none}.cards-focusable{padding:0;margin:0;list-style-type:none;display:flex;align-items:center}.cards-focusable__item{cursor:pointer}.cards-focusable__item+.cards-focusable__item{margin-left:7px}.cards-focusable__card{width:70px;height:48px;display:flex;border-radius:10px;background-color:#027aff;align-items:center;justify-content:center}.cards-focusable__card_main:focus,.cards-focusable__card_main:hover{box-shadow:0 2px 8px 0 #027aff}.not-active{background-color:#282e32}.not-active:focus,.not-active:hover{box-shadow:0 2px 8px 0 #027aff;opacity:1}.cards-focusable_big{width:80px;height:58px;position:relative;transition:width .1s;opacity:1}.cards-focusable_big:before{content:"";width:75%;background-color:#027aff;height:2px;position:absolute;bottom:-7px}.cards-focusable__card-content{display:flex;flex-direction:column;align-items:center;overflow:hidden;padding:3px 12px}.cards-focusable__icon{margin-bottom:5px}.cards-focusable__icon_16{width:16px;height:16px}.cards-focusable__icon_32{width:32px;height:32px}.cards-focusable__text{width:100%;flex:0 0 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;color:#d6d6d6;font-size:.8em}.info-list{margin:0;padding:0;list-style-type:none}.info-list__item{display:flex;align-items:flex-start;padding:8px 17px;cursor:pointer}.info-list__item:focus,.info-list__item:hover{background-color:hsla(0,0%,100%,.08)}.info-list__icon-container{display:flex;align-items:center;margin-right:12px;color:hsla(0,0%,100%,.32)}.info-list__text{font-size:1.37em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.info-list__text-container{overflow:hidden}.info-list__subtext{color:#02a4ff;font-size:1.1em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.search-panel__spinner{margin:20px auto}.input-bottom-bordered{position:relative}.input-bottom-bordered__input_active .input-bottom-bordered__label{top:0;transform:translateY(-50%) scale(.8) translateX(-14%);font-weight:500}.input-bottom-bordered__input{border:none;border-bottom:1px solid #838587;background:transparent;caret-color:#838587;color:inherit;width:100%;padding:10px 0;font-size:inherit}.input-bottom-bordered__label{position:absolute;left:0;pointer-events:none;top:50%;transform:translateY(-50%);transition:transform .2s ease-out,color .2s ease-out;transition:top .2s ease-out,color .2s ease-out;color:#838587;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.color-danger{color:#f01515}.engines-modal{margin-top:10%;padding:13px 14px;width:67%;border-radius:14px;box-shadow:0 0 10px rgba(0,0,0,.3);background-color:#181c1f}.engines-modal__add-caption{margin-top:5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.engines-modal__add-card{background-color:rgba(24,28,31,.5)!important;flex-direction:column;color:#d6d6d6}.engines-modal__context{position:absolute;background-color:rgba(0,0,0,.2);height:13px;z-index:1;right:3px;top:3px;width:13px;padding:2px;border-radius:50%;opacity:0;display:flex;justify-content:center;align-items:center}.engines-modal__context .material-icons{font-size:17px!important}.engines-modal__context:hover{background-color:rgba(0,0,0,.3)}.cards-focusable__helper:hover .engines-modal__context{opacity:1}.engines-modal__add-card:hover{color:#fff}.engines-modal__engines-instruction-container{margin-bottom:10px;display:flex;align-items:center;color:#fff}.engines-modal__engines-instruction-text{margin-left:5px;font-size:1.0843em;word-break:break-all}.engines-modal__circle{width:22px;height:22px;font-size:10.32px;background-color:rgba(0,0,0,.5);color:hsla(0,0%,100%,.8)}.engines-modal__circle:hover{background-color:rgba(0,0,0,.6);color:hsla(0,0%,100%,.9)}.engines-modal__header{display:flex;justify-content:space-between;align-items:center;color:hsla(0,0%,100%,.32)}.engines-modal__header-caption{color:#fff;font-size:1.3333em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.engines-modal__close{cursor:pointer;color:#fff;opacity:.8}.engines-modal__close:hover{color:#fff;opacity:1}.engines-modal__body{margin:20px 0;overflow:auto;max-height:300px}.engines-modal__cards{margin-left:-3px;margin-top:-5px;flex-wrap:wrap}.engines-modal__item-tools{position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;padding:4px 8px;z-index:1;background-color:rgba(0,0,0,.2);border-radius:12px}.engines-modal__item-tools:hover{opacity:1}.engines-modal__tool-up{display:flex;justify-content:space-between}.engines-modal__tool-down{display:flex;justify-content:center}.engines-modal__card{position:relative;background-color:#282e32;width:86px;height:60px}.engines-modal__card-item{margin-left:10px!important;margin-top:10px;list-style-type:none}.modal{width:355px;border-radius:14px;box-shadow:0 0 10px rgba(0,0,0,.3);background-color:#181c1f;color:#fff}.modal__close{cursor:pointer;color:#fff;opacity:.8}.modal__close:hover{color:#fff;opacity:1}.modal__header{padding:20px 25px;display:flex;justify-content:space-between;color:#fff;align-items:center}.modal__header-title{font-size:16px}.modal__body{padding:0 25px}.modal__bottom{display:flex;justify-content:center;padding:29px 0}.button-md{border-radius:14px;padding:7px 20px;box-shadow:0 2px 4px 0 rgb(0 0 0/50%);background-color:#027aff;border:none;color:#fff;font-size:inherit;cursor:pointer;max-width:105px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.input-bottom-bordered__input_error{border-color:red}.button-md:disabled{background-color:#4d5156}.button-md:active{opacity:.7}.engines-modal__info-input-container{position:absolute;bottom:5px;right:0;color:#838587;cursor:pointer}.engines-modal__info-input-text{display:none;font-weight:300;position:absolute;right:0;width:300px;border-radius:14px;box-shadow:0 0 20px 5px rgba(2,122,255,.3);background-color:#282e32;padding:20px;line-height:16px;white-space:pre-line;color:#fff}.engines-modal__info-input-container:hover .engines-modal__info-input-text{display:block}.engines-modal__info-input-container:hover i{color:#fff}.draggable .card__label{pointer-events:none}.draggable{position:relative;transform:translate(0)}.draggable.left-stick:before{left:-10px}.draggable.left-stick:before,.draggable.right-stick:before{content:"";position:absolute;background-color:#027aff;height:100%;width:5px;z-index:1}.draggable.right-stick:before{right:-10px}.draggable.left-stick-engine:before{left:-7px}.draggable.left-stick-engine:before,.draggable.right-stick-engine:before{content:"";position:absolute;background-color:#027aff;height:100%;width:3px;z-index:1}.draggable.right-stick-engine:before{right:-7px}.button-md_red{background-color:#f01515}.button-md__left{margin-right:30px}.modal_question{box-shadow:0 0 20px 5px rgba(255,2,2,.3)}.modal_question .modal__body{padding-top:25px;font-size:14px;text-align:center;line-height:24px}</style><style>.root-element {
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    color: #4c4c4c;
+    line-height: 1;
+}
+
+.search-tool {
+    width: 885px;
+    margin: auto;
+    margin-top: 47px;
+}
+
+i {
+    font-size: 1.69em !important;
+}
+
+.lite-search-bar__input {
+    font-size: 1.334em !important;
+}</style><div class="root-element"></div></template></search-panel>	
+	  
+	
+	
+     
+<body class="sidebar-light" data-new-gr-c-s-check-loaded="14.1140.0" data-gr-ext-installed="">
+        <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo" href="https://103.141.218.26/comforttechnonew/home_dashboard.php">
+                        <img alt="logo" src="./Comfort Techno Services Pvt Ltd - admin_files/logo.png">
+                    </a>
+                    <a class="navbar-brand brand-logo-mini" href="https://103.141.218.26/comforttechnonew/home_dashboard.php">
+                        <img alt="logo" src="./Comfort Techno Services Pvt Ltd - admin_files/logo.png">
+                    </a>
+                </div>
+                <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                    <button class="navbar-toggler navbar-toggler align-self-center" data-toggle="minimize" type="button">
+                        <span class="fas fa-bars">
+                        </span>
+                    </button>
+                    <!--<ul class="navbar-nav navbar-nav-left">
+                        <li class="nav-item nav-search d-none d-md-flex">
+                            <div class="nav-link">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-search">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    <input aria-label="Search" class="form-control" placeholder="Search" type="text">
+                                    </input>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-ellipsis-v">
+                                </i>
+                            </a>
+                        </li>
+                    </ul>-->
+					<button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+					  <span class="fas fa-bars"></span>
+					</button>
+                </div>
+            </nav>
+            <!-- partial -->
+			<div id="load" style="display: none;">
+			   <!-- <div class="loader-demo-box">
+                        <div class="circle-loader"></div>
+                      </div>  -->
+					  <div class="loader-demo-box">
+				<div class="loading">
+					<p>Please wait</p>
+					<span><i></i><i></i><i></i></span>
+				</div>	 
+                       </div>     				
+			</div>            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+                <!-- partial:partials/_settings-panel.html -->
+                <!-- partial -->
+                <!-- partial:partials/_sidebar.html -->
+                
+<nav class="sidebar sidebar-offcanvas bt" id="sidebar">
+                    <ul class="nav">
+					     <li class="nav-item nav-profile">
+                            <div class="nav-link">
+                              <div class="profile-image">
+                                <img src="./Comfort Techno Services Pvt Ltd - admin_files/userprofile.jpg" alt="image">
+                              </div>
+                              <div class="profile-name">
+                                <p class="name">
+                                  Welcome admin                                </p>
+                                <p class="designation">
+                                                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                        						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Dashboard" aria-expanded="false" aria-controls="Dashboard">
+							  <i class="fa fa-tachometer-alt menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Dashboard</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Dashboard">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/panel_dashboard.php">Panel Dashboard</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/panel_communication.php">Panel Communication</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dvrhealthDashboard.php">DVR Health</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dashboard1.php">DVR Dashboard</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/home_dashboard.php">Home</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dash_board.php">AI Dashboard</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/theft_ticket_raise_list.php">Theft Ticket List</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/site_health.php">Site-Health</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Add" aria-expanded="false" aria-controls="Add">
+							  <i class="fa fa-plus-circle menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Add</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Add">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/newsite.php">Add Site</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/add_ticket.php">Raise Service Request</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_request.php">Add Footage Request</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_request_bulk_upload_new.php">Bulk Footage Request</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/add_theft_history.php">Raise Theft Report</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item active">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#View" aria-expanded="false" aria-controls="View">
+							  <i class="fa fa-eye menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">View</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse show" id="View">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/viewsitenew.php">View Site</a></li>
+																								    								<li class="nav-item"> <a class="nav-link" target="_blank" href="http://103.141.218.26:8080/ComfortTechnoNew/live_view.php">Live View</a></li>	
+															    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/panel_health.php">Panel Health</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/view_alert_ticket.php">Ticket Raise History</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/view_ticket.php">Ticket</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/locations.php">Site Location</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link active" href="https://103.141.218.26/comforttechnonew/aiticketview.php">AI Alerts</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link active" href="https://103.141.218.26/comforttechnonew/ticketview.php">Ticket View</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_request_list_logic.php">Footage Request</a></li>
+																								    	
+								   								   <li class="nav-item"> <a class="nav-link" target="_blank" href="http://103.141.218.26:8080/ComfortTechnoNew/viewlive.php">View Live</a></li>
+									  																    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/ticketview1.php">Bulk Ticket View</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_request_process_list.php">Footage Process Request</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data.php">Footage Download</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_ob.php">All  Footage Download</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_24hrs_tbl_bank.php">Footage 24Hrs</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_rejected_tbl_bank.php">Footage Rejected</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_dispute_tbl_bank.php">Footage Dispute</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_24hrs_tbl_1.php">Footage Comfort 24hrs</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_rejected_tbl_1.php">Footage Comfort Rejected</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_dispute_tbl_1.php">Footage Comfort Dispute</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_start_zip_report.php">Footage Zipped Report</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#EMS" aria-expanded="false" aria-controls="EMS">
+							  <i class="fa fa-bolt menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">EMS</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="EMS">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/ems_dash.php">EMS Dashboard</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Reports" aria-expanded="false" aria-controls="Reports">
+							  <i class="fa fa-file menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Reports</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Reports">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/sitehealth.php">Site Health</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/networkreport.php">Network Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/theft_ticket_raise_c_list.php">Theft Ticket List History</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/esurveillance_penalty.php">E-surv Penalty</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dash_board_ftp_video.php">Footage Stats</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dash_board_ftp_video_past.php">Footage Stats 24 Hour Ago</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/newnetworkreporthourly.php">Network Report Hourly Wise</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/newnetworkreporthourly_withpenalty.php">Penalty Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/daily_down_report.php">Daily Down Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/daily_availability_report_new.php">Daily Availability Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/penalty_calculation_sheet_new.php">Penalty Calculation Sheet</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/daily_camera_wise_report.php">Daily Camera Wise Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/date_wise_ticket_report.php">Date Wise Ticket Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/network_report2.php">Cloud Network Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								   <li class="nav-item"> <a class="nav-link" target="_blank" href="http://103.141.218.26:8080/ComfortTechnoNew/live_view_fss.php">Live-View </a></li>
+									  																    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/pmcReportList.php">PMC Report</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Playback" aria-expanded="false" aria-controls="Playback">
+							  <i class="fa fa-file-video menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Playback</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Playback">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/ffmpeg/bin/pagination_ftp.php">Archive</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Snaps" aria-expanded="false" aria-controls="Snaps">
+							  <i class="fa fa-file-image menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Snaps</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Snaps">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/snaps.php">Snaps</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Configuration" aria-expanded="false" aria-controls="Configuration">
+							  <i class="fa fa-cog menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Configuration</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Configuration">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/menu_perm.php">Menu Permission</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/escalationlist.php">Escalation Matrix</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<!--<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#add" aria-expanded="false" aria-controls="add">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Add</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="add">
+							  <ul class="nav flex-column sub-menu">
+							    <li class="nav-item"> <a class="nav-link" href="newsite.php">Site</a></li>
+								<li class="nav-item"> <a class="nav-link" href="add_ticket.php">Ticket</a></li>
+								
+								<li class="nav-item"> <a class="nav-link" href="js-grid.html">Js-grid</a></li>
+								<li class="nav-item"> <a class="nav-link" href="sortable-table.html">Sortable table</a></li>
+							  </ul>
+							</div>
+						  </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="EMS/" target="_blank">
+                                <i class="fa fa-microchip menu-icon">
+                                </i>
+                                <span class="menu-title">
+                                    EMS
+                                </span>
+                            </a>
+                        </li>
+						 <li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">View</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="tables">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="viewsitenew.php">Site</a></li>
+								<li class="nav-item"> <a class="nav-link" href="panel_health.php">Panel Health</a></li>
+								<li class="nav-item"> <a class="nav-link" href="view_ticket.php">Ticket</a></li>
+								<li class="nav-item"> <a class="nav-link" href="view_alert_ticket.php">Alert Ticket</a></li>
+							  </ul>
+							</div>
+						  </li>
+                          <li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#views" aria-expanded="false" aria-controls="views">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Views</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="views">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="sitehealth.php">Site Health</a></li>
+								<li class="nav-item"> <a class="nav-link" href="ticketview.php">Ticket View</a></li>
+								<li class="nav-item"> <a class="nav-link" href="aiticketview.php">AI Ticket View</a></li>
+								<li class="nav-item"> <a class="nav-link" href="live_view.php">Live View</a></li>
+								<li class="nav-item"> <a class="nav-link" href="locations.php">Location</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="ticketviewservice.php">Ticket View Service</a></li>
+								<li class="nav-item"> <a class="nav-link" href="queryticketdata.php">Query Ticket Data</a></li>
+								<li class="nav-item"> <a class="nav-link" href="supervisor.php">Supervisor Screen</a></li>
+								<li class="nav-item"> <a class="nav-link" href="servicecall.php">Service Call</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="installationcall.php">Installation Call</a></li>
+								<li class="nav-item"> <a class="nav-link" href="materialrequire.php">Material Required</a></li>
+							  </ul>
+							</div>
+						  </li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#configuration" aria-expanded="false" aria-controls="configuration">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Configuration</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="configuration">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="sitelist.php">Site</a></li>
+								<li class="nav-item"> <a class="nav-link" href="userlist.php">User</a></li>
+								<li class="nav-item"> <a class="nav-link" href="rolelist.php">Role</a></li>
+								<li class="nav-item"> <a class="nav-link" href="movelist.php">Move Site</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="resetpassword.php">Reset Password</a></li>
+								
+								<li class="nav-item"> <a class="nav-link" href="escalationlist.php">Escalation Matrix</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="adcommentlist.php">AD Comment</a></li>
+								<li class="nav-item"> <a class="nav-link" href="zoneconfiguration.php">Zone Configuration</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="panellistconfiguration.php">Panel Configuration</a></li>
+								<li class="nav-item"> <a class="nav-link" href="aduser.php">AD User</a></li>
+							  </ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#reports" aria-expanded="false" aria-controls="reports">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Reports</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="reports">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="dvrhealthreport.php">DVR Health Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="ticketreport.php">Ticket View Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="cmereport.php">CME Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="panelstatusreport.php">Panel Status Report</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="sitenetworkstatus.php">Site Network Status</a></li>
+								<li class="nav-item"> <a class="nav-link" href="dvrreport.php">DVR Report</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="zonestatusreport.php">Zone Status Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="excelreport.php">Excel Reports</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="sitedownreport.php">Site Down Report</a></li>
+							  </ul>
+							</div>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#changepassword" aria-expanded="false" aria-controls="changepassword">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Utility</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="changepassword">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="ChangePassword.php">Change Password</a></li>
+								
+							  </ul>
+							</div>
+						</li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fa fa-home menu-icon">
+                                </i>
+                                <span class="menu-title">
+                                    E-surveillance
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/widgets.html">
+                                <img alt="Watching" class="menu-icon" src="fonts/menu-icon/watch.png">
+                                    <span class="menu-title">
+                                        Watching
+                                    </span>
+                                </img>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/widgets.html">
+                                <img alt="Archive" class="menu-icon" src="fonts/menu-icon/archive.png">
+                                    <span class="menu-title">
+                                        Archive
+                                    </span>
+                                </img>
+                            </a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link" href="ffmpeg/bin/pagination.php">
+							    <i class="fa fa-file-video menu-icon">
+                                </i>
+                                <span class="menu-title">
+                                    Video Archive
+                                </span>
+                               
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="snaps.php">
+							
+							<i class="fas fa-images menu-icon">
+                                </i>
+                                <span class="menu-title">
+                                    Snaps
+                                </span>
+                              
+                            </a>
+                        </li> -->
+						<li class="nav-item icons-list">
+                            <a class="nav-link" href="https://103.141.218.26/comforttechnonew/logout.php">
+                                <i class="fa fa-sign-out-alt menu-icon fa-3x" style="font-size: 2em;">
+                                </i>
+                                <span class="menu-title">
+                                    Logout
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav bt">
+                        <!-- <li class="nav-item nav-settings d-none d-lg-block" style="margin: 0 auto;margin-top: 3%;">
+                            <button class="btn btn-primary btn-rounded btn-icon" type="button">
+                                <i class="fa fa-bell">
+                                </i>
+                            </button>
+                        </li> -->
+                        <li class="nav-item nav-settings d-none d-lg-block" style="margin: 0 auto;margin-top: 3%;">
+                            <button class="btn btn-primary btn-rounded btn-icon" type="button">
+                                <i class="fa fa-bell">
+                                </i>
+                            </button>
+                            <!-- <span class="count text-white">16</span> -->
+                        </li>
+                    </ul>
+                    <ul class="nav bt">
+                        <li class="nav-item nav-settings d-none d-lg-block" style="margin: 0 auto;margin-top: 3%;">
+                            <h5 class="text-white">
+                                Wednesday 5:40 pm
+                            </h5>
+                            <h5 class="text-white">
+                                25 August, 2021
+                            </h5>
+                        </li>
+                    </ul>
+                </nav>
+				                <!-- partial -->
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                    <h4 class="card-title">Ticket View</h4>
+
+                    <div class="card">
+    <div class="col-12 grid-margin">
+		    
+			<div class="row">
+			    <div class="col-md-3">
+					<div class="form-group row">
+						<label class="col-sm-6 col-form-label">Select Client<br></label>
+							<div class="col-sm-8">
+								<select name="client" id="Client" class="form-control" onchange="onchangebank()">
+								    <option value="">Select</option> 
+									AGS									   <option value="AGS">AGS</option> 
+									Diebold									   <option value="Diebold">Diebold</option> 
+									Euronet									   <option value="Euronet">Euronet</option> 
+									FSS									   <option value="FSS">FSS</option> 
+									Hitachi									   <option value="Hitachi">Hitachi</option> 
+									TATA									   <option value="TATA">TATA</option> 
+																	</select>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group row">
+						<label class="col-sm-6 col-form-label">Select Bank<br></label>
+							<div class="col-sm-8">
+								<select name="Bank" id="Bank" class="form-control" onchange="onchangecircle()">
+<option value="">Select</option><option value="HDFC">HDFC</option><option value="ICICI">ICICI</option><option value="IDFC">IDFC</option><option value="Kotak">Kotak</option></select>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group row">
+						<label class="col-sm-6 col-form-label">Select Circle<br></label>
+							<div class="col-sm-8">
+								<select name="Circle" id="Circle" class="form-control" onchange="onchangeatmid()"><option value="">All Circle</option></select>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group row">
+						<label class="col-sm-6 col-form-label">Select Atm<br></label>
+							<div class="col-sm-8">
+								<select name="atmid" id="AtmID" class="form-control js-example-basic-single w-100 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+
+
+( ! ) Notice: Undefined variable: circlesql in C:\wamp64\www\ComfortTechnoNew\globalfunctions.php on line 140
+Call Stack
+#TimeMemoryFunctionLocation
+10.0004270632{main}(  )...\getMasterData.php:0
+20.0154466984getAtmidList(  )...\getMasterData.php:22
+
+
+
+( ! ) Warning: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\wamp64\www\ComfortTechnoNew\globalfunctions.php on line 140
+Call Stack
+#TimeMemoryFunctionLocation
+10.0004270632{main}(  )...\getMasterData.php:0
+20.0154466984getAtmidList(  )...\getMasterData.php:22
+30.0173467824mysqli_num_rows
+(  )...\globalfunctions.php:140
+
+<option value="">All Site</option><option value="P3ENAP12">P3ENAP12</option><option value="P3ECDE13">P3ECDE13</option><option value="P3ENOD47">P3ENOD47</option><option value="P1ECDL07">P1ECDL07</option><option value="P3ECUP04">P3ECUP04</option><option value="P1ENDL21">P1ENDL21</option><option value="P3ECUP06">P3ECUP06</option><option value="P3ENRN06">P3ENRN06</option><option value="P3ENGG07">P3ENGG07</option><option value="P1EWFA01">P1EWFA01</option><option value="P3ENPG01">P3ENPG01</option><option value="P3ENGG02">P3ENGG02</option><option value="P3ENDL26">P3ENDL26</option><option value="P3ENBT03">P3ENBT03</option><option value="P3ENDL43">P3ENDL43</option><option value="P3ENDB03">P3ENDB03</option><option value="P3ENCO12">P3ENCO12</option><option value="P1ENCI36">P1ENCI36</option><option value="P1ENCI42">P1ENCI42</option><option value="P1ENCH63">P1ENCH63</option><option value="P1ENCH37">P1ENCH37</option><option value="P1ENCI48">P1ENCI48</option><option value="P1ENCI08">P1ENCI08</option><option value="P1ENCH30">P1ENCH30</option><option value="P1EWCH07">P1EWCH07</option><option value="P1ENCI39">P1ENCI39</option><option value="P1ENCN20">P1ENCN20</option><option value="P1ENCI02">P1ENCI02</option><option value="P1ENCH16">P1ENCH16</option><option value="P3ENCI01">P3ENCI01</option><option value="P1ENCI34">P1ENCI34</option><option value="P1ENCN68">P1ENCN68</option><option value="P1ENCI37">P1ENCI37</option><option value="P1ENCI18">P1ENCI18</option><option value="P1ENCI30">P1ENCI30</option><option value="P1ENCI26">P1ENCI26</option><option value="P1ENCN35">P1ENCN35</option><option value="P1ENCN56">P1ENCN56</option><option value="P1EWCH17">P1EWCH17</option><option value="P1ENCI20">P1ENCI20</option><option value="P1EWCH20">P1EWCH20</option><option value="P1ENCH42">P1ENCH42</option><option value="P1ENCH57">P1ENCH57</option><option value="P1ENCH38">P1ENCH38</option><option value="P3ENTN17">P3ENTN17</option><option value="P3ENTN11">P3ENTN11</option><option value="P1ENCH72">P1ENCH72</option><option value="P1ENCH18">P1ENCH18</option><option value="P1ENTP07">P1ENTP07</option><option value="P3ENCI38">P3ENCI38</option><option value="P3ENCI34">P3ENCI34</option><option value="P1ENCH74">P1ENCH74</option><option value="P3ENPU07">P3ENPU07</option><option value="P1EWPU01">P1EWPU01</option><option value="P1ENMU16">P1ENMU16</option><option value="P1EWPU06">P1EWPU06</option><option value="P3ENPN20">P3ENPN20</option><option value="P3ENPU77">P3ENPU77</option><option value="P3ENPU19">P3ENPU19</option><option value="P1ENPU42">P1ENPU42</option><option value="P3ENKK05">P3ENKK05</option><option value="P1ENPU46">P1ENPU46</option><option value="P1ENPU30">P1ENPU30</option><option value="P3ENPU57">P3ENPU57</option><option value="P1EWPU36">P1EWPU36</option><option value="P3ENPU65">P3ENPU65</option><option value="P1ENBL48">P1ENBL48</option><option value="P1ENPU28">P1ENPU28</option><option value="P3ENPU63">P3ENPU63</option><option value="P3ENPU41">P3ENPU41</option><option value="P1EWPU52">P1EWPU52</option><option value="P3ENPU15">P3ENPU15</option><option value="P3ENPU16">P3ENPU16</option><option value="P1ENPU41">P1ENPU41</option><option value="P1ENMU25">P1ENMU25</option><option value="P1ENMU29">P1ENMU29</option><option value="P1ENPU25">P1ENPU25</option><option value="P3ENPU62">P3ENPU62</option><option value="P1ENPU26">P1ENPU26</option><option value="P1ECPU05">P1ECPU05</option><option value="P3ENPU13">P3ENPU13</option><option value="P3ENPU11">P3ENPU11</option><option value="P1ECPU04">P1ECPU04</option><option value="P1ENBL46">P1ENBL46</option><option value="P3ENPU27">P3ENPU27</option><option value="P3ENPU35">P3ENPU35</option><option value="P3ENPU60">P3ENPU60</option><option value="P1ENPU15">P1ENPU15</option><option value="P3ENPU67">P3ENPU67</option><option value="P1EWPU38">P1EWPU38</option><option value="P1ECPU01">P1ECPU01</option><option value="P1ENBA53">P1ENBA53</option><option value="P1ENBA09">P1ENBA09</option><option value="P3ENDE29">P3ENDE29</option><option value="P3ENCO07">P3ENCO07</option><option value="P1ECDL14">P1ECDL14</option><option value="P3ENDL27">P3ENDL27</option><option value="P3ENDL01">P3ENDL01</option><option value="P3ENDL07">P3ENDL07</option><option value="P1EWPU29">P1EWPU29</option><option value="P3ENAB02">P3ENAB02</option><option value="P3ENKN03">P3ENKN03</option><option value="P1EWPU23">P1EWPU23</option><option value="P1ECPU03">P1ECPU03</option><option value="P1ENBA03">P1ENBA03</option><option value="P1ENBA44">P1ENBA44</option><option value="P3ENGG10">P3ENGG10</option><option value="P1EWBA53">P1EWBA53</option><option value="P1EWBA45">P1EWBA45</option><option value="P3ENDB04">P3ENDB04</option><option value="P3ENGG03">P3ENGG03</option><option value="P4ENGK01">P4ENGK01</option><option value="P3ENRM01">P3ENRM01</option><option value="P3ENCI22">P3ENCI22</option><option value="P3ENCI04">P3ENCI04</option><option value="P3ENPU38">P3ENPU38</option><option value="P1ENPU36">P1ENPU36</option><option value="P1ENPU29">P1ENPU29</option><option value="P3ENMY03">P3ENMY03</option><option value="P3ENPU37">P3ENPU37</option><option value="P3ENPU04">P3ENPU04</option><option value="P1EWPU26">P1EWPU26</option><option value="P3ENPU68">P3ENPU68</option><option value="P3ENPU73">P3ENPU73</option><option value="P1ENBL10">P1ENBL10</option><option value="P1ENBA58">P1ENBA58</option><option value="P3ENCI47">P3ENCI47</option><option value="P1EWGO06">P1EWGO06</option><option value="P3ENBH06">P3ENBH06</option><option value="P3ENJE01">P3ENJE01</option><option value="P3ENPU75">P3ENPU75</option><option value="P1ECPU02">P1ECPU02</option><option value="P3ENMY24">P3ENMY24</option><option value="P3ENPU34">P3ENPU34</option><option value="P4ENGP03">P4ENGP03</option><option value="P1ENCH98">P1ENCH98</option><option value="P3ENDE36">P3ENDE36</option><option value="P3ENBT01">P3ENBT01</option><option value="P3ENBX10">P3ENBX10</option><option value="P1ENBL29">P1ENBL29</option><option value="P1ENBA63">P1ENBA63</option><option value="P1ENBG29">P1ENBG29</option><option value="P4ENBN12">P4ENBN12</option><option value="P1ENBA12">P1ENBA12</option><option value="P3ENDB01">P3ENDB01</option><option value="P1EWBA39">P1EWBA39</option><option value="P1ENBA86">P1ENBA86</option><option value="P1ENBL19">P1ENBL19</option><option value="P1ENBG72">P1ENBG72</option><option value="P3ENPU01">P3ENPU01</option><option value="P1ENBL20">P1ENBL20</option><option value="P1ENBA47">P1ENBA47</option><option value="P1ENBA28">P1ENBA28</option><option value="P1ENBG58">P1ENBG58</option><option value="P1ENBL43">P1ENBL43</option><option value="P1ENBG50">P1ENBG50</option><option value="P1EWBA52">P1EWBA52</option><option value="P1ENBA35">P1ENBA35</option><option value="P4ENBN09">P4ENBN09</option><option value="P1ENBL42">P1ENBL42</option><option value="P3ENPU12">P3ENPU12</option><option value="P1EWBA86">P1EWBA86</option><option value="P1ENBG04">P1ENBG04</option><option value="P1ENBA45">P1ENBA45</option><option value="P4ENBN07">P4ENBN07</option><option value="P4ENBN02">P4ENBN02</option><option value="P4ENBN01">P4ENBN01</option><option value="P4ENBN04">P4ENBN04</option><option value="P3ENBE55">P3ENBE55</option><option value="P1ENBG07">P1ENBG07</option><option value="P1EWBA03">P1EWBA03</option><option value="P1ENBA75">P1ENBA75</option><option value="P1EWBA24">P1EWBA24</option><option value="P3ENDE33">P3ENDE33</option><option value="P1EWGU01">P1EWGU01</option><option value="P3ENCI23">P3ENCI23</option><option value="P1EWPU12">P1EWPU12</option><option value="P1ENPU37">P1ENPU37</option><option value="P1ENPU52">P1ENPU52</option><option value="P3ENPU81">P3ENPU81</option><option value="P1EWPU22">P1EWPU22</option><option value="P1ENMY07">P1ENMY07</option><option value="P1EWMY03">P1EWMY03</option><option value="P1EWMY01">P1EWMY01</option><option value="P1ENMY06">P1ENMY06</option><option value="P1ENMY03">P1ENMY03</option><option value="P1ENBA79">P1ENBA79</option><option value="P3ENGR01">P3ENGR01</option><option value="P1ENMG05">P1ENMG05</option><option value="P1ENBA42">P1ENBA42</option><option value="P1ENBA33">P1ENBA33</option><option value="P1ENBA65">P1ENBA65</option><option value="P1ENBL06">P1ENBL06</option><option value="P1EWBA94">P1EWBA94</option><option value="P3ENUP08">P3ENUP08</option><option value="P1ENBL23">P1ENBL23</option><option value="P1EWBA12">P1EWBA12</option><option value="P1ENBG69">P1ENBG69</option><option value="P1ENBG81">P1ENBG81</option><option value="P4ENBN11">P4ENBN11</option><option value="P1EWBA31">P1EWBA31</option><option value="P1ENBA22">P1ENBA22</option><option value="P1ENBG84">P1ENBG84</option><option value="P1EWBA60">P1EWBA60</option><option value="P1EWBA38">P1EWBA38</option><option value="P1ENBA70">P1ENBA70</option><option value="P1ENBL12">P1ENBL12</option><option value="P1ENBG65">P1ENBG65</option><option value="P1ENBG86">P1ENBG86</option><option value="P1ENBA68">P1ENBA68</option><option value="P1ENBA67">P1ENBA67</option><option value="P1ENBA72">P1ENBA72</option><option value="P1ENBA18">P1ENBA18</option><option value="P1EWBA66">P1EWBA66</option><option value="P1ENBG35">P1ENBG35</option><option value="P1ENBG80">P1ENBG80</option><option value="P1ENBG87">P1ENBG87</option><option value="P3ENBE27">P3ENBE27</option><option value="P4ENBE20">P4ENBE20</option><option value="P4ENBN06">P4ENBN06</option><option value="P3ENBE21">P3ENBE21</option><option value="P3ENBE22">P3ENBE22</option><option value="P1EWBA47">P1EWBA47</option><option value="P3ENDE40">P3ENDE40</option><option value="P1ECDL47">P1ECDL47</option><option value="P3ENUP13">P3ENUP13</option><option value="P3ENND16">P3ENND16</option><option value="P3ENBS02">P3ENBS02</option><option value="P3ENMI36">P3ENMI36</option><option value="P3ENND27">P3ENND27</option><option value="P3ENND15">P3ENND15</option><option value="P3ENND14">P3ENND14</option><option value="P3ENDE42">P3ENDE42</option><option value="P3ENND17">P3ENND17</option><option value="P3ENGG35">P3ENGG35</option><option value="P1EWDL15">P1EWDL15</option><option value="P3ENMI28">P3ENMI28</option><option value="P3ENMI31">P3ENMI31</option><option value="P3ECUP07">P3ECUP07</option><option value="P3ENBJ01">P3ENBJ01</option><option value="P3ENDE37">P3ENDE37</option><option value="P3ENJD05">P3ENJD05</option><option value="P3ENBH11">P3ENBH11</option><option value="P3ENGZ02">P3ENGZ02</option><option value="P3ENCO13">P3ENCO13</option><option value="P3ENCO14">P3ENCO14</option><option value="P1EWBA32">P1EWBA32</option><option value="P1ENSL03">P1ENSL03</option><option value="P3ENBE33">P3ENBE33</option><option value="P3ENCI80">P3ENCI80</option><option value="P3ENOD05">P3ENOD05</option><option value="P3ENDE44">P3ENDE44</option><option value="P3ENPL01">P3ENPL01</option><option value="P3ENHY69">P3ENHY69</option><option value="P3ENHY68">P3ENHY68</option><option value="P3ENHY67">P3ENHY67</option><option value="P3ENHY64">P3ENHY64</option><option value="P3ENTR11">P3ENTR11</option><option value="P3ENTR10">P3ENTR10</option><option value="P3ENTR09">P3ENTR09</option><option value="P3ENTR08">P3ENTR08</option><option value="P3ENMR01">P3ENMR01</option><option value="P3ENFB01">P3ENFB01</option><option value="P3ENKN02">P3ENKN02</option><option value="P3ENMI26">P3ENMI26</option><option value="P3ECMI05">P3ECMI05</option><option value="P3ECMI11">P3ECMI11</option><option value="P3ECDE17">P3ECDE17</option><option value="P3ECND12">P3ECND12</option><option value="P3ECMI10">P3ECMI10</option><option value="P3ECBE16">P3ECBE16</option><option value="P3ENBL77">P3ENBL77</option><option value="P3ECBE20">P3ECBE20</option><option value="P3ENPJ01">P3ENPJ01</option><option value="P3ENMH01">P3ENMH01</option><option value="P3ENPJ04">P3ENPJ04</option><option value="P3ENLD04">P3ENLD04</option><option value="P3ENLD02">P3ENLD02</option><option value="P3ENPJ05">P3ENPJ05</option><option value="P3ECMI09">P3ECMI09</option><option value="P3ECHY16">P3ECHY16</option><option value="P1ECDL42">P1ECDL42</option><option value="P3ECMI12">P3ECMI12</option><option value="P3ENPJ03">P3ENPJ03</option><option value="P3ENPK01">P3ENPK01</option><option value="P3ENBL80">P3ENBL80</option><option value="P3ENBL74">P3ENBL74</option><option value="P3ECHY12">P3ECHY12</option><option value="P3ENBL79">P3ENBL79</option><option value="P3ENBL78">P3ENBL78</option><option value="P3ENAL03">P3ENAL03</option><option value="P3ECHY22">P3ECHY22</option><option value="P3ECDE08">P3ECDE08</option><option value="P3ECMT04">P3ECMT04</option><option value="P3ECJP02">P3ECJP02</option><option value="P3ENBL84">P3ENBL84</option><option value="P3ENBL83">P3ENBL83</option><option value="P3ECMI14">P3ECMI14</option><option value="P3ECDE27">P3ECDE27</option><option value="P3ENDE97">P3ENDE97</option><option value="P3ENHE29">P3ENHE29</option><option value="P3ECPT02">P3ECPT02</option><option value="P3ENJG07">P3ENJG07</option><option value="P3ENJG05">P3ENJG05</option><option value="P3ECLK20">P3ECLK20</option><option value="P3ECJB02">P3ECJB02</option><option value="P3ENJR05">P3ENJR05</option><option value="P3ENGZ14">P3ENGZ14</option><option value="P3ECDE16">P3ECDE16</option><option value="P1EWHY21">P1EWHY21</option><option value="P3ENGG04">P3ENGG04</option><option value="P3ECCI08">P3ECCI08</option><option value="P3ECCI09">P3ECCI09</option><option value="P3ECAG02">P3ECAG02</option><option value="P3ENMN03">P3ENMN03</option><option value="P3ECCI10">P3ECCI10</option><option value="P3ECNK18">P3ECNK18</option><option value="P3ENDA01">P3ENDA01</option><option value="P3ENME26">P3ENME26</option><option value="P3ENNK02">P3ENNK02</option><option value="P3ENHE21">P3ENHE21</option><option value="P3ECSO01">P3ECSO01</option><option value="P3ECNK07">P3ECNK07</option><option value="P3ECMO10">P3ECMO10</option><option value="P3ECNK20">P3ECNK20</option><option value="P3ECNK19">P3ECNK19</option><option value="P3ECMO11">P3ECMO11</option><option value="P3ECSO02">P3ECSO02</option><option value="P3ENAA02">P3ENAA02</option><option value="P3ENMF01">P3ENMF01</option><option value="P3ENMO07">P3ENMO07</option><option value="P3ENDL89">P3ENDL89</option><option value="P3ECCI02">P3ECCI02</option><option value="P3ECNK13">P3ECNK13</option><option value="P3ECKV02">P3ECKV02</option><option value="P3ECAU01">P3ECAU01</option><option value="P3ECTV03">P3ECTV03</option><option value="P3ECCI12">P3ECCI12</option><option value="P3ENBL86">P3ENBL86</option><option value="P3ENBL85">P3ENBL85</option><option value="P3ENJG06">P3ENJG06</option><option value="P3ECML02">P3ECML02</option><option value="P3ENBL87">P3ENBL87</option><option value="P3ENCE32">P3ENCE32</option><option value="P3ENJG08">P3ENJG08</option><option value="P3ECKP04">P3ECKP04</option><option value="P3ENBV02">P3ENBV02</option><option value="P3ENDL94">P3ENDL94</option><option value="P3ENDL95">P3ENDL95</option><option value="P3ENDL96">P3ENDL96</option><option value="P3ENAL33">P3ENAL33</option><option value="P3ECAC01">P3ECAC01</option><option value="P3ENHU01">P3ENHU01</option><option value="P1ECLK10">P1ECLK10</option><option value="P3ENBP18">P3ENBP18</option><option value="P3ENJH18">P3ENJH18</option><option value="P3ENBN16">P3ENBN16</option><option value="P3ENDL87">P3ENDL87</option><option value="P3ECKG01">P3ECKG01</option><option value="P1ENHD14">P1ENHD14</option><option value="P3ENAG22">P3ENAG22</option><option value="P3ENAG23">P3ENAG23</option><option value="P3ENTP10">P3ENTP10</option><option value="P3ECRI06">P3ECRI06</option><option value="P3ENHE09">P3ENHE09</option><option value="P3ENRI32">P3ENRI32</option><option value="P3ENLH03">P3ENLH03</option><option value="P3ENHE25">P3ENHE25</option><option value="P3ENRI34">P3ENRI34</option><option value="P3ECRI05">P3ECRI05</option><option value="P3ENPT65">P3ENPT65</option><option value="P3ENRI33">P3ENRI33</option><option value="P3ENMO08">P3ENMO08</option><option value="P3ENJD09">P3ENJD09</option><option value="P3ENLK14">P3ENLK14</option><option value="P3ECPM01">P3ECPM01</option><option value="P3ENMS02">P3ENMS02</option><option value="P3ENPT66">P3ENPT66</option><option value="P3ENMA09">P3ENMA09</option><option value="P3ECCT02">P3ECCT02</option><option value="P3ENAL22">P3ENAL22</option><option value="P3ENDA02">P3ENDA02</option><option value="P3ECFZ01">P3ECFZ01</option><option value="P3ECBB04">P3ECBB04</option><option value="P3ENKB01">P3ENKB01</option><option value="P1ENCO05">P1ENCO05</option><option value="P3ENHE26">P3ENHE26</option><option value="P3ECJJ02">P3ECJJ02</option><option value="P1EWCH39">P1EWCH39</option><option value="P3ENAG25">P3ENAG25</option><option value="P3ENHE31">P3ENHE31</option><option value="P3ENOD28">P3ENOD28</option><option value="P1ENAL04">P1ENAL04</option><option value="P3ECOI01">P3ECOI01</option><option value="P3ECNE01">P3ECNE01</option><option value="P3ENCI92">P3ENCI92</option><option value="P3ECSO05">P3ECSO05</option><option value="P3ENKD03">P3ENKD03</option><option value="P3ECNK21">P3ECNK21</option><option value="P3ECBN27">P3ECBN27</option><option value="P3ENHE19">P3ENHE19</option><option value="P1ECVR01">P1ECVR01</option><option value="P3ENHE27">P3ENHE27</option><option value="P3ENGY10">P3ENGY10</option><option value="P3ECSP02">P3ECSP02</option><option value="P3ENMM09">P3ENMM09</option><option value="P3ENJH25">P3ENJH25</option><option value="P3ECUN01">P3ECUN01</option><option value="P3ENJH17">P3ENJH17</option><option value="P3ENBN31">P3ENBN31</option><option value="P3ECND11">P3ECND11</option><option value="P3ECND08">P3ECND08</option><option value="P3ECFD01">P3ECFD01</option><option value="P3ECCO09">P3ECCO09</option><option value="P3ENKP14">P3ENKP14</option><option value="P3ENMM10">P3ENMM10</option><option value="P3ENKP13">P3ENKP13</option><option value="P3ENSP01">P3ENSP01</option><option value="P3ENBN28">P3ENBN28</option><option value="P1ENNL02">P1ENNL02</option><option value="P3ENKG01">P3ENKG01</option><option value="P3ECRB01">P3ECRB01</option><option value="P3ECKI02">P3ECKI02</option><option value="P3ECPL02">P3ECPL02</option><option value="P3ENAA05">P3ENAA05</option><option value="P3ENKO02">P3ENKO02</option><option value="P3ENPT71">P3ENPT71</option><option value="P3ENDI18">P3ENDI18</option><option value="P3ENST34">P3ENST34</option><option value="P3ECRG02">P3ECRG02</option><option value="P1EWMI03">P1EWMI03</option><option value="P3ENMM02">P3ENMM02</option><option value="P3ENPN82">P3ENPN82</option><option value="P1EWMI04">P1EWMI04</option><option value="P3ENDI11">P3ENDI11</option><option value="P3ENMM07">P3ENMM07</option><option value="P3ENMG16">P3ENMG16</option><option value="P3ENBW02">P3ENBW02</option><option value="P4ENGP07">P4ENGP07</option><option value="P3ENDI10">P3ENDI10</option><option value="P3ENAA06">P3ENAA06</option><option value="P3ECBK01">P3ECBK01</option><option value="P3ENKT02">P3ENKT02</option><option value="P3ENDI13">P3ENDI13</option><option value="P3ENDI15">P3ENDI15</option><option value="P3ENFD93">P3ENFD93</option><option value="P3ENMG22">P3ENMG22</option><option value="P3ENBN32">P3ENBN32</option><option value="P3ENHE28">P3ENHE28</option><option value="P3ENAL35">P3ENAL35</option><option value="P3ENJH21">P3ENJH21</option><option value="P3ENJA02">P3ENJA02</option><option value="P3ENKP19">P3ENKP19</option><option value="P3ENCO36">P3ENCO36</option><option value="P3ENBN34">P3ENBN34</option><option value="P3ENKP02">P3ENKP02</option><option value="P3ENAL34">P3ENAL34</option><option value="P3ENHE45">P3ENHE45</option><option value="P3ECTR01">P3ECTR01</option><option value="P3ENHE44">P3ENHE44</option><option value="P3ECPL03">P3ECPL03</option><option value="P3ENHE43">P3ENHE43</option><option value="P3ENND78">P3ENND78</option><option value="P3ENND74">P3ENND74</option><option value="P3ENBN29">P3ENBN29</option><option value="P3ENBN41">P3ENBN41</option><option value="P3ENPR04">P3ENPR04</option><option value="P3ENDI20">P3ENDI20</option><option value="P3ENMM15">P3ENMM15</option><option value="P3ENAL36">P3ENAL36</option><option value="P3ENND83">P3ENND83</option><option value="P3ENPN95">P3ENPN95</option><option value="P3ENDI12">P3ENDI12</option><option value="P3ENKP18">P3ENKP18</option><option value="P3ENDI08">P3ENDI08</option><option value="P3ENNR39">P3ENNR39</option><option value="P3ENFZ03">P3ENFZ03</option><option value="P3ECBR01">P3ECBR01</option><option value="P3ENBR56">P3ENBR56</option><option value="P3ENJH19">P3ENJH19</option><option value="P3ENBN35">P3ENBN35</option><option value="P3ENJR06">P3ENJR06</option><option value="P3ENDL57">P3ENDL57</option><option value="P3ENKJ01">P3ENKJ01</option><option value="P3ENCO37">P3ENCO37</option><option value="P3ENHE53">P3ENHE53</option><option value="P3ENKI04">P3ENKI04</option><option value="P3ENWL79">P3ENWL79</option><option value="P3ENWL80">P3ENWL80</option><option value="P3ENBU95">P3ENBU95</option><option value="P3ENHE49">P3ENHE49</option><option value="P3ENBV03">P3ENBV03</option><option value="P3ENJH20">P3ENJH20</option><option value="P3ENRG03">P3ENRG03</option><option value="P3ENRG04">P3ENRG04</option><option value="P3ENJR07">P3ENJR07</option><option value="P3ENBN40">P3ENBN40</option><option value="P3ENAA04">P3ENAA04</option><option value="P3ENBN38">P3ENBN38</option><option value="P3ECAP01">P3ECAP01</option><option value="P3ENGU05">P3ENGU05</option><option value="P3ENVG02">P3ENVG02</option><option value="P3ENPN91">P3ENPN91</option><option value="P3ENAT01">P3ENAT01</option><option value="P3ENBV05">P3ENBV05</option><option value="P3ENND90">P3ENND90</option><option value="P3ENPN84">P3ENPN84</option><option value="P3ECNK08">P3ECNK08</option><option value="P3ENMM14">P3ENMM14</option><option value="P3EWAL10">P3EWAL10</option><option value="P3ENSP08">P3ENSP08</option><option value="P3ENUP06">P3ENUP06</option><option value="P3ENND84">P3ENND84</option><option value="P3ECNK06">P3ECNK06</option><option value="P3ENPT73">P3ENPT73</option><option value="P3ENMM17">P3ENMM17</option><option value="P3ENCE44">P3ENCE44</option><option value="P3ENRI24">P3ENRI24</option><option value="P1ECGO02">P1ECGO02</option><option value="P3ENND93">P3ENND93</option><option value="P3ENME27">P3ENME27</option><option value="P3ENND91">P3ENND91</option><option value="P3ENMA10">P3ENMA10</option><option value="P1EWCH55">P1EWCH55</option><option value="P3ENND92">P3ENND92</option><option value="P3ENRI38">P3ENRI38</option><option value="P3ENCI85">P3ENCI85</option><option value="P3ENCB03">P3ENCB03</option><option value="P3ENDI23">P3ENDI23</option><option value="P3ECRI04">P3ECRI04</option><option value="P3ENHE55">P3ENHE55</option><option value="P3ENCE39">P3ENCE39</option><option value="P1EWCH51">P1EWCH51</option><option value="P3ENUP07">P3ENUP07</option><option value="P3ENAG14">P3ENAG14</option><option value="P3ENBT06">P3ENBT06</option><option value="P3ENVW01">P3ENVW01</option><option value="P3ENDO06">P3ENDO06</option><option value="P3ENSL05">P3ENSL05</option><option value="P3ENUP11">P3ENUP11</option><option value="P3ENMR02">P3ENMR02</option><option value="P3ECMT05">P3ECMT05</option><option value="P3ENPI01">P3ENPI01</option><option value="P3ENSB01">P3ENSB01</option><option value="P3ENND95">P3ENND95</option><option value="P3ENND94">P3ENND94</option><option value="P3ENAL40">P3ENAL40</option><option value="P3ENBN46">P3ENBN46</option><option value="P3ENND80">P3ENND80</option><option value="P3ENVR69">P3ENVR69</option><option value="P3ENGN27">P3ENGN27</option><option value="P3ENGK15">P3ENGK15</option><option value="P3ENAA08">P3ENAA08</option><option value="P3ENAG31">P3ENAG31</option><option value="P3ENAA10">P3ENAA10</option><option value="P3ENBN44">P3ENBN44</option><option value="P3ENAL42">P3ENAL42</option><option value="P3ENHS02">P3ENHS02</option><option value="P3ENPU58">P3ENPU58</option><option value="P3ENAL43">P3ENAL43</option><option value="P3ENAL45">P3ENAL45</option><option value="P3ENBW03">P3ENBW03</option><option value="P3ENPL04">P3ENPL04</option><option value="P3ENNE11">P3ENNE11</option><option value="P3ENBW04">P3ENBW04</option><option value="P3ENTP12">P3ENTP12</option><option value="P3ENCE02">P3ENCE02</option><option value="P3ENRU70">P3ENRU70</option><option value="P3ENPC04">P3ENPC04</option><option value="P3ENNE12">P3ENNE12</option><option value="P3ENNE13">P3ENNE13</option><option value="P3ENBT09">P3ENBT09</option><option value="P3ENBT10">P3ENBT10</option><option value="P3ENRU71">P3ENRU71</option><option value="P3ENPT75">P3ENPT75</option><option value="P3ENPT76">P3ENPT76</option><option value="P3ENJB06">P3ENJB06</option><option value="P3ENCE71">P3ENCE71</option><option value="P3ENDI25">P3ENDI25</option><option value="P3ENJH24">P3ENJH24</option><option value="P3ENRI35">P3ENRI35</option><option value="P3ENAG29">P3ENAG29</option><option value="P3ENPN98">P3ENPN98</option><option value="P3ENBV04">P3ENBV04</option><option value="P3ENPE04">P3ENPE04</option><option value="P3ENJG11">P3ENJG11</option><option value="P3ENJG13">P3ENJG13</option><option value="P1ENBA19">P1ENBA19</option><option value="P3ENKI05">P3ENKI05</option><option value="P3ENCE42">P3ENCE42</option><option value="P3ENRI36">P3ENRI36</option><option value="P3ENCE41">P3ENCE41</option><option value="P3ENTJ14">P3ENTJ14</option><option value="P3ENTR17">P3ENTR17</option><option value="P3ENCE46">P3ENCE46</option><option value="P3ENCE47">P3ENCE47</option><option value="P3ENRU67">P3ENRU67</option><option value="P3ENRU68">P3ENRU68</option><option value="P3ENHW01">P3ENHW01</option><option value="P3ENKA76">P3ENKA76</option><option value="P3ENSK04">P3ENSK04</option><option value="P3ECHY18">P3ECHY18</option><option value="P3ENTH01">P3ENTH01</option><option value="P3ENCI27">P3ENCI27</option><option value="P3ENHE64">P3ENHE64</option><option value="P3ENHE67">P3ENHE67</option><option value="P3ENKT04">P3ENKT04</option><option value="P3ENBN37">P3ENBN37</option><option value="P3ENKL01">P3ENKL01</option><option value="P3ENHE62">P3ENHE62</option><option value="P3ENND97">P3ENND97</option><option value="P3ENJG12">P3ENJG12</option><option value="P3ENFD95">P3ENFD95</option><option value="P3ENGG78">P3ENGG78</option><option value="P3ENJG15">P3ENJG15</option><option value="P3ENBN45">P3ENBN45</option><option value="P3ENHE66">P3ENHE66</option><option value="P3ENHE60">P3ENHE60</option><option value="P3ENJG14">P3ENJG14</option><option value="P3ENBV06">P3ENBV06</option><option value="P3ENCT13">P3ENCT13</option><option value="P3ENGU09">P3ENGU09</option><option value="P3ECBE19">P3ECBE19</option><option value="P3ENBN55">P3ENBN55</option><option value="P3ENME25">P3ENME25</option><option value="P3ENBN52">P3ENBN52</option><option value="P3ENCE43">P3ENCE43</option><option value="P3ENBN71">P3ENBN71</option><option value="P3ENPE11">P3ENPE11</option><option value="P3ENBN72">P3ENBN72</option><option value="P3ENBN70">P3ENBN70</option><option value="P3ENND86">P3ENND86</option><option value="P3ENBN53">P3ENBN53</option><option value="P3ENND40">P3ENND40</option><option value="P3ENND72">P3ENND72</option><option value="P3ENHA02">P3ENHA02</option><option value="P1ECFA03">P1ECFA03</option><option value="P3ENFZ02">P3ENFZ02</option><option value="P3ENND82">P3ENND82</option><option value="P3ENND87">P3ENND87</option><option value="P3ENPE12">P3ENPE12</option><option value="P1ECDO01">P1ECDO01</option><option value="P3ENML04">P3ENML04</option><option value="P3ENET01">P3ENET01</option><option value="P3ENPE08">P3ENPE08</option><option value="P1EWGO03">P1EWGO03</option><option value="P1ECDO02">P1ECDO02</option><option value="P4ENDO01">P4ENDO01</option><option value="P3ENDI26">P3ENDI26</option><option value="P3ENBY02">P3ENBY02</option><option value="P3ENBY03">P3ENBY03</option><option value="P3ENJH02">P3ENJH02</option><option value="P3ENBB07">P3ENBB07</option><option value="P3ENFD91">P3ENFD91</option><option value="P3ENLK16">P3ENLK16</option><option value="P3ENPL36">P3ENPL36</option><option value="P3ENPE14">P3ENPE14</option><option value="P3ECPL01">P3ECPL01</option><option value="P3ENMM20">P3ENMM20</option><option value="P4ENDO02">P4ENDO02</option><option value="P3ENPL38">P3ENPL38</option><option value="P3ENMM30">P3ENMM30</option><option value="P3ENPT34">P3ENPT34</option><option value="P3ENBN76">P3ENBN76</option><option value="P3ENBN78">P3ENBN78</option><option value="P3ENBN74">P3ENBN74</option><option value="P3ENCE64">P3ENCE64</option><option value="P3ENBN77">P3ENBN77</option><option value="P3ENKP21">P3ENKP21</option><option value="P3ENPL03">P3ENPL03</option><option value="P3ENUN01">P3ENUN01</option><option value="P3ECPO01">P3ECPO01</option><option value="P3ENHE59">P3ENHE59</option><option value="P3ENJR11">P3ENJR11</option><option value="P3ENRI39">P3ENRI39</option><option value="P3ENPT38">P3ENPT38</option><option value="P3ECRI02">P3ECRI02</option><option value="P3ENBW06">P3ENBW06</option><option value="P3ENHE70">P3ENHE70</option><option value="P3ENPC05">P3ENPC05</option><option value="P3ENCE67">P3ENCE67</option><option value="P3ENHE71">P3ENHE71</option><option value="P3ENMM40">P3ENMM40</option><option value="P3ENPE17">P3ENPE17</option><option value="P3ENMM29">P3ENMM29</option><option value="P3ENBN48">P3ENBN48</option><option value="P3ENBN83">P3ENBN83</option><option value="P3ENTP13">P3ENTP13</option><option value="P3ENHE61">P3ENHE61</option><option value="P3ENHE63">P3ENHE63</option><option value="P3ENFD97">P3ENFD97</option><option value="P3ENLD07">P3ENLD07</option><option value="P3ENPJ10">P3ENPJ10</option><option value="P3ENGU13">P3ENGU13</option><option value="P3ENBP20">P3ENBP20</option><option value="P3ENWI02">P3ENWI02</option><option value="P3ENPU56">P3ENPU56</option><option value="P3ENJH30">P3ENJH30</option><option value="P3ECDH09">P3ECDH09</option><option value="P3ENNK12">P3ENNK12</option><option value="P3ENJH29">P3ENJH29</option><option value="P3ENAL41">P3ENAL41</option><option value="P3ENMM28">P3ENMM28</option><option value="P3ENBU04">P3ENBU04</option><option value="P3ENJJ03">P3ENJJ03</option><option value="P3ENST33">P3ENST33</option><option value="P3ENHW04">P3ENHW04</option><option value="P3ECHR01">P3ECHR01</option><option value="P3ENPU49">P3ENPU49</option><option value="P3ENRI41">P3ENRI41</option><option value="P3ENRG06">P3ENRG06</option><option value="P3ENAR04">P3ENAR04</option><option value="P3ENBU05">P3ENBU05</option><option value="P3ENAA12">P3ENAA12</option><option value="P3ENJR15">P3ENJR15</option><option value="P3ENMM44">P3ENMM44</option><option value="P3ENHW05">P3ENHW05</option><option value="P3ENAG33">P3ENAG33</option><option value="P3ENST36">P3ENST36</option><option value="P3ENNK13">P3ENNK13</option><option value="P3ENMR05">P3ENMR05</option><option value="P3ENPT79">P3ENPT79</option><option value="P3ENGU14">P3ENGU14</option><option value="P3ENST35">P3ENST35</option><option value="P3ENGN12">P3ENGN12</option><option value="P3ECHP02">P3ECHP02</option><option value="P3ENDP04">P3ENDP04</option><option value="P3ENNK10">P3ENNK10</option><option value="P3ENMM35">P3ENMM35</option><option value="P3ENVR70">P3ENVR70</option><option value="P3ENNK09">P3ENNK09</option><option value="P3ENBP22">P3ENBP22</option><option value="P3ENAW03">P3ENAW03</option><option value="P3ENLK24">P3ENLK24</option><option value="P3ENBS09">P3ENBS09</option><option value="P3ENMM32">P3ENMM32</option><option value="P3ENBD07">P3ENBD07</option><option value="P3ENAG38">P3ENAG38</option><option value="P3ENCE84">P3ENCE84</option><option value="P3ENMM54">P3ENMM54</option><option value="P3ENMD17">P3ENMD17</option><option value="P3ENCO45">P3ENCO45</option><option value="P3ENGK17">P3ENGK17</option><option value="P3ENAM14">P3ENAM14</option><option value="P3ENMG24">P3ENMG24</option><option value="P3ENCE85">P3ENCE85</option><option value="P3ENCE87">P3ENCE87</option><option value="P3ENCE86">P3ENCE86</option><option value="P3ENCE83">P3ENCE83</option><option value="P3ENVL19">P3ENVL19</option><option value="P3ENPE39">P3ENPE39</option><option value="P3ENVL20">P3ENVL20</option><option value="P3ENVL18">P3ENVL18</option><option value="P3ENKI07">P3ENKI07</option><option value="P3ENMD26">P3ENMD26</option><option value="P3ENTU01">P3ENTU01</option><option value="P3ENAU03">P3ENAU03</option><option value="P3ENVY01">P3ENVY01</option><option value="P3ENCO46">P3ENCO46</option><option value="P3ENCO40">P3ENCO40</option><option value="P3ENDL21">P3ENDL21</option><option value="P3ENDE30">P3ENDE30</option><option value="P3ENDL02">P3ENDL02</option><option value="P1EWDL11">P1EWDL11</option><option value="P3ENLK26">P3ENLK26</option><option value="P3ENDE50">P3ENDE50</option><option value="P3ENDE53">P3ENDE53</option><option value="P3ENDL05">P3ENDL05</option><option value="P3ENDL41">P3ENDL41</option><option value="P3ENDE31">P3ENDE31</option><option value="P3ENDE48">P3ENDE48</option><option value="P1ENDL04">P1ENDL04</option><option value="P3ENDL60">P3ENDL60</option><option value="P3ENDL35">P3ENDL35</option><option value="P3ENHW08">P3ENHW08</option><option value="P3ENDP05">P3ENDP05</option><option value="P3ENMD22">P3ENMD22</option><option value="P1ENCN71">P1ENCN71</option><option value="P1ENJH33">P1ENJH33</option><option value="P3ENMG17">P3ENMG17</option><option value="P3ENMG19">P3ENMG19</option><option value="P3ENMG18">P3ENMG18</option><option value="P3ENMN02">P3ENMN02</option><option value="P3ENAU04">P3ENAU04</option><option value="P3ENLK30">P3ENLK30</option><option value="P3ENAL54">P3ENAL54</option><option value="P3ENVI01">P3ENVI01</option><option value="P3ENRU69">P3ENRU69</option><option value="P3ENPE42">P3ENPE42</option><option value="P3ENOD44">P3ENOD44</option><option value="P3ENPE58">P3ENPE58</option><option value="P3ENPT81">P3ENPT81</option><option value="P3ENSO21">P3ENSO21</option><option value="P3ENMD67">P3ENMD67</option><option value="P3ENMD71">P3ENMD71</option><option value="P3ENJH34">P3ENJH34</option><option value="P3ENMD49">P3ENMD49</option><option value="P3ENBU54">P3ENBU54</option><option value="P3ENOD45">P3ENOD45</option><option value="P3ENMD38">P3ENMD38</option><option value="P3ENOD52">P3ENOD52</option><option value="P3ENMD37">P3ENMD37</option><option value="P3ENMM85">P3ENMM85</option><option value="P3ENJR25">P3ENJR25</option><option value="P3ENBU56">P3ENBU56</option><option value="P3ENMD39">P3ENMD39</option><option value="P3ENBU53">P3ENBU53</option><option value="P3ENJR27">P3ENJR27</option><option value="P3ENMD48">P3ENMD48</option><option value="P3ENPT82">P3ENPT82</option><option value="P3ENOD48">P3ENOD48</option><option value="P3ENLK37">P3ENLK37</option><option value="P3ENAP08">P3ENAP08</option><option value="P3ENMD44">P3ENMD44</option><option value="P3ENLK33">P3ENLK33</option><option value="P3ENPE61">P3ENPE61</option><option value="P3ENBU51">P3ENBU51</option><option value="P3ENJR26">P3ENJR26</option><option value="P3ENMD55">P3ENMD55</option><option value="P3ENLK38">P3ENLK38</option><option value="P3ENSO22">P3ENSO22</option><option value="P3ENMD56">P3ENMD56</option><option value="P3ENPE59">P3ENPE59</option><option value="P3ENBU55">P3ENBU55</option><option value="P3ENOD46">P3ENOD46</option><option value="P3ENMD54">P3ENMD54</option><option value="P3ENAL53">P3ENAL53</option><option value="P3ENMD50">P3ENMD50</option><option value="P3ENMX10">P3ENMX10</option><option value="P3ENOD50">P3ENOD50</option><option value="P3ENOD49">P3ENOD49</option><option value="P3ENPE63">P3ENPE63</option><option value="P3ENAP09">P3ENAP09</option><option value="P3ENJA05">P3ENJA05</option><option value="P3ENVI17">P3ENVI17</option><option value="P3ENLK39">P3ENLK39</option><option value="P3ENLK35">P3ENLK35</option><option value="P3ENLK44">P3ENLK44</option><option value="P3ENOD56">P3ENOD56</option><option value="P3ENMX30">P3ENMX30</option><option value="P3ENMD51">P3ENMD51</option><option value="P3ENMM86">P3ENMM86</option><option value="P3ENLK49">P3ENLK49</option><option value="P3ENJH35">P3ENJH35</option><option value="P3ENSO14">P3ENSO14</option><option value="P3ENOD57">P3ENOD57</option><option value="P3ENPT83">P3ENPT83</option><option value="P3ENAP18">P3ENAP18</option><option value="P3ENPO26">P3ENPO26</option><option value="P3ENMD77">P3ENMD77</option><option value="P3ENMD83">P3ENMD83</option><option value="P3ENMX58">P3ENMX58</option><option value="P3ENMD79">P3ENMD79</option><option value="P3ENMX32">P3ENMX32</option><option value="P3ENOD54">P3ENOD54</option><option value="P3ENMD76">P3ENMD76</option><option value="P3ENHD81">P3ENHD81</option><option value="P3ENHD89">P3ENHD89</option><option value="P3ENOD55">P3ENOD55</option><option value="P3ENMD81">P3ENMD81</option><option value="P3ENPT84">P3ENPT84</option><option value="P3ENHD85">P3ENHD85</option><option value="P3ENMD80">P3ENMD80</option><option value="P3ENPJ14">P3ENPJ14</option><option value="P3ENMD78">P3ENMD78</option><option value="P3ENBU69">P3ENBU69</option><option value="P3ENPT85">P3ENPT85</option><option value="P3ENMX46">P3ENMX46</option><option value="P3ENAP21">P3ENAP21</option><option value="P3ENOD58">P3ENOD58</option><option value="P3ENMD58">P3ENMD58</option><option value="P3ENMX13">P3ENMX13</option><option value="P3ENMD84">P3ENMD84</option><option value="P3ENMX14">P3ENMX14</option><option value="P3ENMX38">P3ENMX38</option><option value="P3ENLK64">P3ENLK64</option><option value="P3ENPT86">P3ENPT86</option><option value="P3ENLK59">P3ENLK59</option><option value="P3ENMD97">P3ENMD97</option><option value="P3ENBU70">P3ENBU70</option><option value="P3ENLK51">P3ENLK51</option><option value="P3ENLK58">P3ENLK58</option><option value="P3ENMX16">P3ENMX16</option><option value="P3ENJH36">P3ENJH36</option><option value="P3ENPJ16">P3ENPJ16</option><option value="P3ENMX55">P3ENMX55</option><option value="P3ENOD59">P3ENOD59</option><option value="P3ENBU82">P3ENBU82</option><option value="P3ENMX50">P3ENMX50</option><option value="P3ENHD86">P3ENHD86</option><option value="P3ENMX17">P3ENMX17</option><option value="P3ENMX34">P3ENMX34</option><option value="P3ENMX65">P3ENMX65</option><option value="P3ENBU84">P3ENBU84</option><option value="P3ENPJ17">P3ENPJ17</option><option value="P3ENMX69">P3ENMX69</option><option value="P3ENMD96">P3ENMD96</option><option value="P3ENPT87">P3ENPT87</option><option value="P3ENBU85">P3ENBU85</option><option value="P3ENMD88">P3ENMD88</option><option value="P3ENHD97">P3ENHD97</option><option value="P3ENMX90">P3ENMX90</option><option value="P3ENBU86">P3ENBU86</option><option value="P3ENMX91">P3ENMX91</option><option value="P3ENDI47">P3ENDI47</option><option value="P3ENMY04">P3ENMY04</option><option value="P3ENCX15">P3ENCX15</option><option value="P3ENHD78">P3ENHD78</option><option value="P3ENTS14">P3ENTS14</option><option value="P3ENCX17">P3ENCX17</option><option value="P3ENJH37">P3ENJH37</option><option value="P3ENPJ18">P3ENPJ18</option><option value="P3ENLK82">P3ENLK82</option><option value="P3ENCX06">P3ENCX06</option><option value="P3ENMX87">P3ENMX87</option><option value="P3ENMX77">P3ENMX77</option><option value="P3ENCX05">P3ENCX05</option><option value="P3ENJH39">P3ENJH39</option><option value="P3ENCX09">P3ENCX09</option><option value="P3ENLK81">P3ENLK81</option><option value="P3ENTS30">P3ENTS30</option><option value="P3ENPT91">P3ENPT91</option><option value="P3ENTS12">P3ENTS12</option><option value="P3ENPT90">P3ENPT90</option><option value="P3ENPT89">P3ENPT89</option><option value="P3ENMX84">P3ENMX84</option><option value="P3ENBU90">P3ENBU90</option><option value="P3ENBU89">P3ENBU89</option><option value="P3ENBU92">P3ENBU92</option><option value="P3ENBU91">P3ENBU91</option><option value="P3ENCX21">P3ENCX21</option><option value="P3ENLK84">P3ENLK84</option><option value="P3ENJH38">P3ENJH38</option><option value="P3ENOD74">P3ENOD74</option><option value="P3ENMY45">P3ENMY45</option><option value="P3ENCX24">P3ENCX24</option><option value="P3ENMY17">P3ENMY17</option><option value="P3ENMX98">P3ENMX98</option><option value="P3ENMY22">P3ENMY22</option><option value="P3ENMY23">P3ENMY23</option><option value="P3ENMX72">P3ENMX72</option><option value="P3ENPJ24">P3ENPJ24</option><option value="P3ENLK95">P3ENLK95</option><option value="P3ENCX20">P3ENCX20</option><option value="P3ENHW16">P3ENHW16</option><option value="P3ENMX80">P3ENMX80</option><option value="P3ENMX93">P3ENMX93</option><option value="P3ENLK85">P3ENLK85</option><option value="P3ENPJ25">P3ENPJ25</option><option value="P3ENMY05">P3ENMY05</option><option value="P3ENPJ23">P3ENPJ23</option><option value="P3ENMY01">P3ENMY01</option><option value="P3ENAP19">P3ENAP19</option><option value="P3ENMY32">P3ENMY32</option><option value="P3ENMY09">P3ENMY09</option><option value="P3ENBU99">P3ENBU99</option><option value="P3ENMY33">P3ENMY33</option><option value="P3ENMY34">P3ENMY34</option><option value="P3ENMY31">P3ENMY31</option><option value="P3ENLK87">P3ENLK87</option><option value="P3ENMY46">P3ENMY46</option><option value="P3ENBU97">P3ENBU97</option><option value="P3ENMX97">P3ENMX97</option><option value="P3ENMY51">P3ENMY51</option><option value="P3ENMY57">P3ENMY57</option><option value="P3ENMY38">P3ENMY38</option><option value="P3ENBU96">P3ENBU96</option><option value="P3ENMX99">P3ENMX99</option><option value="P3ENPT93">P3ENPT93</option><option value="P3ENCX13">P3ENCX13</option><option value="P3ENMY44">P3ENMY44</option><option value="P3ENMY14">P3ENMY14</option><option value="P3ENMY21">P3ENMY21</option><option value="P3ENMY30">P3ENMY30</option><option value="P3ENMY37">P3ENMY37</option><option value="P3ENMY16">P3ENMY16</option><option value="P3ENMY65">P3ENMY65</option><option value="P3ENAP31">P3ENAP31</option><option value="P3ENAP37">P3ENAP37</option><option value="P3ENCX14">P3ENCX14</option><option value="P3ENCX19">P3ENCX19</option><option value="P3ENAP36">P3ENAP36</option><option value="P3ENMY28">P3ENMY28</option><option value="P3ENMY48">P3ENMY48</option><option value="P3ENKZ04">P3ENKZ04</option><option value="P3ENPJ26">P3ENPJ26</option><option value="P3ENKK32">P3ENKK32</option><option value="P3ENTS33">P3ENTS33</option><option value="P3ENPT96">P3ENPT96</option><option value="P3ENCX34">P3ENCX34</option><option value="P3ENMY77">P3ENMY77</option><option value="P3ENMY76">P3ENMY76</option><option value="P3ENPT95">P3ENPT95</option><option value="P3ENMY43">P3ENMY43</option><option value="P3ENCX26">P3ENCX26</option><option value="P3ENNZ17">P3ENNZ17</option><option value="P3ENMY73">P3ENMY73</option><option value="P3ENMY59">P3ENMY59</option><option value="P3ENMY74">P3ENMY74</option><option value="P3ENCX42">P3ENCX42</option><option value="P3ENMY07">P3ENMY07</option><option value="P3ENMY50">P3ENMY50</option><option value="P3ENLL28">P3ENLL28</option><option value="P3ENCX46">P3ENCX46</option><option value="P3ENNZ01">P3ENNZ01</option><option value="P3ENLL21">P3ENLL21</option><option value="P3ENLL17">P3ENLL17</option><option value="P3ENLL30">P3ENLL30</option><option value="P3ENLL29">P3ENLL29</option><option value="P3ENLL26">P3ENLL26</option><option value="P3ENMY78">P3ENMY78</option><option value="P3ENLL25">P3ENLL25</option><option value="P3ENLL24">P3ENLL24</option><option value="P3ENMY91">P3ENMY91</option><option value="P3ENHW18">P3ENHW18</option><option value="P3ENLL36">P3ENLL36</option><option value="P3ENTS49">P3ENTS49</option><option value="P3ENLL39">P3ENLL39</option><option value="P3ENLL41">P3ENLL41</option><option value="P3ENLL53">P3ENLL53</option><option value="P3ENLL40">P3ENLL40</option><option value="P3ENNZ03">P3ENNZ03</option><option value="P3ENJH42">P3ENJH42</option><option value="P3ENLL38">P3ENLL38</option><option value="P3ENAP45">P3ENAP45</option><option value="P3ENCX56">P3ENCX56</option><option value="P3ENTS47">P3ENTS47</option><option value="P3ENLL42">P3ENLL42</option><option value="P3ENTS45">P3ENTS45</option><option value="P3ENPT99">P3ENPT99</option><option value="P3ENNZ32">P3ENNZ32</option><option value="P3ENKZ23">P3ENKZ23</option><option value="P3ENNZ02">P3ENNZ02</option><option value="P3ENNZ27">P3ENNZ27</option><option value="P3ENNZ71">P3ENNZ71</option><option value="P3ENNZ16">P3ENNZ16</option><option value="P3ENNZ25">P3ENNZ25</option><option value="P3ENLL47">P3ENLL47</option><option value="P3ENNZ05">P3ENNZ05</option><option value="P3ENMY92">P3ENMY92</option><option value="P3ENAP48">P3ENAP48</option><option value="P3ENAP50">P3ENAP50</option><option value="P3ENNZ04">P3ENNZ04</option><option value="P3ENNZ73">P3ENNZ73</option><option value="P3ENNZ53">P3ENNZ53</option><option value="P3ENCX73">P3ENCX73</option><option value="P3ENNZ24">P3ENNZ24</option><option value="P3ENTS52">P3ENTS52</option><option value="P3ENCX74">P3ENCX74</option><option value="P3ENCX69">P3ENCX69</option><option value="P3ENIN13">P3ENIN13</option><option value="P3ENNZ33">P3ENNZ33</option><option value="P3ENNZ34">P3ENNZ34</option><option value="P3ENJH43">P3ENJH43</option><option value="H06957">H06957</option><option value="P3ENLL55">P3ENLL55</option><option value="P3ENTS35">P3ENTS35</option><option value="P3ENNZ77">P3ENNZ77</option><option value="P3ENNZ37">P3ENNZ37</option><option value="P3ENNZ11">P3ENNZ11</option><option value="P3ENNZ15">P3ENNZ15</option><option value="P3ENCX85">P3ENCX85</option><option value="P3ENPF03">P3ENPF03</option><option value="P3ENCX79">P3ENCX79</option><option value="P3ENNZ76">P3ENNZ76</option><option value="P3ENLL64">P3ENLL64</option><option value="P3ENCX77">P3ENCX77</option><option value="P3ENOD93">P3ENOD93</option><option value="P3ENNZ35">P3ENNZ35</option><option value="P3ENNZ75">P3ENNZ75</option><option value="P3ENCX81">P3ENCX81</option><option value="P3ENLL57">P3ENLL57</option><option value="P3ENTS68">P3ENTS68</option><option value="P3ENNZ74">P3ENNZ74</option><option value="P3ENCX78">P3ENCX78</option><option value="P3ENNZ47">P3ENNZ47</option><option value="P3ENIN18">P3ENIN18</option><option value="P3ENLL65">P3ENLL65</option><option value="P3ENTS75">P3ENTS75</option><option value="P3ENIN14">P3ENIN14</option><option value="P3ENLL63">P3ENLL63</option><option value="P3ENNZ72">P3ENNZ72</option><option value="P3ENAP51">P3ENAP51</option><option value="P3ENLL58">P3ENLL58</option><option value="P3ENLL72">P3ENLL72</option><option value="P3ENLL68">P3ENLL68</option><option value="P3ENLL50">P3ENLL50</option><option value="P3ENAP53">P3ENAP53</option><option value="P3ENNZ80">P3ENNZ80</option><option value="P3ENIN17">P3ENIN17</option><option value="P3ENMY64">P3ENMY64</option><option value="P3ENIN22">P3ENIN22</option><option value="P3ENLL59">P3ENLL59</option><option value="P3ENLL76">P3ENLL76</option><option value="P3ENHL02">P3ENHL02</option><option value="P3ENMM23">P3ENMM23</option><option value="P3ENLL51">P3ENLL51</option><option value="P3ENPU76">P3ENPU76</option><option value="P1ENPU47">P1ENPU47</option><option value="P1ENDI01">P1ENDI01</option><option value="P1ENPU22">P1ENPU22</option><option value="P3ENNZ95">P3ENNZ95</option><option value="P3ENMY35">P3ENMY35</option><option value="P3ENNZ93">P3ENNZ93</option><option value="P3ENTS77">P3ENTS77</option><option value="P3ENUM06">P3ENUM06</option><option value="P3ENNZ84">P3ENNZ84</option><option value="P3ENLL80">P3ENLL80</option><option value="P3ENNZ30">P3ENNZ30</option><option value="P3ENGX13">P3ENGX13</option><option value="P3ENIN12">P3ENIN12</option><option value="P3ENCR09">P3ENCR09</option><option value="P3ENLL82">P3ENLL82</option><option value="P3ENLL74">P3ENLL74</option><option value="P3ENPF05">P3ENPF05</option><option value="P3ENCR12">P3ENCR12</option><option value="P3ENCR18">P3ENCR18</option><option value="P3ENUM13">P3ENUM13</option><option value="P3ENCR20">P3ENCR20</option><option value="P3ENCX98">P3ENCX98</option><option value="P3ENCX97">P3ENCX97</option><option value="P3ENUM12">P3ENUM12</option><option value="P3ENAP52">P3ENAP52</option><option value="P3ENCX94">P3ENCX94</option><option value="P3ENLL84">P3ENLL84</option><option value="P3ENHW20">P3ENHW20</option><option value="P3ENLL88">P3ENLL88</option><option value="P3ENCR25">P3ENCR25</option><option value="P3ENLL85">P3ENLL85</option><option value="P3ENKZ42">P3ENKZ42</option><option value="P3ENGX14">P3ENGX14</option><option value="P3ENLL75">P3ENLL75</option><option value="P3ENHW22">P3ENHW22</option><option value="P3ENAP62">P3ENAP62</option><option value="P3ENLL86">P3ENLL86</option><option value="P3ENLL87">P3ENLL87</option><option value="P3ENPJ34">P3ENPJ34</option><option value="P3ENAP61">P3ENAP61</option><option value="P3ENTS82">P3ENTS82</option><option value="P3ENCR08">P3ENCR08</option><option value="P3ENKZ41">P3ENKZ41</option><option value="P3ENCR27">P3ENCR27</option><option value="P3ENUM24">P3ENUM24</option><option value="P3ENCR31">P3ENCR31</option><option value="P3ENUM31">P3ENUM31</option><option value="P3ENJR50">P3ENJR50</option><option value="P3ENJR58">P3ENJR58</option><option value="P3ENNZ78">P3ENNZ78</option><option value="P3ENUM21">P3ENUM21</option><option value="P3ENUM14">P3ENUM14</option><option value="P3ENPJ36">P3ENPJ36</option><option value="P3ENCX82">P3ENCX82</option><option value="P3ENOS13">P3ENOS13</option><option value="P3ENRI22">P3ENRI22</option><option value="H07948">H07948</option><option value="P3ENUQ08">P3ENUQ08</option><option value="H08001">H08001</option><option value="P3ENGM01">P3ENGM01</option><option value="P3ENUM38">P3ENUM38</option><option value="P3ENCR34">P3ENCR34</option><option value="P3ENUM23">P3ENUM23</option><option value="P3ENBJ02">P3ENBJ02</option><option value="H07569">H07569</option><option value="P3ENOD27">P3ENOD27</option><option value="P3ENUM11">P3ENUM11</option><option value="P3ENCT11">P3ENCT11</option><option value="P3ENPI39">P3ENPI39</option><option value="P3ENPI02">P3ENPI02</option><option value="P3ENPJ35">P3ENPJ35</option><option value="P3ENJJ01">P3ENJJ01</option><option value="P3ENLL96">P3ENLL96</option><option value="P3ENAG07">P3ENAG07</option><option value="P3ENAG26">P3ENAG26</option><option value="P3ENDK03">P3ENDK03</option><option value="P1ENPU40">P1ENPU40</option><option value="P3ENPN63">P3ENPN63</option><option value="P3ENOD37">P3ENOD37</option><option value="P3ENOD29">P3ENOD29</option><option value="P3ENOD30">P3ENOD30</option><option value="P3ECMG01">P3ECMG01</option><option value="P3ENPJ39">P3ENPJ39</option><option value="P3ENAM15">P3ENAM15</option><option value="P3ENKP15">P3ENKP15</option><option value="P3ENSH01">P3ENSH01</option><option value="P3ENOD36">P3ENOD36</option><option value="P3ECSG03">P3ECSG03</option><option value="P3ENOD41">P3ENOD41</option><option value="P3ECKR05">P3ECKR05</option><option value="P3ECST01">P3ECST01</option><option value="P3ENST04">P3ENST04</option><option value="P3ENOD07">P3ENOD07</option><option value="P3ENJS01">P3ENJS01</option><option value="P3ENOD40">P3ENOD40</option><option value="P3ENPI38">P3ENPI38</option><option value="P3ENKP10">P3ENKP10</option><option value="P3ENOD23">P3ENOD23</option><option value="P3ENUM99">P3ENUM99</option><option value="P3ENLM18">P3ENLM18</option><option value="P3ENLM46">P3ENLM46</option><option value="P3ENOS18">P3ENOS18</option><option value="P3ENOS19">P3ENOS19</option><option value="P3ENPE33">P3ENPE33</option><option value="P3ENRI27">P3ENRI27</option><option value="P3ENUM95">P3ENUM95</option><option value="P3ENLM05">P3ENLM05</option><option value="P3ENMI54">P3ENMI54</option><option value="P3ENMM52">P3ENMM52</option><option value="P3ENJR22">P3ENJR22</option><option value="P3ENJH15">P3ENJH15</option><option value="P3ENCR60">P3ENCR60</option><option value="P3ENKZ61">P3ENKZ61</option><option value="P3ENUM79">P3ENUM79</option><option value="H07921">H07921</option><option value="P3ENNK58">P3ENNK58</option><option value="P3ENUM78">P3ENUM78</option><option value="AX2E02124">AX2E02124</option><option value="P3ENUM76">P3ENUM76</option><option value="P3ENCR72">P3ENCR72</option><option value="P3ENCR63">P3ENCR63</option><option value="H07852">H07852</option><option value="H07900">H07900</option><option value="P3ENKZ68">P3ENKZ68</option><option value="H07855">H07855</option><option value="P3ENUM74">P3ENUM74</option><option value="P3ENUM75">P3ENUM75</option><option value="P3ENUQ11">P3ENUQ11</option><option value="P3ENTS95">P3ENTS95</option><option value="H07961">H07961</option><option value="H07974">H07974</option><option value="H07959">H07959</option><option value="P3ENLM25">P3ENLM25</option><option value="H08033">H08033</option><option value="H07582">H07582</option><option value="H08079">H08079</option><option value="P3ENCR82">P3ENCR82</option><option value="P3ENCR84">P3ENCR84</option><option value="H07920">H07920</option><option value="P3ENUM98">P3ENUM98</option><option value="P3ENUQ28">P3ENUQ28</option><option value="H07915">H07915</option><option value="H08141">H08141</option><option value="H07956">H07956</option><option value="P3ENLM19">P3ENLM19</option><option value="H07884">H07884</option><option value="H07913">H07913</option><option value="P3ENUQ25">P3ENUQ25</option><option value="P3ENUQ09">P3ENUQ09</option><option value="P3ENUQ22">P3ENUQ22</option><option value="H07951">H07951</option><option value="H07966">H07966</option><option value="P3ENJH54">P3ENJH54</option><option value="P3ENUQ38">P3ENUQ38</option><option value="P3ENMX08">P3ENMX08</option><option value="P3ECBB03">P3ECBB03</option><option value="H07969">H07969</option><option value="P3ENJH55">P3ENJH55</option><option value="H07912">H07912</option><option value="H08122">H08122</option><option value="H07997">H07997</option><option value="P3ENUQ31">P3ENUQ31</option><option value="P3ENUQ17">P3ENUQ17</option><option value="P3ENLM44">P3ENLM44</option><option value="H07851">H07851</option><option value="P3ENLM34">P3ENLM34</option><option value="P3ENUQ13">P3ENUQ13</option><option value="H08031">H08031</option><option value="P3ENLM39">P3ENLM39</option><option value="P3ENPF16">P3ENPF16</option><option value="H08233">H08233</option><option value="H08169">H08169</option><option value="H08190">H08190</option><option value="H08226">H08226</option><option value="H08181">H08181</option><option value="P3ENAP76">P3ENAP76</option><option value="H08265">H08265</option><option value="P3ENNK40">P3ENNK40</option><option value="P3ENCR93">P3ENCR93</option><option value="H08061">H08061</option><option value="P3ECVD02">P3ECVD02</option><option value="P3ENGY17">P3ENGY17</option><option value="H08011">H08011</option><option value="H08205">H08205</option><option value="P3ENCR98">P3ENCR98</option><option value="P3ENUP05">P3ENUP05</option><option value="P3ENUQ33">P3ENUQ33</option><option value="P3ECVD01">P3ECVD01</option><option value="H08296">H08296</option><option value="P3ENPN37">P3ENPN37</option><option value="P3ENPJ42">P3ENPJ42</option><option value="H08354">H08354</option><option value="H08270">H08270</option><option value="P1ENPU45">P1ENPU45</option><option value="H08191">H08191</option><option value="H08264">H08264</option><option value="H08076">H08076</option><option value="P3ENPU02">P3ENPU02</option><option value="P3ECBH12 ">P3ECBH12 </option><option value="P3ENUQ44">P3ENUQ44</option><option value="P3ENAH01">P3ENAH01</option><option value="H08343">H08343</option><option value="P3ENLM49">P3ENLM49</option><option value="H08210">H08210</option><option value="P3ENJR70">P3ENJR70</option><option value="H08231">H08231</option><option value="P3ENUQ47">P3ENUQ47</option><option value="P3ENUQ59">P3ENUQ59</option><option value="P1ENPU50">P1ENPU50</option><option value="H07544">H07544</option><option value="P3ENPN30">P3ENPN30</option><option value="P3ECDU04">P3ECDU04</option><option value="P3ENLM50">P3ENLM50</option><option value="H08352">H08352</option><option value="P3ENJR78">P3ENJR78</option><option value="P3ENLM55">P3ENLM55</option><option value="P3ENPU18">P3ENPU18</option><option value="P3ENAH04">P3ENAH04</option><option value="H08443">H08443</option><option value="H08395">H08395</option><option value="H08307">H08307</option><option value="P3ENAH10">P3ENAH10</option><option value="H08274">H08274</option><option value="P3ECJJ03">P3ECJJ03</option><option value="H08237">H08237</option><option value="P3ENPO28">P3ENPO28</option><option value="P3ENTV02">P3ENTV02</option><option value="H08427">H08427</option><option value="P3ENOD26">P3ENOD26</option><option value="P3ECAL06">P3ECAL06</option><option value="P3ENUQ15">P3ENUQ15</option><option value="H08575">H08575</option><option value="P3ENPJ30">P3ENPJ30</option><option value="P3ENPJ20">P3ENPJ20</option><option value="H08555">H08555</option><option value="P3ENHW24">P3ENHW24</option><option value="H08563">H08563</option><option value="H08451">H08451</option><option value="P3ENOD14">P3ENOD14</option><option value="P3ENOS30">P3ENOS30</option><option value="P3ENJH58">P3ENJH58</option><option value="H08586">H08586</option><option value="P3ENDK04">P3ENDK04</option><option value="H08607">H08607</option></select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 269.4px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-AtmID-container"><span class="select2-selection__rendered" id="select2-AtmID-container" title="P3ENRI27">P3ENRI27</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group row">
+					    <label class="col-sm-6 col-form-label">Select Portal</label>
+					        <div class="col-sm-9">
+					            <select name="portal" id="portal" class="form-control">
+					                <option value="all">All</option>
+					                <option value="active">Ticket Active</option>
+					                <option value="closed">Ticket Closed</option>
+	            				</select>
+					        </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+				    <div class="form-group row">
+					    <label class="col-sm-6 col-form-label">Select From &amp; To</label>
+					        <div class="col-sm-9">
+								<div id="reportrange" class="form-control" data-cancel-class="btn-light" style="float:right;">
+									<i class="fa fa-calendar"></i>&nbsp;
+									<span id="selectedValue">Oct 24,2023 - Nov 23,2023</span> 
+								</div>
+
+								<input type="hidden" id="start" name="start" value="2023-10-24">
+								<input type="hidden" id="end" name="end" value="2023-11-23">
+							</div>
+				    </div>
+			    </div>	
+				
+					<!--
+					<div class="col-sm-6 grid-margin"><br> <br>
+					<div class="form-group row" >
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input"  name="optionsRadios" id="optionsRadios1" value="">
+					   All
+					</label>
+					</div>
+					
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+					Ticket Active
+					</label>
+					</div> 
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+					Ticket Closed
+					</label>
+					</div>
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+					Notification
+					</label>
+					</div>
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+					Restore
+					</label>
+					</div>
+
+					</div>          
+					</div>  -->
+					
+					</div>
+					<div class="row">
+					    <div class="col-sm-3">
+						   <button class="btn btn-primary" id="Button" onclick="getTicketDetails()">Show</button>
+						</div>
+					</div>
+				
+					</div>
+</div><br>					
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Ticket Details From:</h4>
+               <div class="row" style="margin-bottom:10px;">
+			    <div class="col-md-6"></div>
+			   <!-- <div class="col-md-6">
+			     <div id="reportrange" class="form-control"   data-cancel-class="btn-light"  style="float:right;">
+                        <i class="fa fa-calendar"></i>&nbsp;
+                        <span id="selectedValue"></span> 
+                    </div>
+
+                    <input type="hidden" id="start" name="start" value="2023-11-23">
+                    <input type="hidden" id="end" name="end" value="2023-11-23">
+			    </div>	-->
+			   </div>
+              
+              <div class="row">
+                <div class="col-12" id="ticketview_tbody"><div class="table-responsive">
+                    <div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer"><div class="dt-buttons"><button class="dt-button buttons-excel buttons-html5" tabindex="0" aria-controls="order-listing" type="button"><span>Excel</span></button> </div><div id="order-listing_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="order-listing"></label></div><table id="order-listing" class="table dataTable no-footer" role="grid" aria-describedby="order-listing_info">
+                      <thead>
+                        <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-sort="descending" aria-label="ATM ID: activate to sort column ascending" style="width: 55.6833px;">ATM ID</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Alert Type: activate to sort column ascending" style="width: 139.983px;">Alert Type</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Panel ID: activate to sort column ascending" style="width: 65.9667px;">Panel ID</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Location: activate to sort column ascending" style="width: 307.383px;">Location</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="width: 307.383px;">Address</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="State: activate to sort column ascending" style="width: 54.7167px;">State</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="City: activate to sort column ascending" style="width: 33.5333px;">City</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Branch Code: activate to sort column ascending" style="width: 307.383px;">Branch Code</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Alarm Status: activate to sort column ascending" style="width: 107.983px;">Alarm Status</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Zone Status: activate to sort column ascending" style="width: 97.1833px;">Zone Status</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Send To IP: activate to sort column ascending" style="width: 82.4833px;">Send To IP</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Ticket DateTime: activate to sort column ascending" style="width: 133.317px;">Ticket DateTime</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Closure DateTime: activate to sort column ascending" style="width: 146.75px;">Closure DateTime</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Duration (HH:MM): activate to sort column ascending" style="width: 148.3px;">Duration (HH:MM)</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="DVR IP: activate to sort column ascending" style="width: 51.85px;">DVR IP</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Remark: activate to sort column ascending" style="width: 341.767px;">Remark</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Ticket ID: activate to sort column ascending" style="width: 69.85px;">Ticket ID</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Closed By User: activate to sort column ascending" style="width: 121.117px;">Closed By User</th></tr>
+                      </thead>
+                      <tbody>
+					    							   
+								
+													   
+								
+						                      <tr role="row" class="odd">
+							    <td class="sorting_1">P3ENRI27</td>
+								 <td>Lobby PIR Motion sensor</td>
+								<td>094255</td>
+                  <td>Purulia Rd, Lalpur, Ranchi, Jharkhand 834001, India</td>
+				  <td>Purulia Rd, Lalpur, Ranchi, Jharkhand 834001, India</td>
+				  <td>Jharkhand</td>
+				  <td>Ranchi</td>
+                  <td>Purulia Rd, Lalpur, Ranchi, Jharkhand 834001, India</td>
+                 
+				  <td>MA</td>
+				  <td>010</td>
+				  <td>192.168.100.79</td>
+                  <td>2023-11-22 23:30:05</td>
+                  <td>2023-11-22 23:35:40</td>
+				  <td>00:05</td>
+			      <td>10.248.0.17</td>
+                  <td>AS Per Live No one person Present At Site,</td>
+                  <td>3709541</td>
+                  <td>noork</td>
+                  
+								</tr><tr role="row" class="even">
+							    <td class="sorting_1">P3ENRI27</td>
+								 <td>Panic Switch</td>
+								<td>094255</td>
+                  <td>Purulia Rd, Lalpur, Ranchi, Jharkhand 834001, India</td>
+				  <td>Purulia Rd, Lalpur, Ranchi, Jharkhand 834001, India</td>
+				  <td>Jharkhand</td>
+				  <td>Ranchi</td>
+                  <td>Purulia Rd, Lalpur, Ranchi, Jharkhand 834001, India</td>
+                 
+				  <td>PA</td>
+				  <td>001</td>
+				  <td>192.168.100.74</td>
+                  <td>2023-11-22 13:05:17</td>
+                  <td>2023-11-22 13:28:52</td>
+				  <td>00:23</td>
+			      <td>10.248.0.17</td>
+                  <td>Comfort engineer at site mr vishal 2 way 1 way working,</td>
+                  <td>3483872</td>
+                  <td>kashish</td>
+                  
+								</tr></tbody>
+                    </table><div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div><div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="order-listing_previous"><a href="https://103.141.218.26/comforttechnonew/ticketview.php#" aria-controls="order-listing" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="https://103.141.218.26/comforttechnonew/ticketview.php#" aria-controls="order-listing" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="order-listing_next"><a href="https://103.141.218.26/comforttechnonew/ticketview.php#" aria-controls="order-listing" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div>
+                  </div>
+
+</div>
+
+              </div>
+            </div>
+          </div>
+        
+          
+                    </div>
+                                        <footer class="footer">
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">
+                                Copyright © 2021
+                                <a href="https://103.141.218.26/comforttechnonew/ticketview.php#" target="_blank">
+                                    Comfort Techno Services Pvt Ltd
+                                </a>
+                                . All rights reserved.
+                            </span>
+                           <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                                Hand-crafted & made with
+                                <i class="far fa-heart text-danger">
+                                </i>
+                            </span>-->
+                        </div>
+                    </footer>
+					                </div>
+            </div>
+        </div>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/vendor.bundle.base.js.download">
+        </script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/vendor.bundle.addons.js.download">
+        </script>
+
+
+<link rel="stylesheet" type="text/css" href="./Comfort Techno Services Pvt Ltd - admin_files/daterangepicker.css">
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+	<script type="text/javascript" src="./Comfort Techno Services Pvt Ltd - admin_files/moment.min.js.download"></script>
+	<script type="text/javascript" src="./Comfort Techno Services Pvt Ltd - admin_files/daterangepicker.min.js.download"></script>
+	
+		
+<script>
+                    $(function() {
+
+                        var start = moment().subtract(30, 'days');
+                        var end = moment();
+
+            function cb(start, end) {
+                $('#reportrange span').html(start.format('MMM DD,YYYY') + ' - ' + end.format('MMM DD,YYYY'));
+                $("#start").val(start.format('YYYY-MM-DD'));
+                $("#end").val(end.format('YYYY-MM-DD'));
+               // get_ticketview();
+            }
+
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                "showDropdowns": true,
+                "autoApply": true,
+                 maxDate: new Date(),
+                ranges: {
+                   'Today': [moment(), moment()],
+                //   'Yesterday': [moment().subtract(1, 'days'), moment()],
+                   'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                   'Last 7 Days': [moment().subtract(7, 'days'), moment()],
+                   'Last 30 Days': [moment().subtract(30, 'days'), moment()],
+                 //  'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 //  'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+
+
+
+            }, cb);
+
+            cb(start, end);
+
+
+        });
+</script>
+
+        
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/off-canvas.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/hoverable-collapse.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/misc.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/settings.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/todolist.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/dashboard.js.download"></script>
+		<script src="./Comfort Techno Services Pvt Ltd - admin_files/client_bank_circle_atmid.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/ticketview.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/data-table.js.download"></script>
+         <script src="./Comfort Techno Services Pvt Ltd - admin_files/select2.js.download"></script>
+      
+        
+    
+
+<div class="daterangepicker ltr auto-apply show-ranges opensright" style="display: none; top: 321.4px; left: 721.783px; right: auto;"><div class="ranges"><ul><li data-range-key="Today">Today</li><li data-range-key="Yesterday" class="active">Yesterday</li><li data-range-key="Last 7 Days" class="">Last 7 Days</li><li data-range-key="Last 30 Days" class="">Last 30 Days</li><li data-range-key="Custom Range">Custom Range</li></ul></div><div class="drp-calendar left"><div class="calendar-table"><table class="table-condensed"><thead><tr><th class="prev available"><span></span></th><th colspan="5" class="month"><select class="monthselect"><option value="0">Jan</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8">Sep</option><option value="9" selected="selected">Oct</option><option value="10">Nov</option><option value="11" disabled="disabled">Dec</option></select><select class="yearselect"><option value="1923">1923</option><option value="1924">1924</option><option value="1925">1925</option><option value="1926">1926</option><option value="1927">1927</option><option value="1928">1928</option><option value="1929">1929</option><option value="1930">1930</option><option value="1931">1931</option><option value="1932">1932</option><option value="1933">1933</option><option value="1934">1934</option><option value="1935">1935</option><option value="1936">1936</option><option value="1937">1937</option><option value="1938">1938</option><option value="1939">1939</option><option value="1940">1940</option><option value="1941">1941</option><option value="1942">1942</option><option value="1943">1943</option><option value="1944">1944</option><option value="1945">1945</option><option value="1946">1946</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option><option value="1966">1966</option><option value="1967">1967</option><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023" selected="selected">2023</option></select></th><th></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off ends available" data-title="r0c0">24</td><td class="off ends available" data-title="r0c1">25</td><td class="off ends available" data-title="r0c2">26</td><td class="off ends available" data-title="r0c3">27</td><td class="off ends available" data-title="r0c4">28</td><td class="off ends available" data-title="r0c5">29</td><td class="weekend off ends available" data-title="r0c6">30</td></tr><tr><td class="weekend available" data-title="r1c0">1</td><td class="available" data-title="r1c1">2</td><td class="available" data-title="r1c2">3</td><td class="available" data-title="r1c3">4</td><td class="available" data-title="r1c4">5</td><td class="available" data-title="r1c5">6</td><td class="weekend available" data-title="r1c6">7</td></tr><tr><td class="weekend available" data-title="r2c0">8</td><td class="available" data-title="r2c1">9</td><td class="available" data-title="r2c2">10</td><td class="available" data-title="r2c3">11</td><td class="available" data-title="r2c4">12</td><td class="available" data-title="r2c5">13</td><td class="weekend available" data-title="r2c6">14</td></tr><tr><td class="weekend available" data-title="r3c0">15</td><td class="available" data-title="r3c1">16</td><td class="available" data-title="r3c2">17</td><td class="available" data-title="r3c3">18</td><td class="available" data-title="r3c4">19</td><td class="available" data-title="r3c5">20</td><td class="weekend available" data-title="r3c6">21</td></tr><tr><td class="weekend available" data-title="r4c0">22</td><td class="available" data-title="r4c1">23</td><td class="available" data-title="r4c2">24</td><td class="available" data-title="r4c3">25</td><td class="available" data-title="r4c4">26</td><td class="available" data-title="r4c5">27</td><td class="weekend available" data-title="r4c6">28</td></tr><tr><td class="weekend available" data-title="r5c0">29</td><td class="available" data-title="r5c1">30</td><td class="available" data-title="r5c2">31</td><td class="off ends available" data-title="r5c3">1</td><td class="off ends available" data-title="r5c4">2</td><td class="off ends available" data-title="r5c5">3</td><td class="weekend off ends available" data-title="r5c6">4</td></tr></tbody></table></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"><table class="table-condensed"><thead><tr><th></th><th colspan="5" class="month"><select class="monthselect"><option value="0" disabled="disabled">Jan</option><option value="1" disabled="disabled">Feb</option><option value="2" disabled="disabled">Mar</option><option value="3" disabled="disabled">Apr</option><option value="4" disabled="disabled">May</option><option value="5" disabled="disabled">Jun</option><option value="6" disabled="disabled">Jul</option><option value="7" disabled="disabled">Aug</option><option value="8" disabled="disabled">Sep</option><option value="9" disabled="disabled">Oct</option><option value="10" selected="selected">Nov</option><option value="11" disabled="disabled">Dec</option></select><select class="yearselect"><option value="2023" selected="selected">2023</option></select></th><th></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off ends available" data-title="r0c0">29</td><td class="off ends available" data-title="r0c1">30</td><td class="off ends available" data-title="r0c2">31</td><td class="available" data-title="r0c3">1</td><td class="available" data-title="r0c4">2</td><td class="available" data-title="r0c5">3</td><td class="weekend available" data-title="r0c6">4</td></tr><tr><td class="weekend available" data-title="r1c0">5</td><td class="available" data-title="r1c1">6</td><td class="available" data-title="r1c2">7</td><td class="available" data-title="r1c3">8</td><td class="available" data-title="r1c4">9</td><td class="available" data-title="r1c5">10</td><td class="weekend available" data-title="r1c6">11</td></tr><tr><td class="weekend available" data-title="r2c0">12</td><td class="available" data-title="r2c1">13</td><td class="available" data-title="r2c2">14</td><td class="available" data-title="r2c3">15</td><td class="available" data-title="r2c4">16</td><td class="available" data-title="r2c5">17</td><td class="weekend available" data-title="r2c6">18</td></tr><tr><td class="weekend available" data-title="r3c0">19</td><td class="available" data-title="r3c1">20</td><td class="available" data-title="r3c2">21</td><td class="active start-date active end-date available" data-title="r3c3">22</td><td class="today available" data-title="r3c4">23</td><td class="off disabled" data-title="r3c5">24</td><td class="weekend off disabled" data-title="r3c6">25</td></tr><tr><td class="weekend off disabled" data-title="r4c0">26</td><td class="off disabled" data-title="r4c1">27</td><td class="off disabled" data-title="r4c2">28</td><td class="off disabled" data-title="r4c3">29</td><td class="off disabled" data-title="r4c4">30</td><td class="off ends off disabled" data-title="r4c5">1</td><td class="weekend off ends off disabled" data-title="r4c6">2</td></tr><tr><td class="weekend off ends off disabled" data-title="r5c0">3</td><td class="off ends off disabled" data-title="r5c1">4</td><td class="off ends off disabled" data-title="r5c2">5</td><td class="off ends off disabled" data-title="r5c3">6</td><td class="off ends off disabled" data-title="r5c4">7</td><td class="off ends off disabled" data-title="r5c5">8</td><td class="weekend off ends off disabled" data-title="r5c6">9</td></tr></tbody></table></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected">11/22/2023 - 11/22/2023</span><button class="cancelBtn btn btn-sm btn-light" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" type="button">Apply</button> </div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

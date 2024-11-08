@@ -1,0 +1,4874 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.21.211' and b.receivedtime between '2022-11-24 00:00:00' and '2022-11-24 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.21.211&#39; and b.receivedtime between &#39;2022-11-24 00:00:00&#39; and &#39;2022-11-24 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:118</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>3175285</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-11-24 15:02:00</td>
+		<td>2022-11-24 15:02:56</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>3175272</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:02:00</td>
+		<td>2022-11-24 15:02:54</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>3175250</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-11-24 15:01:59</td>
+		<td>2022-11-24 15:02:51</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>3175233</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:59</td>
+		<td>2022-11-24 15:02:49</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>3175216</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-11-24 15:01:59</td>
+		<td>2022-11-24 15:02:46</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>3175201</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:59</td>
+		<td>2022-11-24 15:02:44</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>3175191</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Vibration</td>
+	 	<td>ATM 2 Vibration</td>
+        <td>2022-11-24 15:01:26</td>
+		<td>2022-11-24 15:02:42</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>3175177</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:25</td>
+		<td>2022-11-24 15:02:40</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>3175156</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:24</td>
+		<td>2022-11-24 15:02:17</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>3175147</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM1</td>
+	 	<td>Chest door ATM1</td>
+        <td>2022-11-24 15:01:16</td>
+		<td>2022-11-24 15:02:14</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>3175127</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:15</td>
+		<td>2022-11-24 15:02:12</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>3175121</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM1</td>
+	 	<td>Chest door ATM1</td>
+        <td>2022-11-24 15:01:15</td>
+		<td>2022-11-24 15:02:10</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>3175108</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:14</td>
+		<td>2022-11-24 15:02:07</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>3175091</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM1</td>
+	 	<td>Chest door ATM1</td>
+        <td>2022-11-24 15:01:14</td>
+		<td>2022-11-24 15:02:05</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>3175083</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:13</td>
+		<td>2022-11-24 15:02:03</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>3175063</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM1</td>
+	 	<td>Chest door ATM1</td>
+        <td>2022-11-24 15:01:13</td>
+		<td>2022-11-24 15:02:00</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>3175060</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:12</td>
+		<td>2022-11-24 15:01:58</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>3175054</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM1</td>
+	 	<td>Chest door ATM1</td>
+        <td>2022-11-24 15:01:11</td>
+		<td>2022-11-24 15:01:42</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>3175051</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:01:11</td>
+		<td>2022-11-24 15:01:40</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>3175042</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>195</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 15:00:45</td>
+		<td>2022-11-24 15:01:37</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>3175037</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>191</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 15:00:44</td>
+		<td>2022-11-24 15:01:34</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>3175034</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM2</td>
+	 	<td>Chest door ATM2</td>
+        <td>2022-11-24 15:00:37</td>
+		<td>2022-11-24 15:01:32</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>3175029</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:00:34</td>
+		<td>2022-11-24 15:01:29</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>3175026</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM2</td>
+	 	<td>Chest door ATM2</td>
+        <td>2022-11-24 15:00:32</td>
+		<td>2022-11-24 15:01:26</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>3175005</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:00:31</td>
+		<td>2022-11-24 15:01:11</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>3174996</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM2</td>
+	 	<td>Chest door ATM2</td>
+        <td>2022-11-24 15:00:31</td>
+		<td>2022-11-24 15:01:09</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>3174990</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 15:00:31</td>
+		<td>2022-11-24 15:01:07</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>3174939</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM2</td>
+	 	<td>Chest door ATM2</td>
+        <td>2022-11-24 15:00:30</td>
+		<td>2022-11-24 15:00:51</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>3174596</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:12</td>
+		<td>2022-11-24 14:59:20</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>3174568</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:11</td>
+		<td>2022-11-24 14:59:09</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>3174564</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:57:54</td>
+		<td>2022-11-24 14:59:07</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>3174558</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:57:54</td>
+		<td>2022-11-24 14:59:05</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>3174553</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:57:53</td>
+		<td>2022-11-24 14:59:03</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>3174550</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:57:52</td>
+		<td>2022-11-24 14:59:00</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>3174546</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:57:52</td>
+		<td>2022-11-24 14:58:58</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>3174541</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>171</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:57:51</td>
+		<td>2022-11-24 14:58:56</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>3174262</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>041</td>
+	<td>BD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:56:04</td>
+		<td>2022-11-24 14:56:24</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>3174256</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>041</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Smoke Sensor</td>
+	 	<td>Smoke Sensor</td>
+        <td>2022-11-24 14:56:04</td>
+		<td>2022-11-24 14:56:22</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:56:09</td>
+	    <td>2022-11-24 14:56:09*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>3174253</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>041</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Smoke Sensor</td>
+	 	<td>Smoke Sensor</td>
+        <td>2022-11-24 14:56:04</td>
+		<td>2022-11-24 14:56:12</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>3174191</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:15</td>
+		<td>2022-11-24 14:55:44</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>3174186</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>195</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:55:11</td>
+		<td>2022-11-24 14:55:41</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>3174124</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>191</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:55:10</td>
+		<td>2022-11-24 14:55:19</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>3174109</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:13</td>
+		<td>2022-11-24 14:55:17</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>3174054</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:13</td>
+		<td>2022-11-24 14:55:07</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:56:09</td>
+	    <td>2022-11-24 14:56:09*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>3174040</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:13</td>
+		<td>2022-11-24 14:54:56</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>3174024</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:13</td>
+		<td>2022-11-24 14:54:46</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:56:09</td>
+	    <td>2022-11-24 14:56:09*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>3174001</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:12</td>
+		<td>2022-11-24 14:54:35</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>3173990</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:54:02</td>
+		<td>2022-11-24 14:54:33</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>3173965</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:53:34</td>
+		<td>2022-11-24 14:53:57</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>3173954</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:53:34</td>
+		<td>2022-11-24 14:53:55</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:56:09</td>
+	    <td>2022-11-24 14:56:09*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>3173910</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:53:33</td>
+		<td>2022-11-24 14:53:50</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>3173868</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:12</td>
+		<td>2022-11-24 14:53:18</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>3173800</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:11</td>
+		<td>2022-11-24 14:53:08</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:49</td>
+	    <td>2022-11-24 14:55:49*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>3173789</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>171</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:52:16</td>
+		<td>2022-11-24 14:53:05</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>3173774</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>041</td>
+	<td>BD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:52:16</td>
+		<td>2022-11-24 14:53:03</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>3173765</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>040</td>
+	<td>BD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:52:16</td>
+		<td>2022-11-24 14:52:59</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>3173747</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:52:16</td>
+		<td>2022-11-24 14:52:57</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>3173742</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:52:16</td>
+		<td>2022-11-24 14:52:54</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>3173724</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:52:16</td>
+		<td>2022-11-24 14:52:52</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>3173506</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:15</td>
+		<td>2022-11-24 14:51:54</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>3173504</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:13</td>
+		<td>2022-11-24 14:51:51</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>3173456</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:13</td>
+		<td>2022-11-24 14:51:11</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:49</td>
+	    <td>2022-11-24 14:55:49*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>3173374</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:13</td>
+		<td>2022-11-24 14:50:57</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>3173335</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:13</td>
+		<td>2022-11-24 14:50:48</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:49</td>
+	    <td>2022-11-24 14:55:49*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>3173279</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:12</td>
+		<td>2022-11-24 14:50:36</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>3173256</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:12</td>
+		<td>2022-11-24 14:50:34</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:49</td>
+	    <td>2022-11-24 14:55:49*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>3173224</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:12</td>
+		<td>2022-11-24 14:49:59</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>3173184</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:11</td>
+		<td>2022-11-24 14:49:42</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:49</td>
+	    <td>2022-11-24 14:55:49*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>3173102</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:49:00</td>
+		<td>2022-11-24 14:49:34</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>3173078</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:48:54</td>
+		<td>2022-11-24 14:49:06</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>3173075</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:48:49</td>
+		<td>2022-11-24 14:49:03</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>3173071</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:48:49</td>
+		<td>2022-11-24 14:49:01</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>3173067</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:48:18</td>
+		<td>2022-11-24 14:48:59</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>3173062</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:48:18</td>
+		<td>2022-11-24 14:48:56</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>3173058</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:48:15</td>
+		<td>2022-11-24 14:48:54</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>3173053</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:48:15</td>
+		<td>2022-11-24 14:48:52</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>3173051</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:48:03</td>
+		<td>2022-11-24 14:48:50</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>3173050</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:48:03</td>
+		<td>2022-11-24 14:48:47</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>3173049</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:47</td>
+		<td>2022-11-24 14:48:45</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>3173032</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:19</td>
+		<td>2022-11-24 14:48:30</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>3173028</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:16</td>
+		<td>2022-11-24 14:48:27</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>3173024</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:16</td>
+		<td>2022-11-24 14:48:25</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>3172974</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:15</td>
+		<td>2022-11-24 14:48:16</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>3172966</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:47:14</td>
+		<td>2022-11-24 14:48:13</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>3172941</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 14:47:14</td>
+		<td>2022-11-24 14:48:11</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>3172701</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 14:46:10</td>
+		<td>2022-11-24 14:46:20</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>3172681</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC /UPS removal</td>
+	 	<td>AC /UPS removal</td>
+        <td>2022-11-24 14:46:06</td>
+		<td>2022-11-24 14:46:17</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>3170406</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 14:41:53</td>
+		<td>2022-11-24 14:42:02</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>3170379</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>021</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door</td>
+	 	<td>Backroom door</td>
+        <td>2022-11-24 14:41:53</td>
+		<td>2022-11-24 14:42:00</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 14:55:50</td>
+	    <td>2022-11-24 14:55:50*this site recieved panic alert someone present at site 2way gsm switch off qrt person not responding*,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>3080527</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 12:00:00</td>
+		<td>2022-11-24 12:00:11</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>3080493</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 12:00:00</td>
+		<td>2022-11-24 12:00:09</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>2969494</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 08:31:35</td>
+		<td>2022-11-24 08:35:44</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>2969470</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 08:31:30</td>
+		<td>2022-11-24 08:35:42</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>2947329</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 08:00:00</td>
+		<td>2022-11-24 08:00:18</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>2947293</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 08:00:00</td>
+		<td>2022-11-24 08:00:16</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>2937964</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 07:45:29</td>
+		<td>2022-11-24 07:45:40</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>2937944</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 07:45:23</td>
+		<td>2022-11-24 07:45:38</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>2937919</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 07:45:23</td>
+		<td>2022-11-24 07:45:35</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>2937889</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 07:45:23</td>
+		<td>2022-11-24 07:45:33</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>Wrongly done by customer 2way done,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 07:46:30</td>
+	    <td>2022-11-24 07:46:30*Wrongly done by customer 2way done,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>2937617</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 07:44:55</td>
+		<td>2022-11-24 07:45:06</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>2937592</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 07:44:49</td>
+		<td>2022-11-24 07:45:04</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>2937573</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 07:44:49</td>
+		<td>2022-11-24 07:45:01</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>2937548</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-24 07:44:49</td>
+		<td>2022-11-24 07:44:59</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>Wrongly done by customer 2way done,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 07:46:23</td>
+	    <td>2022-11-24 07:46:23*Wrongly done by customer 2way done,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>2909761</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>105</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 07:00:00</td>
+		<td>2022-11-24 07:00:10</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>2909733</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 07:00:00</td>
+		<td>2022-11-24 07:00:08</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>2908998</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 06:58:52</td>
+		<td>2022-11-24 06:59:03</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>2908972</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-11-24 06:58:50</td>
+		<td>2022-11-24 06:59:01</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 06:58:41</td>
+	    <td>2022-11-24 06:58:41*Person doing transaction,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>2832310</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 05:05:41</td>
+		<td>2022-11-24 05:05:49</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>2832283</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-11-24 05:05:39</td>
+		<td>2022-11-24 05:05:47</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 05:06:37</td>
+	    <td>2022-11-24 05:06:37*Person doing transaction,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>2788056</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 04:00:00</td>
+		<td>2022-11-24 04:00:03</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>2788023</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 04:00:00</td>
+		<td>2022-11-24 04:00:01</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>2776341</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 03:42:37</td>
+		<td>2022-11-24 03:42:46</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>2776317</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-11-24 03:42:35</td>
+		<td>2022-11-24 03:42:43</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 03:42:24</td>
+	    <td>2022-11-24 03:42:24*Guard using backroom,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>2660715</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 00:44:30</td>
+		<td>2022-11-24 00:44:58</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>2660692</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-11-24 00:44:28</td>
+		<td>2022-11-24 00:44:56</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-24 00:44:39</td>
+	    <td>2022-11-24 00:44:39*Guard using backroom,*comfort</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>2632525</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>105</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 00:00:00</td>
+		<td>2022-11-24 00:00:20</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>2632488</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 00:00:00</td>
+		<td>2022-11-24 00:00:17</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>2632440</td>
+     <td>North</td>
+     <!-- <td>Agra,Uttar Pradesh</td>
+     <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj</td>-->
+    <td>P3ENAA04</td>
+    <td>38 /1/12 Raja Ram Ki Baghia Shamshabad Road Raj Pur Chugi Agra 282001</td>
+	<td>Agra</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 00:00:00</td>
+		<td>2022-11-24 00:00:15</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.211</td>
+		<td>SEC</td>	
+		<td>080514</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.21.211' and b.receivedtime between '2022-11-24 00:00:00' and '2022-11-24 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

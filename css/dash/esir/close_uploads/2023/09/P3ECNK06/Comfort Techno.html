@@ -1,0 +1,4397 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                  	
+                  <a class="dropdown-item" href="http://192.168.100.21:8080/css/allalert_data.php">All Alert</a>
+
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="multifix">multifix</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.170' and b.receivedtime between '2023-09-17 00:00:00' and '2023-09-20 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.26.170&#39; and b.receivedtime between &#39;2023-09-17 00:00:00&#39; and &#39;2023-09-20 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:105</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>121777079</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 23:51:13</td>
+		<td>2023-09-20 23:51:16</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>121777049</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-20 23:51:13</td>
+		<td>2023-09-20 23:51:15</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>121753256</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 23:22:02</td>
+		<td>2023-09-20 23:22:03</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>121752897</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-20 23:21:34</td>
+		<td>2023-09-20 23:21:36</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>abhishek</td>
+        <td>2023-09-20 23:25:51</td>
+	    <td>2023-09-20 23:25:51*As Per Live No One Present At Site*abhishek</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>121752855</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-20 23:21:31</td>
+		<td>2023-09-20 23:21:33</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>abhishek</td>
+        <td>2023-09-20 23:25:51</td>
+	    <td>2023-09-20 23:25:51*As Per Live No One Present At Site*abhishek</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>121638216</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 21:01:00</td>
+		<td>2023-09-20 21:01:03</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>121636250</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-20 20:59:10</td>
+		<td>2023-09-20 20:59:14</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>121636212</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 20:59:10</td>
+		<td>2023-09-20 20:59:12</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>121599511</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 20:07:09</td>
+		<td>2023-09-20 20:07:14</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>121599482</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-20 20:07:09</td>
+		<td>2023-09-20 20:07:12</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>ravij</td>
+        <td>2023-09-20 20:10:55</td>
+	    <td>2023-09-20 20:10:55*As per live no one present at site,*ravij</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>121577111</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 19:37:26</td>
+		<td>2023-09-20 19:37:28</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>121576994</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-20 19:37:17</td>
+		<td>2023-09-20 19:37:19</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2023-09-20 19:39:17</td>
+	    <td>2023-09-20 19:39:17*Person doing transaction,*helpdesk</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>121576956</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-20 19:37:14</td>
+		<td>2023-09-20 19:37:16</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2023-09-20 19:39:17</td>
+	    <td>2023-09-20 19:39:17*Person doing transaction,*helpdesk</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>121529191</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-20 18:30:00</td>
+		<td>2023-09-20 18:30:03</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>121529134</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Relay On</td>
+	 	<td>Relay On</td>
+        <td>2023-09-20 18:30:00</td>
+		<td>2023-09-20 18:30:01</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>121528570</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 18:29:28</td>
+		<td>2023-09-20 18:29:32</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>121528536</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 18:29:28</td>
+		<td>2023-09-20 18:29:30</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>121528309</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-20 18:30:00</td>
+		<td>2023-09-20 18:29:14</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>121528283</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Relay On</td>
+	 	<td>Relay On</td>
+        <td>2023-09-20 18:30:00</td>
+		<td>2023-09-20 18:29:12</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>121457251</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 16:59:55</td>
+		<td>2023-09-20 16:59:11</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>121457214</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-20 16:59:55</td>
+		<td>2023-09-20 16:59:09</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>121283602</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-20 12:59:51</td>
+		<td>2023-09-20 12:59:08</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>121283574</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 12:59:51</td>
+		<td>2023-09-20 12:59:06</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>121205287</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 11:15:50</td>
+		<td>2023-09-20 11:15:07</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>121205260</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-20 11:15:50</td>
+		<td>2023-09-20 11:15:05</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per verification person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2023-09-20 11:18:37</td>
+	    <td>2023-09-20 11:18:37*As per verification person doing transaction,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>121182431</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 10:47:40</td>
+		<td>2023-09-20 10:46:54</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>121180985</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-20 10:45:52</td>
+		<td>2023-09-20 10:45:07</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>Cash loading person present on site . 2way issue,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2023-09-20 10:45:31</td>
+	    <td>2023-09-20 10:45:31*Cash loading person present on site . 2way issue,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>121180892</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-09-20 10:45:45</td>
+		<td>2023-09-20 10:45:01</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>Cash loading person present on site .from writer 9075889702 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sachinm</td>
+        <td>2023-09-20 10:46:42</td>
+	    <td>2023-09-20 10:46:42*Cash loading person present on site .from writer 9075889702 2 way done,*sachinm</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>121099489</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 09:00:00</td>
+		<td>2023-09-20 08:59:17</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>121099449</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-20 09:00:00</td>
+		<td>2023-09-20 08:59:15</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>120620380</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 00:31:00</td>
+		<td>2023-09-20 00:30:19</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>120620343</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-20 00:31:00</td>
+		<td>2023-09-20 00:30:17</td>
+		<td>20-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>120576946</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-09-19 23:43:12</td>
+		<td>2023-09-19 23:42:29</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>omdeepg</td>
+        <td>2023-09-19 23:49:06</td>
+	    <td>2023-09-19 23:49:06*As per live no one present at site,*omdeepg</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>120572667</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-09-19 23:38:09</td>
+		<td>2023-09-19 23:37:27</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>omdeepg</td>
+        <td>2023-09-19 23:44:11</td>
+	    <td>2023-09-19 23:44:11*As per live no one present at site,*omdeepg</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>120449447</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 21:01:00</td>
+		<td>2023-09-19 21:00:17</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>120448233</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-19 20:59:36</td>
+		<td>2023-09-19 20:58:56</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>120448210</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 20:59:36</td>
+		<td>2023-09-19 20:58:54</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>120343792</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-19 18:30:00</td>
+		<td>2023-09-19 18:29:20</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>120343758</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Relay On</td>
+	 	<td>Relay On</td>
+        <td>2023-09-19 18:30:00</td>
+		<td>2023-09-19 18:29:18</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>120272281</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 16:59:32</td>
+		<td>2023-09-19 16:58:53</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>120272248</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-19 16:59:32</td>
+		<td>2023-09-19 16:58:51</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>120089283</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-19 12:59:28</td>
+		<td>2023-09-19 12:58:50</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>120089252</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 12:59:28</td>
+		<td>2023-09-19 12:58:48</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>119916718</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 09:23:24</td>
+		<td>2023-09-19 09:22:47</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>119916695</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-19 09:23:24</td>
+		<td>2023-09-19 09:22:45</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-09-19 09:23:10</td>
+	    <td>2023-09-19 09:23:10*As per live no one present at site,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>119897239</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 09:00:00</td>
+		<td>2023-09-19 08:59:22</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>119897186</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-19 09:00:00</td>
+		<td>2023-09-19 08:59:20</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>119892653</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 08:55:17</td>
+		<td>2023-09-19 08:54:37</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>119891620</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-19 08:54:03</td>
+		<td>2023-09-19 08:53:24</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>jyotij</td>
+        <td>2023-09-19 08:54:10</td>
+	    <td>2023-09-19 08:54:10*HK person on site,*jyotij</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>119891573</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-19 08:54:01</td>
+		<td>2023-09-19 08:53:21</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>jyotij</td>
+        <td>2023-09-19 08:54:10</td>
+	    <td>2023-09-19 08:54:10*HK person on site,*jyotij</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>119473258</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-19 01:26:32</td>
+		<td>2023-09-19 01:25:53</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>as par live no one person at site,</td>-->
+        <td>Reactive</td>
+        <td>surajp</td>
+        <td>2023-09-19 01:39:17</td>
+	    <td>2023-09-19 01:39:17*as par live no one person at site,*surajp</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>119464878</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 00:31:00</td>
+		<td>2023-09-19 00:30:23</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>119464841</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-19 00:31:00</td>
+		<td>2023-09-19 00:30:21</td>
+		<td>19-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>119380536</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 22:51:14</td>
+		<td>2023-09-18 22:50:39</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>119380510</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-18 22:51:14</td>
+		<td>2023-09-18 22:50:37</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site shutter down,</td>-->
+        <td>Reactive</td>
+        <td>ravij</td>
+        <td>2023-09-18 22:55:37</td>
+	    <td>2023-09-18 22:55:37*As per live no one present at site shutter down,*ravij</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>119358057</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 22:22:04</td>
+		<td>2023-09-18 22:21:26</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>119357957</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-18 22:21:56</td>
+		<td>2023-09-18 22:21:18</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2023-09-18 22:21:42</td>
+	    <td>2023-09-18 22:21:42*As Per Live No One Present At Site,*helpdesk</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>119357923</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-18 22:21:53</td>
+		<td>2023-09-18 22:21:15</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2023-09-18 22:21:42</td>
+	    <td>2023-09-18 22:21:42*As Per Live No One Present At Site,*helpdesk</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>119291673</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 21:01:00</td>
+		<td>2023-09-18 21:00:22</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>119290030</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-18 20:59:12</td>
+		<td>2023-09-18 20:58:37</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>119290008</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 20:59:12</td>
+		<td>2023-09-18 20:58:35</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>119182536</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-18 18:30:00</td>
+		<td>2023-09-18 18:29:24</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>119182511</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Relay On</td>
+	 	<td>Relay On</td>
+        <td>2023-09-18 18:30:00</td>
+		<td>2023-09-18 18:29:23</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>119165366</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-18 18:09:06</td>
+		<td>2023-09-18 18:08:29</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-09-18 18:46:15</td>
+	    <td>2023-09-18 18:46:15*Person doing transaction,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>119116262</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 16:59:08</td>
+		<td>2023-09-18 16:58:34</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>119116239</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-18 16:59:08</td>
+		<td>2023-09-18 16:58:32</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>118945120</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-18 12:59:05</td>
+		<td>2023-09-18 12:58:31</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>118945096</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 12:59:05</td>
+		<td>2023-09-18 12:58:29</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>118874940</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 11:27:03</td>
+		<td>2023-09-18 11:26:30</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>118874908</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-18 11:27:03</td>
+		<td>2023-09-18 11:26:28</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-09-18 11:29:52</td>
+	    <td>2023-09-18 11:29:52*As per live no one present at site,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>118854065</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 11:00:59</td>
+		<td>2023-09-18 11:00:24</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>118851749</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-18 10:57:57</td>
+		<td>2023-09-18 10:57:23</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2023-09-18 11:06:23</td>
+	    <td>2023-09-18 11:06:23*As Per Live No One Present At Site,*sushma</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>118851424</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-09-18 10:57:32</td>
+		<td>2023-09-18 10:56:57</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>Cash loading person present on site from writer ID card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>jyotij</td>
+        <td>2023-09-18 10:57:57</td>
+	    <td>2023-09-18 10:57:57*Cash loading person present on site from writer ID card shown 2 way done,*jyotij</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>118757176</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 09:00:00</td>
+		<td>2023-09-18 08:59:26</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>118757133</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-18 09:00:00</td>
+		<td>2023-09-18 08:59:24</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>118282147</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 00:31:00</td>
+		<td>2023-09-18 00:30:27</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>118282103</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-18 00:31:00</td>
+		<td>2023-09-18 00:30:25</td>
+		<td>18-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>118203948</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 23:00:51</td>
+		<td>2023-09-17 23:00:19</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>118203920</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-17 23:00:51</td>
+		<td>2023-09-17 23:00:17</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site shutter dwon,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2023-09-17 23:19:20</td>
+	    <td>2023-09-17 23:19:20*As per live no one present at site shutter dwon,*TeamLead</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>118181600</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 22:32:45</td>
+		<td>2023-09-17 22:32:18</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>118180587</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-17 22:31:28</td>
+		<td>2023-09-17 22:30:54</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-09-17 22:32:24</td>
+	    <td>2023-09-17 22:32:24*HK person on site,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>118180544</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-17 22:31:25</td>
+		<td>2023-09-17 22:30:51</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-09-17 22:32:24</td>
+	    <td>2023-09-17 22:32:24*HK person on site,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>118108715</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 21:01:00</td>
+		<td>2023-09-17 21:00:26</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>118107664</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-17 20:59:49</td>
+		<td>2023-09-17 20:59:18</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>118107636</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 20:59:49</td>
+		<td>2023-09-17 20:59:16</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>118009334</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-17 18:30:00</td>
+		<td>2023-09-17 18:29:28</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>118009305</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Relay On</td>
+	 	<td>Relay On</td>
+        <td>2023-09-17 18:30:00</td>
+		<td>2023-09-17 18:29:26</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>117942642</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 16:59:45</td>
+		<td>2023-09-17 16:59:15</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>117942613</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-17 16:59:45</td>
+		<td>2023-09-17 16:59:13</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>117768156</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-17 12:59:41</td>
+		<td>2023-09-17 12:59:12</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>117768123</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 12:59:41</td>
+		<td>2023-09-17 12:59:10</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>117719750</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 11:55:40</td>
+		<td>2023-09-17 11:55:11</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>117719723</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-17 11:55:40</td>
+		<td>2023-09-17 11:55:09</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-09-17 11:55:39</td>
+	    <td>2023-09-17 11:55:39*As per live no one present at site,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>117699380</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 11:28:32</td>
+		<td>2023-09-17 11:28:00</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>117697786</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-17 11:26:21</td>
+		<td>2023-09-17 11:25:48</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>Cash loading person present on site 2way 1way,</td>-->
+        <td>Reactive</td>
+        <td>pratiksha</td>
+        <td>2023-09-17 11:27:47</td>
+	    <td>2023-09-17 11:27:47*Cash loading person present on site 2way 1way,*pratiksha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>117697710</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-09-17 11:26:13</td>
+		<td>2023-09-17 11:25:42</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>Cash loading person present on site 2way 1way,</td>-->
+        <td>Reactive</td>
+        <td>pratiksha</td>
+        <td>2023-09-17 11:27:47</td>
+	    <td>2023-09-17 11:27:47*Cash loading person present on site 2way 1way,*pratiksha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>117604673</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 09:19:38</td>
+		<td>2023-09-17 09:19:10</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>117604641</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-17 09:19:38</td>
+		<td>2023-09-17 09:19:07</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-09-17 09:21:20</td>
+	    <td>2023-09-17 09:21:20*As per live no one present at site,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>117589137</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 09:00:00</td>
+		<td>2023-09-17 08:59:31</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>117589095</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-09-17 09:00:00</td>
+		<td>2023-09-17 08:59:29</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>117581690</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 08:51:37</td>
+		<td>2023-09-17 08:51:06</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>117580256</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-17 08:49:59</td>
+		<td>2023-09-17 08:49:29</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sachinm</td>
+        <td>2023-09-17 08:49:52</td>
+	    <td>2023-09-17 08:49:52*HK person on site 2way done,*sachinm</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>117580208</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2023-09-17 08:49:57</td>
+		<td>2023-09-17 08:49:25</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sachinm</td>
+        <td>2023-09-17 08:49:52</td>
+	    <td>2023-09-17 08:49:52*HK person on site 2way done,*sachinm</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>117125007</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 00:31:00</td>
+		<td>2023-09-17 00:30:32</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>117124971</td>
+     <td>West</td>
+     <!-- <td>Nashik,Maharashtra</td>
+     <td>Pimpalgaon</td>-->
+    <td>P3ECNK06</td>
+    <td>Shop Npo 9.Renuka Colony,Chowphulli,Dhanwantari Hospital,Chinchkhed Road,Pimpalgaon-B,Tal-Niphad, Dist- Nashik:-422209</td>
+	<td>Nashik</td>
+	<td>Maharashtra</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-09-17 00:31:00</td>
+		<td>2023-09-17 00:30:30</td>
+		<td>17-September-2023</td>
+		<td>172.55.26.170</td>
+		<td>RASS</td>	
+		<td>080537</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.170' and b.receivedtime between '2023-09-17 00:00:00' and '2023-09-20 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

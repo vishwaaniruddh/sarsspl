@@ -1,0 +1,7834 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.19' and b.receivedtime between '2023-03-22 00:00:00' and '2023-03-22 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.26.19&#39; and b.receivedtime between &#39;2023-03-22 00:00:00&#39; and &#39;2023-03-22 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:198</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>108439586</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:42:47</td>
+		<td>2023-03-22 16:42:43</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>108439583</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:42:47</td>
+		<td>2023-03-22 16:42:42</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>108439563</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>609</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:42:45</td>
+		<td>2023-03-22 16:42:40</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>108439567</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>609</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:42:45</td>
+		<td>2023-03-22 16:42:40</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>108439546</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>601</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:42:45</td>
+		<td>2023-03-22 16:42:38</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>108439551</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>601</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:42:45</td>
+		<td>2023-03-22 16:42:38</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>108439527</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-03-22 16:42:43</td>
+		<td>2023-03-22 16:42:35</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>108439531</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-03-22 16:42:43</td>
+		<td>2023-03-22 16:42:35</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>108439488</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-03-22 16:42:37</td>
+		<td>2023-03-22 16:42:29</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>108439490</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-03-22 16:42:37</td>
+		<td>2023-03-22 16:42:29</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>108439439</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-03-22 16:42:30</td>
+		<td>2023-03-22 16:42:22</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>108439441</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-03-22 16:42:30</td>
+		<td>2023-03-22 16:42:22</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>108439123</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>400</td>
+	<td>LD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:41:48</td>
+		<td>2023-03-22 16:41:42</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>108439120</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>400</td>
+	<td>LD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:41:48</td>
+		<td>2023-03-22 16:41:41</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>108438802</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>400</td>
+	<td>LA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:41:00</td>
+		<td>2023-03-22 16:41:00</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>108438800</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>400</td>
+	<td>LA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:41:00</td>
+		<td>2023-03-22 16:40:59</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>108438780</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>400</td>
+	<td>LD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:40:49</td>
+		<td>2023-03-22 16:40:57</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>108438782</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>400</td>
+	<td>LD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:40:49</td>
+		<td>2023-03-22 16:40:57</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>108438765</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>508</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:55</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>108438766</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>508</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:55</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>108438745</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>031</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Sensor</td>
+	 	<td>ATM 1 Hood Door Sensor</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:53</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>108438749</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>031</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Sensor</td>
+	 	<td>ATM 1 Hood Door Sensor</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:53</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>108438725</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:51</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>108438724</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:50</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>108438710</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:48</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>108438711</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:48</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>108438690</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>108438693</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>108438671</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Chest Door Open</td>
+	 	<td>ATM2 Chest Door Open</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:44</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>108438672</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Chest Door Open</td>
+	 	<td>ATM2 Chest Door Open</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:44</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>108438654</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:42</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>108438651</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:41</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>108438635</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:40</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>108438633</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-03-22 16:40:47</td>
+		<td>2023-03-22 16:40:39</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>108438618</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>559</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:40:44</td>
+		<td>2023-03-22 16:40:37</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>108438620</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>559</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:40:44</td>
+		<td>2023-03-22 16:40:37</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>108438563</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:40:32</td>
+		<td>2023-03-22 16:40:30</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>108438564</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:40:32</td>
+		<td>2023-03-22 16:40:30</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>108438545</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>703</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-22 16:40:17</td>
+		<td>2023-03-22 16:40:28</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>108438548</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>703</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-22 16:40:17</td>
+		<td>2023-03-22 16:40:28</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>108437989</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>400</td>
+	<td>LA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:39:12</td>
+		<td>2023-03-22 16:39:06</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>108437988</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>400</td>
+	<td>LA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:39:12</td>
+		<td>2023-03-22 16:39:05</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>108437783</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>559</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:38:40</td>
+		<td>2023-03-22 16:38:33</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>108437786</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>559</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:38:40</td>
+		<td>2023-03-22 16:38:33</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>108437511</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor Restoral</td>
+        <td>2023-03-22 16:37:57</td>
+		<td>2023-03-22 16:37:52</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>108437508</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor Restoral</td>
+        <td>2023-03-22 16:37:57</td>
+		<td>2023-03-22 16:37:51</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>108437493</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:37:57</td>
+		<td>2023-03-22 16:37:49</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>108437495</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:37:57</td>
+		<td>2023-03-22 16:37:49</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>108433837</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:29:57</td>
+		<td>2023-03-22 16:29:49</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>108433841</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:29:57</td>
+		<td>2023-03-22 16:29:49</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>108432905</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:27:57</td>
+		<td>2023-03-22 16:28:01</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>108432833</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:27:57</td>
+		<td>2023-03-22 16:27:53</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>108432813</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:27:57</td>
+		<td>2023-03-22 16:27:50</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>108432816</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:27:57</td>
+		<td>2023-03-22 16:27:50</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>108432187</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor Restoral</td>
+        <td>2023-03-22 16:26:28</td>
+		<td>2023-03-22 16:26:23</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>108432183</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor Restoral</td>
+        <td>2023-03-22 16:26:28</td>
+		<td>2023-03-22 16:26:22</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>108432165</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:26:28</td>
+		<td>2023-03-22 16:26:20</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>108432170</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:26:28</td>
+		<td>2023-03-22 16:26:20</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>108428670</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:18:28</td>
+		<td>2023-03-22 16:18:21</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>108428667</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:18:28</td>
+		<td>2023-03-22 16:18:20</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>108427881</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:16:28</td>
+		<td>2023-03-22 16:16:26</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>108427884</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:16:28</td>
+		<td>2023-03-22 16:16:26</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>108427866</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:16:28</td>
+		<td>2023-03-22 16:16:24</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>108427868</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:16:28</td>
+		<td>2023-03-22 16:16:24</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>108427844</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor Restoral</td>
+        <td>2023-03-22 16:16:27</td>
+		<td>2023-03-22 16:16:22</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>108427842</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor Restoral</td>
+        <td>2023-03-22 16:16:27</td>
+		<td>2023-03-22 16:16:21</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>108427825</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:16:27</td>
+		<td>2023-03-22 16:16:19</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>108427828</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:16:27</td>
+		<td>2023-03-22 16:16:19</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>108427742</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open Restoral</td>
+        <td>2023-03-22 16:16:12</td>
+		<td>2023-03-22 16:16:07</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>108427743</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open Restoral</td>
+        <td>2023-03-22 16:16:12</td>
+		<td>2023-03-22 16:16:07</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>108427732</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 16:16:12</td>
+		<td>2023-03-22 16:16:05</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>108427727</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 16:16:12</td>
+		<td>2023-03-22 16:16:04</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>108427110</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:14:41</td>
+		<td>2023-03-22 16:14:34</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>108427107</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:14:41</td>
+		<td>2023-03-22 16:14:33</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>108424362</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:08:12</td>
+		<td>2023-03-22 16:08:05</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>108424356</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:08:12</td>
+		<td>2023-03-22 16:08:04</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>108423721</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:06:27</td>
+		<td>2023-03-22 16:06:29</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 16:08:12</td>
+	    <td>2023-03-22 16:08:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>108423723</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:06:27</td>
+		<td>2023-03-22 16:06:29</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 16:08:12</td>
+	    <td>2023-03-22 16:08:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>108423705</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 16:06:26</td>
+		<td>2023-03-22 16:06:27</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>108423707</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 16:06:26</td>
+		<td>2023-03-22 16:06:27</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>108423690</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:06:26</td>
+		<td>2023-03-22 16:06:25</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 16:08:12</td>
+	    <td>2023-03-22 16:08:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>108423689</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:06:26</td>
+		<td>2023-03-22 16:06:24</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 16:08:12</td>
+	    <td>2023-03-22 16:08:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>108423663</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 16:06:25</td>
+		<td>2023-03-22 16:06:22</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>108423667</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 16:06:25</td>
+		<td>2023-03-22 16:06:22</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>108423646</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:06:24</td>
+		<td>2023-03-22 16:06:20</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 16:08:12</td>
+	    <td>2023-03-22 16:08:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>108423648</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:06:24</td>
+		<td>2023-03-22 16:06:20</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 16:08:12</td>
+	    <td>2023-03-22 16:08:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>108423631</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 16:06:24</td>
+		<td>2023-03-22 16:06:18</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>108423630</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 16:06:24</td>
+		<td>2023-03-22 16:06:17</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>108423538</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 16:06:12</td>
+		<td>2023-03-22 16:06:05</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 16:08:12</td>
+	    <td>2023-03-22 16:08:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>108423535</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 16:06:12</td>
+		<td>2023-03-22 16:06:04</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 16:08:12</td>
+	    <td>2023-03-22 16:08:12*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>108422927</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:04:44</td>
+		<td>2023-03-22 16:04:40</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>108422931</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 16:04:44</td>
+		<td>2023-03-22 16:04:40</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>108422907</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:04:41</td>
+		<td>2023-03-22 16:04:38</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>108422909</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 16:04:41</td>
+		<td>2023-03-22 16:04:38</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>108422888</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:04:41</td>
+		<td>2023-03-22 16:04:36</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>108422891</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-03-22 16:04:41</td>
+		<td>2023-03-22 16:04:36</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>108422870</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor Restoral</td>
+        <td>2023-03-22 16:04:40</td>
+		<td>2023-03-22 16:04:34</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>108422868</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>028</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor Restoral</td>
+        <td>2023-03-22 16:04:40</td>
+		<td>2023-03-22 16:04:33</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>108421696</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-03-22 16:01:53</td>
+		<td>2023-03-22 16:01:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>108421699</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-03-22 16:01:53</td>
+		<td>2023-03-22 16:01:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>108421476</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch Restoral</td>
+        <td>2023-03-22 16:01:17</td>
+		<td>2023-03-22 16:01:17</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>108421483</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch Restoral</td>
+        <td>2023-03-22 16:01:17</td>
+		<td>2023-03-22 16:01:17</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>108421462</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor Restoral</td>
+        <td>2023-03-22 16:01:17</td>
+		<td>2023-03-22 16:01:15</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>108421458</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor Restoral</td>
+        <td>2023-03-22 16:01:17</td>
+		<td>2023-03-22 16:01:14</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>108421440</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-03-22 16:01:17</td>
+		<td>2023-03-22 16:01:12</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>108421443</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-03-22 16:01:17</td>
+		<td>2023-03-22 16:01:12</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>108421425</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2023-03-22 16:01:17</td>
+		<td>2023-03-22 16:01:10</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>108421423</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2023-03-22 16:01:17</td>
+		<td>2023-03-22 16:01:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>108419142</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open Restoral</td>
+        <td>2023-03-22 15:57:15</td>
+		<td>2023-03-22 15:57:10</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>108419145</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open Restoral</td>
+        <td>2023-03-22 15:57:15</td>
+		<td>2023-03-22 15:57:10</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>108419125</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 15:57:15</td>
+		<td>2023-03-22 15:57:08</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>108419124</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 15:57:15</td>
+		<td>2023-03-22 15:57:07</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>108418867</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal Restoral</td>
+        <td>2023-03-22 15:56:38</td>
+		<td>2023-03-22 15:56:33</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>108418871</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal Restoral</td>
+        <td>2023-03-22 15:56:38</td>
+		<td>2023-03-22 15:56:33</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>108418846</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-03-22 15:56:38</td>
+		<td>2023-03-22 15:56:31</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>108418850</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-03-22 15:56:38</td>
+		<td>2023-03-22 15:56:31</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>108418220</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:44</td>
+		<td>2023-03-22 15:55:13</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>108418217</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:44</td>
+		<td>2023-03-22 15:55:12</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>108418198</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:44</td>
+		<td>2023-03-22 15:55:10</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>108418201</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:44</td>
+		<td>2023-03-22 15:55:10</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>108418175</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:44</td>
+		<td>2023-03-22 15:55:08</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>108418182</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:44</td>
+		<td>2023-03-22 15:55:08</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>108418158</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:44</td>
+		<td>2023-03-22 15:55:06</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>108418154</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:44</td>
+		<td>2023-03-22 15:55:05</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>108418137</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:43</td>
+		<td>2023-03-22 15:55:03</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>108418141</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:43</td>
+		<td>2023-03-22 15:55:03</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>108418120</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:43</td>
+		<td>2023-03-22 15:55:01</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>108418117</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:43</td>
+		<td>2023-03-22 15:55:00</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>108418099</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:43</td>
+		<td>2023-03-22 15:54:58</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>108418102</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:43</td>
+		<td>2023-03-22 15:54:58</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>108418079</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:42</td>
+		<td>2023-03-22 15:54:56</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>108418076</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:42</td>
+		<td>2023-03-22 15:54:55</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>108418053</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:42</td>
+		<td>2023-03-22 15:54:53</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>108418060</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:42</td>
+		<td>2023-03-22 15:54:53</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>108418034</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:42</td>
+		<td>2023-03-22 15:54:51</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>108418036</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:42</td>
+		<td>2023-03-22 15:54:51</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>108418011</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:41</td>
+		<td>2023-03-22 15:54:48</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>108418014</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:41</td>
+		<td>2023-03-22 15:54:48</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>108417989</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:41</td>
+		<td>2023-03-22 15:54:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>108417994</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:41</td>
+		<td>2023-03-22 15:54:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>108417976</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:41</td>
+		<td>2023-03-22 15:54:44</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>108417972</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:41</td>
+		<td>2023-03-22 15:54:43</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Euronet</td>
+     <td>108417954</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:40</td>
+		<td>2023-03-22 15:54:41</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Euronet</td>
+     <td>108417960</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:40</td>
+		<td>2023-03-22 15:54:41</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Euronet</td>
+     <td>108417937</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:39</td>
+		<td>2023-03-22 15:54:39</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Euronet</td>
+     <td>108417939</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:39</td>
+		<td>2023-03-22 15:54:39</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Euronet</td>
+     <td>108417919</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:38</td>
+		<td>2023-03-22 15:54:37</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Euronet</td>
+     <td>108417917</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:38</td>
+		<td>2023-03-22 15:54:36</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Euronet</td>
+     <td>108417892</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:38</td>
+		<td>2023-03-22 15:54:34</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Euronet</td>
+     <td>108417898</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High</td>
+        <td>2023-03-22 15:54:38</td>
+		<td>2023-03-22 15:54:34</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:56:06</td>
+	    <td>2023-03-22 15:56:06*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Euronet</td>
+     <td>108417875</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:38</td>
+		<td>2023-03-22 15:54:32</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Euronet</td>
+     <td>108417868</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>032</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor High</td>
+	 	<td>Lobby Temprature Sensor High Restoral</td>
+        <td>2023-03-22 15:54:38</td>
+		<td>2023-03-22 15:54:31</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Euronet</td>
+     <td>108417511</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 15:53:53</td>
+		<td>2023-03-22 15:53:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Euronet</td>
+     <td>108417513</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 15:53:53</td>
+		<td>2023-03-22 15:53:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Euronet</td>
+     <td>108416651</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-03-22 15:51:53</td>
+		<td>2023-03-22 15:51:46</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:52:23</td>
+	    <td>2023-03-22 15:52:23*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Euronet</td>
+     <td>108416646</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-03-22 15:51:53</td>
+		<td>2023-03-22 15:51:45</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:52:23</td>
+	    <td>2023-03-22 15:52:23*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Euronet</td>
+     <td>108416438</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type) Restoral</td>
+        <td>2023-03-22 15:51:17</td>
+		<td>2023-03-22 15:51:18</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Euronet</td>
+     <td>108416436</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type) Restoral</td>
+        <td>2023-03-22 15:51:17</td>
+		<td>2023-03-22 15:51:17</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Euronet</td>
+     <td>108416414</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 15:51:17</td>
+		<td>2023-03-22 15:51:15</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Euronet</td>
+     <td>108416419</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 15:51:17</td>
+		<td>2023-03-22 15:51:15</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Euronet</td>
+     <td>108416400</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-03-22 15:51:17</td>
+		<td>2023-03-22 15:51:13</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:52:18</td>
+	    <td>2023-03-22 15:52:18*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Euronet</td>
+     <td>108416396</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-03-22 15:51:17</td>
+		<td>2023-03-22 15:51:12</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:52:18</td>
+	    <td>2023-03-22 15:52:18*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Euronet</td>
+     <td>108416374</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2023-03-22 15:51:17</td>
+		<td>2023-03-22 15:51:10</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:52:18</td>
+	    <td>2023-03-22 15:52:18*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Euronet</td>
+     <td>108416378</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2023-03-22 15:51:17</td>
+		<td>2023-03-22 15:51:10</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:52:18</td>
+	    <td>2023-03-22 15:52:18*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>165</td>-->
+    <td>Euronet</td>
+     <td>108415527</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 15:49:15</td>
+		<td>2023-03-22 15:49:08</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>166</td>-->
+    <td>Euronet</td>
+     <td>108415523</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 15:49:15</td>
+		<td>2023-03-22 15:49:07</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>167</td>-->
+    <td>Euronet</td>
+     <td>108414462</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 15:47:15</td>
+		<td>2023-03-22 15:47:08</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>comfort enginer at site  2way done</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:48:59</td>
+	    <td>2023-03-22 15:48:59*comfort enginer at site  2way done*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>168</td>-->
+    <td>Euronet</td>
+     <td>108414458</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM3 Chest Door Open</td>
+	 	<td>ATM3 Chest Door Open</td>
+        <td>2023-03-22 15:47:15</td>
+		<td>2023-03-22 15:47:07</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>comfort enginer at site  2way done</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-03-22 15:48:59</td>
+	    <td>2023-03-22 15:48:59*comfort enginer at site  2way done*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>169</td>-->
+    <td>Euronet</td>
+     <td>108414157</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 15:46:38</td>
+		<td>2023-03-22 15:46:33</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>170</td>-->
+    <td>Euronet</td>
+     <td>108414161</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 15:46:38</td>
+		<td>2023-03-22 15:46:33</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>171</td>-->
+    <td>Euronet</td>
+     <td>108414139</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-03-22 15:46:38</td>
+		<td>2023-03-22 15:46:31</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>172</td>-->
+    <td>Euronet</td>
+     <td>108414143</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-03-22 15:46:38</td>
+		<td>2023-03-22 15:46:31</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>173</td>-->
+    <td>Euronet</td>
+     <td>108409413</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open Restoral</td>
+        <td>2023-03-22 15:36:55</td>
+		<td>2023-03-22 15:36:49</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>174</td>-->
+    <td>Euronet</td>
+     <td>108409408</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open Restoral</td>
+        <td>2023-03-22 15:36:55</td>
+		<td>2023-03-22 15:36:48</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>175</td>-->
+    <td>Euronet</td>
+     <td>108343871</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-03-22 13:28:16</td>
+		<td>2023-03-22 13:28:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>176</td>-->
+    <td>Euronet</td>
+     <td>108343876</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-03-22 13:28:16</td>
+		<td>2023-03-22 13:28:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>177</td>-->
+    <td>Euronet</td>
+     <td>108339878</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 13:20:16</td>
+		<td>2023-03-22 13:20:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>178</td>-->
+    <td>Euronet</td>
+     <td>108339880</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 13:20:16</td>
+		<td>2023-03-22 13:20:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>179</td>-->
+    <td>Euronet</td>
+     <td>108339019</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 13:18:16</td>
+		<td>2023-03-22 13:18:11</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>180</td>-->
+    <td>Euronet</td>
+     <td>108339020</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 13:18:16</td>
+		<td>2023-03-22 13:18:11</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>181</td>-->
+    <td>Euronet</td>
+     <td>108338997</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-03-22 13:18:16</td>
+		<td>2023-03-22 13:18:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-03-22 13:19:12</td>
+	    <td>2023-03-22 13:19:12*Person doing transaction 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>182</td>-->
+    <td>Euronet</td>
+     <td>108338999</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-03-22 13:18:16</td>
+		<td>2023-03-22 13:18:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-03-22 13:19:12</td>
+	    <td>2023-03-22 13:19:12*Person doing transaction 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>183</td>-->
+    <td>Euronet</td>
+     <td>108336596</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open Restoral</td>
+        <td>2023-03-22 13:13:15</td>
+		<td>2023-03-22 13:13:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>184</td>-->
+    <td>Euronet</td>
+     <td>108336600</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open Restoral</td>
+        <td>2023-03-22 13:13:15</td>
+		<td>2023-03-22 13:13:09</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>185</td>-->
+    <td>Euronet</td>
+     <td>108311748</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>508</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 12:24:52</td>
+		<td>2023-03-22 12:24:45</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>186</td>-->
+    <td>Euronet</td>
+     <td>108311750</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>508</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 12:24:52</td>
+		<td>2023-03-22 12:24:45</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>187</td>-->
+    <td>Euronet</td>
+     <td>108311659</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-03-22 12:24:42</td>
+		<td>2023-03-22 12:24:35</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>188</td>-->
+    <td>Euronet</td>
+     <td>108311662</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-03-22 12:24:42</td>
+		<td>2023-03-22 12:24:35</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>189</td>-->
+    <td>Euronet</td>
+     <td>108307713</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 12:16:42</td>
+		<td>2023-03-22 12:16:35</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>190</td>-->
+    <td>Euronet</td>
+     <td>108307719</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 12:16:42</td>
+		<td>2023-03-22 12:16:35</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>191</td>-->
+    <td>Euronet</td>
+     <td>108306710</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>508</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 12:14:42</td>
+		<td>2023-03-22 12:14:40</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>192</td>-->
+    <td>Euronet</td>
+     <td>108306708</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>508</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 12:14:42</td>
+		<td>2023-03-22 12:14:39</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>193</td>-->
+    <td>Euronet</td>
+     <td>108306690</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 12:14:42</td>
+		<td>2023-03-22 12:14:37</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>194</td>-->
+    <td>Euronet</td>
+     <td>108306692</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-22 12:14:42</td>
+		<td>2023-03-22 12:14:37</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>195</td>-->
+    <td>Euronet</td>
+     <td>108306664</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-03-22 12:14:42</td>
+		<td>2023-03-22 12:14:35</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site 2way done</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-03-22 12:15:33</td>
+	    <td>2023-03-22 12:15:33*as per live no one present at site 2way done*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>196</td>-->
+    <td>Euronet</td>
+     <td>108306666</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-03-22 12:14:42</td>
+		<td>2023-03-22 12:14:35</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no one present at site 2way done</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-03-22 12:15:33</td>
+	    <td>2023-03-22 12:15:33*as per live no one present at site 2way done*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>197</td>-->
+    <td>Euronet</td>
+     <td>108304873</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open Restoral</td>
+        <td>2023-03-22 12:11:14</td>
+		<td>2023-03-22 12:11:08</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>198</td>-->
+    <td>Euronet</td>
+     <td>108304872</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>141, Maharaja Tej Singh Main Crossing, Mainpuri -205001</td>-->
+    <td>P3ENMR05</td>
+    <td>141, Maharaja Tej Singh Main Crossing, Mainpuri</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open Restoral</td>
+        <td>2023-03-22 12:11:14</td>
+		<td>2023-03-22 12:11:07</td>
+		<td>22-March-2023</td>
+		<td>172.55.26.19</td>
+		<td>securico_gx4816</td>	
+		<td>090300</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.19' and b.receivedtime between '2023-03-22 00:00:00' and '2023-03-22 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

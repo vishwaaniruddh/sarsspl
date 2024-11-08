@@ -1,0 +1,6824 @@
+
+<!-- saved from url=(0044)http://192.168.100.23:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				   
+				  <a id="1" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php#">Add Site</a>
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsite.php">View Site</a>
+                                    <a id="21" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Project_Add.php">Project Add</a>
+				  				<!-- <a   class="dropdown-item" href="addDvrSite.php">Add DVR Site</a>
+                 <a   class="dropdown-item" href="ViewDvrSite.php">View DVR Site</a>-->
+                  <a id="22" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/customerDataMaintain.php">Customer Data Maintain</a>
+				                    <a id="23" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewcustomerDataMaintain.php">View Customer Data Maintain</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                  <a id="3" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addusers.php">Add user</a>
+				                    <a id="4" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewusers.php">View user</a>
+				                   
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                   
+                 <a id="6" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/lastcommunication.php">Last Communication</a>
+				                     <a id="7" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/ebmisnew.php">Count call close by</a>
+					                    <a id="8" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/newview.php">HZ /HL View</a>
+					                    <a id="9" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/panelcount.php">Description Count</a>
+										<a id="10" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/useralertreport.php">call alert report</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertviewAsc.php">View Alert Report</a>
+					                    <a id="11" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Mains_UPS_Fail.php">Mains &amp; UPS Fail</a>
+					                    <a id="13" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/graph.php">view Graph</a> 
+					                      <a id="14" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/qrtsites.php">QRT Excel upload</a>
+					                        <a id="15" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/mailcount.php">Mail Count</a>
+					                   <a id="16" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="19" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/bypass.php">By Pass Alert</a>
+					 					   <a id="20" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/old_alert_SendIP.php">Archive Alert SendIP</a>
+					  					 <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewemp.php">View Emp Details</a>
+				  				  <a id="24" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/logoutByAdmin.php">User Logout</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Rohit Bhardwaj				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.23:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.23:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;10.236.40.199&#39; and b.receivedtime between &#39;2023-03-27 00:00:00&#39; and &#39;2023-03-27 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:170</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Hitachi</td>
+     <td>36589599</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-27 13:30:33</td>
+		<td>2023-03-27 13:30:05</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Hitachi</td>
+     <td>36589588</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-03-27 13:30:30</td>
+		<td>2023-03-27 13:30:02</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.79</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Hitachi</td>
+     <td>36589413</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Hood Door Sensor</td>
+	 	<td>ATM1 Hood Door Sensor</td>
+        <td>2023-03-27 13:29:47</td>
+		<td>2023-03-27 13:29:19</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.79</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Hitachi</td>
+     <td>36589404</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-27 13:29:45</td>
+		<td>2023-03-27 13:29:17</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Hitachi</td>
+     <td>36589347</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:29:29</td>
+		<td>2023-03-27 13:29:01</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.79</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Hitachi</td>
+     <td>36589211</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:28:46</td>
+		<td>2023-03-27 13:28:18</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Hitachi</td>
+     <td>36589188</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:28:40</td>
+		<td>2023-03-27 13:28:12</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Hitachi</td>
+     <td>36589193</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:28:41</td>
+		<td>2023-03-27 13:28:12</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh id card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:31:37</td>
+	    <td>2023-03-27 13:31:37*Comfort engineer at site mr lokesh id card shown 2 way done,*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Hitachi</td>
+     <td>36589179</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:28:37</td>
+		<td>2023-03-27 13:28:08</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh id card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:31:37</td>
+	    <td>2023-03-27 13:31:37*Comfort engineer at site mr lokesh id card shown 2 way done,*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Hitachi</td>
+     <td>36589172</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:28:36</td>
+		<td>2023-03-27 13:28:07</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Hitachi</td>
+     <td>36589160</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:28:33</td>
+		<td>2023-03-27 13:28:04</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh id card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:31:37</td>
+	    <td>2023-03-27 13:31:37*Comfort engineer at site mr lokesh id card shown 2 way done,*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Hitachi</td>
+     <td>36589152</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:28:30</td>
+		<td>2023-03-27 13:28:02</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Hitachi</td>
+     <td>36589142</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:28:28</td>
+		<td>2023-03-27 13:28:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Hitachi</td>
+     <td>36589146</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:28:29</td>
+		<td>2023-03-27 13:28:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh id card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:31:37</td>
+	    <td>2023-03-27 13:31:37*Comfort engineer at site mr lokesh id card shown 2 way done,*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Hitachi</td>
+     <td>36589094</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:28:17</td>
+		<td>2023-03-27 13:27:48</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Hitachi</td>
+     <td>36589025</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:27:58</td>
+		<td>2023-03-27 13:27:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Hitachi</td>
+     <td>36589029</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:27:58</td>
+		<td>2023-03-27 13:27:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh id card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:31:37</td>
+	    <td>2023-03-27 13:31:37*Comfort engineer at site mr lokesh id card shown 2 way done,*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Hitachi</td>
+     <td>36588993</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:27:51</td>
+		<td>2023-03-27 13:27:22</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh id card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:31:37</td>
+	    <td>2023-03-27 13:31:37*Comfort engineer at site mr lokesh id card shown 2 way done,*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Hitachi</td>
+     <td>36588985</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:27:49</td>
+		<td>2023-03-27 13:27:20</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Hitachi</td>
+     <td>36588971</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:27:46</td>
+		<td>2023-03-27 13:27:18</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh id card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:31:37</td>
+	    <td>2023-03-27 13:31:37*Comfort engineer at site mr lokesh id card shown 2 way done,*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Hitachi</td>
+     <td>36588883</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:27:22</td>
+		<td>2023-03-27 13:26:54</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Hitachi</td>
+     <td>36588879</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:27:21</td>
+		<td>2023-03-27 13:26:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:43</td>
+	    <td>2023-03-27 13:27:43*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Hitachi</td>
+     <td>36588852</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:27:14</td>
+		<td>2023-03-27 13:26:45</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Hitachi</td>
+     <td>36588847</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:27:13</td>
+		<td>2023-03-27 13:26:44</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:27</td>
+	    <td>2023-03-27 13:27:27*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Hitachi</td>
+     <td>36588837</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:27:10</td>
+		<td>2023-03-27 13:26:41</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Hitachi</td>
+     <td>36588825</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:27:07</td>
+		<td>2023-03-27 13:26:38</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:27</td>
+	    <td>2023-03-27 13:27:27*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Hitachi</td>
+     <td>36588807</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:27:02</td>
+		<td>2023-03-27 13:26:33</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Hitachi</td>
+     <td>36588793</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:58</td>
+		<td>2023-03-27 13:26:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Hitachi</td>
+     <td>36588794</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:58</td>
+		<td>2023-03-27 13:26:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:16</td>
+	    <td>2023-03-27 13:27:16*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Hitachi</td>
+     <td>36588756</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:48</td>
+		<td>2023-03-27 13:26:20</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Hitachi</td>
+     <td>36588753</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:47</td>
+		<td>2023-03-27 13:26:19</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Hitachi</td>
+     <td>36588748</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:46</td>
+		<td>2023-03-27 13:26:18</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Hitachi</td>
+     <td>36588745</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:46</td>
+		<td>2023-03-27 13:26:17</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Hitachi</td>
+     <td>36588736</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:44</td>
+		<td>2023-03-27 13:26:16</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Hitachi</td>
+     <td>36588743</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:45</td>
+		<td>2023-03-27 13:26:16</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Hitachi</td>
+     <td>36588705</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:35</td>
+		<td>2023-03-27 13:26:06</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Hitachi</td>
+     <td>36588691</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:31</td>
+		<td>2023-03-27 13:26:03</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Hitachi</td>
+     <td>36588684</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:30</td>
+		<td>2023-03-27 13:26:02</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Hitachi</td>
+     <td>36588681</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:29</td>
+		<td>2023-03-27 13:26:01</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Hitachi</td>
+     <td>36588675</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:28</td>
+		<td>2023-03-27 13:26:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Hitachi</td>
+     <td>36588677</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:28</td>
+		<td>2023-03-27 13:26:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Hitachi</td>
+     <td>36588648</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:20</td>
+		<td>2023-03-27 13:25:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Hitachi</td>
+     <td>36588643</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:19</td>
+		<td>2023-03-27 13:25:51</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Hitachi</td>
+     <td>36588629</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:16</td>
+		<td>2023-03-27 13:25:48</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Hitachi</td>
+     <td>36588610</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:26:11</td>
+		<td>2023-03-27 13:25:43</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Hitachi</td>
+     <td>36588608</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Temper Switch</td>
+	 	<td>Panel Temper Switch</td>
+        <td>2023-03-27 13:26:11</td>
+		<td>2023-03-27 13:25:42</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Hitachi</td>
+     <td>36588600</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:26:09</td>
+		<td>2023-03-27 13:25:40</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Hitachi</td>
+     <td>36588443</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>EN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:25:28</td>
+		<td>2023-03-27 13:25:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Hitachi</td>
+     <td>36588444</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:25:28</td>
+		<td>2023-03-27 13:25:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Hitachi</td>
+     <td>36588445</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:25:28</td>
+		<td>2023-03-27 13:25:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Hitachi</td>
+     <td>36588446</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:25:28</td>
+		<td>2023-03-27 13:25:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Hitachi</td>
+     <td>36588448</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:25:28</td>
+		<td>2023-03-27 13:25:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Hitachi</td>
+     <td>36588321</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>ST</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA Switch</td>
+	 	<td>CRA Switch</td>
+        <td>2023-03-27 13:24:58</td>
+		<td>2023-03-27 13:24:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Hitachi</td>
+     <td>36588323</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td>House Keeping Switch</td>
+	 	<td>House Keeping Switch</td>
+        <td>2023-03-27 13:24:58</td>
+		<td>2023-03-27 13:24:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Hitachi</td>
+     <td>36588324</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IT</td>
+ 	
+    	 
+
+	 
+	 	<td>IT Team Switch</td>
+	 	<td>IT Team Switch</td>
+        <td>2023-03-27 13:24:58</td>
+		<td>2023-03-27 13:24:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Hitachi</td>
+     <td>36588325</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>ET</td>
+ 	
+    	 
+
+	 
+	 	<td>Other Engineers Switch</td>
+	 	<td>Other Engineers Switch</td>
+        <td>2023-03-27 13:24:58</td>
+		<td>2023-03-27 13:24:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Hitachi</td>
+     <td>36588326</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-03-27 13:24:58</td>
+		<td>2023-03-27 13:24:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Hitachi</td>
+     <td>36588248</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:24:39</td>
+		<td>2023-03-27 13:24:11</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Hitachi</td>
+     <td>36588251</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:24:39</td>
+		<td>2023-03-27 13:24:11</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Hitachi</td>
+     <td>36588253</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>EN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:24:39</td>
+		<td>2023-03-27 13:24:11</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Hitachi</td>
+     <td>36588256</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:24:40</td>
+		<td>2023-03-27 13:24:11</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Hitachi</td>
+     <td>36588247</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:24:39</td>
+		<td>2023-03-27 13:24:10</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Hitachi</td>
+     <td>36588216</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IT</td>
+ 	
+    	 
+
+	 
+	 	<td>IT Team Switch</td>
+	 	<td>IT Team Switch</td>
+        <td>2023-03-27 13:24:32</td>
+		<td>2023-03-27 13:24:04</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Hitachi</td>
+     <td>36588217</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>ET</td>
+ 	
+    	 
+
+	 
+	 	<td>Other Engineers Switch</td>
+	 	<td>Other Engineers Switch</td>
+        <td>2023-03-27 13:24:32</td>
+		<td>2023-03-27 13:24:04</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Hitachi</td>
+     <td>36588219</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-03-27 13:24:32</td>
+		<td>2023-03-27 13:24:04</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Hitachi</td>
+     <td>36588210</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>ST</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA Switch</td>
+	 	<td>CRA Switch</td>
+        <td>2023-03-27 13:24:31</td>
+		<td>2023-03-27 13:24:03</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Hitachi</td>
+     <td>36588212</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td>House Keeping Switch</td>
+	 	<td>House Keeping Switch</td>
+        <td>2023-03-27 13:24:32</td>
+		<td>2023-03-27 13:24:03</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Hitachi</td>
+     <td>36588196</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:24:28</td>
+		<td>2023-03-27 13:24:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Hitachi</td>
+     <td>36588197</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:24:28</td>
+		<td>2023-03-27 13:24:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:27:04</td>
+	    <td>2023-03-27 13:27:04*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Hitachi</td>
+     <td>36588172</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>TR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-03-27 13:24:21</td>
+		<td>2023-03-27 13:23:53</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Hitachi</td>
+     <td>36588105</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:24:04</td>
+		<td>2023-03-27 13:23:36</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:26:52</td>
+	    <td>2023-03-27 13:26:52*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Hitachi</td>
+     <td>36588100</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:24:03</td>
+		<td>2023-03-27 13:23:35</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Hitachi</td>
+     <td>36588075</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:23:58</td>
+		<td>2023-03-27 13:23:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:26:52</td>
+	    <td>2023-03-27 13:26:52*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Hitachi</td>
+     <td>36588052</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:23:52</td>
+		<td>2023-03-27 13:23:24</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Hitachi</td>
+     <td>36588044</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:23:50</td>
+		<td>2023-03-27 13:23:22</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:26:52</td>
+	    <td>2023-03-27 13:26:52*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Hitachi</td>
+     <td>36588039</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:23:49</td>
+		<td>2023-03-27 13:23:20</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Hitachi</td>
+     <td>36588032</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:23:47</td>
+		<td>2023-03-27 13:23:19</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:26:52</td>
+	    <td>2023-03-27 13:26:52*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Hitachi</td>
+     <td>36588009</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:23:42</td>
+		<td>2023-03-27 13:23:13</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Hitachi</td>
+     <td>36588002</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:23:40</td>
+		<td>2023-03-27 13:23:12</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>,this site recived panal temper switch alert dvr not login qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-03-27 13:26:52</td>
+	    <td>2023-03-27 13:26:52*,this site recived panal temper switch alert dvr not login qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Hitachi</td>
+     <td>36587982</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:23:36</td>
+		<td>2023-03-27 13:23:07</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Hitachi</td>
+     <td>36584159</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:07:02</td>
+		<td>2023-03-27 13:06:34</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Hitachi</td>
+     <td>36583807</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:05:36</td>
+		<td>2023-03-27 13:05:07</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Hitachi</td>
+     <td>36583774</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:05:29</td>
+		<td>2023-03-27 13:05:01</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Hitachi</td>
+     <td>36583768</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:05:29</td>
+		<td>2023-03-27 13:05:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Hitachi</td>
+     <td>36583719</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:05:17</td>
+		<td>2023-03-27 13:04:49</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Hitachi</td>
+     <td>36583489</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:04:22</td>
+		<td>2023-03-27 13:03:53</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Hitachi</td>
+     <td>36583430</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:04:07</td>
+		<td>2023-03-27 13:03:39</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Hitachi</td>
+     <td>36583425</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:04:06</td>
+		<td>2023-03-27 13:03:38</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Hitachi</td>
+     <td>36583413</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 13:04:04</td>
+		<td>2023-03-27 13:03:36</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Hitachi</td>
+     <td>36583344</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 13:03:46</td>
+		<td>2023-03-27 13:03:18</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Hitachi</td>
+     <td>36581644</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:57:06</td>
+		<td>2023-03-27 12:56:38</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 13:36:18</td>
+	    <td>2023-03-27 13:36:18*as per live no one present at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Hitachi</td>
+     <td>36581639</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:57:05</td>
+		<td>2023-03-27 12:56:37</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Hitachi</td>
+     <td>36581381</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:55:58</td>
+		<td>2023-03-27 12:55:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 13:36:19</td>
+	    <td>2023-03-27 13:36:19*as per live no one present at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Hitachi</td>
+     <td>36581255</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:55:28</td>
+		<td>2023-03-27 12:55:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Hitachi</td>
+     <td>36581225</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:55:19</td>
+		<td>2023-03-27 12:54:51</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 13:36:19</td>
+	    <td>2023-03-27 13:36:19*as per live no one present at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Hitachi</td>
+     <td>36580777</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:20</td>
+		<td>2023-03-27 12:52:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Hitachi</td>
+     <td>36580780</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>EN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:20</td>
+		<td>2023-03-27 12:52:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Hitachi</td>
+     <td>36580781</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:20</td>
+		<td>2023-03-27 12:52:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Hitachi</td>
+     <td>36580774</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:19</td>
+		<td>2023-03-27 12:52:51</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Hitachi</td>
+     <td>36580775</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:20</td>
+		<td>2023-03-27 12:52:51</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Hitachi</td>
+     <td>36580763</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>ET</td>
+ 	
+    	 
+
+	 
+	 	<td>Other Engineers Switch</td>
+	 	<td>Other Engineers Switch</td>
+        <td>2023-03-27 12:53:18</td>
+		<td>2023-03-27 12:52:50</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Hitachi</td>
+     <td>36580766</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-03-27 12:53:18</td>
+		<td>2023-03-27 12:52:50</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Hitachi</td>
+     <td>36580759</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td>House Keeping Switch</td>
+	 	<td>House Keeping Switch</td>
+        <td>2023-03-27 12:53:17</td>
+		<td>2023-03-27 12:52:49</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Hitachi</td>
+     <td>36580760</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IT</td>
+ 	
+    	 
+
+	 
+	 	<td>IT Team Switch</td>
+	 	<td>IT Team Switch</td>
+        <td>2023-03-27 12:53:18</td>
+		<td>2023-03-27 12:52:49</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Hitachi</td>
+     <td>36580755</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>ST</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA Switch</td>
+	 	<td>CRA Switch</td>
+        <td>2023-03-27 12:53:17</td>
+		<td>2023-03-27 12:52:48</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Hitachi</td>
+     <td>36580732</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:12</td>
+		<td>2023-03-27 12:52:43</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Hitachi</td>
+     <td>36580713</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:07</td>
+		<td>2023-03-27 12:52:39</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Hitachi</td>
+     <td>36580706</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:06</td>
+		<td>2023-03-27 12:52:38</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Hitachi</td>
+     <td>36580708</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:06</td>
+		<td>2023-03-27 12:52:38</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Hitachi</td>
+     <td>36580709</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:07</td>
+		<td>2023-03-27 12:52:38</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Hitachi</td>
+     <td>36580710</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>EN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:53:07</td>
+		<td>2023-03-27 12:52:38</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Hitachi</td>
+     <td>36580688</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-03-27 12:53:02</td>
+		<td>2023-03-27 12:52:34</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Hitachi</td>
+     <td>36580682</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>ST</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA Switch</td>
+	 	<td>CRA Switch</td>
+        <td>2023-03-27 12:53:01</td>
+		<td>2023-03-27 12:52:33</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Hitachi</td>
+     <td>36580683</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td>House Keeping Switch</td>
+	 	<td>House Keeping Switch</td>
+        <td>2023-03-27 12:53:01</td>
+		<td>2023-03-27 12:52:33</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Hitachi</td>
+     <td>36580684</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IT</td>
+ 	
+    	 
+
+	 
+	 	<td>IT Team Switch</td>
+	 	<td>IT Team Switch</td>
+        <td>2023-03-27 12:53:02</td>
+		<td>2023-03-27 12:52:33</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Hitachi</td>
+     <td>36580685</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>ET</td>
+ 	
+    	 
+
+	 
+	 	<td>Other Engineers Switch</td>
+	 	<td>Other Engineers Switch</td>
+        <td>2023-03-27 12:53:02</td>
+		<td>2023-03-27 12:52:33</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Hitachi</td>
+     <td>36580664</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:52:57</td>
+		<td>2023-03-27 12:52:29</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Hitachi</td>
+     <td>36580618</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:52:47</td>
+		<td>2023-03-27 12:52:18</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Hitachi</td>
+     <td>36580613</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:52:45</td>
+		<td>2023-03-27 12:52:17</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:40</td>
+	    <td>2023-03-27 12:55:40*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Hitachi</td>
+     <td>36580602</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:52:43</td>
+		<td>2023-03-27 12:52:14</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Hitachi</td>
+     <td>36580260</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:51:08</td>
+		<td>2023-03-27 12:50:39</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Hitachi</td>
+     <td>36580253</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:51:05</td>
+		<td>2023-03-27 12:50:37</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Hitachi</td>
+     <td>36580238</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:51:01</td>
+		<td>2023-03-27 12:50:33</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Hitachi</td>
+     <td>36580223</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:50:57</td>
+		<td>2023-03-27 12:50:29</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Hitachi</td>
+     <td>36580154</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:50:39</td>
+		<td>2023-03-27 12:50:11</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Hitachi</td>
+     <td>36580115</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:50:29</td>
+		<td>2023-03-27 12:50:01</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Hitachi</td>
+     <td>36580117</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:50:30</td>
+		<td>2023-03-27 12:50:01</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Hitachi</td>
+     <td>36580060</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:50:17</td>
+		<td>2023-03-27 12:49:48</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Hitachi</td>
+     <td>36580043</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:50:12</td>
+		<td>2023-03-27 12:49:44</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Hitachi</td>
+     <td>36580026</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:50:09</td>
+		<td>2023-03-27 12:49:40</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Hitachi</td>
+     <td>36580021</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:50:08</td>
+		<td>2023-03-27 12:49:39</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Hitachi</td>
+     <td>36580013</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:50:05</td>
+		<td>2023-03-27 12:49:37</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Hitachi</td>
+     <td>36579987</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:49:58</td>
+		<td>2023-03-27 12:49:30</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Hitachi</td>
+     <td>36579978</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:49:57</td>
+		<td>2023-03-27 12:49:29</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Hitachi</td>
+     <td>36579982</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:49:57</td>
+		<td>2023-03-27 12:49:29</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Hitachi</td>
+     <td>36579901</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:49:36</td>
+		<td>2023-03-27 12:49:08</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Hitachi</td>
+     <td>36579899</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:49:35</td>
+		<td>2023-03-27 12:49:07</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>Comfort engineer at site mr lokesh,2 way not working</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:55:24</td>
+	    <td>2023-03-27 12:55:24*Comfort engineer at site mr lokesh,2 way not working*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Hitachi</td>
+     <td>36579875</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:49:28</td>
+		<td>2023-03-27 12:49:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Hitachi</td>
+     <td>36579870</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:49:27</td>
+		<td>2023-03-27 12:48:59</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:52:22</td>
+	    <td>2023-03-27 12:52:22*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Hitachi</td>
+     <td>36579840</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:49:20</td>
+		<td>2023-03-27 12:48:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Hitachi</td>
+     <td>36579827</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:49:17</td>
+		<td>2023-03-27 12:48:48</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:52:22</td>
+	    <td>2023-03-27 12:52:22*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Hitachi</td>
+     <td>36579817</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:49:15</td>
+		<td>2023-03-27 12:48:46</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Hitachi</td>
+     <td>36579811</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:49:13</td>
+		<td>2023-03-27 12:48:45</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:52:22</td>
+	    <td>2023-03-27 12:52:22*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Hitachi</td>
+     <td>36579804</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:49:12</td>
+		<td>2023-03-27 12:48:44</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Hitachi</td>
+     <td>36579800</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:49:10</td>
+		<td>2023-03-27 12:48:42</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>priyanka</td>
+        <td>2023-03-27 12:52:22</td>
+	    <td>2023-03-27 12:52:22*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*priyanka</td>
+		<td>192.168.100.76</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Hitachi</td>
+     <td>36579767</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:49:01</td>
+		<td>2023-03-27 12:48:33</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Hitachi</td>
+     <td>36575688</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:31:07</td>
+		<td>2023-03-27 12:30:39</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:13</td>
+	    <td>2023-03-27 12:33:13*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Hitachi</td>
+     <td>36575585</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:30:38</td>
+		<td>2023-03-27 12:30:10</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Hitachi</td>
+     <td>36575541</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:30:26</td>
+		<td>2023-03-27 12:29:59</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Hitachi</td>
+     <td>36575505</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:30:15</td>
+		<td>2023-03-27 12:29:47</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:13</td>
+	    <td>2023-03-27 12:33:13*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Hitachi</td>
+     <td>36575481</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:30:08</td>
+		<td>2023-03-27 12:29:40</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Hitachi</td>
+     <td>36575333</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:29:28</td>
+		<td>2023-03-27 12:29:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Hitachi</td>
+     <td>36575334</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:29:28</td>
+		<td>2023-03-27 12:29:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Hitachi</td>
+     <td>36575336</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>EN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:29:28</td>
+		<td>2023-03-27 12:29:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Hitachi</td>
+     <td>36575337</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:29:28</td>
+		<td>2023-03-27 12:29:00</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Hitachi</td>
+     <td>36575328</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-03-27 12:29:27</td>
+		<td>2023-03-27 12:28:59</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Hitachi</td>
+     <td>36575329</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:29:27</td>
+		<td>2023-03-27 12:28:59</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Hitachi</td>
+     <td>36575313</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-03-27 12:29:21</td>
+		<td>2023-03-27 12:28:55</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Hitachi</td>
+     <td>36575298</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td>House Keeping Switch</td>
+	 	<td>House Keeping Switch</td>
+        <td>2023-03-27 12:29:20</td>
+		<td>2023-03-27 12:28:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Hitachi</td>
+     <td>36575299</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>IT</td>
+ 	
+    	 
+
+	 
+	 	<td>IT Team Switch</td>
+	 	<td>IT Team Switch</td>
+        <td>2023-03-27 12:29:20</td>
+		<td>2023-03-27 12:28:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Hitachi</td>
+     <td>36575303</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>ET</td>
+ 	
+    	 
+
+	 
+	 	<td>Other Engineers Switch</td>
+	 	<td>Other Engineers Switch</td>
+        <td>2023-03-27 12:29:21</td>
+		<td>2023-03-27 12:28:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Hitachi</td>
+     <td>36575294</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>ST</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA Switch</td>
+	 	<td>CRA Switch</td>
+        <td>2023-03-27 12:29:20</td>
+		<td>2023-03-27 12:28:51</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Hitachi</td>
+     <td>36575229</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:29:03</td>
+		<td>2023-03-27 12:28:34</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Hitachi</td>
+     <td>36575185</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:28:49</td>
+		<td>2023-03-27 12:28:21</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>165</td>-->
+    <td>Hitachi</td>
+     <td>36575176</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:28:48</td>
+		<td>2023-03-27 12:28:20</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>166</td>-->
+    <td>Hitachi</td>
+     <td>36574861</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:27:20</td>
+		<td>2023-03-27 12:26:52</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>167</td>-->
+    <td>Hitachi</td>
+     <td>36574835</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:27:14</td>
+		<td>2023-03-27 12:26:46</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>168</td>-->
+    <td>Hitachi</td>
+     <td>36574813</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Temper Switch</td>
+	 	<td>Panel Temper Switch</td>
+        <td>2023-03-27 12:27:08</td>
+		<td>2023-03-27 12:26:40</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>169</td>-->
+    <td>Hitachi</td>
+     <td>36574814</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-03-27 12:27:08</td>
+		<td>2023-03-27 12:26:40</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>170</td>-->
+    <td>Hitachi</td>
+     <td>36574773</td>
+     <td>North</td>
+     <!-- <td>Muzaffarnagar,Uttar Pradesh</td>
+     <td>BAGHRA, CITY MUZAFFARNAGAR</td>-->
+    <td>D3476400</td>
+    <td>BAGHRA, CITY MUZAFFARNAGAR</td>
+	<td>Muzaffarnagar</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-03-27 12:26:56</td>
+		<td>2023-03-27 12:26:29</td>
+		<td>27-March-2023</td>
+		<td>10.236.40.199</td>
+		<td>comfort</td>	
+		<td>093185</td>
+        <td>PNB</td>
+	    <!--<td>this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-03-27 12:33:06</td>
+	    <td>2023-03-27 12:33:06*this site received panel tampera nd multi alert someone present at site 2 way one way working qrt call not responding,infrom cms team*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.236.40.199' and b.receivedtime between '2023-03-27 00:00:00' and '2023-03-27 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

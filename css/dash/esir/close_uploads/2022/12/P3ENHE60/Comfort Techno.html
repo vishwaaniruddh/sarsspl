@@ -1,0 +1,6095 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.126' and b.receivedtime between '2022-12-01 00:00:00' and '2022-12-01 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.26.126&#39; and b.receivedtime between &#39;2022-12-01 00:00:00&#39; and &#39;2022-12-01 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:151</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>8701420</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:39:10</td>
+		<td>2022-12-01 17:38:57</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>8701398</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2022-12-01 17:39:07</td>
+		<td>2022-12-01 17:38:55</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>8700780</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Speaker / MIC Removal</td>
+	 	<td>Speaker / MIC Removal</td>
+        <td>2022-12-01 17:38:05</td>
+		<td>2022-12-01 17:37:53</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Tejesh</td>
+        <td>2022-12-01 17:38:20</td>
+	    <td>2022-12-01 17:38:20*No Issue found after video verification,*Tejesh</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>8700756</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 17:38:02</td>
+		<td>2022-12-01 17:37:50</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Tejesh</td>
+        <td>2022-12-01 17:38:20</td>
+	    <td>2022-12-01 17:38:20*No Issue found after video verification,*Tejesh</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>8700301</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:37:15</td>
+		<td>2022-12-01 17:37:03</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>8700268</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open ATM1</td>
+	 	<td>Chest Door Open ATM1</td>
+        <td>2022-12-01 17:37:12</td>
+		<td>2022-12-01 17:36:59</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Tejesh</td>
+        <td>2022-12-01 17:37:17</td>
+	    <td>2022-12-01 17:37:17*No Issue found after video verification,*Tejesh</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>8699116</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 17:35:02</td>
+		<td>2022-12-01 17:34:50</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:34:47</td>
+	    <td>2022-12-01 17:34:47*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>8699090</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:34:59</td>
+		<td>2022-12-01 17:34:47</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>8699070</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 17:34:57</td>
+		<td>2022-12-01 17:34:45</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:34:47</td>
+	    <td>2022-12-01 17:34:47*No Issue found after video verification,*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>8698989</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:34:47</td>
+		<td>2022-12-01 17:34:35</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>8697881</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 17:32:31</td>
+		<td>2022-12-01 17:32:19</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>dsome one present at site qrt arrenged</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:32:59</td>
+	    <td>2022-12-01 17:32:59*dsome one present at site qrt arrenged*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>8697831</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:32:25</td>
+		<td>2022-12-01 17:32:13</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>8697716</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:32:11</td>
+		<td>2022-12-01 17:31:59</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>8697695</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor Low</td>
+	 	<td>Lobby Temprature Sensor Low</td>
+        <td>2022-12-01 17:32:09</td>
+		<td>2022-12-01 17:31:57</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>dsome one present at site qrt arrenged</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:32:59</td>
+	    <td>2022-12-01 17:32:59*dsome one present at site qrt arrenged*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>8697678</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:32:05</td>
+		<td>2022-12-01 17:31:55</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>8697663</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 17:32:05</td>
+		<td>2022-12-01 17:31:53</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>dsome one present at site qrt arrenged</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:32:59</td>
+	    <td>2022-12-01 17:32:59*dsome one present at site qrt arrenged*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>8697222</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:31:10</td>
+		<td>2022-12-01 17:31:03</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>8697203</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 17:31:10</td>
+		<td>2022-12-01 17:31:01</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>dsome one present at site qrt arrenged</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:32:59</td>
+	    <td>2022-12-01 17:32:59*dsome one present at site qrt arrenged*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>8696977</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 17:30:46</td>
+		<td>2022-12-01 17:30:34</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>dsome one present at site qrt arrenged</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:32:59</td>
+	    <td>2022-12-01 17:32:59*dsome one present at site qrt arrenged*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>8696917</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:30:40</td>
+		<td>2022-12-01 17:30:28</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>8693878</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 17:25:37</td>
+		<td>2022-12-01 17:25:25</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>dsome one present at site qrt arrenged</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:33:00</td>
+	    <td>2022-12-01 17:33:00*dsome one present at site qrt arrenged*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>8693758</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:25:23</td>
+		<td>2022-12-01 17:25:11</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>8693697</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 17:25:15</td>
+		<td>2022-12-01 17:25:04</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>dsome one present at site qrt arrenged</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:33:00</td>
+	    <td>2022-12-01 17:33:00*dsome one present at site qrt arrenged*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>8692770</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:23:19</td>
+		<td>2022-12-01 17:23:08</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>8692727</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 17:23:15</td>
+		<td>2022-12-01 17:23:03</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>some one present at site open hood door  2way issue qrt arrenged mr gulla madhu</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:27:27</td>
+	    <td>2022-12-01 17:27:27*some one present at site open hood door  2way issue qrt arrenged mr gulla madhu*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>8692563</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:22:55</td>
+		<td>2022-12-01 17:22:43</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>8692545</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor Low</td>
+	 	<td>Lobby Temprature Sensor Low</td>
+        <td>2022-12-01 17:22:53</td>
+		<td>2022-12-01 17:22:41</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>some one present at site open hood door  2way issue qrt arrenged mr gulla madhu</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:27:27</td>
+	    <td>2022-12-01 17:27:27*some one present at site open hood door  2way issue qrt arrenged mr gulla madhu*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>8692509</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2022-12-01 17:22:49</td>
+		<td>2022-12-01 17:22:37</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>some one present at site open hood door  2way issue qrt arrenged mr gulla madhu</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:27:27</td>
+	    <td>2022-12-01 17:27:27*some one present at site open hood door  2way issue qrt arrenged mr gulla madhu*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>8692288</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:22:21</td>
+		<td>2022-12-01 17:22:09</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>8692251</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 17:22:17</td>
+		<td>2022-12-01 17:22:05</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>some one present at site open hood door  2way issue qrt arrenged mr gulla madhu</td>-->
+        <td>Reactive</td>
+        <td>deepakp</td>
+        <td>2022-12-01 17:27:27</td>
+	    <td>2022-12-01 17:27:27*some one present at site open hood door  2way issue qrt arrenged mr gulla madhu*deepakp</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>8692187</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:22:10</td>
+		<td>2022-12-01 17:21:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>8682340</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 17:02:06</td>
+		<td>2022-12-01 17:01:54</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>8682275</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 17:01:55</td>
+		<td>2022-12-01 17:01:46</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>8682207</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 17:01:47</td>
+		<td>2022-12-01 17:01:38</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>8682184</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 17:01:44</td>
+		<td>2022-12-01 17:01:35</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>8681749</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 17:01:14</td>
+		<td>2022-12-01 17:00:43</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>8679983</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 16:58:10</td>
+		<td>2022-12-01 16:58:02</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>8673708</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2022-12-01 16:45:38</td>
+		<td>2022-12-01 16:45:30</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>8672406</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 16:42:51</td>
+		<td>2022-12-01 16:42:42</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>8671864</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:41:41</td>
+		<td>2022-12-01 16:41:33</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,No one at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-01 16:46:56</td>
+	    <td>2022-12-01 16:46:56*No Issue found after video verification,No one at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>8671831</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:41:39</td>
+		<td>2022-12-01 16:41:30</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,No one at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-01 16:46:56</td>
+	    <td>2022-12-01 16:46:56*No Issue found after video verification,No one at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>8662840</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:23:23</td>
+		<td>2022-12-01 16:22:45</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2022-12-01 16:22:41</td>
+	    <td>2022-12-01 16:22:41*No Issue found after video verification,*karan</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>8659448</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 16:15:09</td>
+		<td>2022-12-01 16:15:50</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>8654477</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 16:06:18</td>
+		<td>2022-12-01 16:05:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2022-12-01 16:07:15</td>
+	    <td>2022-12-01 16:07:15*No Issue found after video verification,*karan</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>8648906</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 15:55:54</td>
+		<td>2022-12-01 15:55:24</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>8648832</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 15:55:30</td>
+		<td>2022-12-01 15:55:15</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,No one at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-01 16:46:56</td>
+	    <td>2022-12-01 16:46:56*No Issue found after video verification,No one at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>8648773</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 15:55:38</td>
+		<td>2022-12-01 15:55:08</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,No one at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-01 16:46:56</td>
+	    <td>2022-12-01 16:46:56*No Issue found after video verification,No one at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>8646733</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 15:51:23</td>
+		<td>2022-12-01 15:50:56</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>8646659</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 15:51:17</td>
+		<td>2022-12-01 15:50:46</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Tejesh</td>
+        <td>2022-12-01 15:58:14</td>
+	    <td>2022-12-01 15:58:14*No Issue found after video verification,*Tejesh</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>8646624</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 15:51:12</td>
+		<td>2022-12-01 15:50:43</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Tejesh</td>
+        <td>2022-12-01 15:58:14</td>
+	    <td>2022-12-01 15:58:14*No Issue found after video verification,*Tejesh</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>8627182</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 15:12:09</td>
+		<td>2022-12-01 15:12:27</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>8620155</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 14:59:47</td>
+		<td>2022-12-01 14:59:40</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>8619542</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 11:12:04</td>
+		<td>2022-12-01 14:58:48</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>8619518</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 07:31:05</td>
+		<td>2022-12-01 14:58:46</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>8619503</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 07:11:58</td>
+		<td>2022-12-01 14:58:44</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>8619480</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 06:31:10</td>
+		<td>2022-12-01 14:58:42</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>8619460</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 03:11:53</td>
+		<td>2022-12-01 14:58:40</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>8619430</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-30 23:11:47</td>
+		<td>2022-12-01 14:58:36</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>8619397</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 14:59:02</td>
+		<td>2022-12-01 14:58:34</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2022-12-01 14:58:57</td>
+	    <td>2022-12-01 14:58:57*No Issue found after video verification,*sanjana sonawane</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>8617402</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2022-12-01 14:55:03</td>
+		<td>2022-12-01 14:54:57</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>8613903</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 14:42:31</td>
+		<td>2022-12-01 14:48:21</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>8607119</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 14:35:29</td>
+		<td>2022-12-01 14:35:22</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 14:35:37</td>
+	    <td>2022-12-01 14:35:37*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>8585891</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 13:55:05</td>
+		<td>2022-12-01 13:55:01</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>8585874</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 13:55:05</td>
+		<td>2022-12-01 13:54:59</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 14:20:28</td>
+	    <td>2022-12-01 14:20:28*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>8570241</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 13:25:37</td>
+		<td>2022-12-01 13:25:30</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>8570011</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 13:25:07</td>
+		<td>2022-12-01 13:25:01</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>swetha</td>
+        <td>2022-12-01 13:25:12</td>
+	    <td>2022-12-01 13:25:12*No Issue found after video verification,*swetha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>8569990</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 13:25:05</td>
+		<td>2022-12-01 13:24:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>swetha</td>
+        <td>2022-12-01 13:25:12</td>
+	    <td>2022-12-01 13:25:12*No Issue found after video verification,*swetha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>8553676</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 12:53:03</td>
+		<td>2022-12-01 12:53:00</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>8553662</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 12:53:03</td>
+		<td>2022-12-01 12:52:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-01 12:54:32</td>
+	    <td>2022-12-01 12:54:32*No Issue found after video verification,*Mahalaxmi</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>8542673</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 12:31:57</td>
+		<td>2022-12-01 12:31:52</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>8542660</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 12:31:57</td>
+		<td>2022-12-01 12:31:50</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 13:11:31</td>
+	    <td>2022-12-01 13:11:31*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>8538828</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 12:24:07</td>
+		<td>2022-12-01 12:24:02</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>8538595</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 12:23:37</td>
+		<td>2022-12-01 12:23:32</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Customer doing txn.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-01 12:28:10</td>
+	    <td>2022-12-01 12:28:10*No Issue found after video verification,Customer doing txn.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>8538571</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 12:23:34</td>
+		<td>2022-12-01 12:23:29</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Customer doing txn.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-01 12:28:10</td>
+	    <td>2022-12-01 12:28:10*No Issue found after video verification,Customer doing txn.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>8538385</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 12:23:16</td>
+		<td>2022-12-01 12:23:04</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Customer doing txn.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-01 12:28:10</td>
+	    <td>2022-12-01 12:28:10*No Issue found after video verification,Customer doing txn.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>8538121</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 12:22:34</td>
+		<td>2022-12-01 12:22:29</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>8535723</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 12:17:31</td>
+		<td>2022-12-01 12:17:26</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>sanjana prajapati</td>
+        <td>2022-12-01 12:17:51</td>
+	    <td>2022-12-01 12:17:51*Person doing transaction,*sanjana prajapati</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>8535689</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 12:17:26</td>
+		<td>2022-12-01 12:17:20</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>8531398</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 12:08:33</td>
+		<td>2022-12-01 12:08:27</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>8529740</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2022-12-01 12:05:15</td>
+		<td>2022-12-01 12:05:09</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>8528539</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 12:02:49</td>
+		<td>2022-12-01 12:02:41</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>ac maintainance person present at site from voltas id shown 2 way 1 is working,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-01 12:08:53</td>
+	    <td>2022-12-01 12:08:53*ac maintainance person present at site from voltas id shown 2 way 1 is working,*Mahalaxmi</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>8525312</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 11:58:05</td>
+		<td>2022-12-01 11:58:00</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-01 11:58:05</td>
+	    <td>2022-12-01 11:58:05*Person doing transaction,*Mahalaxmi</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>8525282</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 11:58:02</td>
+		<td>2022-12-01 11:57:57</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-01 11:58:05</td>
+	    <td>2022-12-01 11:58:05*Person doing transaction,*Mahalaxmi</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>8511825</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 11:31:11</td>
+		<td>2022-12-01 11:31:04</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>8511806</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor Low</td>
+	 	<td>Lobby Temprature Sensor Low</td>
+        <td>2022-12-01 11:31:09</td>
+		<td>2022-12-01 11:31:02</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Tejesh</td>
+        <td>2022-12-01 15:58:14</td>
+	    <td>2022-12-01 15:58:14*No Issue found after video verification,*Tejesh</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>8497952</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 11:02:49</td>
+		<td>2022-12-01 11:02:38</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>swetha</td>
+        <td>2022-12-01 11:02:34</td>
+	    <td>2022-12-01 11:02:34*No Issue found after video verification,*swetha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>8497188</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 11:01:12</td>
+		<td>2022-12-01 11:01:05</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>8497168</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor Low</td>
+	 	<td>Lobby Temprature Sensor Low</td>
+        <td>2022-12-01 11:01:09</td>
+		<td>2022-12-01 11:01:03</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 11:30:30</td>
+	    <td>2022-12-01 11:30:30*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>8495023</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 10:57:01</td>
+		<td>2022-12-01 10:56:59</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>8495003</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 10:57:01</td>
+		<td>2022-12-01 10:56:57</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 11:30:30</td>
+	    <td>2022-12-01 11:30:30*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>8490538</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 10:42:27</td>
+		<td>2022-12-01 10:48:18</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>8481654</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 10:29:56</td>
+		<td>2022-12-01 10:29:51</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>8480280</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 10:27:14</td>
+		<td>2022-12-01 10:27:10</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-12-01 10:27:08</td>
+	    <td>2022-12-01 10:27:08*No Issue found after video verification,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>8480246</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 10:27:11</td>
+		<td>2022-12-01 10:27:07</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-12-01 10:27:08</td>
+	    <td>2022-12-01 10:27:08*No Issue found after video verification,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>8476298</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 10:19:05</td>
+		<td>2022-12-01 10:19:01</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>8475911</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 10:18:17</td>
+		<td>2022-12-01 10:18:12</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>8470594</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 10:06:59</td>
+		<td>2022-12-01 10:06:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>8470581</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 10:06:59</td>
+		<td>2022-12-01 10:06:56</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,2 way done</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-01 10:23:26</td>
+	    <td>2022-12-01 10:23:26*Person doing transaction,2 way done*Mahalaxmi</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>8468685</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 10:02:53</td>
+		<td>2022-12-01 10:02:51</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>8468660</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 10:02:53</td>
+		<td>2022-12-01 10:02:48</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,2 way done</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-01 10:21:32</td>
+	    <td>2022-12-01 10:21:32*Person doing transaction,2 way done*Mahalaxmi</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>8458360</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 09:41:58</td>
+		<td>2022-12-01 09:41:55</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-12-01 09:41:36</td>
+	    <td>2022-12-01 09:41:36*No Issue found after video verification,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>8456273</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 09:37:50</td>
+		<td>2022-12-01 09:37:47</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>8456149</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 09:37:36</td>
+		<td>2022-12-01 09:37:33</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2022-12-01 09:37:47</td>
+	    <td>2022-12-01 09:37:47*Person doing transaction,*sanjana sonawane</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>8456121</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 09:37:33</td>
+		<td>2022-12-01 09:37:30</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2022-12-01 09:37:47</td>
+	    <td>2022-12-01 09:37:47*Person doing transaction,*sanjana sonawane</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>8454123</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 09:33:22</td>
+		<td>2022-12-01 09:33:16</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2022-12-01 09:33:19</td>
+	    <td>2022-12-01 09:33:19*Person doing transaction,*sanjana sonawane</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>8452920</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2022-12-01 09:30:48</td>
+		<td>2022-12-01 09:30:43</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>8441700</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 09:07:56</td>
+		<td>2022-12-01 09:07:22</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 09:13:40</td>
+	    <td>2022-12-01 09:13:40*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>8431696</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 08:51:06</td>
+		<td>2022-12-01 08:51:01</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>8431679</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor Low</td>
+	 	<td>Lobby Temprature Sensor Low</td>
+        <td>2022-12-01 08:51:04</td>
+		<td>2022-12-01 08:50:59</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,2 way done</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2022-12-01 08:53:09</td>
+	    <td>2022-12-01 08:53:09*Person doing transaction,2 way done*sanjana sonawane</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>8431612</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 08:51:02</td>
+		<td>2022-12-01 08:50:52</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,2 way done</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2022-12-01 08:53:09</td>
+	    <td>2022-12-01 08:53:09*Person doing transaction,2 way done*sanjana sonawane</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>8422767</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 08:35:57</td>
+		<td>2022-12-01 08:35:57</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>8422749</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 08:35:57</td>
+		<td>2022-12-01 08:35:55</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>sanjana sonawane</td>
+        <td>2022-12-01 08:36:21</td>
+	    <td>2022-12-01 08:36:21*No Issue found after video verification,*sanjana sonawane</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>8409840</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 08:13:38</td>
+		<td>2022-12-01 08:13:36</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>8405461</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 08:06:05</td>
+		<td>2022-12-01 08:06:04</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>sanjana prajapati</td>
+        <td>2022-12-01 08:06:38</td>
+	    <td>2022-12-01 08:06:38*No Issue found after video verification,*sanjana prajapati</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>8405432</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 08:06:03</td>
+		<td>2022-12-01 08:06:01</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>sanjana prajapati</td>
+        <td>2022-12-01 08:06:38</td>
+	    <td>2022-12-01 08:06:38*No Issue found after video verification,*sanjana prajapati</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>8390688</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 07:41:01</td>
+		<td>2022-12-01 07:40:51</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,2way done</td>-->
+        <td>Reactive</td>
+        <td>swetha</td>
+        <td>2022-12-01 07:40:51</td>
+	    <td>2022-12-01 07:40:51*No Issue found after video verification,2way done*swetha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>8385712</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 07:32:06</td>
+		<td>2022-12-01 07:32:04</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>8385694</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 07:31:00</td>
+		<td>2022-12-01 07:32:02</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>8359341</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 06:42:23</td>
+		<td>2022-12-01 06:48:16</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>8354885</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 06:41:04</td>
+		<td>2022-12-01 06:41:00</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>8354864</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor Low</td>
+	 	<td>Lobby Temprature Sensor Low</td>
+        <td>2022-12-01 06:41:02</td>
+		<td>2022-12-01 06:40:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>ravi</td>
+        <td>2022-12-01 06:44:40</td>
+	    <td>2022-12-01 06:44:40*No Issue found after video verification,*ravi</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>8353127</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 06:31:00</td>
+		<td>2022-12-01 06:38:15</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>8348453</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 06:30:59</td>
+		<td>2022-12-01 06:30:51</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Yasha</td>
+        <td>2022-12-01 06:30:52</td>
+	    <td>2022-12-01 06:30:52*No Issue found after video verification,*Yasha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>8347050</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2022-12-01 06:28:42</td>
+		<td>2022-12-01 06:28:38</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>8326533</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 05:55:20</td>
+		<td>2022-12-01 05:55:19</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 05:55:07</td>
+	    <td>2022-12-01 05:55:07*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>8320991</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal </td>
+	 	<td>ATM1 Removal </td>
+        <td>2022-12-01 05:45:48</td>
+		<td>2022-12-01 05:46:26</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 05:51:26</td>
+	    <td>2022-12-01 05:51:26*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>8305845</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 05:21:50</td>
+		<td>2022-12-01 05:21:42</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-12-01 05:22:08</td>
+	    <td>2022-12-01 05:22:08*HK person on site,*helpdesk</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>8299039</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 05:11:00</td>
+		<td>2022-12-01 05:10:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>8299016</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor Low</td>
+	 	<td>Lobby Temprature Sensor Low</td>
+        <td>2022-12-01 05:10:59</td>
+		<td>2022-12-01 05:10:56</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 05:10:52</td>
+	    <td>2022-12-01 05:10:52*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>8272895</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 04:29:19</td>
+		<td>2022-12-01 04:29:19</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>ravi</td>
+        <td>2022-12-01 04:30:13</td>
+	    <td>2022-12-01 04:30:13*No Issue found after video verification,*ravi</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>8269834</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 04:24:13</td>
+		<td>2022-12-01 04:24:13</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 04:27:55</td>
+	    <td>2022-12-01 04:27:55*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>8267966</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 04:21:05</td>
+		<td>2022-12-01 04:21:04</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>8267892</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor Low</td>
+	 	<td>Lobby Temprature Sensor Low</td>
+        <td>2022-12-01 04:20:59</td>
+		<td>2022-12-01 04:20:57</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 04:21:05</td>
+	    <td>2022-12-01 04:21:05*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>8226103</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 03:10:55</td>
+		<td>2022-12-01 03:10:48</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 03:10:58</td>
+	    <td>2022-12-01 03:10:58*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>8220001</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 03:00:01</td>
+		<td>2022-12-01 03:00:02</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 03:00:03</td>
+	    <td>2022-12-01 03:00:03*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>8213009</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 02:42:19</td>
+		<td>2022-12-01 02:48:13</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>8211389</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 02:46:21</td>
+		<td>2022-12-01 02:45:34</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 02:46:38</td>
+	    <td>2022-12-01 02:46:38*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>8196717</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 02:21:45</td>
+		<td>2022-12-01 02:20:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-12-01 02:26:21</td>
+	    <td>2022-12-01 02:26:21*No Issue found after video verification,*helpdesk</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>8191877</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 02:13:37</td>
+		<td>2022-12-01 02:12:53</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>8191858</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 02:13:37</td>
+		<td>2022-12-01 02:12:51</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 02:13:08</td>
+	    <td>2022-12-01 02:13:08*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>8180778</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 01:54:37</td>
+		<td>2022-12-01 01:53:50</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>8174444</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 01:43:47</td>
+		<td>2022-12-01 01:43:01</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 01:42:55</td>
+	    <td>2022-12-01 01:42:55*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Euronet</td>
+     <td>8174412</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 01:43:44</td>
+		<td>2022-12-01 01:42:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 01:42:55</td>
+	    <td>2022-12-01 01:42:55*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Euronet</td>
+     <td>8173109</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 01:41:33</td>
+		<td>2022-12-01 01:40:46</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 01:42:55</td>
+	    <td>2022-12-01 01:42:55*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Euronet</td>
+     <td>8168004</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 01:32:26</td>
+		<td>2022-12-01 01:31:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>ravi</td>
+        <td>2022-12-01 01:33:42</td>
+	    <td>2022-12-01 01:33:42*No Issue found after video verification,*ravi</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Euronet</td>
+     <td>8149756</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 01:00:52</td>
+		<td>2022-12-01 01:00:47</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 01:02:04</td>
+	    <td>2022-12-01 01:02:04*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Euronet</td>
+     <td>8139587</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 00:44:06</td>
+		<td>2022-12-01 00:43:38</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-12-01 00:44:11</td>
+	    <td>2022-12-01 00:44:11*No Issue found after video verification,*helpdesk</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Euronet</td>
+     <td>8139181</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 00:43:24</td>
+		<td>2022-12-01 00:42:56</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Euronet</td>
+     <td>8139008</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 00:43:07</td>
+		<td>2022-12-01 00:42:39</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Euronet</td>
+     <td>8135612</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal </td>
+	 	<td>ATM1 Removal </td>
+        <td>2022-12-01 00:36:28</td>
+		<td>2022-12-01 00:37:07</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Yasha</td>
+        <td>2022-12-01 00:38:41</td>
+	    <td>2022-12-01 00:38:41*No Issue found after video verification,*Yasha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Euronet</td>
+     <td>8118064</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Radhakrishna Nagar, Barabanda</td>-->
+    <td>P3ENHE60</td>
+    <td>H.No: 1-47, Radhakrishna Nagar, Barabanda, Hyderabad, Telangana â€“ 500018.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 00:09:26</td>
+		<td>2022-12-01 00:08:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.126</td>
+		<td>RASS</td>	
+		<td>000000</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 00:09:01</td>
+	    <td>2022-12-01 00:09:01*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.126' and b.receivedtime between '2022-12-01 00:00:00' and '2022-12-01 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

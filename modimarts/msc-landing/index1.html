@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Safety Card - Allmart</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo-light.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<style>
+body{
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto Condensed', sans-serif;*/
+}
+</style>
+        <style>
+        .box
+        {
+    box-shadow: 0px -2px 6px 1px #c1c1c1;
+    width: 39%;
+    /* height: 1px; */
+    margin-left: 16%;
+    margin-top: 10%;
+    background: #c1c1c14d;
+        }
+
+         .ap-items .item
+        {
+    padding: 10%;
+    color: white;
+    background: gray;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+        }
+        .card-body
+        {
+            background: #ffffff;
+        }
+        .btn-link
+        {
+            font-family: 'Roboto', sans-serif;
+              color: black;
+        text-decoration: none;
+        font-weight: 300;
+        }
+        .list-menu
+        {
+            /*font-family: 'Myriad Pro', sans-serif;*/
+             font-family: 'Roboto', sans-serif;
+        }
+        sup
+        {
+            top: -1.5em;
+            font-size: 10px;
+        }
+        .btn-outline-danger
+        {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            width: 183px;
+        }
+        .approved
+        {
+            color: #f7c324;
+            font-weight: bold;
+            font-size: 43px;
+        }
+       
+        .ap-row
+        {
+            align-items: center;
+    justify-content: center;
+        }
+      .offr {
+       font-family: 'Roboto', sans-serif;
+        /*margin: 100px auto;
+        color: #228B22;*/
+        text-align: center;
+        font-size: 18px;
+        max-width: 100%;
+        position: relative;
+        padding-top: 6px;
+      }
+      .heading
+      {
+        line-height: 1.5;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 24px;
+
+      }
+      .offr:before {
+                content: "";
+    display: block;
+    width: 20%;
+    height: 1px;
+    background: #f5f5f7;
+    left: 15%;
+    top: 50%;
+    position: absolute;
+            }
+      .offr:after {
+        content: "";
+    display: block;
+    width: 20%;
+    height: 1px;
+    background: #f5f5f7;
+    right: 15%;
+    top: 50%;
+    position: absolute;
+      }
+      .main-logo
+      {
+        background: white;
+    border-radius: 0 0 50% 50%;
+      }
+
+      [data-toggle="collapse"] .fa-co:before {  
+  content: "remove_circle_outline";
+}
+
+[data-toggle="collapse"].collapsed .fa-co:before {
+  content: "add_circle_outline";
+}
+.colla
+{
+    background: #f7c324;
+    color: black;
+}
+.btn-block
+{
+    text-decoration: none;
+}
+.fa-co
+{
+    float: right;
+    color: black;
+    font-size: 30px;
+}
+/*for Desktop*/
+.main-logo
+  {
+    width: 92px;
+    padding-top: 10%;
+  }
+
+  .navbar-brand
+  {
+    padding-top: 0;
+  }
+
+  .Headname
+      {
+        font-family: 'Times New Roman', Times, serif;
+        text-transform: uppercase;
+        color: black;
+        font-size: 29px;
+        margin-left: 15px;
+    border-left: 1px solid white;
+    padding-left: 15px;
+    display: inline-block;
+
+      }
+    /*  .banner-one__moc
+      {
+        width: 57%;
+      }
+      .cta-two__moc
+      {
+        width: 57%;
+      }*/
+
+      .img-responsive
+      {
+        width: 100%;
+      }
+
+
+@media only screen 
+   and (min-width : 1200px) {
+   /* Styles here */
+   .main-navigation
+   {
+    margin-left: 44%;
+   }
+    .ap-border
+        {
+            border-right: 1px solid #f7c324;
+        }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .approved
+        {
+            color: #f7c324;
+            font-weight: bold;
+            font-size: 35px;
+            margin-bottom: 8%;
+        }
+
+        .img-responsive
+      {
+        width: 100%;
+      }
+
+
+
+  /*.banner-one__moc
+      {
+        width: 100%;
+      } 
+      .cta-two__moc
+      {
+        width: 100%;
+      }*/
+  .navbar-brand
+  {
+    padding: 0 !important;
+  }
+  .main-logo
+  {
+    width: 60px;
+    padding-top: 10%;
+  }
+
+  .offr {
+     font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    max-width: 100%;
+    position: relative;
+    padding-top: 2%;
+    margin-bottom: 2%;
+      }
+
+    .offr:before {
+                content: "";
+                display: block;
+                width: 14%;
+                height: 1px;
+                background: #f5f5f7;
+                left: 3%;
+                top: 60%;
+                position: absolute;
+            }
+      .offr:after {
+        content: "";
+                display: block;
+                width: 14%;
+                height: 1px;
+                background: #f5f5f7;
+                right: 3%;
+                top: 60%;
+                position: absolute;
+      }
+      .Headname
+      {
+        font-family: 'Times New Roman', Times, serif;
+        text-transform: uppercase;
+        color: black;
+        font-size: 17px;
+
+        margin-left: 15px;
+    border-left: 1px solid white;
+    padding-left: 15px;
+    display: inline-block;
+
+      }
+  
+}
+    </style>
+
+
+</head>
+
+<body>
+    <div class="preloader">
+        <img class="preloader__icon" src="images/preloader.png" alt="Awesome Image" />
+    </div>
+    <div class="page-wrapper">
+        <header class="site-header header-one ">
+            <div class="row">
+                <div class="col-md-12 text-center bg-danger text-white">
+                   <p class="offr">Make ‘Safety’ your ‘Priority’, <b>Order now.</b></p>  
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light header-navigation stricky">
+                <div class="container clearfix">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="logo-box clearfix">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logo-light.png" class="main-logo"  alt="Awesome Image" />
+                            
+                        </a>
+                        <a href="#" class="navbar-brand"><br/> <span class="Headname">MY SAFETY <br/>CARD<sup class="tm">TM</sup></span></a>
+                        <button class="menu-toggler" data-target=".main-navigation">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                    </div>
+                    
+                       
+                 
+                    <!-- <div class="main-navigation" >
+                        <ul class=" navigation-box one-page-scroll-menu ">
+                            <li class="scrollToLink current">
+                                <button type="button" class="btn btn-outline-danger">Refer Friend</button>
+                            </li>
+                            <li class="scrollToLink">
+                                <a href="" class="list-menu" style="color:black;"><i class="fa fa-phone" style="color:black;margin: 5px;"></i> +91 9892384666</a>
+                            </li>
+                            <li class="scrollToLink">
+                                <a href="#contact" style="color:black;" class="list-menu"><i class="fa fa-envelope" style="color:black;margin: 5px;"></i> enquiry.allmart@gmail.com</a>
+                            </li>
+                            
+                        </ul>
+                    </div> --> 
+                  
+
+                    <div class="main-navigation">
+                        <ul class=" navigation-box one-page-scroll-menu ">
+                            <li class="scrollToLink current">
+                               <button type="button" onclick="window.open('https://web.whatsapp.com/send?text='+window.location.href)" class="btn btn-outline-danger">Refer a Friend</button>
+                            </li>
+                            <li class="scrollToLink">
+                               <a href="" class="list-menu" style="color:black;"><i class="fa fa-phone" style="color:black;margin: 5px;"></i> +91 9892384666</a>
+                            </li>
+                            <li class="scrollToLink">
+                                <a href="#contact" style="color:black;" class="list-menu"><i class="fa fa-envelope" style="color:black;margin: 5px;"></i> enquiry.allmart@gmail.com</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                                      
+                </div>
+                <!-- /.container -->
+            </nav>
+        </header><!-- /.header-one -->
+
+        <section class="banner-one" id="home">
+            <span class="banner-one__shape-1"></span>
+            <span class="banner-one__shape-2"></span>
+            <span class="banner-one__shape-3"></span>
+            <!-- <span class="banner-one__shape-4"></span> -->
+            <span class="banner-one__shape-5"></span>
+            <span class="banner-one__shape-6"></span>
+
+            <img src="images/virus.png" class="banner-one__globe" alt="Awesome Image"/>
+            <img src="images/virusd.png" class="banner-one__rocket" alt="Awesome Image"/>
+            <img src="images/banner-1-1-moc.png" class="banner-one__moc"  alt="Awesome Image"/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="banner-one__content">
+                           
+                            <h5 class="banner-one__title">Get My safety card today,<br> <span style="color: black;">keep Coronavirus at bay !</span></h5><!-- /.banner-one__title -->
+                            <h5 class="text-white heading">Get 360° Protection From Deadly Bacterias,<br/>Viruses And <span class="text-danger">Covid-19</span></h5>
+                            <a href="https://allmart.world/my-safety-card/P/711/803/1427" class="banner-one__btn thm-btn">Buy Now</a>
+                        </div><!-- /.banner-one__content -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.banner-one -->
+        <hr>
+
+        <section class="brand-one">
+            <div class="container">
+                <div class="row ap-row">
+                    <div class="col-md-3 col-sm-3 col-xs-3 ap-border">
+                        <div><h4 class="approved">Approved By</h4></div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        <div class="brand-one__carousel owl-theme owl-carousel ">
+                    <div class="item" data-toggle="modal" data-target="#exampleModal1">
+                       <img src="images/brand-1-4.png" alt="Awesome Image" style="height: 60px;width: auto;" />
+                    </div>
+                   
+                    <div class="item" data-toggle="modal" data-target="#exampleModal2">
+                         <img src="images/brand-1-5.png" alt="Awesome Image" style="height: 60px;width: auto;" />
+                    </div>
+                    <div class="item" data-toggle="modal" data-target="#exampleModal3">
+                         <img src="images/brand-1-2.png" alt="Awesome Image" style="height: 60px;width: auto;" />
+                    </div>
+                    <div class="item" data-toggle="modal" data-target="#exampleModal4">
+                        <img src="images/brand-1-6.png" alt="Awesome Image" style="height: 60px;width: auto;" /> 
+                    </div>
+                    <div class="item" data-toggle="modal" data-target="#exampleModal5">
+                         <img src="images/brand-1-3.png" alt="Awesome Image" style="height: 60px;width: auto;" />
+                    </div>
+                    <div class="item" data-toggle="modal" data-target="#exampleModal6">
+                         <img src="images/brand-1-1.png" alt="Awesome Image" style="height: 60px;width: auto;" />
+                    </div>
+                   
+                </div>
+                    </div>
+                </div>
+                
+                <!-- /.brand-one__carousel owl-theme owl-carousel -->
+
+                <!-- Button trigger modal -->
+
+
+            </div><!-- /.container -->
+        </section><!-- /.brand-one -->
+
+        <section class="service-one" id="services">
+             <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="cta-three__image">
+                            <img src="images/shape-2.png" alt="Awesome Image"/>
+                        </div><!-- /.cta-three__image -->
+                        <div class="box"></div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="cta-three__content">
+                            <div class="block-title text-left">
+                                <h2 class="block-title__title black-text-color">My Safety Card - Your shield against COVID-19.</h2><!-- /.block-title__title -->
+                            </div><!-- /.block-title -->
+                            <p class="cta-three__text">The ultimate saviour against COVID-19 is here !</p>
+                            <p class="cta-three__text">NOT IN A CAPE</p>
+                            <p class="cta-three__text">BUT IN THE FORM OF A CARD !</p>
+                            <ul class="cta-three__list">
+                                <li class="cta-three__list-item"><i class="fa fa-check"></i>Presenting to you ‘MY SAFETY CARD’ a revolutionary ‘Antibacterial Sterilization Card’ that destroys more than 99.99% of all kinds of harmful viruses & bacteria including COVID-19</li><!-- /.cta-three__list-item -->
+                                <li class="cta-three__list-item"><i class="fa fa-check"></i>Made with formulation recommended by WHO, it is well supported by lab tested reports & is highly effective against coronavirus.</li><!-- /.cta-three__list-item -->
+                                <li class="cta-three__list-item"><i class="fa fa-check"></i>Wear it as an ID card or hang it in the car, fridge, entrance door etc. it's equally effective in closed as well as open spaces.  Backed by science & Made in India, ‘My Safety Card' is a reliable protection against Coronavirus.</li><!-- /.cta-three__list-item -->
+                                
+                            </ul><!-- /.cta-three__list -->
+                            <a href="https://allmart.world/my-safety-card/P/711/803/1427" class="thm-btn cta-three__btn">Buy Now</a>
+                        </div><!-- /.cta-three__content -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.service-one -->
+
+        <section class="cta-three">
+
+           <div class="container">
+                <div class="block-title text-center">
+                    <h2 class="block-title__title black-text-color">Use your safety shield in 3 simple steps</h2>
+                </div><!-- /.block-title -->
+            <span class="banner-one__shape-7"></span>
+            <span class="banner-one__shape-8"></span>
+            <span class="banner-one__shape-9"></span>
+            <span class="banner-one__shape-10"></span>
+            <span class="banner-one__shape-11"></span>
+            <span class="banner-one__shape-12"></span>
+            <span class="banner-one__shape-13"></span>
+            <span class="banner-one__shape-14"></span>
+            <span class="banner-one__shape-15"></span>
+            <span class="banner-one__shape-16"></span>
+            <span class="banner-one__shape-17"></span>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="funfact-one__single-outer">
+                            <div class="funfact-one__single">
+                                <span class="funfact-one__dot-1"></span>
+                                <span class="funfact-one__dot-2"></span>
+                                <span class="funfact-one__dot-3"></span>
+                                <h3 class="funfact-two__title ">Open the pack</h3><!-- /.funfact-one__title -->
+                                <h3 class="funfact-two__title ">&</h3><!-- /.funfact-one__title -->
+                                <p class="funfact-one__tag-line">Take the card out</p><!-- /.funfact-one__tag-line -->
+                            </div><!-- /.funfact-one__single -->
+                        </div><!-- /.funfact-one__single-outer -->
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-lg-4 col-md-6 col-sm-4">
+                        <div class="funfact-one__single-outer">
+                            <div class="funfact-one__single">
+                                <span class="funfact-one__dot-1"></span>
+                                <span class="funfact-one__dot-2"></span>
+                                <span class="funfact-one__dot-3"></span>
+                                <h3 class="funfact-two__title ">Attach the</h3><!-- /.funfact-one__title -->
+                                <p class="funfact-one__tag-line">strap</p><!-- /.funfact-one__tag-line -->
+                            </div><!-- /.funfact-one__single -->
+                        </div><!-- /.funfact-one__single-outer -->
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-lg-4 col-md-6 col-sm-4">
+                        <div class="funfact-one__single-outer">
+                            <div class="funfact-one__single">
+                                <span class="funfact-one__dot-1"></span>
+                                <span class="funfact-one__dot-2"></span>
+                                <span class="funfact-one__dot-3"></span>
+                                <h3 class="funfact-two__title ">Wear it as an ID card</h3><!-- /.funfact-one__title -->
+                                <h3 class="funfact-two__title ">or</h3><!-- /.funfact-one__title -->
+                                <p class="funfact-one__tag-line">Hang it wherever you want</p><!-- /.funfact-one__tag-line -->
+                            </div><!-- /.funfact-one__single -->
+                        </div><!-- /.funfact-one__single-outer -->
+                    </div><!-- /.col-lg-3 -->
+                   
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.cta-three -->
+
+        <section class="cta-two">
+            <img src="images/mscboy.png" class="cta-two__moc"  alt="Awesome Image"/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="cta-two__block">
+                            <div class="block-title text-left">
+                                <h2 class="block-title__title black-text-color">It's Economical, It's Effective and It’s Efficient.</h2><!-- /.block-title__title -->
+                            </div><!-- /.block-title -->
+                            <div class="cta-two__single" style="min-height: 235px;">
+                                <div class="owl-theme owl-carousel" id="faq2">
+                                    <div class="item">
+                                        <!-- <div class="cta-two__icon">
+                                            <i class="lums-icon-strategy">
+                                            </i>
+                                        </div> -->
+                                        <div class="cta-two__content">
+                                            <p class="cta-two__text">
+                                                99.99% effective in blocking COVID-19 Virus & other harmful Viruses and Bacteria
+                                            </p>
+                                            <a href="https://allmart.world/my-safety-card/P/711/803/1427" class="thm-btn cta-two__btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <!-- <div class="cta-two__icon">
+                                            <i class="lums-icon-strategy">
+                                            </i>
+                                        </div> -->
+                                        <div class="cta-two__content">
+                                            <p class="cta-two__text">
+                                                Formulation recommended by WHO and ICMR
+                                            </p>
+                                            <a href="https://allmart.world/my-safety-card/P/711/803/1427" class="thm-btn cta-two__btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <!-- <div class="cta-two__icon">
+                                            <i class="lums-icon-strategy">
+                                            </i>
+                                        </div> -->
+                                        <div class="cta-two__content">
+                                            <p class="cta-two__text">
+                                                Effective upto 30 days & protects 24*7.
+                                            </p>
+                                            <a href="https://allmart.world/my-safety-card/P/711/803/1427" class="thm-btn cta-two__btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                       <!--  <div class="cta-two__icon">
+                                            <i class="lums-icon-strategy">
+                                            </i>
+                                        </div> -->
+                                        <div class="cta-two__content">
+                                            <p class="cta-two__text">
+                                                Certified by Haffkine, ISO, GMP, FDA, CE & many other prestigious institutions
+                                            </p>
+                                            <a href="https://allmart.world/my-safety-card/P/711/803/1427" class="thm-btn cta-two__btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <!-- <div class="cta-two__icon">
+                                            <i class="lums-icon-strategy">
+                                            </i>
+                                        </div> -->
+                                        <div class="cta-two__content">
+                                            <p class="cta-two__text">
+                                                Suitable for all age groups
+                                            </p>
+                                            <a href="https://allmart.world/my-safety-card/P/711/803/1427" class="thm-btn cta-two__btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div><!-- /.cta-two__block -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.cta-two -->
+        <section class="pricing-one" id="pricing">
+            <div class="container">
+                <div class="block-title text-center">
+                    <h2 class="block-title__title black-text-color">Pick what suits you best !<br/>One card for all your safety needs.
+</h2><!-- /.block-title__title -->
+                </div><!-- /.block-title -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="pricing-one__single">
+                            <h3 class="pricing-one__amount">₹ 531</h3><!-- /.pricing-one__amount -->
+                            <span class="pricing-one__month">Personal Use</span>
+                            <ul class="pricing-one__list">
+                                <li class="pricing-one__list-item">1 piece</li><!-- /.pricing-one__list-item -->
+                                <li class="pricing-one__list-item"> Safeguard yourself 24*7 for a month with just one card.<br/><br/><br/></li><!-- /.pricing-one__list-item -->
+                               
+                            </ul><!-- /.pricing-one__list -->
+                            <a href="https://allmart.world/my-safety-card/P/711/803/1427" class="thm-btn pricing-one__btn">Buy Now</a>
+                            <span class="pricing-one__tag-line">FREE SHIPPING</span>
+                        </div><!-- /.pricing-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div class="pricing-one__single ">
+                            <h3 class="pricing-one__amount">₹ 531 x 4</h3><!-- /.pricing-one__amount -->
+                            <span class="pricing-one__month">Family Pack</span>
+                            <ul class="pricing-one__list">
+                                <li class="pricing-one__list-item">4 pieces</li><!-- /.pricing-one__list-item -->
+                                <li class="pricing-one__list-item">Get a card for everyone you care about. With ‘My Safety Card’ get complete protection for everyone at home.</li><!-- /.pricing-one__list-item -->                               
+                            </ul><!-- /.pricing-one__list -->
+                            <a href="https://allmart.world/my-safety-card/L/711/803/1427/4" class="thm-btn pricing-one__btn">Buy Now</a>
+                            <span class="pricing-one__tag-line">FREE SHIPPING</span>
+                        </div><!-- /.pricing-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div class="pricing-one__single">
+                            <h3 class="pricing-one__amount">₹ 531 x 12</h3><!-- /.pricing-one__amount -->
+                            <span class="pricing-one__month">Yearly Pack</span>
+                            <ul class="pricing-one__list">
+                                <li class="pricing-one__list-item">12 pieces</li><!-- /.pricing-one__list-item -->
+                                <li class="pricing-one__list-item">Good things sell fast, get your annual pack, before it's sold out.<br/><br/></li><!-- /.pricing-one__list-item -->
+                             
+                            </ul><!-- /.pricing-one__list -->
+                            <a href="https://allmart.world/my-safety-card/L/711/803/1427/12" class="thm-btn pricing-one__btn">Buy Now</a>
+                            <span class="pricing-one__tag-line">FREE SHIPPING</span>
+                        </div><!-- /.pricing-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.pricing-one -->
+        <section class="testimonials-one" id="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="testimonials-one__image-block">
+                            <div class="owl-carousel owl-theme" id="sync2">
+                                <div class="item clearfix">
+                                    <div class="testimonials-one__image">
+                                        <img src="images/testi-1-1.jpg" class="testimonials-one__thumb" alt="Awesome Image" />
+                                        <div class="testimonials-one__qoute">
+                                            <img src="images/testi-qoute-1-1.png" alt="Awesome Image" />
+                                        </div><!-- /.testimonials-one__qoute -->
+                                    </div><!-- /.testimonials-one__image -->
+                                </div><!-- /.item -->
+                                <div class="item clearfix">
+                                    <div class="testimonials-one__image">
+                                        <img src="images/testi-1-2.jpg" class="testimonials-one__thumb" alt="Awesome Image" />
+                                        <div class="testimonials-one__qoute">
+                                            <img src="images/testi-qoute-1-1.png" alt="Awesome Image" />
+                                        </div><!-- /.testimonials-one__qoute -->
+                                    </div><!-- /.testimonials-one__image -->
+                                </div><!-- /.item -->
+                                <div class="item clearfix">
+                                    <div class="testimonials-one__image">
+                                        <img src="images/testi-1-3.jpg" class="testimonials-one__thumb" alt="Awesome Image" />
+                                        <div class="testimonials-one__qoute">
+                                            <img src="images/testi-qoute-1-1.png" alt="Awesome Image" />
+                                        </div><!-- /.testimonials-one__qoute -->
+                                    </div><!-- /.testimonials-one__image -->
+                                </div><!-- /.item -->
+                            </div><!-- /.owl-carousel owl-theme -->
+                            <div class="testimonials-one__button-block">
+                                <button class="testimonials-one__button__prev-btn"></button>
+                                <button class="testimonials-one__button__current-btn"></button>
+                                <button class="testimonials-one__button__next-btn"></button>
+                            </div>
+                        </div><!-- /.testimonials-one__image-block -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="testimonials-one__content">
+                            <div class="block-title text-left">
+                                <h2 class="block-title__title black-text-color">Once a user, always a patron <br> People Love it, here’s why !</h2><!-- /.block-title__title -->
+                            </div><!-- /.block-title -->
+                            <div class="owl-carousel owl-theme" id="sync1">
+                                <div class="item">
+                                    <div class="testimonials-one__single" data-thumb-img="images/testi-1-1.jpg">
+                                        <p class="testimonials-one__text black-text-color">Aarav is a very naughty child. But then such are children. There are days when I find it hard to keep him indoors during this pandemic, & he often goes down to cycle and play with his friends, sometimes in spite of a stern warning he takes off his mask while playing. I'm glad that I have ‘My Safety Card’ to ensure that he is safe even when he is not at home.</p><!-- /.testimonials-one__text -->
+                                        <div class="testimonials-one__bottom">
+                                            <h3 class="testimonials-one__title black-text-color">- Suchi</h3><!-- /.testimonials-one__title -->
+                                            <div class="testimonials-one__sep">.</div><!-- /.testimonials-one__sep -->
+                                            <!-- <p class="testimonials-one__designation">CEO Lums</p> -->
+                                            <!-- /.testimonials-one__designation -->
+                                        </div><!-- /.testimonials-one__bottom -->
+                                    </div><!-- /.testimonials-one__single -->
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <div class="testimonials-one__single" data-thumb-img="images/testi-1-2.jpg">
+                                        <p class="testimonials-one__text black-text-color">I stay in Delhi and my Parents are in Nashik. They often have to venture out for their daily needs, but given the current times I was always worried about their well being. A colleague recommended ‘My Safety Card’ and I immediately brought it for my parents. This product has given me a great peace of mind. </p><!-- /.testimonials-one__text -->
+                                        <div class="testimonials-one__bottom">
+                                            <h3 class="testimonials-one__title black-text-color"> - Sujit</h3><!-- /.testimonials-one__title -->
+                                            <div class="testimonials-one__sep">.</div><!-- /.testimonials-one__sep -->
+                                            <!-- <p class="testimonials-one__designation">CEO Lums</p> -->
+                                            <!-- /.testimonials-one__designation -->
+                                        </div><!-- /.testimonials-one__bottom -->
+                                    </div><!-- /.testimonials-one__single -->
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <div class="testimonials-one__single" data-thumb-img="images/testi-1-3.jpg">
+                                        <p class="testimonials-one__text black-text-color">I have a very busy job as I work in the food manufacturing industry. The daily commute, constant interaction with teams on the shopfloor and the frequent reports of a fresh Covid case in the factory were making everyday work really difficult. Given the difficulty in getting the vaccine I was really worried about my safety but now with ‘My Safety Card’, my peace of mind has returned & I now carry my day to day activities stress free.</p><!-- /.testimonials-one__text -->
+                                        <div class="testimonials-one__bottom">
+                                            <h3 class="testimonials-one__title black-text-color">- Anahita</h3><!-- /.testimonials-one__title -->
+                                            <div class="testimonials-one__sep">.</div><!-- /.testimonials-one__sep -->
+                                            <!-- <p class="testimonials-one__designation">CEO Lums</p> -->
+                                            <!-- /.testimonials-one__designation -->
+                                        </div><!-- /.testimonials-one__bottom -->
+                                    </div><!-- /.testimonials-one__single -->
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <div class="testimonials-one__single" data-thumb-img="images/testi-1-3.jpg">
+                                        <p class="testimonials-one__text black-text-color">Being in the medical profession the risk of getting infected is always very high. We often come in contact with infected patients and that poses a great threat to our safety. My team & I have been vaccinated, but ‘My Safety card’ provides us extra protection. All of us at our hospital have been using it for quite some time & it's very effective. It's WHO recommended formulation , & its effectiveness against all kinds of viruses & bacterias including COVID-19 makes it a potent product. I would highly recommend it to everyone</p><!-- /.testimonials-one__text -->
+                                        <div class="testimonials-one__bottom">
+                                            <h3 class="testimonials-one__title black-text-color">- Dr. Nisarg</h3><!-- /.testimonials-one__title -->
+                                            <div class="testimonials-one__sep">.</div><!-- /.testimonials-one__sep -->
+                                            <!-- <p class="testimonials-one__designation">CEO Lums</p> -->
+                                            <!-- /.testimonials-one__designation -->
+                                        </div><!-- /.testimonials-one__bottom -->
+                                    </div><!-- /.testimonials-one__single -->
+                                </div><!-- /.item -->
+                                <div class="item">
+                                    <div class="testimonials-one__single" data-thumb-img="images/testi-1-3.jpg">
+                                        <p class="testimonials-one__text black-text-color">Since the Pandemic started, we have ceased to venture out, however I was always worried about the food we consumed and its safety. But not any more. You might find it funny, but I not only use ‘My Safety card’ for myself and my family but I also use it at important places in the home such as hanging it on the refrigerator which keeps the food disinfected and fresh for a longer time.</p><!-- /.testimonials-one__text -->
+                                        <div class="testimonials-one__bottom">
+                                            <h3 class="testimonials-one__title black-text-color">-  Vinita Narang</h3><!-- /.testimonials-one__title -->
+                                            <div class="testimonials-one__sep">.</div><!-- /.testimonials-one__sep -->
+                                            <!-- <p class="testimonials-one__designation">CEO Lums</p> -->
+                                            <!-- /.testimonials-one__designation -->
+                                        </div><!-- /.testimonials-one__bottom -->
+                                    </div><!-- /.testimonials-one__single -->
+                                </div><!-- /.item -->
+                            </div><!-- /.owl-carousel owl-theme -->
+                        </div><!-- /.testimonials-one__content -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.testimonials-one -->
+        
+        <section class="funfact-one">
+            
+        </section><!-- /.funfact-one -->
+        <section class="blog-one" id="blog">
+            <div class="container">
+                <div class="block-title text-center">
+                    <h2 class="block-title__title black-text-color">My Safety Card in News </h2><!-- /.block-title__title -->
+                </div><!-- /.block-title -->
+                <div class="row high-gutters">
+                    <div class="col-lg-4">
+                        <div class="blog-one__single">
+                            <div class="blog-one__image-outer">
+                               <a href="https://thetimesnews.co.in/protection-against-corona-and-other-infections-using-my-safety-card/" > <div class="blog-one__image">
+                                   <img src="images/news/msc.jpg" alt="Awesome Image" />
+                                    
+                                </div></a><!-- /.blog-one__image -->
+                            </div><!-- /.blog-one__image-outer -->
+                            <div class="blog-one__content">
+                                <div class="blog-one__meta">
+                                    <a href="https://thetimesnews.co.in/protection-against-corona-and-other-infections-using-my-safety-card/" class="blog-one__meta-link">By The times news</a>
+                                    <span class="blog-one__meta-sep">.</span>
+                                    <a href="https://thetimesnews.co.in/protection-against-corona-and-other-infections-using-my-safety-card/" class="blog-one__meta-link">24 Apr</a>
+                                    <span class="blog-one__meta-sep">.</span>
+                                    <!-- <a href="blog-details.html" class="blog-one__meta-link">2 comments</a> -->
+                                </div><!-- /.blog-one__meta -->
+                                <h3 class="blog-one__title"><a href="https://thetimesnews.co.in/protection-against-corona-and-other-infections-using-my-safety-card/">Protection against Corona and other infections</a></h3><!-- /.blog-one__title -->
+                            </div><!-- /.blog-one__content -->
+                        </div><!-- /.blog-one__single -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-4">
+                        <div class="blog-one__single">
+                            <div class="blog-one__image-outer">
+                                 <a href="https://www.mid-day.com/lifestyle/health-&-fitness/article/my-safety-card-assures-protection-against-all-bacteria-and-viruses-including-covid19-23170003"><div class="blog-one__image">
+                                   <img src="images/news/msc.jpg" alt="Awesome Image" />
+                                   
+                                </div> </a><!-- /.blog-one__image -->
+                            </div><!-- /.blog-one__image-outer -->
+                            <div class="blog-one__content">
+                                <div class="blog-one__meta">
+                                    <a href="https://www.mid-day.com/lifestyle/health-&-fitness/article/my-safety-card-assures-protection-against-all-bacteria-and-viruses-including-covid19-23170003" class="blog-one__meta-link">By Mid-day</a>
+                                    <span class="blog-one__meta-sep">.</span>
+                                    <a href="https://www.mid-day.com/lifestyle/health-&-fitness/article/my-safety-card-assures-protection-against-all-bacteria-and-viruses-including-covid19-23170003" class="blog-one__meta-link">24 Apr</a>
+                                    <span class="blog-one__meta-sep">.</span>
+                                    <!-- <a href="blog-details.html" class="blog-one__meta-link">2 comments</a> -->
+                                </div><!-- /.blog-one__meta -->
+                                <h3 class="blog-one__title"><a href="https://www.mid-day.com/lifestyle/health-&-fitness/article/my-safety-card-assures-protection-against-all-bacteria-and-viruses-including-covid19-23170003">My Safety Card assures protection against all bacteria and viruses including Covid19</a></h3><!-- /.blog-one__title -->
+                            </div><!-- /.blog-one__content -->
+                        </div><!-- /.blog-one__single -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-4">
+                        <div class="blog-one__single">
+                            <div class="blog-one__image-outer">
+                                 <a href="https://dainiktimes.co.in/%E0%A4%AE%E0%A4%BE%E0%A4%AF-%E0%A4%B8%E0%A5%87%E0%A4%AB%E0%A5%8D%E0%A4%9F%E0%A5%80-%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A1-%E0%A4%8F%E0%A4%95-%E0%A4%A8%E0%A4%AF%E0%A4%BE-%E0%A4%AD%E0%A4%BE/" >
+                                <div class="blog-one__image">
+                                   <img src="images/news/msc.jpg" alt="Awesome Image" />
+                                   
+                                </div> </a><!-- /.blog-one__image -->
+                            </div><!-- /.blog-one__image-outer -->
+                            <div class="blog-one__content">
+                                <div class="blog-one__meta">
+                                    <a href="https://dainiktimes.co.in/%E0%A4%AE%E0%A4%BE%E0%A4%AF-%E0%A4%B8%E0%A5%87%E0%A4%AB%E0%A5%8D%E0%A4%9F%E0%A5%80-%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A1-%E0%A4%8F%E0%A4%95-%E0%A4%A8%E0%A4%AF%E0%A4%BE-%E0%A4%AD%E0%A4%BE/" class="blog-one__meta-link">By Dainiktimes</a>
+                                    <span class="blog-one__meta-sep">.</span>
+                                    <a href="https://dainiktimes.co.in/%E0%A4%AE%E0%A4%BE%E0%A4%AF-%E0%A4%B8%E0%A5%87%E0%A4%AB%E0%A5%8D%E0%A4%9F%E0%A5%80-%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A1-%E0%A4%8F%E0%A4%95-%E0%A4%A8%E0%A4%AF%E0%A4%BE-%E0%A4%AD%E0%A4%BE/" class="blog-one__meta-link">24 Apr</a>
+                                    <span class="blog-one__meta-sep">.</span>
+                                    <!-- <a href="blog-details.html" class="blog-one__meta-link">2 comments</a> -->
+                                </div><!-- /.blog-one__meta -->
+                                <h3 class="blog-one__title"><a href="https://dainiktimes.co.in/%E0%A4%AE%E0%A4%BE%E0%A4%AF-%E0%A4%B8%E0%A5%87%E0%A4%AB%E0%A5%8D%E0%A4%9F%E0%A5%80-%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A1-%E0%A4%8F%E0%A4%95-%E0%A4%A8%E0%A4%AF%E0%A4%BE-%E0%A4%AD%E0%A4%BE/">माय सेफ्टी कार्ड जो कि आपको सभी वायरस और बैक्टीरिया से बचाता है</a></h3><!-- /.blog-one__title -->
+                            </div><!-- /.blog-one__content -->
+                        </div><!-- /.blog-one__single -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.blog-one -->
+        <section class="cta-one" id="contact">
+            <div class="container">
+                    <h2 class="block-title__title black-text-color" style="text-align: center;">FAQ'S</h2>
+               
+                  <div class="owl-theme owl-carousel" id="faq1">
+    <div class="item">
+        <div class="accordion" id="accordionExampleone" style="margin-top: 3%;">
+            <div class="card colla">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapseOne" aria-expanded="false" class="btn btn-link btn-block text-left text-black collapsed" data-target="#collapseOne" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            Is ‘My Safety Card’ Safe to use  yet  effective against COVID-19 ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="headingOne" class="collapse " data-parent="#accordionExampleone" id="collapseOne">
+                    <div class="card-body">
+                        Yes ! My Safety Card is absolutely safe and it is certified by institutions like Haffkine, ISO, GMP, FDA, CE. Chlorine Dioxide(ClO2) ClO2- is an oxidizing agent which is a key component of this product. It kills all forms of microorganisms such as viruses, bacterias, fungi etc, & the ClO2 molecule is approved By WHO, ICMR, CDC, US- EPA, IIHP, CPHEEO, NIV, IDA and many other agencies for protection against Covid-19 virus. 
+                    The card releases ClO2 in concentration much lower than levels which are marked safe by OSHA (Occupational Safety and Hazard Administration) USA. Once opened, it starts releasing Chlorine Dioxide when it comes in contact with air and remains active for about 30 days.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapseTwo" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            Can I use ‘My Safety Card’ for my family members ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordionExampleone" id="collapseTwo">
+                    <div class="card-body">
+                        ‘My Safety card can be used by anyone and everyone you care about. Just practice caution while using it on children or adults who are not independent enough to manage themselves as there are few precautions to be followed. Otherwise its absolutely safe. You may use it to safeguard your family, loved ones, or even spaces such as the car, home entrance etc.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapseThree" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapseThree" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            What are the precautions I need to follow while using ‘My Safety Card’ ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="headingThree" class="collapse" data-parent="#accordionExampleone" id="collapseThree">
+                    <div class="card-body">
+                        There are few instances that you need to keep in mind while using ‘My Safety Card, see the points below:<br/>
+                    ● Do not put My Safety Card in your Shirt pocket as it may lead to discoloration after 6-8 hours.<br/>
+                    ● Do not remove the inside chemical from the card.<br/>
+                    ● Avoid direct contact of My Safety Card with the body.<br/>
+                    ● Do not use it for any other Purpose.<br/>
+                    ● If ingested, drink plenty of water and seek consultation with a doctor.<br/>
+                    ● Avoid contact with water or leather, store in a cool & dry place.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="headingfour">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapsefour" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapsefour" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            How do I use ‘My Safety Card’?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="headingfour" class="collapse" data-parent="#accordionExampleone" id="collapsefour">
+                    <div class="card-body">
+                        Using My Safety card is as easy as counting 1...2...3…<br/>
+                    1. Strip open the package & take the card card out<br/>
+                    2. Attach the strap given along in the pack<br/>
+                    3. Just put it on, as an ID Card or hang it wherever you want & you are good to go !
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="headingfive">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapsefive" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapsefive" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            How much Area Does ‘My Safety Card Cover’ ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="headingfive" class="collapse" data-parent="#accordionExampleone" id="collapsefive">
+                    <div class="card-body">
+                        ‘My safety card is highly effective in almost every situation, no matter where you use it. If used in a closed area, it covers upto 100 sq ft. & when it is used in open space like stations, trains, malls, markets, it covers upto 1 cubic meter of area. But in either case the expanse is safe enough to protect you !
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="accordion" id="accordionExampletwo" style="margin: 3%;">
+            <div class="card colla">
+                <div class="card-header" id="headingsix">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapsesix" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapsesix" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            What will ‘My safety card’ protect me from ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="headingsix" class="collapse" data-parent="#accordionExampletwo" id="collapsesix">
+                    <div class="card-body">
+                        Thiefs, traffic, water logging….. No we are kidding, there is still time to come up with inventions that protect you from those ! In fact, ‘My safety card’ protects you from far greater dangers such as Bacterias, Fungi, Molds, viruses (Yes, COVID virus too) . It is effective on almost every antigen in fact it is so potent that it also keeps mosquitoes and other pests away.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="heading7">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapse7" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapse7" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            For how Long Can I continue using ‘My safety card’ ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="heading7" class="collapse" data-parent="#accordionExampletwo" id="collapse7">
+                    <div class="card-body">
+                        Any new card  will last effectively upto 30 days, whereas an unused card has a validity of 2 years from the manufacturing date.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="heading8">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapse8" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapse8" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            When and Who should use ‘My Safety Card’ ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="heading8" class="collapse" data-parent="#accordionExampletwo" id="collapse8">
+                    <div class="card-body">
+                        ‘My Safety Card’ is suitable for any one stepping out of their home. And if you are visiting a crowded place then you definitely need it. Offices, Markets, Hospitals anywhere there are people & the chance of contracting infection, this card can be used. It can also  be used by anyone such as office workers, students and frontline professionals such as doctors, nurses, police and others to limit the spread of any virus. You can even use it in your car, doorway or even the refrigerator of your home to keep it safe from viruses and bacterias.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="heading9">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapse9" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapse9" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            Does ‘My safety card’ also impact my skin if I wear it for long ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="heading9" class="collapse" data-parent="#accordionExampletwo" id="collapse9">
+                    <div class="card-body">
+                        No, Prolonged use of ‘My Safety card’ does not have any negative effect on the skin, however one has to be careful that it does not directly stay in contact with the skin while wearing.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="heading10">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapse10" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapse10" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            Is ‘My safety card’ registered internationally too ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="heading10" class="collapse" data-parent="#accordionExampletwo" id="collapse10">
+                    <div class="card-body">
+                        Although ‘My safety card is yet not registered globally , it is fit to be used anywhere and in any country. It is certified by prestigious regulatory authorities like Haffkine, ISO, GMP, FDA, CE and is considered to be 99.99% effective and its chemical compositions are as per the guidelines of WHO & ICMR.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="accordion" id="accordionExamplethree" style="margin: 3%;">
+            <div class="card colla">
+                <div class="card-header" id="heading11">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapse11" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapse11" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            How effective is Chlorine dioxide ? The key ingredient of ‘ My Safety Card’ ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="heading11" class="collapse" data-parent="#accordionExamplethree" id="collapse11">
+                    <div class="card-body">
+                        Chlorine Dioxide(ClO2) ClO2 is potent enough to kill all kinds of viruses, bacterias, fungi etc. It destroys microorganisms by disrupting it's membrane. The ClO2 molecule is approved By WHO, ICMR, CDC, US- EPA, IIHP, CPHEEO, NIV, IDA and many other agencies for protection against Covid-19 virus.Solid chlorine dioxide has two and a half times more oxidizing power than general chlorine agents used for disinfectant, plus it has a strong antibacterial & deodorizing effect
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="heading12">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapse12" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapse12" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            Can I wear more than one card for extra protection ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="heading12" class="collapse" data-parent="#accordionExamplethree" id="collapse12">
+                    <div class="card-body">
+                        Not really !  At a time only one card is advisable per person each month. There is no need to use multiple cards.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="heading13">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapse13" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapse13" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            How Do I Store & Dispose My Safety Card ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="heading13" class="collapse" data-parent="#accordionExamplethree" id="collapse13">
+                    <div class="card-body">
+                        If not in use, keep the card in a cold , dry place, avoiding exposure to direct sunlight. Once the card completes a month of use, dispose  it by following the dry waste disposal method.
+                    </div>
+                </div>
+            </div>
+            <div class="card colla">
+                <div class="card-header" id="heading14">
+                    <h2 class="mb-0">
+                        <button aria-controls="collapse14" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapse14" data-toggle="collapse" style="color: black;text-decoration: none;" type="button">
+                            I need more details. Who do I reach out to ?
+                            <span class="fa-co material-icons-outlined md-36">
+                            </span>
+                        </button>
+                    </h2>
+                </div>
+                <div aria-labelledby="heading14" class="collapse" data-parent="#accordionExamplethree" id="collapse14">
+                    <div class="card-body">
+                        We are glad to know that you are so interested to know more about ‘My safety card’ .
+            Please drop in your queries at & our team will get back to you within 24 to 48 hours.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                
+            </div>
+           
+        </section><!-- /.cta-one -->
+        <footer class="site-footer">
+            <div class="site-footer__lower" style="background: #ee1a22;">
+                <div class="container">
+                    <div class="inner-container">
+                          
+                          <p class="site-footer__copytext text-white"><a href="https://allmart.world/privacy_policy.php" class="text-white">Privacy Policy</a> | <a href="https://allmart.world/terms.php" class="text-white">Terms & Condition</a></p>
+                        <!-- <a href="">Privacy Policy</a><a href=""></a> -->
+                      
+                        <!-- /.site-footer__copytext -->
+                        <div class="site-footer__social text-white">
+                            <a href="https://www.facebook.com/AllmartWorld-111946707234321" class="text-white"><i class="fa fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/AllMart_World" class="text-white"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/allmart.world" class="text-white"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCmwbXGCoL4RnSuzEhbA71Aw" class="text-white"><i class="fa fa-youtube"></i></a>
+                        </div><!-- /.site-footer__social -->
+                        <p class="site-footer__copytext text-white">© copyright 2021 <a href="#" class="text-white">Allmart.world</a></p>
+                    </div><!-- /.inner-container -->
+                </div><!-- /.container -->
+            </div><!-- /.site-footer__lower -->
+        </footer><!-- /.site-footer -->
+    </div><!-- /.page-wrapper -->
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- /.scroll-to-top -->
+
+    <!-- Caertificates -->
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Haffkine</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <img src="images/crtf/MySafetyCard_page-0001.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0002.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0003.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0004.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0005.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0006.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0007.jpg" class="img-responsive"  alt="">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="modal fade " id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ISO</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <img src="images/crtf/MySafetyCard_page-0015.jpg" class="img-responsive"  alt="">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="modal fade " id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">FDA</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <img src="images/crtf/MySafetyCard_page-0016.jpg" class="img-responsive"  alt="">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="modal fade " id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">CE</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <img src="images/crtf/MySafetyCard_page-0017.jpg" class="img-responsive"  alt="">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="modal fade " id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">GMP</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <img src="images/crtf/MySafetyCard_page-0018.jpg" class="img-responsive"  alt="">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="modal fade " id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Bombay Test House</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <img src="images/crtf/MySafetyCard_page-0008.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0009.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0010.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0011.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0012.jpg" class="img-responsive"  alt="">
+           <img src="images/crtf/MySafetyCard_page-0013.jpg" class="img-responsive"  alt="">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- /Caertificates -->
+
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/testimonials-owl.carousel.config.js"></script>
+    <script src="js/faq-owl.carousel.config.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

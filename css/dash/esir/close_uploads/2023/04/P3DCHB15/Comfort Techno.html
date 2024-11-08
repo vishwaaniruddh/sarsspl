@@ -1,0 +1,5725 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.17' and b.receivedtime between '2023-04-03 00:00:00' and '2023-04-03 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.26.17&#39; and b.receivedtime between &#39;2023-04-03 00:00:00&#39; and &#39;2023-04-03 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:141</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Diebold</td>
+     <td>125363544</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>012</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Chest Door Open</td>
+	 	<td>ATM2 Chest Door Open</td>
+        <td>2023-04-03 15:42:57</td>
+		<td>2023-04-03 15:40:57</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Diebold</td>
+     <td>125363370</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-04-03 15:42:57</td>
+		<td>2023-04-03 15:40:46</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Diebold</td>
+     <td>125363199</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Thermal</td>
+	 	<td>ATM 1 Thermal</td>
+        <td>2023-04-03 15:42:57</td>
+		<td>2023-04-03 15:40:36</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Diebold</td>
+     <td>125363135</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>047</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+        <td>2023-04-03 15:42:57</td>
+		<td>2023-04-03 15:40:33</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Diebold</td>
+     <td>125360744</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor Restoral</td>
+        <td>2023-04-03 15:41:07</td>
+		<td>2023-04-03 15:38:05</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Diebold</td>
+     <td>125360703</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:41:07</td>
+		<td>2023-04-03 15:38:03</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Diebold</td>
+     <td>125360665</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:41:07</td>
+		<td>2023-04-03 15:38:01</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Diebold</td>
+     <td>125360628</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2023-04-03 15:41:07</td>
+		<td>2023-04-03 15:37:59</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Diebold</td>
+     <td>125360590</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:41:02</td>
+		<td>2023-04-03 15:37:56</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Diebold</td>
+     <td>125360556</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:41:00</td>
+		<td>2023-04-03 15:37:54</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Diebold</td>
+     <td>125360522</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:41:00</td>
+		<td>2023-04-03 15:37:52</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Diebold</td>
+     <td>125360488</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2023-04-03 15:41:00</td>
+		<td>2023-04-03 15:37:50</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Diebold</td>
+     <td>125360279</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch Restoral</td>
+        <td>2023-04-03 15:40:37</td>
+		<td>2023-04-03 15:37:36</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Diebold</td>
+     <td>125360246</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:40:37</td>
+		<td>2023-04-03 15:37:34</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Diebold</td>
+     <td>125360215</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:40:37</td>
+		<td>2023-04-03 15:37:31</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Diebold</td>
+     <td>125360178</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-04-03 15:40:37</td>
+		<td>2023-04-03 15:37:29</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Diebold</td>
+     <td>125360141</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:40:33</td>
+		<td>2023-04-03 15:37:27</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Diebold</td>
+     <td>125360104</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:40:30</td>
+		<td>2023-04-03 15:37:25</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Diebold</td>
+     <td>125360067</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:40:30</td>
+		<td>2023-04-03 15:37:23</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Diebold</td>
+     <td>125360030</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-04-03 15:40:30</td>
+		<td>2023-04-03 15:37:21</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Diebold</td>
+     <td>125359950</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>011</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Thermal</td>
+	 	<td>ATM 2 Thermal Restoral</td>
+        <td>2023-04-03 15:40:10</td>
+		<td>2023-04-03 15:37:16</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Diebold</td>
+     <td>125359912</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Vibration</td>
+	 	<td>ATM 2 Vibration Restoral</td>
+        <td>2023-04-03 15:40:10</td>
+		<td>2023-04-03 15:37:14</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Diebold</td>
+     <td>125359877</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Removal</td>
+	 	<td>ATM2 Removal Restoral</td>
+        <td>2023-04-03 15:40:10</td>
+		<td>2023-04-03 15:37:12</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Diebold</td>
+     <td>125359840</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:40:10</td>
+		<td>2023-04-03 15:37:09</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Diebold</td>
+     <td>125359802</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:40:10</td>
+		<td>2023-04-03 15:37:07</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Diebold</td>
+     <td>125359770</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>011</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Thermal</td>
+	 	<td>ATM 2 Thermal</td>
+        <td>2023-04-03 15:40:10</td>
+		<td>2023-04-03 15:37:05</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Diebold</td>
+     <td>125359734</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>010</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Vibration</td>
+	 	<td>ATM 2 Vibration</td>
+        <td>2023-04-03 15:40:10</td>
+		<td>2023-04-03 15:37:03</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Diebold</td>
+     <td>125359697</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Removal</td>
+	 	<td>ATM2 Removal</td>
+        <td>2023-04-03 15:40:10</td>
+		<td>2023-04-03 15:37:01</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Diebold</td>
+     <td>125359637</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Vibration</td>
+	 	<td>ATM 2 Vibration</td>
+        <td>2023-04-03 15:40:01</td>
+		<td>2023-04-03 15:36:57</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-04-03 15:38:04</td>
+	    <td>2023-04-03 15:38:04*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Diebold</td>
+     <td>125359600</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Thermal</td>
+	 	<td>ATM 2 Thermal</td>
+        <td>2023-04-03 15:40:00</td>
+		<td>2023-04-03 15:36:55</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-04-03 15:38:04</td>
+	    <td>2023-04-03 15:38:04*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Diebold</td>
+     <td>125359566</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:39:58</td>
+		<td>2023-04-03 15:36:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Diebold</td>
+     <td>125359531</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:39:58</td>
+		<td>2023-04-03 15:36:51</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Diebold</td>
+     <td>125359493</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Removal</td>
+	 	<td>ATM2 Removal</td>
+        <td>2023-04-03 15:39:58</td>
+		<td>2023-04-03 15:36:49</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-04-03 15:38:04</td>
+	    <td>2023-04-03 15:38:04*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Diebold</td>
+     <td>125359238</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration Restoral</td>
+        <td>2023-04-03 15:39:32</td>
+		<td>2023-04-03 15:36:33</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Diebold</td>
+     <td>125359207</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal Restoral</td>
+        <td>2023-04-03 15:39:32</td>
+		<td>2023-04-03 15:36:30</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Diebold</td>
+     <td>125359175</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:39:31</td>
+		<td>2023-04-03 15:36:28</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Diebold</td>
+     <td>125359142</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:39:31</td>
+		<td>2023-04-03 15:36:26</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Diebold</td>
+     <td>125359112</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-04-03 15:39:31</td>
+		<td>2023-04-03 15:36:24</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Diebold</td>
+     <td>125359079</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-04-03 15:39:31</td>
+		<td>2023-04-03 15:36:22</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Diebold</td>
+     <td>125359037</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-04-03 15:39:23</td>
+		<td>2023-04-03 15:36:19</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-04-03 15:37:16</td>
+	    <td>2023-04-03 15:37:16*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Diebold</td>
+     <td>125359004</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:39:22</td>
+		<td>2023-04-03 15:36:17</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Diebold</td>
+     <td>125358965</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:39:22</td>
+		<td>2023-04-03 15:36:15</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Diebold</td>
+     <td>125358932</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-04-03 15:39:22</td>
+		<td>2023-04-03 15:36:13</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-04-03 15:37:16</td>
+	    <td>2023-04-03 15:37:16*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Diebold</td>
+     <td>125358425</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:38:45</td>
+		<td>2023-04-03 15:35:40</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Diebold</td>
+     <td>125358392</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:38:45</td>
+		<td>2023-04-03 15:35:38</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Diebold</td>
+     <td>125358358</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-04-03 15:38:45</td>
+		<td>2023-04-03 15:35:36</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Diebold</td>
+     <td>125358245</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:38:33</td>
+		<td>2023-04-03 15:35:28</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Diebold</td>
+     <td>125358211</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:38:30</td>
+		<td>2023-04-03 15:35:26</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Diebold</td>
+     <td>125358179</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:38:30</td>
+		<td>2023-04-03 15:35:24</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Diebold</td>
+     <td>125358137</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-04-03 15:38:30</td>
+		<td>2023-04-03 15:35:22</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-04-03 15:37:16</td>
+	    <td>2023-04-03 15:37:16*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Diebold</td>
+     <td>125358101</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type) Restoral</td>
+        <td>2023-04-03 15:38:29</td>
+		<td>2023-04-03 15:35:20</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Diebold</td>
+     <td>125357298</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor Restoral</td>
+        <td>2023-04-03 15:37:30</td>
+		<td>2023-04-03 15:34:26</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Diebold</td>
+     <td>125357263</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:37:29</td>
+		<td>2023-04-03 15:34:24</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Diebold</td>
+     <td>125357224</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:37:29</td>
+		<td>2023-04-03 15:34:22</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Diebold</td>
+     <td>125357191</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2023-04-03 15:37:29</td>
+		<td>2023-04-03 15:34:20</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Diebold</td>
+     <td>125357147</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:37:23</td>
+		<td>2023-04-03 15:34:17</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Diebold</td>
+     <td>125357110</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:37:21</td>
+		<td>2023-04-03 15:34:15</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Diebold</td>
+     <td>125357077</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:37:21</td>
+		<td>2023-04-03 15:34:13</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Diebold</td>
+     <td>125357040</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2023-04-03 15:37:21</td>
+		<td>2023-04-03 15:34:11</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-04-03 15:37:16</td>
+	    <td>2023-04-03 15:37:16*Comfort engineer at site,*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Diebold</td>
+     <td>125356326</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>SO</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-04-03 15:36:28</td>
+		<td>2023-04-03 15:33:24</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Diebold</td>
+     <td>125356297</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>SC</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-04-03 15:36:28</td>
+		<td>2023-04-03 15:33:22</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Diebold</td>
+     <td>125356256</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>SO</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-04-03 15:36:27</td>
+		<td>2023-04-03 15:33:19</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Diebold</td>
+     <td>125356223</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>SC</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2023-04-03 15:36:27</td>
+		<td>2023-04-03 15:33:17</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Diebold</td>
+     <td>125355640</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:35:47</td>
+		<td>2023-04-03 15:32:38</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Diebold</td>
+     <td>125355340</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>609</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:35:26</td>
+		<td>2023-04-03 15:32:17</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Diebold</td>
+     <td>125355030</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:34:47</td>
+		<td>2023-04-03 15:31:55</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Diebold</td>
+     <td>125355001</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:34:46</td>
+		<td>2023-04-03 15:31:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Diebold</td>
+     <td>125354971</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:34:03</td>
+		<td>2023-04-03 15:31:51</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Diebold</td>
+     <td>125354937</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:34:03</td>
+		<td>2023-04-03 15:31:49</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Diebold</td>
+     <td>125354908</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>047</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+        <td>2023-04-03 15:34:03</td>
+		<td>2023-04-03 15:31:47</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Diebold</td>
+     <td>125354868</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>012</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Chest Door Open</td>
+	 	<td>ATM2 Chest Door Open</td>
+        <td>2023-04-03 15:34:03</td>
+		<td>2023-04-03 15:31:45</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Diebold</td>
+     <td>125354834</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-04-03 15:34:03</td>
+		<td>2023-04-03 15:31:42</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Diebold</td>
+     <td>125354801</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Thermal</td>
+	 	<td>ATM 1 Thermal</td>
+        <td>2023-04-03 15:34:03</td>
+		<td>2023-04-03 15:31:40</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Diebold</td>
+     <td>125354771</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2023-04-03 15:34:03</td>
+		<td>2023-04-03 15:31:38</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Diebold</td>
+     <td>125354739</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>015</td>
+	<td>BD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:33:56</td>
+		<td>2023-04-03 15:31:36</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Diebold</td>
+     <td>125354707</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:33:54</td>
+		<td>2023-04-03 15:31:34</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Diebold</td>
+     <td>125354672</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:33:51</td>
+		<td>2023-04-03 15:31:32</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Diebold</td>
+     <td>125354637</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:33:51</td>
+		<td>2023-04-03 15:31:29</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Diebold</td>
+     <td>125354604</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:33:51</td>
+		<td>2023-04-03 15:31:27</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Diebold</td>
+     <td>125354575</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>703</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-04-03 15:32:57</td>
+		<td>2023-04-03 15:31:25</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Diebold</td>
+     <td>125346159</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:24:35</td>
+		<td>2023-04-03 15:21:25</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Diebold</td>
+     <td>125345253</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:23:35</td>
+		<td>2023-04-03 15:20:27</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Diebold</td>
+     <td>125345220</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:23:34</td>
+		<td>2023-04-03 15:20:25</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Diebold</td>
+     <td>125343462</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:21:37</td>
+		<td>2023-04-03 15:18:27</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Diebold</td>
+     <td>125343283</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch Restoral</td>
+        <td>2023-04-03 15:21:18</td>
+		<td>2023-04-03 15:18:15</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Diebold</td>
+     <td>125343255</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:21:18</td>
+		<td>2023-04-03 15:18:13</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Diebold</td>
+     <td>125343227</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:21:18</td>
+		<td>2023-04-03 15:18:11</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Diebold</td>
+     <td>125343195</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-04-03 15:21:18</td>
+		<td>2023-04-03 15:18:08</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Diebold</td>
+     <td>125343114</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:21:08</td>
+		<td>2023-04-03 15:18:02</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Diebold</td>
+     <td>125343086</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:21:06</td>
+		<td>2023-04-03 15:18:00</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Diebold</td>
+     <td>125343054</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:21:06</td>
+		<td>2023-04-03 15:17:58</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Diebold</td>
+     <td>125343021</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-04-03 15:21:06</td>
+		<td>2023-04-03 15:17:56</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>comfort enginer at site mr rajender id shown 2way done</td>-->
+        <td>Reactive</td>
+        <td>vamshi</td>
+        <td>2023-04-03 15:21:07</td>
+	    <td>2023-04-03 15:21:07*comfort enginer at site mr rajender id shown 2way done*vamshi</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Diebold</td>
+     <td>125342577</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:20:36</td>
+		<td>2023-04-03 15:17:29</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Diebold</td>
+     <td>125342537</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:20:36</td>
+		<td>2023-04-03 15:17:27</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Diebold</td>
+     <td>125342282</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:20:21</td>
+		<td>2023-04-03 15:17:11</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Diebold</td>
+     <td>125341390</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:19:20</td>
+		<td>2023-04-03 15:16:13</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Diebold</td>
+     <td>125341358</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:19:20</td>
+		<td>2023-04-03 15:16:11</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Diebold</td>
+     <td>125340856</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:18:48</td>
+		<td>2023-04-03 15:15:38</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Diebold</td>
+     <td>125339989</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:17:47</td>
+		<td>2023-04-03 15:14:40</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Diebold</td>
+     <td>125339954</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:17:47</td>
+		<td>2023-04-03 15:14:38</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Diebold</td>
+     <td>125339674</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:17:29</td>
+		<td>2023-04-03 15:14:19</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Diebold</td>
+     <td>125338779</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:16:28</td>
+		<td>2023-04-03 15:13:21</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Diebold</td>
+     <td>125338744</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:16:28</td>
+		<td>2023-04-03 15:13:19</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Diebold</td>
+     <td>125338174</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:15:51</td>
+		<td>2023-04-03 15:12:41</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Diebold</td>
+     <td>125337345</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:14:50</td>
+		<td>2023-04-03 15:11:43</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Diebold</td>
+     <td>125337312</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:14:50</td>
+		<td>2023-04-03 15:11:41</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Diebold</td>
+     <td>125337110</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:14:38</td>
+		<td>2023-04-03 15:11:28</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Diebold</td>
+     <td>125336195</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:13:37</td>
+		<td>2023-04-03 15:10:30</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Diebold</td>
+     <td>125336162</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 15:13:37</td>
+		<td>2023-04-03 15:10:28</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Diebold</td>
+     <td>125307105</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>506</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:40:48</td>
+		<td>2023-04-03 14:37:38</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Diebold</td>
+     <td>125306990</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>506</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:40:38</td>
+		<td>2023-04-03 14:37:30</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Diebold</td>
+     <td>125306960</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>581</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-04-03 14:40:38</td>
+		<td>2023-04-03 14:37:28</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Diebold</td>
+     <td>125306837</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:40:28</td>
+		<td>2023-04-03 14:37:21</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Diebold</td>
+     <td>125306808</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:40:28</td>
+		<td>2023-04-03 14:37:18</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Diebold</td>
+     <td>125306743</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:40:18</td>
+		<td>2023-04-03 14:37:14</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Diebold</td>
+     <td>125306706</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:40:18</td>
+		<td>2023-04-03 14:37:11</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Diebold</td>
+     <td>125306672</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>583</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-04-03 14:40:18</td>
+		<td>2023-04-03 14:37:09</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Diebold</td>
+     <td>125306177</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch Restoral</td>
+        <td>2023-04-03 14:39:39</td>
+		<td>2023-04-03 14:36:36</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Diebold</td>
+     <td>125306142</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:39:39</td>
+		<td>2023-04-03 14:36:34</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Diebold</td>
+     <td>125306109</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:39:39</td>
+		<td>2023-04-03 14:36:32</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Diebold</td>
+     <td>125306072</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-04-03 14:39:39</td>
+		<td>2023-04-03 14:36:30</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Diebold</td>
+     <td>125305837</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:39:21</td>
+		<td>2023-04-03 14:36:15</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Diebold</td>
+     <td>125305803</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:39:18</td>
+		<td>2023-04-03 14:36:13</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Diebold</td>
+     <td>125305761</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:39:18</td>
+		<td>2023-04-03 14:36:11</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Diebold</td>
+     <td>125305731</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-04-03 14:39:18</td>
+		<td>2023-04-03 14:36:08</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rajendra id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2023-04-03 14:55:52</td>
+	    <td>2023-04-03 14:55:52*Comfort engineer at site mr rajendra id shown 2 way done,*TeamLead</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Diebold</td>
+     <td>125269919</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:00:00</td>
+		<td>2023-04-03 13:56:52</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Diebold</td>
+     <td>125269880</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 14:00:00</td>
+		<td>2023-04-03 13:56:50</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Diebold</td>
+     <td>125161257</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 12:00:00</td>
+		<td>2023-04-03 11:56:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Diebold</td>
+     <td>125161216</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 12:00:00</td>
+		<td>2023-04-03 11:56:50</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Diebold</td>
+     <td>125057722</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 10:00:00</td>
+		<td>2023-04-03 09:56:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Diebold</td>
+     <td>125057689</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 10:00:00</td>
+		<td>2023-04-03 09:56:50</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Diebold</td>
+     <td>124930121</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 08:00:00</td>
+		<td>2023-04-03 07:56:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Diebold</td>
+     <td>124930076</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 08:00:00</td>
+		<td>2023-04-03 07:56:51</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Diebold</td>
+     <td>124856880</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>510</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 07:00:00</td>
+		<td>2023-04-03 06:56:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Diebold</td>
+     <td>124856837</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>509</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 07:00:00</td>
+		<td>2023-04-03 06:56:51</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Diebold</td>
+     <td>124785851</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 06:00:00</td>
+		<td>2023-04-03 05:56:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Diebold</td>
+     <td>124785807</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 06:00:00</td>
+		<td>2023-04-03 05:56:51</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Diebold</td>
+     <td>124643504</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 04:00:00</td>
+		<td>2023-04-03 03:56:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Diebold</td>
+     <td>124643459</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 04:00:00</td>
+		<td>2023-04-03 03:56:51</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Diebold</td>
+     <td>124504305</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 02:00:00</td>
+		<td>2023-04-03 01:56:53</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Diebold</td>
+     <td>124504259</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-1-151/1/A , Karimnagar road, Opp Integrated </td>-->
+    <td>P3DCHB15</td>
+    <td>1-1-151/1/A , Karimnagar road, Opp Integrated Market, Siddipet, Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-04-03 02:00:00</td>
+		<td>2023-04-03 01:56:51</td>
+		<td>03-April-2023</td>
+		<td>172.55.26.17</td>
+		<td>securico_gx4816</td>	
+		<td>090287</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.17' and b.receivedtime between '2023-04-03 00:00:00' and '2023-04-03 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

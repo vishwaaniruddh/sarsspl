@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
+
+  <base href="/quiztest/web/app2/" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="stylesheet" href="styles.771c6c84404edfb11b93.css"></head>
+
+<body>
+  <audio id="background-music" preload="auto">
+    <source src="./assets/audio/QuizStarted.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="btn-click" preload="auto">
+    <source src="./assets/audio/Button_Push.mp3" type="audio/mpeg">
+  </audio>
+  <app-root></app-root>
+  <script>
+    MathJax.Hub.Config({
+      CommonHTML: {linebreaks: { automatic: true}},
+      SVG: {linebreaks: { automatic: true}},
+      "HTML-CSS": {linebreaks: { automatic: true}}
+    });
+    MathJax.Hub.Register.StartupHook("CommonHTML multiline Ready",function () {
+      var PENALTY = MathJax.ElementJax.mml.mbase.prototype.CHTMLlinebreakPenalty;
+      PENALTY.toobig = 1000000;
+    });
+  </script>
+<script src="runtime-es2015.dd057d8677351e3d820b.js" type="module"></script><script src="polyfills-es2015.6d3c25de9423dfbb37ad.js" type="module"></script><script src="runtime-es5.994768624cc988325458.js" nomodule></script><script src="polyfills-es5.f3dc7d81c5fd1ef6b34d.js" nomodule></script><script src="main-es2015.156f4af3590797495243.js" type="module"></script><script src="main-es5.657bba55d739687f3376.js" nomodule></script></body>
+
+</html>

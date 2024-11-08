@@ -1,0 +1,4619 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                  	
+                  <a class="dropdown-item" href="http://192.168.100.21:8080/css/allalert_data.php">All Alert</a>
+
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="multifix">multifix</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.67' and b.receivedtime between '2023-10-14 00:00:00' and '2023-10-14 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.25.67&#39; and b.receivedtime between &#39;2023-10-14 00:00:00&#39; and &#39;2023-10-14 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:111</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Hitachi</td>
+     <td>146130790</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 11:02:06</td>
+		<td>2023-10-14 11:02:29</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Hitachi</td>
+     <td>146130722</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Lobby Temperature</td>
+	 	<td>ATM Lobby Temperature</td>
+        <td>2023-10-14 11:02:04</td>
+		<td>2023-10-14 11:02:23</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Hitachi</td>
+     <td>146129385</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:59:47</td>
+		<td>2023-10-14 11:00:27</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Hitachi</td>
+     <td>146129309</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:59:47</td>
+		<td>2023-10-14 11:00:21</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Hitachi</td>
+     <td>146129236</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:59:45</td>
+		<td>2023-10-14 11:00:15</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Hitachi</td>
+     <td>146129164</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:59:44</td>
+		<td>2023-10-14 11:00:09</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Hitachi</td>
+     <td>146129089</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-14 10:59:44</td>
+		<td>2023-10-14 11:00:03</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Hitachi</td>
+     <td>146128434</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:56:56</td>
+		<td>2023-10-14 10:59:05</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Hitachi</td>
+     <td>146128367</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:56:56</td>
+		<td>2023-10-14 10:58:59</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Hitachi</td>
+     <td>146128302</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:56:55</td>
+		<td>2023-10-14 10:58:53</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Hitachi</td>
+     <td>146128235</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:56:54</td>
+		<td>2023-10-14 10:58:47</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Hitachi</td>
+     <td>146128173</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-14 10:56:54</td>
+		<td>2023-10-14 10:58:41</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2023-10-14 10:58:58</td>
+	    <td>2023-10-14 10:58:58*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Hitachi</td>
+     <td>146128115</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:56:19</td>
+		<td>2023-10-14 10:58:35</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Hitachi</td>
+     <td>146128050</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:56:19</td>
+		<td>2023-10-14 10:58:29</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Hitachi</td>
+     <td>146127987</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:56:14</td>
+		<td>2023-10-14 10:58:23</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Hitachi</td>
+     <td>146127922</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>017</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main Door shutter Normally NO type</td>
+	 	<td>Main Door shutter Normally NO type</td>
+        <td>2023-10-14 10:56:14</td>
+		<td>2023-10-14 10:58:17</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2023-10-14 10:58:58</td>
+	    <td>2023-10-14 10:58:58*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Hitachi</td>
+     <td>146127848</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:55:19</td>
+		<td>2023-10-14 10:58:11</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Hitachi</td>
+     <td>146127783</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:55:19</td>
+		<td>2023-10-14 10:58:05</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Hitachi</td>
+     <td>146127716</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:55:14</td>
+		<td>2023-10-14 10:57:59</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Hitachi</td>
+     <td>146127654</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:55:13</td>
+		<td>2023-10-14 10:57:53</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Hitachi</td>
+     <td>146127589</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-10-14 10:55:13</td>
+		<td>2023-10-14 10:57:47</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Hitachi</td>
+     <td>146127525</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:36</td>
+		<td>2023-10-14 10:57:41</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Hitachi</td>
+     <td>146127463</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:54:36</td>
+		<td>2023-10-14 10:57:35</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Hitachi</td>
+     <td>146127400</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:54:35</td>
+		<td>2023-10-14 10:57:29</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Hitachi</td>
+     <td>146127332</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV 1+2+3 Removal</td>
+	 	<td>CCTV 1+2+3 Removal</td>
+        <td>2023-10-14 10:54:35</td>
+		<td>2023-10-14 10:57:23</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Hitachi</td>
+     <td>146127261</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>020</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:35</td>
+		<td>2023-10-14 10:57:17</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Hitachi</td>
+     <td>146127198</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:34</td>
+		<td>2023-10-14 10:57:11</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Hitachi</td>
+     <td>146127137</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:54:34</td>
+		<td>2023-10-14 10:57:06</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Hitachi</td>
+     <td>146127081</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV 1+2+3 Removal</td>
+	 	<td>CCTV 1+2+3 Removal</td>
+        <td>2023-10-14 10:54:34</td>
+		<td>2023-10-14 10:56:59</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Hitachi</td>
+     <td>146127021</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>020</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:34</td>
+		<td>2023-10-14 10:56:54</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Hitachi</td>
+     <td>146126964</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:54:33</td>
+		<td>2023-10-14 10:56:47</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Hitachi</td>
+     <td>146126904</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV 1+2+3 Removal</td>
+	 	<td>CCTV 1+2+3 Removal</td>
+        <td>2023-10-14 10:54:33</td>
+		<td>2023-10-14 10:56:41</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Hitachi</td>
+     <td>146126841</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Lobby Temperature</td>
+	 	<td>ATM Lobby Temperature</td>
+        <td>2023-10-14 10:54:33</td>
+		<td>2023-10-14 10:56:35</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Hitachi</td>
+     <td>146126779</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>020</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:33</td>
+		<td>2023-10-14 10:56:30</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Hitachi</td>
+     <td>146126713</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>022</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:30</td>
+		<td>2023-10-14 10:56:24</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Hitachi</td>
+     <td>146126649</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>022</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Housekeeping Alert</td>
+	 	<td>Housekeeping Alert</td>
+        <td>2023-10-14 10:54:28</td>
+		<td>2023-10-14 10:56:18</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Hitachi</td>
+     <td>146126582</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:54:25</td>
+		<td>2023-10-14 10:56:12</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Hitachi</td>
+     <td>146126517</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:25</td>
+		<td>2023-10-14 10:56:06</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Hitachi</td>
+     <td>146126451</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:54:25</td>
+		<td>2023-10-14 10:56:00</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Hitachi</td>
+     <td>146126394</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:23</td>
+		<td>2023-10-14 10:55:55</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Hitachi</td>
+     <td>146126325</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:54:20</td>
+		<td>2023-10-14 10:55:48</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Hitachi</td>
+     <td>146126258</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>019</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-10-14 10:54:20</td>
+		<td>2023-10-14 10:55:42</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Hitachi</td>
+     <td>146126188</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>018</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:17</td>
+		<td>2023-10-14 10:55:36</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Hitachi</td>
+     <td>146126123</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>017</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:17</td>
+		<td>2023-10-14 10:55:30</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Hitachi</td>
+     <td>146126062</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-10-14 10:54:14</td>
+		<td>2023-10-14 10:55:24</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Hitachi</td>
+     <td>146125998</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:03</td>
+		<td>2023-10-14 10:55:18</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Hitachi</td>
+     <td>146125936</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:54:03</td>
+		<td>2023-10-14 10:55:12</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Hitachi</td>
+     <td>146125875</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:54:02</td>
+		<td>2023-10-14 10:55:06</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Hitachi</td>
+     <td>146125814</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:54:01</td>
+		<td>2023-10-14 10:55:00</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Hitachi</td>
+     <td>146125752</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-14 10:54:01</td>
+		<td>2023-10-14 10:54:54</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Hitachi</td>
+     <td>146125690</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:53:50</td>
+		<td>2023-10-14 10:54:48</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Hitachi</td>
+     <td>146125627</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:53:50</td>
+		<td>2023-10-14 10:54:42</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Hitachi</td>
+     <td>146125568</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:53:47</td>
+		<td>2023-10-14 10:54:36</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Hitachi</td>
+     <td>146125511</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:53:47</td>
+		<td>2023-10-14 10:54:30</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Hitachi</td>
+     <td>146125449</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:53:46</td>
+		<td>2023-10-14 10:54:24</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Hitachi</td>
+     <td>146125393</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-14 10:53:46</td>
+		<td>2023-10-14 10:54:18</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>anju</td>
+        <td>2023-10-14 10:54:35</td>
+	    <td>2023-10-14 10:54:35*as per live no one present at site,*anju</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Hitachi</td>
+     <td>146125323</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:53:46</td>
+		<td>2023-10-14 10:54:12</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Hitachi</td>
+     <td>146125261</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Removal</td>
+	 	<td>ATM 1 Removal</td>
+        <td>2023-10-14 10:53:46</td>
+		<td>2023-10-14 10:54:06</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>anju</td>
+        <td>2023-10-14 10:54:35</td>
+	    <td>2023-10-14 10:54:35*as per live no one present at site,*anju</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Hitachi</td>
+     <td>146125071</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Sensor</td>
+	 	<td>ATM 1 Hood Door Sensor</td>
+        <td>2023-10-14 10:52:16</td>
+		<td>2023-10-14 10:53:47</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>anju</td>
+        <td>2023-10-14 10:54:12</td>
+	    <td>2023-10-14 10:54:12*Guard using backroom,*anju</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Hitachi</td>
+     <td>146125007</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:52:16</td>
+		<td>2023-10-14 10:53:41</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Hitachi</td>
+     <td>146124948</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:52:12</td>
+		<td>2023-10-14 10:53:35</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Hitachi</td>
+     <td>146124888</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:52:12</td>
+		<td>2023-10-14 10:53:29</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Hitachi</td>
+     <td>146124828</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:52:10</td>
+		<td>2023-10-14 10:53:23</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Hitachi</td>
+     <td>146124763</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:52:09</td>
+		<td>2023-10-14 10:53:17</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Hitachi</td>
+     <td>146124705</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-14 10:52:09</td>
+		<td>2023-10-14 10:53:11</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>anju</td>
+        <td>2023-10-14 10:54:12</td>
+	    <td>2023-10-14 10:54:12*Guard using backroom,*anju</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Hitachi</td>
+     <td>146124647</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:52:05</td>
+		<td>2023-10-14 10:53:05</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Hitachi</td>
+     <td>146124587</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:52:05</td>
+		<td>2023-10-14 10:52:59</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Hitachi</td>
+     <td>146124529</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:52:04</td>
+		<td>2023-10-14 10:52:53</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Hitachi</td>
+     <td>146124470</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:52:04</td>
+		<td>2023-10-14 10:52:47</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Hitachi</td>
+     <td>146124405</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:52:03</td>
+		<td>2023-10-14 10:52:41</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Hitachi</td>
+     <td>146124344</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Removal</td>
+	 	<td>ATM 1 Removal</td>
+        <td>2023-10-14 10:52:03</td>
+		<td>2023-10-14 10:52:35</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>anju</td>
+        <td>2023-10-14 10:53:00</td>
+	    <td>2023-10-14 10:53:00*Guard using backroom,*anju</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Hitachi</td>
+     <td>146124289</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:52:03</td>
+		<td>2023-10-14 10:52:29</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Hitachi</td>
+     <td>146124232</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-10-14 10:52:03</td>
+		<td>2023-10-14 10:52:23</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>anju</td>
+        <td>2023-10-14 10:53:00</td>
+	    <td>2023-10-14 10:53:00*Guard using backroom,*anju</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Hitachi</td>
+     <td>146123068</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:49:50</td>
+		<td>2023-10-14 10:50:33</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Hitachi</td>
+     <td>146122998</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:49:46</td>
+		<td>2023-10-14 10:50:27</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Hitachi</td>
+     <td>146122939</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:49:46</td>
+		<td>2023-10-14 10:50:21</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Hitachi</td>
+     <td>146122876</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:49:44</td>
+		<td>2023-10-14 10:50:15</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Hitachi</td>
+     <td>146122813</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:49:43</td>
+		<td>2023-10-14 10:50:09</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Hitachi</td>
+     <td>146122746</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-10-14 10:49:43</td>
+		<td>2023-10-14 10:50:03</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Hitachi</td>
+     <td>146122661</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:49:18</td>
+		<td>2023-10-14 10:49:55</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Hitachi</td>
+     <td>146122591</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:49:18</td>
+		<td>2023-10-14 10:49:49</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Hitachi</td>
+     <td>146122524</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:49:17</td>
+		<td>2023-10-14 10:49:43</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Hitachi</td>
+     <td>146122446</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2023-10-14 10:49:17</td>
+		<td>2023-10-14 10:49:37</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Hitachi</td>
+     <td>146121468</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:45:30</td>
+		<td>2023-10-14 10:48:15</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Hitachi</td>
+     <td>146121399</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:45:30</td>
+		<td>2023-10-14 10:48:09</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Hitachi</td>
+     <td>146121328</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:22</td>
+		<td>2023-10-14 10:48:03</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Hitachi</td>
+     <td>146121259</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>026</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Sensor</td>
+	 	<td>ATM 1 Hood Door Sensor</td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:57</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Hitachi</td>
+     <td>146121189</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:51</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Hitachi</td>
+     <td>146121128</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:45</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Hitachi</td>
+     <td>146121060</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:39</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Hitachi</td>
+     <td>146120996</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>021</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Speaker / MIC Removal</td>
+	 	<td>Speaker / MIC Removal</td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:33</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Hitachi</td>
+     <td>146120929</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:27</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Hitachi</td>
+     <td>146120859</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV 1+2+3 Removal</td>
+	 	<td>CCTV 1+2+3 Removal</td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:21</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Hitachi</td>
+     <td>146120792</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:15</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Hitachi</td>
+     <td>146120725</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:09</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Hitachi</td>
+     <td>146120652</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:47:03</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Hitachi</td>
+     <td>146120584</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:46:57</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Hitachi</td>
+     <td>146120510</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:46:51</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Hitachi</td>
+     <td>146120446</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:46:45</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Hitachi</td>
+     <td>146120383</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:46:39</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Hitachi</td>
+     <td>146120325</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>001</td>
+	<td>CF</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:46:33</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Hitachi</td>
+     <td>146120258</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>014</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 10:45:16</td>
+		<td>2023-10-14 10:46:27</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Hitachi</td>
+     <td>146120195</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS Out Fails (DI)</td>
+	 	<td>UPS Out Fails (DI)</td>
+        <td>2023-10-14 10:45:04</td>
+		<td>2023-10-14 10:46:21</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Hitachi</td>
+     <td>146010852</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>007</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 08:00:00</td>
+		<td>2023-10-14 08:00:25</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Hitachi</td>
+     <td>146010749</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 08:00:00</td>
+		<td>2023-10-14 08:00:19</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Hitachi</td>
+     <td>145965027</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>008</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 07:01:00</td>
+		<td>2023-10-14 07:01:19</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Hitachi</td>
+     <td>145920557</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 06:01:00</td>
+		<td>2023-10-14 06:01:18</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Hitachi</td>
+     <td>145831108</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>007</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 04:00:00</td>
+		<td>2023-10-14 04:00:25</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Hitachi</td>
+     <td>145831016</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 04:00:00</td>
+		<td>2023-10-14 04:00:19</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Hitachi</td>
+     <td>145652624</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>007</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 00:00:00</td>
+		<td>2023-10-14 00:00:24</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Hitachi</td>
+     <td>145652465</td>
+     <td>West</td>
+     <!-- <td>Mumbai,Maharashtra</td>
+     <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, ,</td>-->
+    <td>MN003315</td>
+    <td>Indusind bank ATM , Ground floor, High street Phoenix market city, Phoenix market city Senapati Bapat Marg, , Lower parel 400011</td>
+	<td>Mumbai</td>
+	<td>Maharashtra</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-10-14 00:00:00</td>
+		<td>2023-10-14 00:00:18</td>
+		<td>14-October-2023</td>
+		<td>172.55.25.67</td>
+		<td>SMART-IN</td>	
+		<td>065444</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.67' and b.receivedtime between '2023-10-14 00:00:00' and '2023-10-14 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

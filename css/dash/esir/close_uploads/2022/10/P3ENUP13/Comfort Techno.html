@@ -1,0 +1,7249 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                   
+                 <a id="6" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/lastcommunication.php">Last Communication</a>
+				                     <a id="7" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/ebmisnew.php">Count call close by</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertviewAsc.php">View Alert Report</a>
+					                 <a id="16" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                                        <a id="18" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/old_alert.php">Archive Alert</a>
+					 					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Rohit Bhardwaj				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.47' and b.receivedtime between '2022-10-21 00:00:00' and '2022-10-21 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.25.47&#39; and b.receivedtime between &#39;2022-10-21 00:00:00&#39; and &#39;2022-10-21 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:182</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>193999878</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:34:12</td>
+		<td>2022-10-21 14:36:42</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>193999820</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:34:12</td>
+		<td>2022-10-21 14:36:36</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>193999766</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:34:12</td>
+		<td>2022-10-21 14:36:30</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>193999709</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:34:12</td>
+		<td>2022-10-21 14:36:24</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>193999651</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:34:12</td>
+		<td>2022-10-21 14:36:18</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>193999595</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>011</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:34:12</td>
+		<td>2022-10-21 14:36:12</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>193999544</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:34:04</td>
+		<td>2022-10-21 14:36:06</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>193999487</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:34:04</td>
+		<td>2022-10-21 14:36:00</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>193999426</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:54</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>193999369</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Chest Door Open Sensor</td>
+	 	<td>ATM 2 Chest Door Open Sensor</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:48</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>193999313</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Hood Door Open</td>
+	 	<td>ATM 2 Hood Door Open</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:42</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>193999259</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:36</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>193999205</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>022</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Lobby Temperature</td>
+	 	<td>ATM Lobby Temperature</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:30</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>193999146</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:24</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>193999092</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>021</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>A/C 1/ 2 Removal Sensor</td>
+	 	<td>A/C 1/ 2 Removal Sensor</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:18</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>193999041</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:12</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>193998989</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:06</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>193998931</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:35:00</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>193998877</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Speaker +MIC Removal Sensor</td>
+	 	<td>Speaker +MIC Removal Sensor</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:54</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>193998821</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:48</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>193998763</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV1+CCTV2+CCTV3Removal Sensor</td>
+	 	<td>CCTV1+CCTV2+CCTV3Removal Sensor</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:42</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>193998712</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Open</td>
+	 	<td>ATM 1 Hood Door Open</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:36</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>193998654</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:30</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>193998599</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal Sensor</td>
+	 	<td>Cheque Drop Box Removal Sensor</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:24</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>193998545</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Removal Sensor</td>
+	 	<td>ATM 1 Removal Sensor</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:18</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>193998491</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:12</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>193998436</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration Sensor</td>
+	 	<td>ATM 1 Vibration Sensor</td>
+        <td>2022-10-21 14:34:02</td>
+		<td>2022-10-21 14:34:06</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>193998114</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:33:18</td>
+		<td>2022-10-21 14:33:30</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>193998056</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:33:15</td>
+		<td>2022-10-21 14:33:24</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>193997998</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:33:14</td>
+		<td>2022-10-21 14:33:18</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>193997945</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:32:59</td>
+		<td>2022-10-21 14:33:12</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>193997891</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:32:57</td>
+		<td>2022-10-21 14:33:06</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>193997831</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fails (DI) </td>
+	 	<td>AC Mains Fails (DI) </td>
+        <td>2022-10-21 14:32:52</td>
+		<td>2022-10-21 14:33:00</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>193997774</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:32:37</td>
+		<td>2022-10-21 14:32:54</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>193997714</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:32:34</td>
+		<td>2022-10-21 14:32:48</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>193997658</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:32:34</td>
+		<td>2022-10-21 14:32:42</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>193997604</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS Out Fails (DI)</td>
+	 	<td>UPS Out Fails (DI)</td>
+        <td>2022-10-21 14:32:23</td>
+		<td>2022-10-21 14:32:36</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>193997545</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:32:20</td>
+		<td>2022-10-21 14:32:30</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>193997493</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-10-21 14:32:20</td>
+		<td>2022-10-21 14:32:24</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>193995442</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:26:01</td>
+		<td>2022-10-21 14:28:47</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>193995389</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:26:01</td>
+		<td>2022-10-21 14:28:41</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>193995335</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:25:58</td>
+		<td>2022-10-21 14:28:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>193995286</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:25:58</td>
+		<td>2022-10-21 14:28:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>193995231</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:25:57</td>
+		<td>2022-10-21 14:28:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>193994674</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2022-10-21 14:25:00</td>
+		<td>2022-10-21 14:27:24</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>193994623</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:24:39</td>
+		<td>2022-10-21 14:27:18</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>193994568</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:24:35</td>
+		<td>2022-10-21 14:27:12</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>193994507</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:24:35</td>
+		<td>2022-10-21 14:27:06</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>193994449</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:24:34</td>
+		<td>2022-10-21 14:27:00</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>193994222</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2022-10-21 14:26:15</td>
+		<td>2022-10-21 14:26:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>193994167</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:25:47</td>
+		<td>2022-10-21 14:26:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>193994115</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:25:47</td>
+		<td>2022-10-21 14:26:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>193994056</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:25:34</td>
+		<td>2022-10-21 14:26:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>193994006</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:25:34</td>
+		<td>2022-10-21 14:26:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>193993946</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:25:26</td>
+		<td>2022-10-21 14:26:05</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>193993885</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:25:26</td>
+		<td>2022-10-21 14:25:59</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>193993823</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:25:26</td>
+		<td>2022-10-21 14:25:53</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>193993771</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:25:24</td>
+		<td>2022-10-21 14:25:47</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>193993718</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:24:48</td>
+		<td>2022-10-21 14:25:41</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>193993665</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:24:48</td>
+		<td>2022-10-21 14:25:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>193993608</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:24:45</td>
+		<td>2022-10-21 14:25:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>193993557</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:24:45</td>
+		<td>2022-10-21 14:25:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>193993503</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:24:42</td>
+		<td>2022-10-21 14:25:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>193993449</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:24:41</td>
+		<td>2022-10-21 14:25:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>193993394</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:24:41</td>
+		<td>2022-10-21 14:25:05</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>193993345</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:24:41</td>
+		<td>2022-10-21 14:24:59</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>193992518</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:22:46</td>
+		<td>2022-10-21 14:23:26</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>193992465</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:22:44</td>
+		<td>2022-10-21 14:23:20</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>193992411</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:22:44</td>
+		<td>2022-10-21 14:23:14</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>193992356</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:22:40</td>
+		<td>2022-10-21 14:23:08</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>193992300</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-10-21 14:22:40</td>
+		<td>2022-10-21 14:23:02</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>193992238</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:22:21</td>
+		<td>2022-10-21 14:22:56</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>193992184</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:22:16</td>
+		<td>2022-10-21 14:22:50</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>193992127</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2022-10-21 14:22:16</td>
+		<td>2022-10-21 14:22:44</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>193992070</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:22:01</td>
+		<td>2022-10-21 14:22:38</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>193992017</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:22:01</td>
+		<td>2022-10-21 14:22:32</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>193991967</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:21:59</td>
+		<td>2022-10-21 14:22:26</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>193991918</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:21:59</td>
+		<td>2022-10-21 14:22:20</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>193991866</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:21:56</td>
+		<td>2022-10-21 14:22:14</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>193991693</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:21:29</td>
+		<td>2022-10-21 14:21:54</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>193991636</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:21:24</td>
+		<td>2022-10-21 14:21:48</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>193991580</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2022-10-21 14:21:24</td>
+		<td>2022-10-21 14:21:42</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>193990031</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:18:35</td>
+		<td>2022-10-21 14:18:53</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>193989556</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:17:34</td>
+		<td>2022-10-21 14:18:01</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>193989503</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:16:57</td>
+		<td>2022-10-21 14:17:54</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>193989448</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:16:55</td>
+		<td>2022-10-21 14:17:48</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>193989398</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:16:55</td>
+		<td>2022-10-21 14:17:42</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>193989345</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:16:49</td>
+		<td>2022-10-21 14:17:36</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>193989286</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:16:49</td>
+		<td>2022-10-21 14:17:30</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>193989229</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:16:48</td>
+		<td>2022-10-21 14:17:25</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>193989173</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:16:48</td>
+		<td>2022-10-21 14:17:18</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>193989119</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:16:48</td>
+		<td>2022-10-21 14:17:13</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>193989063</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:16:48</td>
+		<td>2022-10-21 14:17:07</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>193988758</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:15:56</td>
+		<td>2022-10-21 14:16:34</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>193988703</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:15:56</td>
+		<td>2022-10-21 14:16:28</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>193988651</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:15:53</td>
+		<td>2022-10-21 14:16:22</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>193988590</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:15:53</td>
+		<td>2022-10-21 14:16:16</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>193988539</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:15:52</td>
+		<td>2022-10-21 14:16:10</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>193987266</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:13:23</td>
+		<td>2022-10-21 14:13:57</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>193987208</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:13:23</td>
+		<td>2022-10-21 14:13:51</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>193987147</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:13:19</td>
+		<td>2022-10-21 14:13:45</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>193987092</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:13:15</td>
+		<td>2022-10-21 14:13:39</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>193987036</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-10-21 14:13:15</td>
+		<td>2022-10-21 14:13:33</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort Engineer Mr. lokesh  present at site 2 way done id shown,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-10-21 14:18:44</td>
+	    <td>2022-10-21 14:18:44*Comfort Engineer Mr. lokesh  present at site 2 way done id shown,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>193986859</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:12:57</td>
+		<td>2022-10-21 14:13:15</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>193986776</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:12:29</td>
+		<td>2022-10-21 14:13:07</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>193986715</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:12:29</td>
+		<td>2022-10-21 14:13:01</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>193986653</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:12:27</td>
+		<td>2022-10-21 14:12:55</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>193986598</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:12:25</td>
+		<td>2022-10-21 14:12:49</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>193986541</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-10-21 14:12:25</td>
+		<td>2022-10-21 14:12:43</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort Engineer Mr. lokesh  present at site 2 way done id shown,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-10-21 14:18:44</td>
+	    <td>2022-10-21 14:18:44*Comfort Engineer Mr. lokesh  present at site 2 way done id shown,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>193986329</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:12:04</td>
+		<td>2022-10-21 14:12:22</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>193986104</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:11:40</td>
+		<td>2022-10-21 14:11:58</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>193986042</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS Out Fails (DI)</td>
+	 	<td>UPS Out Fails (DI)</td>
+        <td>2022-10-21 14:11:33</td>
+		<td>2022-10-21 14:11:51</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>193984748</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:08:43</td>
+		<td>2022-10-21 14:09:32</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>193984696</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-21 14:08:43</td>
+		<td>2022-10-21 14:09:26</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>193984646</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:08:41</td>
+		<td>2022-10-21 14:09:20</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>193984597</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-21 14:08:41</td>
+		<td>2022-10-21 14:09:14</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>193984548</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-21 14:08:38</td>
+		<td>2022-10-21 14:09:08</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>193984498</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV1+CCTV2+CCTV3Removal Sensor</td>
+	 	<td>CCTV1+CCTV2+CCTV3Removal Sensor</td>
+        <td>2022-10-21 14:08:38</td>
+		<td>2022-10-21 14:09:02</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort Engineer Mr. lokesh  present at site 2 way done id shown,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-10-21 14:10:08</td>
+	    <td>2022-10-21 14:10:08*Comfort Engineer Mr. lokesh  present at site 2 way done id shown,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>193984447</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Open</td>
+	 	<td>ATM 1 Hood Door Open</td>
+        <td>2022-10-21 14:08:38</td>
+		<td>2022-10-21 14:08:56</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort Engineer Mr. lokesh  present at site 2 way done id shown,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-10-21 14:10:08</td>
+	    <td>2022-10-21 14:10:08*Comfort Engineer Mr. lokesh  present at site 2 way done id shown,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>193982537</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2022-10-21 14:05:08</td>
+		<td>2022-10-21 14:05:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>193982487</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 16:01:26</td>
+		<td>2022-10-21 14:05:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>193982428</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 16:01:22</td>
+		<td>2022-10-21 14:05:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>193982381</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:46:51</td>
+		<td>2022-10-21 14:05:05</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>193982327</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:46:11</td>
+		<td>2022-10-21 14:04:59</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>193982276</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:45:36</td>
+		<td>2022-10-21 14:04:53</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>193982224</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:45:23</td>
+		<td>2022-10-21 14:04:47</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>193982168</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:42:48</td>
+		<td>2022-10-21 14:04:41</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>193982107</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 15:42:44</td>
+		<td>2022-10-21 14:04:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>193982051</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:40:02</td>
+		<td>2022-10-21 14:04:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>193981996</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:24:16</td>
+		<td>2022-10-21 14:04:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>193981946</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 15:24:12</td>
+		<td>2022-10-21 14:04:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>193981894</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:06:49</td>
+		<td>2022-10-21 14:04:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>193981841</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:05:37</td>
+		<td>2022-10-21 14:04:05</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>193981791</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 15:05:33</td>
+		<td>2022-10-21 14:03:59</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>193981738</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:05:16</td>
+		<td>2022-10-21 14:03:53</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>193981682</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 15:03:58</td>
+		<td>2022-10-21 14:03:47</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>193981631</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:52:54</td>
+		<td>2022-10-21 14:03:41</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>193981573</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:52:25</td>
+		<td>2022-10-21 14:03:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>193981517</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:47:04</td>
+		<td>2022-10-21 14:03:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>193981465</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 14:47:00</td>
+		<td>2022-10-21 14:03:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>193981408</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:28:26</td>
+		<td>2022-10-21 14:03:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>193981356</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 14:28:22</td>
+		<td>2022-10-21 14:03:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Euronet</td>
+     <td>193981302</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:22:15</td>
+		<td>2022-10-21 14:03:05</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Euronet</td>
+     <td>193981252</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:21:57</td>
+		<td>2022-10-21 14:02:59</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Euronet</td>
+     <td>193981201</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:21:51</td>
+		<td>2022-10-21 14:02:53</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Euronet</td>
+     <td>193981149</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:21:50</td>
+		<td>2022-10-21 14:02:47</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Euronet</td>
+     <td>193981095</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:21:49</td>
+		<td>2022-10-21 14:02:41</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Euronet</td>
+     <td>193981038</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:09:51</td>
+		<td>2022-10-21 14:02:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Euronet</td>
+     <td>193980986</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 14:09:47</td>
+		<td>2022-10-21 14:02:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Euronet</td>
+     <td>193980932</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 14:00:00</td>
+		<td>2022-10-21 14:02:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Euronet</td>
+     <td>193980877</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:53:13</td>
+		<td>2022-10-21 14:02:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Euronet</td>
+     <td>193980822</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:51:16</td>
+		<td>2022-10-21 14:02:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Euronet</td>
+     <td>193980777</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 13:51:12</td>
+		<td>2022-10-21 14:02:05</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Euronet</td>
+     <td>193980727</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:45:16</td>
+		<td>2022-10-21 14:01:59</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Euronet</td>
+     <td>193980674</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:32:40</td>
+		<td>2022-10-21 14:01:53</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Euronet</td>
+     <td>193980621</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 13:32:36</td>
+		<td>2022-10-21 14:01:47</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Euronet</td>
+     <td>193980568</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:21:10</td>
+		<td>2022-10-21 14:01:41</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Euronet</td>
+     <td>193980510</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:21:06</td>
+		<td>2022-10-21 14:01:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Euronet</td>
+     <td>193980455</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:18:04</td>
+		<td>2022-10-21 14:01:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Euronet</td>
+     <td>193980401</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:17:38</td>
+		<td>2022-10-21 14:01:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Euronet</td>
+     <td>193980345</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:17:35</td>
+		<td>2022-10-21 14:01:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Euronet</td>
+     <td>193980289</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:15:34</td>
+		<td>2022-10-21 14:01:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Euronet</td>
+     <td>193980236</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:15:04</td>
+		<td>2022-10-21 14:01:05</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Euronet</td>
+     <td>193980182</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:14:27</td>
+		<td>2022-10-21 14:00:59</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>165</td>-->
+    <td>Euronet</td>
+     <td>193980133</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:14:26</td>
+		<td>2022-10-21 14:00:53</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>166</td>-->
+    <td>Euronet</td>
+     <td>193980071</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:14:04</td>
+		<td>2022-10-21 14:00:47</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>167</td>-->
+    <td>Euronet</td>
+     <td>193980009</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:14:03</td>
+		<td>2022-10-21 14:00:41</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>168</td>-->
+    <td>Euronet</td>
+     <td>193979951</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 13:14:00</td>
+		<td>2022-10-21 14:00:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>169</td>-->
+    <td>Euronet</td>
+     <td>193979896</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:02:46</td>
+		<td>2022-10-21 14:00:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>170</td>-->
+    <td>Euronet</td>
+     <td>193979838</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 13:02:41</td>
+		<td>2022-10-21 14:00:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>171</td>-->
+    <td>Euronet</td>
+     <td>193979775</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2022-10-17 13:02:41</td>
+		<td>2022-10-21 14:00:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site id card show 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Sanjana sonawane</td>
+        <td>2022-10-21 14:05:41</td>
+	    <td>2022-10-21 14:05:41*Comfort engineer at site id card show 2 way done,*Sanjana sonawane</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>172</td>-->
+    <td>Euronet</td>
+     <td>193979701</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 12:55:26</td>
+		<td>2022-10-21 14:00:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>173</td>-->
+    <td>Euronet</td>
+     <td>193979619</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 12:55:26</td>
+		<td>2022-10-21 14:00:05</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>174</td>-->
+    <td>Euronet</td>
+     <td>193979536</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>002</td>
+	<td>NA</td>
+ 	
+    	 
+
+	 
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+	 	<td>Network Alarm (Router reset RLY ON)</td>
+        <td>2022-10-17 12:55:22</td>
+		<td>2022-10-21 13:59:59</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>175</td>-->
+    <td>Euronet</td>
+     <td>193979450</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-17 12:53:59</td>
+		<td>2022-10-21 13:59:53</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>176</td>-->
+    <td>Euronet</td>
+     <td>193979370</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-17 12:42:51</td>
+		<td>2022-10-21 13:59:47</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>177</td>-->
+    <td>Euronet</td>
+     <td>193979290</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 12:42:51</td>
+		<td>2022-10-21 13:59:41</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>178</td>-->
+    <td>Euronet</td>
+     <td>193979217</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-10-17 12:42:49</td>
+		<td>2022-10-21 13:59:35</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>179</td>-->
+    <td>Euronet</td>
+     <td>193979153</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2022-10-17 12:42:48</td>
+		<td>2022-10-21 13:59:29</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>180</td>-->
+    <td>Euronet</td>
+     <td>193979101</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-10-17 12:42:48</td>
+		<td>2022-10-21 13:59:23</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site id card show 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Sanjana sonawane</td>
+        <td>2022-10-21 14:05:41</td>
+	    <td>2022-10-21 14:05:41*Comfort engineer at site id card show 2 way done,*Sanjana sonawane</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>181</td>-->
+    <td>Euronet</td>
+     <td>193979049</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 12:39:19</td>
+		<td>2022-10-21 13:59:17</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>182</td>-->
+    <td>Euronet</td>
+     <td>193978995</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>PARTAPUR INDUSTRIAL AREA MEERUT</td>-->
+    <td>P3ENUP13</td>
+    <td>67/B2 PARTAPUR INDUSTRIAL AREA MEERUT UP PINCODE 250103</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-10-17 12:39:18</td>
+		<td>2022-10-21 13:59:11</td>
+		<td>21-October-2022</td>
+		<td>172.55.25.47</td>
+		<td>SMART -I</td>	
+		<td>060363</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.47' and b.receivedtime between '2022-10-21 00:00:00' and '2022-10-21 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,5788 @@
+
+<!-- saved from url=(0044)http://192.168.100.23:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				   
+				  <a id="1" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php#">Add Site</a>
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsite.php">View Site</a>
+                                    <a id="21" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Project_Add.php">Project Add</a>
+				  				<!-- <a   class="dropdown-item" href="addDvrSite.php">Add DVR Site</a>
+                 <a   class="dropdown-item" href="ViewDvrSite.php">View DVR Site</a>-->
+                  <a id="22" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/customerDataMaintain.php">Customer Data Maintain</a>
+				                    <a id="23" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewcustomerDataMaintain.php">View Customer Data Maintain</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                  <a id="3" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addusers.php">Add user</a>
+				                    <a id="4" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewusers.php">View user</a>
+				                   
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                   
+                 <a id="6" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/lastcommunication.php">Last Communication</a>
+				                     <a id="7" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/ebmisnew.php">Count call close by</a>
+					                    <a id="8" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/newview.php">HZ /HL View</a>
+					                    <a id="9" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/panelcount.php">Description Count</a>
+										<a id="10" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/useralertreport.php">call alert report</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertviewAsc.php">View Alert Report</a>
+					                    <a id="11" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Mains_UPS_Fail.php">Mains &amp; UPS Fail</a>
+					                    <a id="13" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/graph.php">view Graph</a> 
+					                      <a id="14" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/qrtsites.php">QRT Excel upload</a>
+					                        <a id="15" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/mailcount.php">Mail Count</a>
+					                   <a id="16" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="19" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/bypass.php">By Pass Alert</a>
+					 					   <a id="20" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/old_alert_SendIP.php">Archive Alert SendIP</a>
+					  					 <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewemp.php">View Emp Details</a>
+				  				  <a id="24" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/logoutByAdmin.php">User Logout</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Rohit Bhardwaj				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.23:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.23:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.23.148&#39; and b.receivedtime between &#39;2023-02-03 00:00:00&#39; and &#39;2023-02-03 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:142</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>18660978</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-02-03 17:13:49</td>
+		<td>2023-02-03 17:14:00</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>18660956</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 17:13:49</td>
+		<td>2023-02-03 17:13:54</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>18660616</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 17:11:30</td>
+		<td>2023-02-03 17:12:04</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>18660598</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 17:11:26</td>
+		<td>2023-02-03 17:11:58</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>18660578</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 17:11:26</td>
+		<td>2023-02-03 17:11:51</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>18660556</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 17:11:23</td>
+		<td>2023-02-03 17:11:45</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>18660534</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 17:11:23</td>
+		<td>2023-02-03 17:11:39</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>18660514</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 17:11:22</td>
+		<td>2023-02-03 17:11:33</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>18660499</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Panic Switch</td>
+	 	<td>ATM Panic Switch</td>
+        <td>2023-02-03 17:11:22</td>
+		<td>2023-02-03 17:11:27</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>18660114</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 17:09:10</td>
+		<td>2023-02-03 17:09:13</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>18660075</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 17:08:55</td>
+		<td>2023-02-03 17:09:00</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>18660024</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 17:08:26</td>
+		<td>2023-02-03 17:08:44</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>18660007</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 17:08:16</td>
+		<td>2023-02-03 17:08:37</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>18659988</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 17:08:14</td>
+		<td>2023-02-03 17:08:31</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>18659967</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 17:08:14</td>
+		<td>2023-02-03 17:08:25</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2023-02-03 17:09:22</td>
+	    <td>2023-02-03 17:09:22*No Issue found after video verification,*karan</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>18659945</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 17:08:08</td>
+		<td>2023-02-03 17:08:19</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>18659925</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 17:08:08</td>
+		<td>2023-02-03 17:08:13</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2023-02-03 17:09:22</td>
+	    <td>2023-02-03 17:09:22*No Issue found after video verification,*karan</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>18659902</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 17:08:00</td>
+		<td>2023-02-03 17:08:05</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>18659846</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 17:07:41</td>
+		<td>2023-02-03 17:07:45</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>18659653</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 17:06:08</td>
+		<td>2023-02-03 17:06:44</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>18659633</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 17:06:04</td>
+		<td>2023-02-03 17:06:38</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>18659614</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 17:06:04</td>
+		<td>2023-02-03 17:06:32</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2023-02-03 17:06:46</td>
+	    <td>2023-02-03 17:06:46*No Issue found after video verification,*karan</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>18659592</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 17:06:04</td>
+		<td>2023-02-03 17:06:26</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>18659573</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 17:06:04</td>
+		<td>2023-02-03 17:06:20</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2023-02-03 17:06:46</td>
+	    <td>2023-02-03 17:06:46*No Issue found after video verification,*karan</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>18659552</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 17:06:03</td>
+		<td>2023-02-03 17:06:14</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>18659529</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-02-03 17:06:03</td>
+		<td>2023-02-03 17:06:07</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2023-02-03 17:06:46</td>
+	    <td>2023-02-03 17:06:46*No Issue found after video verification,*karan</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>18644563</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 16:14:35</td>
+		<td>2023-02-03 16:14:39</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>18639773</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:57:26</td>
+		<td>2023-02-03 15:58:08</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>18639752</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:57:24</td>
+		<td>2023-02-03 15:58:02</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 16:04:18</td>
+	    <td>2023-02-03 16:04:18*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>18639728</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:57:22</td>
+		<td>2023-02-03 15:57:56</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>18639704</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:57:22</td>
+		<td>2023-02-03 15:57:50</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 16:04:18</td>
+	    <td>2023-02-03 16:04:18*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>18639680</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:57:22</td>
+		<td>2023-02-03 15:57:44</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>18639658</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 15:57:22</td>
+		<td>2023-02-03 15:57:37</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 16:04:18</td>
+	    <td>2023-02-03 16:04:18*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>18639629</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:57:21</td>
+		<td>2023-02-03 15:57:31</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>18639604</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-02-03 15:57:21</td>
+		<td>2023-02-03 15:57:25</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 16:04:18</td>
+	    <td>2023-02-03 16:04:18*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>18638957</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:54:34</td>
+		<td>2023-02-03 15:54:39</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>18637907</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:49:51</td>
+		<td>2023-02-03 15:50:33</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>18637885</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:49:47</td>
+		<td>2023-02-03 15:50:27</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>18637864</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:49:47</td>
+		<td>2023-02-03 15:50:20</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2023-02-03 15:50:42</td>
+	    <td>2023-02-03 15:50:42*Comfort engineer at site mr dhone id showing 2way done,*karan</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>18637841</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:49:47</td>
+		<td>2023-02-03 15:50:14</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>18637818</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 15:49:47</td>
+		<td>2023-02-03 15:50:08</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2023-02-03 15:50:35</td>
+	    <td>2023-02-03 15:50:35*Comfort engineer at site mr dhone id showing 2way done,*karan</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>18637775</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:49:46</td>
+		<td>2023-02-03 15:49:57</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>18637751</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-02-03 15:49:46</td>
+		<td>2023-02-03 15:49:51</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>karan</td>
+        <td>2023-02-03 15:50:26</td>
+	    <td>2023-02-03 15:50:26*Comfort engineer at site mr dhone id showing 2way done,*karan</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>18637580</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:47:17</td>
+		<td>2023-02-03 15:48:58</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>18637562</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:47:14</td>
+		<td>2023-02-03 15:48:52</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>18637544</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:47:14</td>
+		<td>2023-02-03 15:48:45</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:51:20</td>
+	    <td>2023-02-03 15:51:20*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>18637524</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:47:14</td>
+		<td>2023-02-03 15:48:39</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>18637505</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:47:13</td>
+		<td>2023-02-03 15:48:33</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>18637484</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-02-03 15:47:13</td>
+		<td>2023-02-03 15:48:27</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:51:20</td>
+	    <td>2023-02-03 15:51:20*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>18637458</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:47:13</td>
+		<td>2023-02-03 15:48:21</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>18637432</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 15:47:13</td>
+		<td>2023-02-03 15:48:15</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:51:20</td>
+	    <td>2023-02-03 15:51:20*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>18637409</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:47:12</td>
+		<td>2023-02-03 15:48:09</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>18637385</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:47:12</td>
+		<td>2023-02-03 15:48:03</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>18637361</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-02-03 15:47:12</td>
+		<td>2023-02-03 15:47:56</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:51:20</td>
+	    <td>2023-02-03 15:51:20*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>18637342</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:47:10</td>
+		<td>2023-02-03 15:47:50</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>18637320</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:47:09</td>
+		<td>2023-02-03 15:47:44</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>18637296</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:47:05</td>
+		<td>2023-02-03 15:47:38</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>18637273</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:47:05</td>
+		<td>2023-02-03 15:47:32</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:51:20</td>
+	    <td>2023-02-03 15:51:20*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>18637251</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:47:04</td>
+		<td>2023-02-03 15:47:26</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>18637229</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 15:47:04</td>
+		<td>2023-02-03 15:47:20</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:51:20</td>
+	    <td>2023-02-03 15:51:20*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>18637206</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:47:03</td>
+		<td>2023-02-03 15:47:14</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>18637183</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-02-03 15:47:03</td>
+		<td>2023-02-03 15:47:07</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:49:02</td>
+	    <td>2023-02-03 15:49:02*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>18636874</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:43:49</td>
+		<td>2023-02-03 15:45:42</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>18636848</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:43:44</td>
+		<td>2023-02-03 15:45:36</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>18636823</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>OG</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:43:44</td>
+		<td>2023-02-03 15:45:29</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>18636804</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:43:44</td>
+		<td>2023-02-03 15:45:23</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:49:02</td>
+	    <td>2023-02-03 15:49:02*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>18636784</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-02-03 15:43:40</td>
+		<td>2023-02-03 15:45:17</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:49:02</td>
+	    <td>2023-02-03 15:49:02*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>18636766</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:43:39</td>
+		<td>2023-02-03 15:45:11</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>18636747</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>CG</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:43:37</td>
+		<td>2023-02-03 15:45:05</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>18636728</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:43:33</td>
+		<td>2023-02-03 15:44:59</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>18636706</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:43:28</td>
+		<td>2023-02-03 15:44:53</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>18636685</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>OG</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:43:28</td>
+		<td>2023-02-03 15:44:47</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>18636661</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:43:28</td>
+		<td>2023-02-03 15:44:40</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:48:02</td>
+	    <td>2023-02-03 15:48:02*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>18636643</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:43:05</td>
+		<td>2023-02-03 15:44:34</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:48:02</td>
+	    <td>2023-02-03 15:48:02*Comfort engineer at site mr dhone id showing 2way done,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>18636621</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:42:59</td>
+		<td>2023-02-03 15:44:28</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>18636599</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:42:56</td>
+		<td>2023-02-03 15:44:22</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:46:02</td>
+	    <td>2023-02-03 15:46:02*Comfort engineer at site,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>18636576</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:42:55</td>
+		<td>2023-02-03 15:44:16</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>18636554</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:42:55</td>
+		<td>2023-02-03 15:44:10</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:46:02</td>
+	    <td>2023-02-03 15:46:02*Comfort engineer at site,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>18636531</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:42:55</td>
+		<td>2023-02-03 15:44:04</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>18636507</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 15:42:55</td>
+		<td>2023-02-03 15:43:58</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site,</td>-->
+        <td>Reactive</td>
+        <td>lallan</td>
+        <td>2023-02-03 15:46:02</td>
+	    <td>2023-02-03 15:46:02*Comfort engineer at site,*lallan</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>18636486</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:42:54</td>
+		<td>2023-02-03 15:43:51</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>18636462</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:42:54</td>
+		<td>2023-02-03 15:43:45</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>18636440</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-02-03 15:42:54</td>
+		<td>2023-02-03 15:43:39</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 16:04:18</td>
+	    <td>2023-02-03 16:04:18*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>18636418</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:42:53</td>
+		<td>2023-02-03 15:43:33</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>18636369</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:42:53</td>
+		<td>2023-02-03 15:43:27</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 16:04:18</td>
+	    <td>2023-02-03 16:04:18*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>18636327</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter sense</td>
+	 	<td>Hooter sense</td>
+        <td>2023-02-03 15:42:53</td>
+		<td>2023-02-03 15:43:21</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 16:04:18</td>
+	    <td>2023-02-03 16:04:18*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>18636273</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:42:53</td>
+		<td>2023-02-03 15:43:15</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>18636231</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 15:42:53</td>
+		<td>2023-02-03 15:43:09</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>18636196</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fails (DI) </td>
+	 	<td>AC Mains Fails (DI) </td>
+        <td>2023-02-03 15:42:53</td>
+		<td>2023-02-03 15:43:02</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>18636150</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>CG</td>
+ 	
+    	 
+
+	 
+	 	<td>System Arm for AC Maintenance</td>
+	 	<td>System Arm for AC Maintenance</td>
+        <td>2023-02-03 15:42:53</td>
+		<td>2023-02-03 15:42:56</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>18636100</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:42:31</td>
+		<td>2023-02-03 15:42:47</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>18636067</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>017</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Main Door Shutter Sensor</td>
+	 	<td>ATM Main Door Shutter Sensor</td>
+        <td>2023-02-03 15:42:31</td>
+		<td>2023-02-03 15:42:41</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>18636037</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:41:53</td>
+		<td>2023-02-03 15:42:35</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>18636006</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:41:34</td>
+		<td>2023-02-03 15:42:29</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>18635977</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-02-03 15:41:02</td>
+		<td>2023-02-03 15:42:23</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>18635957</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-02-03 15:40:55</td>
+		<td>2023-02-03 15:42:17</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>18635931</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:40:50</td>
+		<td>2023-02-03 15:42:10</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>18635903</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:40:37</td>
+		<td>2023-02-03 15:42:04</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>18635873</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:40:35</td>
+		<td>2023-02-03 15:41:58</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>18635838</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 15:40:32</td>
+		<td>2023-02-03 15:41:52</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>18635813</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence key</td>
+	 	<td>Silence key</td>
+        <td>2023-02-03 15:40:32</td>
+		<td>2023-02-03 15:41:46</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>18635792</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:40:31</td>
+		<td>2023-02-03 15:41:40</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>18635769</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 15:40:31</td>
+		<td>2023-02-03 15:41:34</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>18635743</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:40:30</td>
+		<td>2023-02-03 15:41:27</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>18635715</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:41:02</td>
+		<td>2023-02-03 15:41:21</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>18635698</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Tamper + Hooter sense</td>
+	 	<td>Tamper + Hooter sense</td>
+        <td>2023-02-03 15:41:02</td>
+		<td>2023-02-03 15:41:15</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>18635670</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter sense</td>
+	 	<td>Hooter sense</td>
+        <td>2023-02-03 15:41:02</td>
+		<td>2023-02-03 15:41:09</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:49:19</td>
+	    <td>2023-02-03 15:49:19*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>18635644</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 15:41:02</td>
+		<td>2023-02-03 15:41:03</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>18635616</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-02-03 15:40:55</td>
+		<td>2023-02-03 15:40:57</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:48:45</td>
+	    <td>2023-02-03 15:48:45*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>18635592</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fails (DI) </td>
+	 	<td>AC Mains Fails (DI) </td>
+        <td>2023-02-03 15:40:37</td>
+		<td>2023-02-03 15:40:51</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>18635569</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>CF</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:40:37</td>
+		<td>2023-02-03 15:40:45</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>18635548</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>014</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Restarted (Power On)</td>
+	 	<td>System Restarted (Power On)</td>
+        <td>2023-02-03 15:40:37</td>
+		<td>2023-02-03 15:40:39</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>18635350</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:39:33</td>
+		<td>2023-02-03 15:39:42</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:48:45</td>
+	    <td>2023-02-03 15:48:45*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>18635325</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:39:30</td>
+		<td>2023-02-03 15:39:36</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:48:45</td>
+	    <td>2023-02-03 15:48:45*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>18635301</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-02-03 15:39:25</td>
+		<td>2023-02-03 15:39:30</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:48:45</td>
+	    <td>2023-02-03 15:48:45*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>18635265</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-02-03 15:39:13</td>
+		<td>2023-02-03 15:39:20</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:48:45</td>
+	    <td>2023-02-03 15:48:45*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>18635243</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:39:09</td>
+		<td>2023-02-03 15:39:14</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:48:45</td>
+	    <td>2023-02-03 15:48:45*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>18635212</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:39:01</td>
+		<td>2023-02-03 15:39:05</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:48:45</td>
+	    <td>2023-02-03 15:48:45*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>18635184</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 15:38:53</td>
+		<td>2023-02-03 15:38:57</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr dhone id showing 2way done</td>-->
+        <td>Reactive</td>
+        <td>jeeva</td>
+        <td>2023-02-03 15:48:45</td>
+	    <td>2023-02-03 15:48:45*Comfort engineer at site mr dhone id showing 2way done*jeeva</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>18626826</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 15:00:00</td>
+		<td>2023-02-03 15:00:04</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>18593168</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 12:13:53</td>
+		<td>2023-02-03 12:14:53</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>18593148</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 12:13:48</td>
+		<td>2023-02-03 12:14:46</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>18593127</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>OG</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 12:13:48</td>
+		<td>2023-02-03 12:14:40</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>18593110</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-03 12:13:48</td>
+		<td>2023-02-03 12:14:34</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,as per live</td>-->
+        <td>Reactive</td>
+        <td>shlesha</td>
+        <td>2023-02-03 12:18:49</td>
+	    <td>2023-02-03 12:18:49*HK person on site,as per live*shlesha</td>
+		<td>192.168.100.80</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>18593090</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2023-02-03 12:13:42</td>
+		<td>2023-02-03 12:14:28</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,as per live</td>-->
+        <td>Reactive</td>
+        <td>shlesha</td>
+        <td>2023-02-03 12:18:49</td>
+	    <td>2023-02-03 12:18:49*HK person on site,as per live*shlesha</td>
+		<td>192.168.100.80</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>18593068</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-02-03 12:13:40</td>
+		<td>2023-02-03 12:14:22</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,as per live</td>-->
+        <td>Reactive</td>
+        <td>shlesha</td>
+        <td>2023-02-03 12:18:49</td>
+	    <td>2023-02-03 12:18:49*HK person on site,as per live*shlesha</td>
+		<td>192.168.100.80</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>18590357</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 12:00:00</td>
+		<td>2023-02-03 12:00:41</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>18556545</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 09:00:00</td>
+		<td>2023-02-03 09:00:41</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>18537576</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 07:30:26</td>
+		<td>2023-02-03 07:31:10</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>18537553</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 07:30:23</td>
+		<td>2023-02-03 07:31:04</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>18537460</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 07:29:52</td>
+		<td>2023-02-03 07:30:41</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>18537434</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 07:29:52</td>
+		<td>2023-02-03 07:30:35</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no issue at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-02-03 07:31:24</td>
+	    <td>2023-02-03 07:31:24*as per live no issue at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>18537358</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-03 07:29:31</td>
+		<td>2023-02-03 07:30:14</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>18537333</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 07:29:27</td>
+		<td>2023-02-03 07:30:08</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>18537248</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>HOOTER</td>
+	 	<td>HOOTER</td>
+        <td>2023-02-03 07:28:56</td>
+		<td>2023-02-03 07:29:45</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>18537219</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-03 07:28:56</td>
+		<td>2023-02-03 07:29:38</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no issue at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-02-03 07:31:24</td>
+	    <td>2023-02-03 07:31:24*as per live no issue at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>18515503</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>007</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 06:00:00</td>
+		<td>2023-02-03 06:00:41</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>18511231</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-02-03 05:43:12</td>
+		<td>2023-02-03 05:43:55</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no issue at site,</td>-->
+        <td>Reactive</td>
+        <td>rahulk</td>
+        <td>2023-02-03 05:47:15</td>
+	    <td>2023-02-03 05:47:15*as per live no issue at site,*rahulk</td>
+		<td>192.168.100.71</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>18473379</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-02-03 03:04:54</td>
+		<td>2023-02-03 03:05:36</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>as per live no issue at site,</td>-->
+        <td>Reactive</td>
+        <td>rahulk</td>
+        <td>2023-02-03 03:07:19</td>
+	    <td>2023-02-03 03:07:19*as per live no issue at site,*rahulk</td>
+		<td>192.168.100.71</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>18447907</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-02-03 01:04:34</td>
+		<td>2023-02-03 01:05:17</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one issue at site</td>-->
+        <td>Reactive</td>
+        <td>abhayr</td>
+        <td>2023-02-03 01:07:14</td>
+	    <td>2023-02-03 01:07:14*As per live no one issue at site*abhayr</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>18433948</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 00:00:00</td>
+		<td>2023-02-03 00:00:47</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>18433896</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam,</td>-->
+    <td>P3ENCR18</td>
+    <td>No: 82, MM complex Building, Indira Prriyadharshini nagar, Global Hospital road, Perumbakkam, Chennai - 600100</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-03 00:00:00</td>
+		<td>2023-02-03 00:00:41</td>
+		<td>03-February-2023</td>
+		<td>172.55.23.148</td>
+		<td>smarti_hdfc32</td>	
+		<td>092028</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.23.148' and b.receivedtime between '2023-02-03 00:00:00' and '2023-02-03 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

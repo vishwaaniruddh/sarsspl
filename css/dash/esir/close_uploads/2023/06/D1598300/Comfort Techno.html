@@ -1,0 +1,3901 @@
+
+<!-- saved from url=(0132)file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/bootstrap.min.css">
+     <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				   
+				  <a id="1" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php#">Add Site</a>
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsite.php">View Site</a>
+                                    <a id="21" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Project_Add.php">Project Add</a>
+				  				<!-- <a   class="dropdown-item" href="addDvrSite.php">Add DVR Site</a>
+                 <a   class="dropdown-item" href="ViewDvrSite.php">View DVR Site</a>-->
+                  <a id="22" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/customerDataMaintain.php">Customer Data Maintain</a>
+				                    <a id="23" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewcustomerDataMaintain.php">View Customer Data Maintain</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                  <a id="3" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addusers.php">Add user</a>
+				                    <a id="4" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewusers.php">View user</a>
+				                   
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                   
+                 <a id="6" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/lastcommunication.php">Last Communication</a>
+				                     <a id="7" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/ebmisnew.php">Count call close by</a>
+					                    <a id="8" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/newview.php">HZ /HL View</a>
+					                    <a id="9" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/panelcount.php">Description Count</a>
+										<a id="10" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/useralertreport.php">call alert report</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertviewAsc.php">View Alert Report</a>
+					                    <a id="11" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Mains_UPS_Fail.php">Mains &amp; UPS Fail</a>
+					                    <a id="13" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/graph.php">view Graph</a> 
+					                      <a id="14" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/qrtsites.php">QRT Excel upload</a>
+					                        <a id="15" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/mailcount.php">Mail Count</a>
+					                   <a id="16" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="19" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/bypass.php">By Pass Alert</a>
+					 					   <a id="20" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/old_alert_SendIP.php">Archive Alert SendIP</a>
+					  					 <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewemp.php">View Emp Details</a>
+				  				  <a id="24" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/logoutByAdmin.php">User Logout</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Rohit Bhardwaj				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.23:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/popper.min.js.download"></script>
+    <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/owl.carousel.min.js.download"></script>
+    <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.23:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;10.185.181.7&#39; and b.receivedtime between &#39;2023-06-07 00:00:00&#39; and &#39;2023-06-07 23:59:59&#39;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:91</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Hitachi</td>
+     <td>62021624</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 09:58:41</td>
+		<td>2023-06-07 09:57:39</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>as per live Person doing transaction</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 10:08:56</td>
+	    <td>2023-06-07 10:08:56*as per live Person doing transaction*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Hitachi</td>
+     <td>62026417</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>JA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC1 Removal &amp; AC2 Removal</td>
+	 	<td>AC1 Removal &amp; AC2 Removal</td>
+        <td>2023-06-07 10:14:13</td>
+		<td>2023-06-07 10:13:11</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Hitachi</td>
+     <td>62026580</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 10:14:43</td>
+		<td>2023-06-07 10:13:41</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Hitachi</td>
+     <td>62027711</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 10:18:28</td>
+		<td>2023-06-07 10:17:26</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Hitachi</td>
+     <td>62027712</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 10:18:26</td>
+		<td>2023-06-07 10:17:26</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Hitachi</td>
+     <td>62027731</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 10:18:29</td>
+		<td>2023-06-07 10:17:27</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Hitachi</td>
+     <td>62068519</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 12:46:41</td>
+		<td>2023-06-07 12:45:43</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>As per live Person doing transaction,2 way done</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-07 12:49:35</td>
+	    <td>2023-06-07 12:49:35*As per live Person doing transaction,2 way done*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Hitachi</td>
+     <td>62068525</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 12:46:41</td>
+		<td>2023-06-07 12:45:43</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Hitachi</td>
+     <td>62068781</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 12:47:37</td>
+		<td>2023-06-07 12:46:40</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>As per live Person doing transaction,2 way done</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-07 12:49:35</td>
+	    <td>2023-06-07 12:49:35*As per live Person doing transaction,2 way done*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Hitachi</td>
+     <td>62068784</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 12:47:37</td>
+		<td>2023-06-07 12:46:40</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>As per live Person doing transaction,2 way done</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-07 12:49:35</td>
+	    <td>2023-06-07 12:49:35*As per live Person doing transaction,2 way done*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Hitachi</td>
+     <td>62069060</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 12:48:41</td>
+		<td>2023-06-07 12:47:44</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Hitachi</td>
+     <td>62069064</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 12:48:41</td>
+		<td>2023-06-07 12:47:44</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Hitachi</td>
+     <td>62069256</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 12:49:27</td>
+		<td>2023-06-07 12:48:30</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Hitachi</td>
+     <td>62069259</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 12:49:27</td>
+		<td>2023-06-07 12:48:30</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Hitachi</td>
+     <td>62069515</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 12:50:26</td>
+		<td>2023-06-07 12:49:28</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Hitachi</td>
+     <td>62071336</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 12:58:30</td>
+		<td>2023-06-07 12:57:32</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Hitachi</td>
+     <td>62071510</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 12:59:08</td>
+		<td>2023-06-07 12:58:10</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Hitachi</td>
+     <td>62071731</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 12:59:52</td>
+		<td>2023-06-07 12:58:55</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Hitachi</td>
+     <td>62072942</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:04:27</td>
+		<td>2023-06-07 13:03:28</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Hitachi</td>
+     <td>62072950</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:04:27</td>
+		<td>2023-06-07 13:03:28</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Hitachi</td>
+     <td>62072958</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>006</td>
+	<td>JA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC1 Removal &amp; AC2 Removal</td>
+	 	<td>AC1 Removal &amp; AC2 Removal</td>
+        <td>2023-06-07 13:04:27</td>
+		<td>2023-06-07 13:03:28</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Hitachi</td>
+     <td>62072959</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:04:27</td>
+		<td>2023-06-07 13:03:28</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Hitachi</td>
+     <td>62072969</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:04:30</td>
+		<td>2023-06-07 13:03:29</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Hitachi</td>
+     <td>62072980</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:04:30</td>
+		<td>2023-06-07 13:03:29</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Hitachi</td>
+     <td>62072988</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:04:30</td>
+		<td>2023-06-07 13:03:29</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Hitachi</td>
+     <td>62073119</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:04:59</td>
+		<td>2023-06-07 13:03:58</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Hitachi</td>
+     <td>62073127</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:04:59</td>
+		<td>2023-06-07 13:03:58</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Hitachi</td>
+     <td>62073128</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:04:59</td>
+		<td>2023-06-07 13:03:58</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Hitachi</td>
+     <td>62073140</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:04:59</td>
+		<td>2023-06-07 13:03:58</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Hitachi</td>
+     <td>62073156</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:05:00</td>
+		<td>2023-06-07 13:03:58</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Hitachi</td>
+     <td>62073165</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:05:00</td>
+		<td>2023-06-07 13:03:58</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Hitachi</td>
+     <td>62073313</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:05:29</td>
+		<td>2023-06-07 13:04:27</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Hitachi</td>
+     <td>62073328</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:05:29</td>
+		<td>2023-06-07 13:04:29</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Hitachi</td>
+     <td>62073340</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:05:29</td>
+		<td>2023-06-07 13:04:29</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Hitachi</td>
+     <td>62073511</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:06:01</td>
+		<td>2023-06-07 13:04:59</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Hitachi</td>
+     <td>62073516</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:06:00</td>
+		<td>2023-06-07 13:04:59</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Hitachi</td>
+     <td>62073523</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:00</td>
+		<td>2023-06-07 13:04:59</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Hitachi</td>
+     <td>62073532</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:00</td>
+		<td>2023-06-07 13:04:59</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Hitachi</td>
+     <td>62073539</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:06:00</td>
+		<td>2023-06-07 13:04:59</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:00</td>
+	    <td>2023-06-07 13:09:00*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Hitachi</td>
+     <td>62073691</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:34</td>
+		<td>2023-06-07 13:05:34</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Hitachi</td>
+     <td>62073697</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:06:34</td>
+		<td>2023-06-07 13:05:34</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:56</td>
+	    <td>2023-06-07 13:09:56*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Hitachi</td>
+     <td>62073700</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:34</td>
+		<td>2023-06-07 13:05:34</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Hitachi</td>
+     <td>62073701</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:34</td>
+		<td>2023-06-07 13:05:34</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Hitachi</td>
+     <td>62073719</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:06:37</td>
+		<td>2023-06-07 13:05:36</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:56</td>
+	    <td>2023-06-07 13:09:56*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Hitachi</td>
+     <td>62073720</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:37</td>
+		<td>2023-06-07 13:05:36</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Hitachi</td>
+     <td>62073728</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:37</td>
+		<td>2023-06-07 13:05:36</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Hitachi</td>
+     <td>62073731</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:06:37</td>
+		<td>2023-06-07 13:05:36</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:56</td>
+	    <td>2023-06-07 13:09:56*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Hitachi</td>
+     <td>62073732</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-07 13:06:36</td>
+		<td>2023-06-07 13:05:36</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:56</td>
+	    <td>2023-06-07 13:09:56*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Hitachi</td>
+     <td>62073735</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:37</td>
+		<td>2023-06-07 13:05:36</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Hitachi</td>
+     <td>62073741</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:06:37</td>
+		<td>2023-06-07 13:05:36</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Hitachi</td>
+     <td>62073742</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:06:37</td>
+		<td>2023-06-07 13:05:36</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:56</td>
+	    <td>2023-06-07 13:09:56*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Hitachi</td>
+     <td>62073883</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:07:06</td>
+		<td>2023-06-07 13:06:05</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:56</td>
+	    <td>2023-06-07 13:09:56*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Hitachi</td>
+     <td>62074052</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:07:39</td>
+		<td>2023-06-07 13:06:39</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Hitachi</td>
+     <td>62074066</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:07:42</td>
+		<td>2023-06-07 13:06:40</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Hitachi</td>
+     <td>62074072</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:07:41</td>
+		<td>2023-06-07 13:06:40</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:56</td>
+	    <td>2023-06-07 13:09:56*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Hitachi</td>
+     <td>62074088</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:07:42</td>
+		<td>2023-06-07 13:06:40</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>vendor person from comfrot mr krishna raj 9003420549  2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 13:09:56</td>
+	    <td>2023-06-07 13:09:56*vendor person from comfrot mr krishna raj 9003420549  2 way done,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Hitachi</td>
+     <td>62075448</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>CR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:11:54</td>
+		<td>2023-06-07 13:10:54</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Hitachi</td>
+     <td>62075614</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>CA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-06-07 13:12:26</td>
+		<td>2023-06-07 13:11:24</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Hitachi</td>
+     <td>62075907</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Hood Door Sensor</td>
+	 	<td>ATM1 Hood Door Sensor</td>
+        <td>2023-06-07 13:13:27</td>
+		<td>2023-06-07 13:12:26</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Hitachi</td>
+     <td>62076113</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:13:57</td>
+		<td>2023-06-07 13:12:59</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Hitachi</td>
+     <td>62076451</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>CR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:15:12</td>
+		<td>2023-06-07 13:14:15</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Hitachi</td>
+     <td>62076751</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:16:32</td>
+		<td>2023-06-07 13:15:32</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Hitachi</td>
+     <td>62077460</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-07 13:19:18</td>
+		<td>2023-06-07 13:18:17</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Hitachi</td>
+     <td>62077608</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:19:49</td>
+		<td>2023-06-07 13:18:48</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Hitachi</td>
+     <td>62077623</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:19:49</td>
+		<td>2023-06-07 13:18:48</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Hitachi</td>
+     <td>62077778</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-07 13:20:18</td>
+		<td>2023-06-07 13:19:16</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Hitachi</td>
+     <td>62078081</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:21:18</td>
+		<td>2023-06-07 13:20:17</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Hitachi</td>
+     <td>62078100</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-07 13:21:18</td>
+		<td>2023-06-07 13:20:17</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Hitachi</td>
+     <td>62078256</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:21:48</td>
+		<td>2023-06-07 13:20:46</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Hitachi</td>
+     <td>62078265</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:21:48</td>
+		<td>2023-06-07 13:20:46</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Hitachi</td>
+     <td>62078282</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:21:48</td>
+		<td>2023-06-07 13:20:46</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Hitachi</td>
+     <td>62079398</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:25:19</td>
+		<td>2023-06-07 13:24:18</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Hitachi</td>
+     <td>62079408</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:25:19</td>
+		<td>2023-06-07 13:24:18</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Hitachi</td>
+     <td>62079419</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-07 13:25:19</td>
+		<td>2023-06-07 13:24:18</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Hitachi</td>
+     <td>62079521</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:25:49</td>
+		<td>2023-06-07 13:24:48</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Hitachi</td>
+     <td>62079528</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-07 13:25:49</td>
+		<td>2023-06-07 13:24:48</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Hitachi</td>
+     <td>62079530</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-07 13:25:49</td>
+		<td>2023-06-07 13:24:48</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Hitachi</td>
+     <td>62081666</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:33:50</td>
+		<td>2023-06-07 13:32:48</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Hitachi</td>
+     <td>62084616</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-07 13:43:20</td>
+		<td>2023-06-07 13:42:19</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Hitachi</td>
+     <td>62084807</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>VA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-06-07 13:43:51</td>
+		<td>2023-06-07 13:42:49</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Hitachi</td>
+     <td>62084811</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>VR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:43:50</td>
+		<td>2023-06-07 13:42:49</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Hitachi</td>
+     <td>62084828</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>012</td>
+	<td>VR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:43:50</td>
+		<td>2023-06-07 13:42:49</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Hitachi</td>
+     <td>62089351</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:58:51</td>
+		<td>2023-06-07 13:57:49</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Hitachi</td>
+     <td>62089354</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 13:58:51</td>
+		<td>2023-06-07 13:57:49</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 14:00:07</td>
+	    <td>2023-06-07 14:00:07*as per live no one present at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Hitachi</td>
+     <td>62089366</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 13:58:51</td>
+		<td>2023-06-07 13:57:49</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Hitachi</td>
+     <td>62090378</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 14:01:57</td>
+		<td>2023-06-07 14:00:55</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 14:08:00</td>
+	    <td>2023-06-07 14:08:00*as per live no one present at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Hitachi</td>
+     <td>62090546</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-07 14:02:27</td>
+		<td>2023-06-07 14:01:25</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 14:08:00</td>
+	    <td>2023-06-07 14:08:00*as per live no one present at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Hitachi</td>
+     <td>62090558</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Hood Door Sensor</td>
+	 	<td>ATM1 Hood Door Sensor</td>
+        <td>2023-06-07 14:02:27</td>
+		<td>2023-06-07 14:01:25</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sanjana</td>
+        <td>2023-06-07 14:08:00</td>
+	    <td>2023-06-07 14:08:00*as per live no one present at site,*sanjana</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Hitachi</td>
+     <td>62090562</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 14:02:27</td>
+		<td>2023-06-07 14:01:25</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Hitachi</td>
+     <td>62090581</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 14:02:27</td>
+		<td>2023-06-07 14:01:25</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Hitachi</td>
+     <td>62091238</td>
+     <td>South</td>
+     <!-- <td>Chennai,Tamil Nadu</td>
+     <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>-->
+    <td>D1598300</td>
+    <td>NO.55, GINGEE ROAD, RAJALAKSHMI MAHAL, TINDIVANAM-604001</td>
+	<td>Chennai</td>
+	<td>Tamil Nadu</td>
+	<td>004</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-07 14:04:27</td>
+		<td>2023-06-07 14:03:25</td>
+		<td>07-June-2023</td>
+		<td>10.185.181.7</td>
+		<td>comfort</td>	
+		<td>093805</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.185.181.7' and b.receivedtime between '2023-06-07 00:00:00' and '2023-06-07 23:59:59'" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="file:///C:/Users/ADMINI~1/AppData/Local/Temp/MicrosoftEdgeDownloads/19c1226e-a643-4ba5-91ab-89ea169bd78c/Comfort%20Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

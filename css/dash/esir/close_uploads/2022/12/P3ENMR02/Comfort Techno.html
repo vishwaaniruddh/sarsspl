@@ -1,0 +1,6095 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.109.9.108' and b.receivedtime between '2022-12-03 00:00:00' and '2022-12-03 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;10.109.9.108&#39; and b.receivedtime between &#39;2022-12-03 00:00:00&#39; and &#39;2022-12-03 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:151</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>10122437</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 15:13:58</td>
+		<td>2022-12-03 15:14:14</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>10122423</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 15:13:58</td>
+		<td>2022-12-03 15:14:12</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>10122407</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 15:13:58</td>
+		<td>2022-12-03 15:14:10</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>10122394</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 15:13:58</td>
+		<td>2022-12-03 15:14:08</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>10122377</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 15:13:58</td>
+		<td>2022-12-03 15:14:06</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>10122358</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 15:13:56</td>
+		<td>2022-12-03 15:14:03</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>10122343</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 15:13:56</td>
+		<td>2022-12-03 15:14:01</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>10122325</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 15:13:55</td>
+		<td>2022-12-03 15:13:59</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>10122311</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest door ATM1</td>
+	 	<td>Chest door ATM1</td>
+        <td>2022-12-03 15:11:25</td>
+		<td>2022-12-03 15:13:57</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>10117355</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 15:01:22</td>
+		<td>2022-12-03 15:01:23</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>10115803</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:58:11</td>
+		<td>2022-12-03 14:58:20</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-03 15:00:31</td>
+	    <td>2022-12-03 15:00:31*Comfort engineer at site mr rahul kumar id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>10115790</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:57:43</td>
+		<td>2022-12-03 14:58:18</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>10113796</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:51:02</td>
+		<td>2022-12-03 14:53:22</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar  id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-03 14:53:43</td>
+	    <td>2022-12-03 14:53:43*Comfort engineer at site mr rahul kumar  id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>10112980</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:51:02</td>
+		<td>2022-12-03 14:51:15</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar  id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-03 14:53:37</td>
+	    <td>2022-12-03 14:53:37*Comfort engineer at site mr rahul kumar  id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>10112968</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:51:02</td>
+		<td>2022-12-03 14:51:12</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>10112954</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:51:02</td>
+		<td>2022-12-03 14:51:10</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar  id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-03 14:53:37</td>
+	    <td>2022-12-03 14:53:37*Comfort engineer at site mr rahul kumar  id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>10112937</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:51:02</td>
+		<td>2022-12-03 14:51:08</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>10112923</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:39:41</td>
+		<td>2022-12-03 14:51:06</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar  id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-12-03 14:53:37</td>
+	    <td>2022-12-03 14:53:37*Comfort engineer at site mr rahul kumar  id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>10110856</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:39:41</td>
+		<td>2022-12-03 14:45:53</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:46:57</td>
+	    <td>2022-12-03 14:46:57*Comfort engineer at site mr rahul kumar id card shwn 2 way done,,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>10110552</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:22:50</td>
+		<td>2022-12-03 14:45:12</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>10110533</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>195</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:18:39</td>
+		<td>2022-12-03 14:45:09</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>10110398</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:44:51</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>10110381</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>031</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:44:48</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>10110258</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>021</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:44:29</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>10110177</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:44:19</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>10110101</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:44:08</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>10110042</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:43:58</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>10110025</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:43:56</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>10109899</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:43:37</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>10109828</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:43:26</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>10109760</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>014</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:43:16</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>10109685</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:43:05</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>10109626</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:42:55</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>10109566</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>011</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:42:44</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>10109502</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>010</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:42:34</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>10109435</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:42:23</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>10109360</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:42:13</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>10109298</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:42:02</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>10109228</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>AS</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:04</td>
+		<td>2022-12-03 14:41:52</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>10109216</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:39:41</td>
+		<td>2022-12-03 14:41:50</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:42:27</td>
+	    <td>2022-12-03 14:42:27*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>10108416</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:39:41</td>
+		<td>2022-12-03 14:39:43</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:42:28</td>
+	    <td>2022-12-03 14:42:28*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>10108398</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:39:41</td>
+		<td>2022-12-03 14:39:40</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>10108227</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>170</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:15:02</td>
+		<td>2022-12-03 14:39:17</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>10108157</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:02</td>
+		<td>2022-12-03 14:39:06</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>10108086</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>174</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:15:02</td>
+		<td>2022-12-03 14:38:56</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>10108014</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>173</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:15:02</td>
+		<td>2022-12-03 14:38:45</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>10107931</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>172</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:02</td>
+		<td>2022-12-03 14:38:35</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>10107854</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>031</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:38:24</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>10107829</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:38:21</td>
+		<td>2022-12-03 14:38:21</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:39:02</td>
+	    <td>2022-12-03 14:39:02*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>10107807</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:38:18</td>
+		<td>2022-12-03 14:38:17</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>10107778</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>021</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:38:14</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>10107693</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>020</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:38:03</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>10107612</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>019</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:37:52</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>10107535</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>018</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:37:42</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>10107465</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>017</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:37:32</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>10107384</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>016</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:37:21</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>10107304</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:37:10</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>10107235</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>014</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:37:00</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>10107167</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:36:49</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>10107084</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>012</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:36:39</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>10107013</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>011</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:36:28</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>10106930</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>010</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:36:18</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>10106913</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:36:14</td>
+		<td>2022-12-03 14:36:16</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:39:02</td>
+	    <td>2022-12-03 14:39:02*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>10106890</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:36:14</td>
+		<td>2022-12-03 14:36:14</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>10106653</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>009</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:35:41</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>10106559</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>007</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:35:30</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>10106545</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:35:25</td>
+		<td>2022-12-03 14:35:28</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:38:38</td>
+	    <td>2022-12-03 14:38:38*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>10106526</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:35:23</td>
+		<td>2022-12-03 14:35:26</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>10106508</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:35:17</td>
+		<td>2022-12-03 14:35:24</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:38:38</td>
+	    <td>2022-12-03 14:38:38*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>10106494</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:35:17</td>
+		<td>2022-12-03 14:35:22</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>10106477</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:35:16</td>
+		<td>2022-12-03 14:35:20</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:38:38</td>
+	    <td>2022-12-03 14:38:38*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>10106460</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:35:16</td>
+		<td>2022-12-03 14:35:18</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>10106447</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:35:15</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>10106365</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>005</td>
+	<td>AK</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:35:05</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>10106282</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>191</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:15:00</td>
+		<td>2022-12-03 14:34:54</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>10106265</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:34:48</td>
+		<td>2022-12-03 14:34:52</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:38:38</td>
+	    <td>2022-12-03 14:38:38*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>10106247</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:34:48</td>
+		<td>2022-12-03 14:34:50</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>10106228</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:34:47</td>
+		<td>2022-12-03 14:34:48</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr rahul kumar id card shwn 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2022-12-03 14:38:38</td>
+	    <td>2022-12-03 14:38:38*Comfort engineer at site mr rahul kumar id card shwn 2 way done,*kashish</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>10106211</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:34:46</td>
+		<td>2022-12-03 14:34:46</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>10105385</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>171</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:14:59</td>
+		<td>2022-12-03 14:32:57</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>10105326</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>040</td>
+	<td>BD</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:14:59</td>
+		<td>2022-12-03 14:32:46</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>10105264</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:14:59</td>
+		<td>2022-12-03 14:32:36</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>10105252</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:32:32</td>
+		<td>2022-12-03 14:32:34</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:27</td>
+	    <td>2022-12-03 14:36:27*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>10105240</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:32:32</td>
+		<td>2022-12-03 14:32:31</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>10105202</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:14:59</td>
+		<td>2022-12-03 14:32:24</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>10105125</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>100</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:14:59</td>
+		<td>2022-12-03 14:32:14</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>10105109</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:32:00</td>
+		<td>2022-12-03 14:32:11</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:27</td>
+	    <td>2022-12-03 14:36:27*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>10105094</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:31:59</td>
+		<td>2022-12-03 14:32:09</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>10105079</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:31:59</td>
+		<td>2022-12-03 14:32:07</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:27</td>
+	    <td>2022-12-03 14:36:27*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>10105060</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:31:58</td>
+		<td>2022-12-03 14:32:05</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>10105044</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:31:57</td>
+		<td>2022-12-03 14:32:03</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:27</td>
+	    <td>2022-12-03 14:36:27*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>10105029</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:31:54</td>
+		<td>2022-12-03 14:32:00</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>10105011</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:31:53</td>
+		<td>2022-12-03 14:31:58</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:28</td>
+	    <td>2022-12-03 14:36:28*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>10104994</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:31:52</td>
+		<td>2022-12-03 14:31:56</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>10104981</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:31:49</td>
+		<td>2022-12-03 14:31:54</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:28</td>
+	    <td>2022-12-03 14:36:28*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>10104965</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:31:49</td>
+		<td>2022-12-03 14:31:52</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>10104950</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:31:49</td>
+		<td>2022-12-03 14:31:49</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:28</td>
+	    <td>2022-12-03 14:36:28*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>10104932</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:31:47</td>
+		<td>2022-12-03 14:31:47</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>10104321</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:30:08</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:28</td>
+	    <td>2022-12-03 14:36:28*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>10104310</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:30:06</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>10104296</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:30:04</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:28</td>
+	    <td>2022-12-03 14:36:28*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>10104281</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:30:02</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>10104266</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:59</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:28</td>
+	    <td>2022-12-03 14:36:28*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>10104253</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:57</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>10104234</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:55</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:29</td>
+	    <td>2022-12-03 14:36:29*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>10104221</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:53</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>10104205</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:51</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:29</td>
+	    <td>2022-12-03 14:36:29*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>10104190</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:49</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>10104175</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:46</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:29</td>
+	    <td>2022-12-03 14:36:29*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>10104157</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:44</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>10104144</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:42</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:29</td>
+	    <td>2022-12-03 14:36:29*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>10104130</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:40</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>10104118</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:38</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:29</td>
+	    <td>2022-12-03 14:36:29*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>10104102</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:36</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>10104086</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:33</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:29</td>
+	    <td>2022-12-03 14:36:29*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>10104071</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:08</td>
+		<td>2022-12-03 14:29:31</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>10104052</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:07</td>
+		<td>2022-12-03 14:29:29</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:29</td>
+	    <td>2022-12-03 14:36:29*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>10104039</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:07</td>
+		<td>2022-12-03 14:29:26</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>10104023</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:07</td>
+		<td>2022-12-03 14:29:24</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:30</td>
+	    <td>2022-12-03 14:36:30*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>10104007</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:07</td>
+		<td>2022-12-03 14:29:22</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>10103993</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:06</td>
+		<td>2022-12-03 14:29:20</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:30</td>
+	    <td>2022-12-03 14:36:30*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>10103979</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:06</td>
+		<td>2022-12-03 14:29:18</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>10103963</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:06</td>
+		<td>2022-12-03 14:29:16</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:30</td>
+	    <td>2022-12-03 14:36:30*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>10103950</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:06</td>
+		<td>2022-12-03 14:29:13</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>10103931</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:06</td>
+		<td>2022-12-03 14:29:11</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:30</td>
+	    <td>2022-12-03 14:36:30*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>10103912</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:06</td>
+		<td>2022-12-03 14:29:09</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>10103894</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:26:06</td>
+		<td>2022-12-03 14:29:07</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:30</td>
+	    <td>2022-12-03 14:36:30*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>10103873</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 14:26:06</td>
+		<td>2022-12-03 14:29:05</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>10103853</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:25:12</td>
+		<td>2022-12-03 14:29:03</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>10103836</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 14:25:07</td>
+		<td>2022-12-03 14:29:00</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>10103820</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-03 14:22:51</td>
+		<td>2022-12-03 14:28:58</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,Atm  engineer at site.</td>-->
+        <td>Reactive</td>
+        <td>sarita</td>
+        <td>2022-12-03 14:36:30</td>
+	    <td>2022-12-03 14:36:30*No Issue found after video verification,Atm  engineer at site.*sarita</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>10035986</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 12:00:00</td>
+		<td>2022-12-03 12:00:32</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>10035961</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 12:00:00</td>
+		<td>2022-12-03 12:00:30</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>10024077</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>021</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-03 11:37:01</td>
+		<td>2022-12-03 11:37:35</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>10024044</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>021</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door</td>
+	 	<td>Backroom door</td>
+        <td>2022-12-03 11:35:09</td>
+		<td>2022-12-03 11:37:31</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>9977696</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 09:52:04</td>
+		<td>2022-12-03 09:55:26</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>9977680</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 09:51:59</td>
+		<td>2022-12-03 09:55:24</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>9916513</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 08:00:00</td>
+		<td>2022-12-03 08:00:07</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>9916486</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 08:00:00</td>
+		<td>2022-12-03 08:00:05</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>9881577</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>105</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 07:00:00</td>
+		<td>2022-12-03 07:00:05</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>9881551</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 07:00:00</td>
+		<td>2022-12-03 07:00:03</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>9824184</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 05:18:56</td>
+		<td>2022-12-03 05:23:51</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Euronet</td>
+     <td>9824131</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 05:19:01</td>
+		<td>2022-12-03 05:23:45</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Euronet</td>
+     <td>9775765</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 04:00:00</td>
+		<td>2022-12-03 04:00:29</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Euronet</td>
+     <td>9775738</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 04:00:00</td>
+		<td>2022-12-03 04:00:27</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Euronet</td>
+     <td>9766723</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 03:37:18</td>
+		<td>2022-12-03 03:45:20</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Euronet</td>
+     <td>9766697</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 03:37:24</td>
+		<td>2022-12-03 03:45:18</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Euronet</td>
+     <td>9766689</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>110</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 03:37:24</td>
+		<td>2022-12-03 03:45:17</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Euronet</td>
+     <td>9643519</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>105</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 00:00:00</td>
+		<td>2022-12-03 00:00:22</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Euronet</td>
+     <td>9643480</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 00:00:00</td>
+		<td>2022-12-03 00:00:20</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Euronet</td>
+     <td>9643424</td>
+     <td>North</td>
+     <!-- <td>Mainpuri,Uttar Pradesh</td>
+     <td>Main Chowraha , Adjoining ICICI ATM, Mainpuri</td>-->
+    <td>P3ENMR02</td>
+    <td>Chauhan Market , Bhawant Crossing Main Chowraha , Adjoining ICICI ATM, Mainpuri- 205001</td>
+	<td>Mainpuri</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-03 00:00:00</td>
+		<td>2022-12-03 00:00:18</td>
+		<td>03-December-2022</td>
+		<td>10.109.9.108</td>
+		<td>SEC</td>	
+		<td>080584</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.109.9.108' and b.receivedtime between '2022-12-03 00:00:00' and '2022-12-03 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

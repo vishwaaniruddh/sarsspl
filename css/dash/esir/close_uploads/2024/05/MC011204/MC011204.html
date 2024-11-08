@@ -1,0 +1,2950 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./MC011204_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./MC011204_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+
+
+  <title>Comfort Techno</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+  <link href="./MC011204_files/css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./MC011204_files/bootstrap.css">
+
+  <link rel="stylesheet" href="./MC011204_files/bootstrap-datepicker.css">
+
+
+
+  <script src="./MC011204_files/jquery.min(1).js.download"></script>
+  <link rel="stylesheet" href="./MC011204_files/bootstrap.min.css">
+  <script src="./MC011204_files/bootstrap.min.js.download"></script>
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="./MC011204_files/style.css">
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <header role="banner">
+
+    <nav class="navbar navbar-expand-lg " style="color:#fff;">
+      <div class="container">
+        <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">
+          <div style="display:inline-block;"><img src="./MC011204_files/download.png" width="32px">Comfort Techno+</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+                
+                  <!-- <a id="1" style="" class="dropdown-item" href="#">Add Site</a> -->
+                                  <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                				                              </div>
+
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                
+
+              </div>
+
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard_all.php">View Sites</a>
+                                  <a id="6" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/lastcommunication.php">Last Communication</a>
+                                  <a id="12" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertviewAsc.php">View Alert Report</a>
+                                  <a id="11" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/def1.php">Mains &amp; UPS Fail</a>
+                                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>
+                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a>
+              </div>
+
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown05">
+                
+                  <a class="dropdown-item" href="http://192.168.100.21:8080/css/allalert_data.php">All Alert</a>
+
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+			  
+			   
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+                                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+              </div>
+            </li><li class="nav-item">
+              <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+
+            </li>
+            <li class="nav-item">
+              &nbsp;&nbsp;&nbsp;Welcome Sandeep Kumbhar
+            </li>
+
+
+          </ul>
+
+
+
+
+
+
+          
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+              <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </li>
+
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
+
+
+  <!-- END slider -->
+
+
+
+
+
+
+
+
+  <!-- END section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./MC011204_files/jquery-3.2.1.min.js.download"></script>
+  <script src="./MC011204_files/popper.min.js.download"></script>
+  <script src="./MC011204_files/bootstrap.min(1).js.download"></script>
+  <script src="./MC011204_files/owl.carousel.min.js.download"></script>
+  <script src="./MC011204_files/bootstrap-datepicker.js.download"></script>
+  <script src="./MC011204_files/jquery.timepicker.min.js.download"></script>
+  <script src="./MC011204_files/jquery.waypoints.min.js.download"></script>
+  <script src="./MC011204_files/main.js.download"></script>
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Hitachi">Hitachi</option>
+ <option value="Diebold">Diebold</option>
+ <option value="FSS">FSS</option>
+ <option value="Euronet">Euronet</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./MC011204_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.51.16.28' and b.receivedtime between '2024-05-06 00:00:00' and '2024-05-10 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.51.16.28&#39; and b.receivedtime between &#39;2024-05-06 00:00:00&#39; and &#39;2024-05-10 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:66</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Hitachi</td>
+     <td>3223159</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 18:44:46</td>
+		<td>2024-05-10 18:44:09</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-10 18:45:25</td>
+	    <td>2024-05-10 18:45:25*as per live no one present at site,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Hitachi</td>
+     <td>3207123</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:34:15</td>
+		<td>2024-05-10 11:33:40</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>sneha</td>
+        <td>2024-05-10 11:32:37</td>
+	    <td>2024-05-10 11:32:37*as per live no one present at site,*sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Hitachi</td>
+     <td>3205859</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:05:15</td>
+		<td>2024-05-10 11:04:40</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>authourize person present at site 2way fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 11:08:16</td>
+	    <td>2024-05-10 11:08:16*authourize person present at site 2way fluctuated,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Hitachi</td>
+     <td>3205855</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>014</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:05:12</td>
+		<td>2024-05-10 11:04:37</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>authourize person present at site 2way fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 11:08:16</td>
+	    <td>2024-05-10 11:08:16*authourize person present at site 2way fluctuated,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Hitachi</td>
+     <td>3205435</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 10:54:50</td>
+		<td>2024-05-10 10:54:16</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>authourize person present at site 2way fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 11:08:17</td>
+	    <td>2024-05-10 11:08:17*authourize person present at site 2way fluctuated,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Hitachi</td>
+     <td>3205433</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>014</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 10:54:47</td>
+		<td>2024-05-10 10:54:12</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>authourize person present at site 2way fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 11:08:17</td>
+	    <td>2024-05-10 11:08:17*authourize person present at site 2way fluctuated,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Hitachi</td>
+     <td>3174584</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 22:21:51</td>
+		<td>2024-05-09 22:21:19</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one  present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-09 22:24:52</td>
+	    <td>2024-05-09 22:24:52*as per live no one  present at site,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Hitachi</td>
+     <td>3172953</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 21:51:51</td>
+		<td>2024-05-09 21:51:19</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one  present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-09 21:53:11</td>
+	    <td>2024-05-09 21:53:11*as per live no one  present at site,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Hitachi</td>
+     <td>3170542</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 21:11:50</td>
+		<td>2024-05-09 21:11:18</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>vijayd</td>
+        <td>2024-05-09 21:11:33</td>
+	    <td>2024-05-09 21:11:33*As Per Live No One Present At Site,*vijayd</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Hitachi</td>
+     <td>3168626</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 20:41:49</td>
+		<td>2024-05-09 20:41:18</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-09 20:50:34</td>
+	    <td>2024-05-09 20:50:34*as per live no one present at site,*ShabbirS</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Hitachi</td>
+     <td>3162072</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 11:41:50</td>
+		<td>2024-05-09 18:25:12</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-09 18:24:16</td>
+	    <td>2024-05-09 18:24:16*as per live no one present at site,*ShabbirS</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Hitachi</td>
+     <td>3162071</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 11:11:58</td>
+		<td>2024-05-09 18:25:10</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-09 18:24:16</td>
+	    <td>2024-05-09 18:24:16*as per live no one present at site,*ShabbirS</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Hitachi</td>
+     <td>3162069</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 11:11:57</td>
+		<td>2024-05-09 18:25:08</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-09 18:24:16</td>
+	    <td>2024-05-09 18:24:16*as per live no one present at site,*ShabbirS</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Hitachi</td>
+     <td>3126291</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 02:34:33</td>
+		<td>2024-05-09 02:34:07</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-09 02:34:25</td>
+	    <td>2024-05-09 02:34:25*As Per Live No One Present At Site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Hitachi</td>
+     <td>3123375</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 00:34:31</td>
+		<td>2024-05-09 00:34:06</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-09 00:34:28</td>
+	    <td>2024-05-09 00:34:28*As Per Live No One Present At Site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Hitachi</td>
+     <td>3115699</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 22:14:29</td>
+		<td>2024-05-08 22:14:04</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>SahilG</td>
+        <td>2024-05-08 22:14:18</td>
+	    <td>2024-05-08 22:14:18*As Per Live No One Present At Site,*SahilG</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Hitachi</td>
+     <td>3111736</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 21:04:28</td>
+		<td>2024-05-08 21:04:03</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>Nitesh01</td>
+        <td>2024-05-08 21:04:50</td>
+	    <td>2024-05-08 21:04:50*As Per Live No One Present At Site,*Nitesh01</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Hitachi</td>
+     <td>3109109</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 20:24:27</td>
+		<td>2024-05-08 20:24:03</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>SahilG</td>
+        <td>2024-05-08 20:41:23</td>
+	    <td>2024-05-08 20:41:23*As Per Live No One Present At Site,*SahilG</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Hitachi</td>
+     <td>3104662</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 19:04:25</td>
+		<td>2024-05-08 19:04:02</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 19:04:26</td>
+	    <td>2024-05-08 19:04:26*As Per Live No One Present At Site,*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Hitachi</td>
+     <td>3101448</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 18:04:24</td>
+		<td>2024-05-08 18:04:01</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-08 18:06:37</td>
+	    <td>2024-05-08 18:06:37*As Per Live No One Present At Site,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Hitachi</td>
+     <td>3100644</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 17:44:24</td>
+		<td>2024-05-08 17:44:01</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>vijayd</td>
+        <td>2024-05-08 17:45:29</td>
+	    <td>2024-05-08 17:45:29*as per live no one present at site,*vijayd</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Hitachi</td>
+     <td>3097692</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 16:34:23</td>
+		<td>2024-05-08 16:34:00</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>vijayd</td>
+        <td>2024-05-08 16:35:49</td>
+	    <td>2024-05-08 16:35:49*as per live no one present at site,*vijayd</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Hitachi</td>
+     <td>3089350</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 13:44:20</td>
+		<td>2024-05-08 13:43:58</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site 2way fluctuate</td>-->
+        <td>Reactive</td>
+        <td>shweta patel</td>
+        <td>2024-05-08 13:44:56</td>
+	    <td>2024-05-08 13:44:56*as per live no one present at site 2way fluctuate*shweta patel</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Hitachi</td>
+     <td>3084873</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 12:24:18</td>
+		<td>2024-05-08 12:23:57</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>,As per live no one present at site 2way done</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-08 12:32:02</td>
+	    <td>2024-05-08 12:32:02*,As per live no one present at site 2way done*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Hitachi</td>
+     <td>3079264</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 10:24:16</td>
+		<td>2024-05-08 10:23:56</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As per live no one present at site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-08 10:25:29</td>
+	    <td>2024-05-08 10:25:29*As per live no one present at site 2way done,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Hitachi</td>
+     <td>3075676</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 09:02:06</td>
+		<td>2024-05-08 09:01:45</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site 2 way  fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-08 09:03:44</td>
+	    <td>2024-05-08 09:03:44*As Per Live No One Present At Site 2 way  fluctuated,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Hitachi</td>
+     <td>3075238</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 08:42:06</td>
+		<td>2024-05-08 08:41:45</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site 2waydone,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-08 08:43:13</td>
+	    <td>2024-05-08 08:43:13*As Per Live No One Present At Site 2waydone,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Hitachi</td>
+     <td>3074551</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 08:12:05</td>
+		<td>2024-05-08 08:11:45</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 08:12:29</td>
+	    <td>2024-05-08 08:12:29*As Per Live No One Present At Site,*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Hitachi</td>
+     <td>3073885</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 07:52:05</td>
+		<td>2024-05-08 07:51:44</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-08 07:53:50</td>
+	    <td>2024-05-08 07:53:50*As per live no one present at site,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Hitachi</td>
+     <td>3072855</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 07:22:04</td>
+		<td>2024-05-08 07:21:44</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site 2waydone,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-08 07:22:57</td>
+	    <td>2024-05-08 07:22:57*As Per Live No One Present At Site 2waydone,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Hitachi</td>
+     <td>3072135</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 07:02:04</td>
+		<td>2024-05-08 07:01:44</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-08 07:03:05</td>
+	    <td>2024-05-08 07:03:05*As per live no one present at site*Priyankagupta</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Hitachi</td>
+     <td>3069279</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 05:49:54</td>
+		<td>2024-05-08 05:49:34</td>
+		<td>08-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>ritikk</td>
+        <td>2024-05-08 05:52:50</td>
+	    <td>2024-05-08 05:52:50*as per live no one present at site,*ritikk</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Hitachi</td>
+     <td>3033974</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 18:26:07</td>
+		<td>2024-05-07 18:25:50</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>yashr</td>
+        <td>2024-05-07 18:38:19</td>
+	    <td>2024-05-07 18:38:19*Person doing transaction,*yashr</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Hitachi</td>
+     <td>3032084</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 17:56:40</td>
+		<td>2024-05-07 17:56:24</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As per live  authorised person present at site 2way not workin,</td>-->
+        <td>Reactive</td>
+        <td>yashr</td>
+        <td>2024-05-07 17:57:11</td>
+	    <td>2024-05-07 17:57:11*As per live  authorised person present at site 2way not workin,*yashr</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Hitachi</td>
+     <td>3032081</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 17:56:37</td>
+		<td>2024-05-07 17:56:21</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As per live authorised person present at site 2way not workin,,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-07 18:00:14</td>
+	    <td>2024-05-07 18:00:14*As per live authorised person present at site 2way not workin,,*ShabbirS</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Hitachi</td>
+     <td>3031632</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 17:49:06</td>
+		<td>2024-05-07 17:48:50</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>Hitavhi Cash loading person present on site . ID card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>yashr</td>
+        <td>2024-05-07 17:52:44</td>
+	    <td>2024-05-07 17:52:44*Hitavhi Cash loading person present on site . ID card shown 2 way done,*yashr</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Hitachi</td>
+     <td>3029843</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 17:19:52</td>
+		<td>2024-05-07 17:19:37</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>engineer person presenrt on site 2 way is 1 way,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-07 17:23:45</td>
+	    <td>2024-05-07 17:23:45*engineer person presenrt on site 2 way is 1 way,*ShabbirS</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Hitachi</td>
+     <td>3029839</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 17:19:50</td>
+		<td>2024-05-07 17:19:34</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>engineer person presenrt on site  2 way is 1 way</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2024-05-07 17:23:29</td>
+	    <td>2024-05-07 17:23:29*engineer person presenrt on site  2 way is 1 way*helpdesk</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Hitachi</td>
+     <td>3004667</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 10:39:58</td>
+		<td>2024-05-07 10:39:45</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>authorized personon site 2way fluctuated qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-07 10:58:50</td>
+	    <td>2024-05-07 10:58:50*authorized personon site 2way fluctuated qrt not responding*TeamLead</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Hitachi</td>
+     <td>3002901</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 10:10:44</td>
+		<td>2024-05-07 10:10:30</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>authorized personon site 2way fluctuated qrt not responding,</td>-->
+        <td>Reactive</td>
+        <td>Muskaan</td>
+        <td>2024-05-07 10:10:50</td>
+	    <td>2024-05-07 10:10:50*authorized personon site 2way fluctuated qrt not responding,*Muskaan</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Hitachi</td>
+     <td>3002895</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>014</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 10:10:41</td>
+		<td>2024-05-07 10:10:27</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>,authorized personon site 2way fluctuated qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-07 10:11:52</td>
+	    <td>2024-05-07 10:11:52*,authorized personon site 2way fluctuated qrt not responding*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Hitachi</td>
+     <td>3002340</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 10:01:58</td>
+		<td>2024-05-07 10:01:45</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live no one  PresentAt Site,</td>-->
+        <td>Reactive</td>
+        <td>Muskaan</td>
+        <td>2024-05-07 10:01:34</td>
+	    <td>2024-05-07 10:01:34*As Per Live no one  PresentAt Site,*Muskaan</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Hitachi</td>
+     <td>3000693</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 09:32:59</td>
+		<td>2024-05-07 09:32:46</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>Authorize person present at site 2 way fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-07 09:36:12</td>
+	    <td>2024-05-07 09:36:12*Authorize person present at site 2 way fluctuated,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Hitachi</td>
+     <td>3000692</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 09:32:57</td>
+		<td>2024-05-07 09:32:43</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>Authorize person present at site 2 way fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-07 09:36:12</td>
+	    <td>2024-05-07 09:36:12*Authorize person present at site 2 way fluctuated,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Hitachi</td>
+     <td>2968906</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2024-05-06 23:03:01</td>
+		<td>2024-05-06 23:02:51</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-07 00:51:07</td>
+	    <td>2024-05-07 00:51:07*As Per Live No One Present At Site,*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Hitachi</td>
+     <td>2935889</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2024-05-06 14:38:03</td>
+		<td>2024-05-06 14:38:07</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>supervisior  person present  at site mr. jaishyam malav 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 14:40:11</td>
+	    <td>2024-05-06 14:40:11*supervisior  person present  at site mr. jaishyam malav 2 way done,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Hitachi</td>
+     <td>2935879</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hood Door Open Sensor</td>
+	 	<td>Hood Door Open Sensor</td>
+        <td>2024-05-06 14:38:03</td>
+		<td>2024-05-06 14:38:01</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>supervisior  person present  at site mr. jaishyam malav 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 14:40:00</td>
+	    <td>2024-05-06 14:40:00*supervisior  person present  at site mr. jaishyam malav 2 way done,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Hitachi</td>
+     <td>2935877</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 14:38:03</td>
+		<td>2024-05-06 14:37:59</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>supervisior  person present  at site mr. jaishyam malav 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 14:40:00</td>
+	    <td>2024-05-06 14:40:00*supervisior  person present  at site mr. jaishyam malav 2 way done,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Hitachi</td>
+     <td>2935874</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>022</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Thermal Sensor</td>
+	 	<td>ATM Thermal Sensor</td>
+        <td>2024-05-06 14:38:03</td>
+		<td>2024-05-06 14:37:57</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>supervisior  person present  at site mr. jaishyam malav 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 14:40:00</td>
+	    <td>2024-05-06 14:40:00*supervisior  person present  at site mr. jaishyam malav 2 way done,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Hitachi</td>
+     <td>2935872</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal</td>
+	 	<td>AC Removal</td>
+        <td>2024-05-06 14:38:03</td>
+		<td>2024-05-06 14:37:55</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>supervisior  person present  at site mr. jaishyam malav 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 14:39:53</td>
+	    <td>2024-05-06 14:39:53*supervisior  person present  at site mr. jaishyam malav 2 way done,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Hitachi</td>
+     <td>2935868</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open Sensor</td>
+	 	<td>Chest Door Open Sensor</td>
+        <td>2024-05-06 14:38:02</td>
+		<td>2024-05-06 14:37:53</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>supervisior  person present  at site mr. jaishyam malav 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 14:39:53</td>
+	    <td>2024-05-06 14:39:53*supervisior  person present  at site mr. jaishyam malav 2 way done,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Hitachi</td>
+     <td>2935865</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-05-06 14:38:00</td>
+		<td>2024-05-06 14:37:51</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>supervisior  person present  at site mr. jaishyam malav 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 14:39:53</td>
+	    <td>2024-05-06 14:39:53*supervisior  person present  at site mr. jaishyam malav 2 way done,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Hitachi</td>
+     <td>2935862</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 14:37:57</td>
+		<td>2024-05-06 14:37:48</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>supervisior  person present  at site mr. jaishyam malav 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 14:39:53</td>
+	    <td>2024-05-06 14:39:53*supervisior  person present  at site mr. jaishyam malav 2 way done,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Hitachi</td>
+     <td>2910249</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 07:14:35</td>
+		<td>2024-05-06 07:14:28</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site 2waydone,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-06 07:15:04</td>
+	    <td>2024-05-06 07:15:04*As Per Live No One Present At Site 2waydone,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+    
+  
+  
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Hitachi</td>
+     <td>14446837</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-10 11:34:15</td>
+		<td>2024-05-10 11:33:42</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Hitachi</td>
+     <td>14435922</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-10 11:06:19</td>
+		<td>2024-05-10 11:05:44</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Hitachi</td>
+     <td>14432423</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-10 10:55:37</td>
+		<td>2024-05-10 10:55:02</td>
+		<td>10-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Hitachi</td>
+     <td>13872163</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-09 11:51:12</td>
+		<td>2024-05-09 18:25:16</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Hitachi</td>
+     <td>13872149</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-09 11:41:50</td>
+		<td>2024-05-09 18:25:14</td>
+		<td>09-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Hitachi</td>
+     <td>12716024</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-07 18:37:07</td>
+		<td>2024-05-07 18:36:51</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Hitachi</td>
+     <td>12711846</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-07 18:26:07</td>
+		<td>2024-05-07 18:25:52</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Hitachi</td>
+     <td>12657317</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-07 09:35:11</td>
+		<td>2024-05-07 09:34:57</td>
+		<td>07-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Hitachi</td>
+     <td>12029901</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-06 14:39:05</td>
+		<td>2024-05-06 14:38:55</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Hitachi</td>
+     <td>12029522</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>034</td>
+	<td>TR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-06 14:38:05</td>
+		<td>2024-05-06 14:38:09</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Hitachi</td>
+     <td>12029495</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2024-05-06 14:38:03</td>
+		<td>2024-05-06 14:38:05</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Hitachi</td>
+     <td>12029478</td>
+     <td>North</td>
+     <!-- <td>Kota,Rajasthan</td>
+     <td>C 37 LADMARK BUNDI ROAD KOTA</td>-->
+    <td>MC011204</td>
+    <td>C 37 LADMARK BUNDI ROAD KOTA</td>
+	<td>Kota</td>
+	<td>Rajasthan</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2024-05-06 14:38:03</td>
+		<td>2024-05-06 14:38:03</td>
+		<td>06-May-2024</td>
+		<td>172.51.16.28</td>
+		<td>RASS</td>	
+		<td>080282</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.51.16.28' and b.receivedtime between '2024-05-06 00:00:00' and '2024-05-10 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./MC011204_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

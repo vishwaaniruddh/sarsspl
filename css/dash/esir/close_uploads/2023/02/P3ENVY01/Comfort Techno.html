@@ -1,0 +1,4689 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.109.9.245' and b.receivedtime between '2023-02-22 00:00:00' and '2023-02-22 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;10.109.9.245&#39; and b.receivedtime between &#39;2023-02-22 00:00:00&#39; and &#39;2023-02-22 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:113</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>82761089</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open Restoral</td>
+        <td>2023-02-22 12:24:55</td>
+		<td>2023-02-22 12:24:55</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>82757856</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:25</td>
+		<td>2023-02-22 12:19:53</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>82757749</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:25</td>
+		<td>2023-02-22 12:19:43</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>82757638</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:15</td>
+		<td>2023-02-22 12:19:32</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>82757612</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>559</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:19:30</td>
+		<td>2023-02-22 12:19:30</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>82757525</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:15</td>
+		<td>2023-02-22 12:19:21</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>82757495</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>031</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Sensor</td>
+	 	<td>ATM 1 Hood Door Sensor</td>
+        <td>2023-02-22 12:19:15</td>
+		<td>2023-02-22 12:19:19</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>82757468</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-02-22 12:19:15</td>
+		<td>2023-02-22 12:19:17</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>82757446</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-02-22 12:19:15</td>
+		<td>2023-02-22 12:19:15</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>82757379</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>031</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Sensor</td>
+	 	<td>ATM 1 Hood Door Sensor</td>
+        <td>2023-02-22 12:09:15</td>
+		<td>2023-02-22 12:19:08</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site  mr. abdul 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-02-22 12:21:25</td>
+	    <td>2023-02-22 12:21:25*Comfort engineer at site  mr. abdul 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>82757268</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-02-22 12:09:15</td>
+		<td>2023-02-22 12:18:57</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site  mr. abdul 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-02-22 12:21:25</td>
+	    <td>2023-02-22 12:21:25*Comfort engineer at site  mr. abdul 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>82757162</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-02-22 12:09:15</td>
+		<td>2023-02-22 12:18:47</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site  mr. abdul 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-02-22 12:21:25</td>
+	    <td>2023-02-22 12:21:25*Comfort engineer at site  mr. abdul 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>82757142</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>034</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV 1+2+3 Removal</td>
+	 	<td>CCTV 1+2+3 Removal</td>
+        <td>2023-02-22 12:18:45</td>
+		<td>2023-02-22 12:18:45</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>82757107</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>047</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+	 	<td>Panel Door Tamper (Inbuilt Zone) Restoral</td>
+        <td>2023-02-22 12:18:41</td>
+		<td>2023-02-22 12:18:41</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>82757046</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:11</td>
+		<td>2023-02-22 12:18:36</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>82756963</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>400</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:18:25</td>
+		<td>2023-02-22 12:18:27</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>82756939</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:11</td>
+		<td>2023-02-22 12:18:25</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>82756829</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:01</td>
+		<td>2023-02-22 12:18:14</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>82756733</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>508</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:01</td>
+		<td>2023-02-22 12:18:04</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>82756689</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>510</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:17:58</td>
+		<td>2023-02-22 12:17:58</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>82756630</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>507</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:01</td>
+		<td>2023-02-22 12:17:53</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>82756523</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:01</td>
+		<td>2023-02-22 12:17:43</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>82756436</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>559</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:17:34</td>
+		<td>2023-02-22 12:17:34</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>82756417</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:09:01</td>
+		<td>2023-02-22 12:17:32</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>82756309</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:07:58</td>
+		<td>2023-02-22 12:17:21</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>82756273</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>601</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:11:14</td>
+		<td>2023-02-22 12:17:18</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>82746845</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>559</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 12:02:43</td>
+		<td>2023-02-22 12:02:43</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>82746630</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-02-22 12:02:23</td>
+		<td>2023-02-22 12:02:23</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>82743368</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:58:43</td>
+		<td>2023-02-22 11:58:43</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>82743270</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-02-22 11:58:35</td>
+		<td>2023-02-22 11:58:35</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>82743042</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:58:15</td>
+		<td>2023-02-22 11:58:15</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>82742673</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>510</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:57:45</td>
+		<td>2023-02-22 11:57:45</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>82742352</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>601</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:57:17</td>
+		<td>2023-02-22 11:57:17</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>82742322</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>510</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:57:15</td>
+		<td>2023-02-22 11:57:15</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>82742154</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>510</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:57:00</td>
+		<td>2023-02-22 11:57:01</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>82741325</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>400</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:55:46</td>
+		<td>2023-02-22 11:55:47</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>82741239</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>559</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:55:38</td>
+		<td>2023-02-22 11:55:38</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>82740480</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:54:28</td>
+		<td>2023-02-22 11:54:28</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>82740457</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:54:23</td>
+		<td>2023-02-22 11:54:26</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>82740432</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:54:23</td>
+		<td>2023-02-22 11:54:23</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>82740393</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:54:20</td>
+		<td>2023-02-22 11:54:20</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>82740371</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:54:15</td>
+		<td>2023-02-22 11:54:18</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>82740344</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:54:15</td>
+		<td>2023-02-22 11:54:15</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>82740221</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:54:02</td>
+		<td>2023-02-22 11:54:04</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>82740193</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>601</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-22 11:53:58</td>
+		<td>2023-02-22 11:54:02</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>82740172</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:53:58</td>
+		<td>2023-02-22 11:54:00</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>82740148</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:53:57</td>
+		<td>2023-02-22 11:53:58</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>82739286</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:52:33</td>
+		<td>2023-02-22 11:52:37</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>82739259</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:52:33</td>
+		<td>2023-02-22 11:52:35</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>82739233</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:52:23</td>
+		<td>2023-02-22 11:52:33</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>82739209</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:52:23</td>
+		<td>2023-02-22 11:52:30</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>82739181</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-02-22 11:52:23</td>
+		<td>2023-02-22 11:52:28</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr.abdul id card shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-02-22 11:51:35</td>
+	    <td>2023-02-22 11:51:35*Comfort engineer at site mr.abdul id card shown 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>82739159</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal Restoral</td>
+        <td>2023-02-22 11:52:21</td>
+		<td>2023-02-22 11:52:26</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>82739129</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:52:21</td>
+		<td>2023-02-22 11:52:23</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>82739101</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:52:21</td>
+		<td>2023-02-22 11:52:21</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>82739042</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:52:11</td>
+		<td>2023-02-22 11:52:16</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>82739009</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:52:11</td>
+		<td>2023-02-22 11:52:14</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>82738977</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-02-22 11:52:11</td>
+		<td>2023-02-22 11:52:11</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr.abdul id card shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-02-22 11:51:29</td>
+	    <td>2023-02-22 11:51:29*Comfort engineer at site mr.abdul id card shown 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>82738690</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>008</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open Restoral</td>
+        <td>2023-02-22 11:51:49</td>
+		<td>2023-02-22 11:51:49</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>82737007</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch Restoral</td>
+        <td>2023-02-22 11:49:15</td>
+		<td>2023-02-22 11:49:19</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>82736984</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:49:15</td>
+		<td>2023-02-22 11:49:17</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>82736956</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:49:15</td>
+		<td>2023-02-22 11:49:15</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>82736911</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:49:05</td>
+		<td>2023-02-22 11:49:11</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>82736878</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:49:05</td>
+		<td>2023-02-22 11:49:08</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>82736853</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-02-22 11:49:05</td>
+		<td>2023-02-22 11:49:06</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr. abdul id card shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-02-22 11:49:09</td>
+	    <td>2023-02-22 11:49:09*Comfort engineer at site mr. abdul id card shown 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>82736652</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:48:45</td>
+		<td>2023-02-22 11:48:47</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>82736627</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:48:45</td>
+		<td>2023-02-22 11:48:45</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>82736578</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:48:35</td>
+		<td>2023-02-22 11:48:40</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>82736543</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:48:35</td>
+		<td>2023-02-22 11:48:37</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>82736520</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-02-22 11:48:35</td>
+		<td>2023-02-22 11:48:35</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr. abdul id card shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2023-02-22 11:49:09</td>
+	    <td>2023-02-22 11:49:09*Comfort engineer at site mr. abdul id card shown 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>82736208</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>508</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 11:48:05</td>
+		<td>2023-02-22 11:48:05</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>82668862</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 10:00:00</td>
+		<td>2023-02-22 10:00:00</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>82668270</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>511</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 09:59:00</td>
+		<td>2023-02-22 09:59:08</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>82584694</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 08:00:00</td>
+		<td>2023-02-22 08:00:01</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>82583889</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 07:59:00</td>
+		<td>2023-02-22 07:59:00</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>82540004</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>510</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 06:59:00</td>
+		<td>2023-02-22 06:59:03</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>82539939</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>509</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 06:59:00</td>
+		<td>2023-02-22 06:59:01</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>82502814</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:24:56</td>
+		<td>2023-02-22 06:06:02</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>82502694</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:24:56</td>
+		<td>2023-02-22 06:05:52</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>82502575</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-02-22 05:24:56</td>
+		<td>2023-02-22 06:05:41</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>pravins</td>
+        <td>2023-02-22 06:10:38</td>
+	    <td>2023-02-22 06:10:38*Guard using backroom,*pravins</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>82502449</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open Restoral</td>
+        <td>2023-02-22 05:24:04</td>
+		<td>2023-02-22 06:05:31</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>82502312</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:24:04</td>
+		<td>2023-02-22 06:05:20</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>82502177</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:24:04</td>
+		<td>2023-02-22 06:05:10</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>82502051</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:23:54</td>
+		<td>2023-02-22 06:04:59</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>82501929</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:23:54</td>
+		<td>2023-02-22 06:04:48</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>82501805</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-02-22 05:23:54</td>
+		<td>2023-02-22 06:04:38</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>pravins</td>
+        <td>2023-02-22 06:10:38</td>
+	    <td>2023-02-22 06:10:38*Guard using backroom,*pravins</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>82501694</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open Restoral</td>
+        <td>2023-02-22 05:20:07</td>
+		<td>2023-02-22 06:04:27</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>82501573</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:20:07</td>
+		<td>2023-02-22 06:04:17</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>82501449</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:20:07</td>
+		<td>2023-02-22 06:04:06</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>82501326</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:19:57</td>
+		<td>2023-02-22 06:03:56</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>82501189</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:19:57</td>
+		<td>2023-02-22 06:03:45</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>82501058</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2023-02-22 05:19:57</td>
+		<td>2023-02-22 06:03:35</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>As per Live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>pravins</td>
+        <td>2023-02-22 06:03:12</td>
+	    <td>2023-02-22 06:03:12*As per Live no one present at site,*pravins</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>82500922</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>508</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 05:19:27</td>
+		<td>2023-02-22 06:03:24</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>82500886</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 06:00:00</td>
+		<td>2023-02-22 06:03:21</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>82411773</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 04:00:00</td>
+		<td>2023-02-22 04:02:19</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>82409114</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 03:59:00</td>
+		<td>2023-02-22 03:59:01</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>82377716</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>047</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+        <td>2023-02-22 03:15:21</td>
+		<td>2023-02-22 03:15:21</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>82370558</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 03:05:31</td>
+		<td>2023-02-22 03:05:34</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>82370529</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 03:05:31</td>
+		<td>2023-02-22 03:05:32</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>82370487</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 03:05:21</td>
+		<td>2023-02-22 03:05:28</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>82370457</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 03:05:21</td>
+		<td>2023-02-22 03:05:26</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>82370430</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>047</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+        <td>2023-02-22 03:05:21</td>
+		<td>2023-02-22 03:05:24</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td>As  Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>pravins</td>
+        <td>2023-02-22 03:05:35</td>
+	    <td>2023-02-22 03:05:35*As  Per Live No One Present At Site,*pravins</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>82370401</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>047</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Door Tamper (Inbuilt Zone)</td>
+	 	<td>Panel Door Tamper (Inbuilt Zone) Restoral</td>
+        <td>2023-02-22 03:05:20</td>
+		<td>2023-02-22 03:05:21</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>82323130</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>511</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 01:59:00</td>
+		<td>2023-02-22 02:01:19</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>82323073</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 02:00:00</td>
+		<td>2023-02-22 02:01:15</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>82231522</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 00:00:00</td>
+		<td>2023-02-22 00:00:32</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>82231480</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>510</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 00:00:00</td>
+		<td>2023-02-22 00:00:30</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>82231431</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>509</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-22 00:00:00</td>
+		<td>2023-02-22 00:00:27</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>82231383</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-21 23:59:00</td>
+		<td>2023-02-22 00:00:25</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>82231234</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>510</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-21 23:59:00</td>
+		<td>2023-02-22 00:00:19</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>82231120</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>509</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-21 23:59:00</td>
+		<td>2023-02-22 00:00:17</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>82231000</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>504</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-21 23:56:51</td>
+		<td>2023-02-22 00:00:14</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>82230886</td>
+     <td>South</td>
+     <!-- <td>Vaniyambadi,Tamil Nadu</td>
+     <td>Alangayam cross road, Koramedu Opp. To Hr. sec. School</td>-->
+    <td>P3ENVY01</td>
+    <td>No.4/5, Alangayam cross road, Koramedu Opp. To Hr. sec. School), Vaniyambadi - 635752</td>
+	<td>Vaniyambadi</td>
+	<td>Tamil Nadu</td>
+	<td>504</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-21 23:56:41</td>
+		<td>2023-02-22 00:00:12</td>
+		<td>22-February-2023</td>
+		<td>10.109.9.245</td>
+		<td>securico_gx4816</td>	
+		<td>090529</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.109.9.245' and b.receivedtime between '2023-02-22 00:00:00' and '2023-02-22 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

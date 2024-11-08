@@ -1,0 +1,8611 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.126.36.44' and b.receivedtime between '2023-02-28 00:00:00' and '2023-02-28 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;10.126.36.44&#39; and b.receivedtime between &#39;2023-02-28 00:00:00&#39; and &#39;2023-02-28 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:219</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Diebold</td>
+     <td>88694127</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-02-28 13:59:39</td>
+		<td>2023-02-28 13:59:44</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Diebold</td>
+     <td>88693811</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>018</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:59:09</td>
+		<td>2023-02-28 13:59:18</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Diebold</td>
+     <td>88693747</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV 1+2+3 Removal</td>
+	 	<td>CCTV 1+2+3 Removal</td>
+        <td>2023-02-28 13:59:07</td>
+		<td>2023-02-28 13:59:12</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Diebold</td>
+     <td>88692784</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:55:34</td>
+		<td>2023-02-28 13:57:44</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Diebold</td>
+     <td>88692708</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:55:24</td>
+		<td>2023-02-28 13:57:36</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Diebold</td>
+     <td>88692653</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>011</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:55:19</td>
+		<td>2023-02-28 13:57:30</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Diebold</td>
+     <td>88692594</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-02-28 13:55:18</td>
+		<td>2023-02-28 13:57:23</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Diebold</td>
+     <td>88692531</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>016</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:55:14</td>
+		<td>2023-02-28 13:57:17</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Diebold</td>
+     <td>88692470</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>016</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque Drop Box Removal</td>
+	 	<td>Cheque Drop Box Removal</td>
+        <td>2023-02-28 13:55:11</td>
+		<td>2023-02-28 13:57:11</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Diebold</td>
+     <td>88692409</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>018</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:55:09</td>
+		<td>2023-02-28 13:57:05</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Diebold</td>
+     <td>88692348</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV 1+2+3 Removal</td>
+	 	<td>CCTV 1+2+3 Removal</td>
+        <td>2023-02-28 13:55:07</td>
+		<td>2023-02-28 13:56:58</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site as per live 2 way not working properly id shown,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 13:57:26</td>
+	    <td>2023-02-28 13:57:26*Comfort engineer at site as per live 2 way not working properly id shown,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Diebold</td>
+     <td>88692282</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>020</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:55:05</td>
+		<td>2023-02-28 13:56:52</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Diebold</td>
+     <td>88692222</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>019</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:55:05</td>
+		<td>2023-02-28 13:56:46</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Diebold</td>
+     <td>88692157</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-02-28 13:55:02</td>
+		<td>2023-02-28 13:56:40</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Diebold</td>
+     <td>88692091</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>020</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:55:02</td>
+		<td>2023-02-28 13:56:33</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Diebold</td>
+     <td>88692035</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-02-28 13:55:02</td>
+		<td>2023-02-28 13:56:27</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Diebold</td>
+     <td>88691968</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>019</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Speaker / MIC Removal</td>
+	 	<td>Speaker / MIC Removal</td>
+        <td>2023-02-28 13:55:02</td>
+		<td>2023-02-28 13:56:21</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Diebold</td>
+     <td>88691902</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>022</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:55:00</td>
+		<td>2023-02-28 13:56:15</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Diebold</td>
+     <td>88691839</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-02-28 13:54:58</td>
+		<td>2023-02-28 13:56:08</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Diebold</td>
+     <td>88691760</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>022</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor</td>
+	 	<td>Lobby Temprature Sensor</td>
+        <td>2023-02-28 13:54:58</td>
+		<td>2023-02-28 13:56:02</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Diebold</td>
+     <td>88691693</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:54:48</td>
+		<td>2023-02-28 13:55:56</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Diebold</td>
+     <td>88691630</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:54:45</td>
+		<td>2023-02-28 13:55:50</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Diebold</td>
+     <td>88691561</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:54:43</td>
+		<td>2023-02-28 13:55:43</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Diebold</td>
+     <td>88691492</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:54:42</td>
+		<td>2023-02-28 13:55:37</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Diebold</td>
+     <td>88691423</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:54:41</td>
+		<td>2023-02-28 13:55:31</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Diebold</td>
+     <td>88691358</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>024</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:54:39</td>
+		<td>2023-02-28 13:55:25</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Diebold</td>
+     <td>88691301</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>024</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:54:39</td>
+		<td>2023-02-28 13:55:18</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Diebold</td>
+     <td>88691230</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:54:39</td>
+		<td>2023-02-28 13:55:12</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Diebold</td>
+     <td>88691167</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-02-28 13:54:38</td>
+		<td>2023-02-28 13:55:06</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Diebold</td>
+     <td>88691105</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Chest Door Open</td>
+	 	<td>ATM 2 Chest Door Open</td>
+        <td>2023-02-28 13:54:38</td>
+		<td>2023-02-28 13:55:00</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site as per live 2 way not working properly id shown,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 13:56:08</td>
+	    <td>2023-02-28 13:56:08*Comfort engineer at site as per live 2 way not working properly id shown,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Diebold</td>
+     <td>88691049</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Chest Door Open</td>
+	 	<td>ATM 2 Chest Door Open</td>
+        <td>2023-02-28 13:54:38</td>
+		<td>2023-02-28 13:54:54</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site as per live 2 way not working properly id shown,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 13:56:08</td>
+	    <td>2023-02-28 13:56:08*Comfort engineer at site as per live 2 way not working properly id shown,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Diebold</td>
+     <td>88690995</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Hood Door Sensor</td>
+	 	<td>ATM 2 Hood Door Sensor</td>
+        <td>2023-02-28 13:54:38</td>
+		<td>2023-02-28 13:54:47</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site as per live 2 way not working properly id shown,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 13:56:08</td>
+	    <td>2023-02-28 13:56:08*Comfort engineer at site as per live 2 way not working properly id shown,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Diebold</td>
+     <td>88690940</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:54:27</td>
+		<td>2023-02-28 13:54:41</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Diebold</td>
+     <td>88690885</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2023-02-28 13:54:24</td>
+		<td>2023-02-28 13:54:35</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site as per live 2 way not working properly id shown,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 13:56:08</td>
+	    <td>2023-02-28 13:56:08*Comfort engineer at site as per live 2 way not working properly id shown,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Diebold</td>
+     <td>88690836</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:54:24</td>
+		<td>2023-02-28 13:54:28</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Diebold</td>
+     <td>88690626</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-02-28 13:53:53</td>
+		<td>2023-02-28 13:54:03</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site as per live 2 way not working properly id shown,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 13:56:08</td>
+	    <td>2023-02-28 13:56:08*Comfort engineer at site as per live 2 way not working properly id shown,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Diebold</td>
+     <td>88690575</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-02-28 13:53:52</td>
+		<td>2023-02-28 13:53:57</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Diebold</td>
+     <td>88689675</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:52:19</td>
+		<td>2023-02-28 13:52:26</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Diebold</td>
+     <td>88689615</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 13:52:02</td>
+		<td>2023-02-28 13:52:19</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Diebold</td>
+     <td>88689551</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>System Disarm for Backroom</td>
+	 	<td>System Disarm for Backroom</td>
+        <td>2023-02-28 13:52:02</td>
+		<td>2023-02-28 13:52:13</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site as per live 2 way not working properly id shown,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 13:56:01</td>
+	    <td>2023-02-28 13:56:01*Comfort engineer at site as per live 2 way not working properly id shown,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Diebold</td>
+     <td>88689488</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-02-28 13:52:02</td>
+		<td>2023-02-28 13:52:07</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site as per live 2 way not working properly id shown,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 13:56:01</td>
+	    <td>2023-02-28 13:56:01*Comfort engineer at site as per live 2 way not working properly id shown,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Diebold</td>
+     <td>88628065</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 12:04:13</td>
+		<td>2023-02-28 12:05:14</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Diebold</td>
+     <td>88628010</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CF</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 12:04:06</td>
+		<td>2023-02-28 12:05:08</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Diebold</td>
+     <td>88627369</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>021</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Removal Sensor</td>
+	 	<td>AC Removal Sensor</td>
+        <td>2023-02-28 12:02:51</td>
+		<td>2023-02-28 12:03:53</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Diebold</td>
+     <td>88626716</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 12:01:40</td>
+		<td>2023-02-28 12:02:42</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Diebold</td>
+     <td>88626659</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CF</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 12:01:34</td>
+		<td>2023-02-28 12:02:35</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Diebold</td>
+     <td>88626168</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 12:00:41</td>
+		<td>2023-02-28 12:01:42</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Diebold</td>
+     <td>88626110</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 12:00:34</td>
+		<td>2023-02-28 12:01:36</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Diebold</td>
+     <td>88625765</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 12:00:01</td>
+		<td>2023-02-28 12:01:01</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Diebold</td>
+     <td>88625704</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:59:55</td>
+		<td>2023-02-28 12:00:54</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Diebold</td>
+     <td>88625625</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:59:49</td>
+		<td>2023-02-28 12:00:48</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Diebold</td>
+     <td>88625546</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:59:36</td>
+		<td>2023-02-28 12:00:42</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Diebold</td>
+     <td>88625469</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:59:35</td>
+		<td>2023-02-28 12:00:36</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Diebold</td>
+     <td>88625385</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:59:14</td>
+		<td>2023-02-28 12:00:30</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Diebold</td>
+     <td>88625296</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:59:14</td>
+		<td>2023-02-28 12:00:23</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Diebold</td>
+     <td>88625192</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:59:13</td>
+		<td>2023-02-28 12:00:17</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Diebold</td>
+     <td>88625069</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:59:10</td>
+		<td>2023-02-28 12:00:11</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Diebold</td>
+     <td>88624949</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:58:42</td>
+		<td>2023-02-28 12:00:05</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Diebold</td>
+     <td>88624807</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:58:42</td>
+		<td>2023-02-28 11:59:58</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Diebold</td>
+     <td>88624676</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:58:41</td>
+		<td>2023-02-28 11:59:52</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Diebold</td>
+     <td>88624540</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:58:41</td>
+		<td>2023-02-28 11:59:46</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Diebold</td>
+     <td>88624415</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:58:40</td>
+		<td>2023-02-28 11:59:39</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Diebold</td>
+     <td>88624306</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:58:29</td>
+		<td>2023-02-28 11:59:33</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Diebold</td>
+     <td>88624213</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:58:22</td>
+		<td>2023-02-28 11:59:27</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Diebold</td>
+     <td>88624135</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:58:21</td>
+		<td>2023-02-28 11:59:21</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Diebold</td>
+     <td>88624079</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:57:56</td>
+		<td>2023-02-28 11:59:15</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Diebold</td>
+     <td>88624017</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:57:55</td>
+		<td>2023-02-28 11:59:08</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Diebold</td>
+     <td>88623949</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:57:55</td>
+		<td>2023-02-28 11:59:02</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Diebold</td>
+     <td>88623879</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:57:54</td>
+		<td>2023-02-28 11:58:56</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Diebold</td>
+     <td>88623807</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:57:50</td>
+		<td>2023-02-28 11:58:50</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Diebold</td>
+     <td>88623729</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:31</td>
+		<td>2023-02-28 11:58:43</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Diebold</td>
+     <td>88623653</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:31</td>
+		<td>2023-02-28 11:58:37</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Diebold</td>
+     <td>88623564</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:30</td>
+		<td>2023-02-28 11:58:31</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Diebold</td>
+     <td>88623493</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:30</td>
+		<td>2023-02-28 11:58:25</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Diebold</td>
+     <td>88623432</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:29</td>
+		<td>2023-02-28 11:58:18</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Diebold</td>
+     <td>88623378</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:29</td>
+		<td>2023-02-28 11:58:12</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Diebold</td>
+     <td>88623323</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:28</td>
+		<td>2023-02-28 11:58:06</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Diebold</td>
+     <td>88623133</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:28</td>
+		<td>2023-02-28 11:57:47</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Diebold</td>
+     <td>88623071</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:27</td>
+		<td>2023-02-28 11:57:41</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Diebold</td>
+     <td>88623015</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:56:27</td>
+		<td>2023-02-28 11:57:34</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Diebold</td>
+     <td>88622953</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:56:26</td>
+		<td>2023-02-28 11:57:28</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Diebold</td>
+     <td>88622891</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:16</td>
+		<td>2023-02-28 11:57:22</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Diebold</td>
+     <td>88622832</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:16</td>
+		<td>2023-02-28 11:57:16</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Diebold</td>
+     <td>88622776</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:15</td>
+		<td>2023-02-28 11:57:09</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Diebold</td>
+     <td>88622717</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:15</td>
+		<td>2023-02-28 11:57:03</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Diebold</td>
+     <td>88622657</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:15</td>
+		<td>2023-02-28 11:56:57</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Diebold</td>
+     <td>88622596</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:14</td>
+		<td>2023-02-28 11:56:51</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Diebold</td>
+     <td>88622542</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:14</td>
+		<td>2023-02-28 11:56:44</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Diebold</td>
+     <td>88622475</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:13</td>
+		<td>2023-02-28 11:56:38</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Diebold</td>
+     <td>88622415</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:13</td>
+		<td>2023-02-28 11:56:32</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Diebold</td>
+     <td>88622360</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:12</td>
+		<td>2023-02-28 11:56:26</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Diebold</td>
+     <td>88622305</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:55:12</td>
+		<td>2023-02-28 11:56:19</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Diebold</td>
+     <td>88622243</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:55:11</td>
+		<td>2023-02-28 11:56:13</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Diebold</td>
+     <td>88622186</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:08</td>
+		<td>2023-02-28 11:56:07</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Diebold</td>
+     <td>88622125</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:08</td>
+		<td>2023-02-28 11:56:01</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Diebold</td>
+     <td>88622068</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:07</td>
+		<td>2023-02-28 11:55:54</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Diebold</td>
+     <td>88622001</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:07</td>
+		<td>2023-02-28 11:55:48</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Diebold</td>
+     <td>88621937</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:05</td>
+		<td>2023-02-28 11:55:42</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Diebold</td>
+     <td>88621873</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:05</td>
+		<td>2023-02-28 11:55:36</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Diebold</td>
+     <td>88621811</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:04</td>
+		<td>2023-02-28 11:55:29</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Diebold</td>
+     <td>88621752</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:04</td>
+		<td>2023-02-28 11:55:23</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Diebold</td>
+     <td>88621687</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:03</td>
+		<td>2023-02-28 11:55:17</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Diebold</td>
+     <td>88621631</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:54:03</td>
+		<td>2023-02-28 11:55:11</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Diebold</td>
+     <td>88621568</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:54:02</td>
+		<td>2023-02-28 11:55:04</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Diebold</td>
+     <td>88621513</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:53:45</td>
+		<td>2023-02-28 11:54:58</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Diebold</td>
+     <td>88621455</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:53:45</td>
+		<td>2023-02-28 11:54:52</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Diebold</td>
+     <td>88621390</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:53:44</td>
+		<td>2023-02-28 11:54:45</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Diebold</td>
+     <td>88621335</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:53:24</td>
+		<td>2023-02-28 11:54:39</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Diebold</td>
+     <td>88621285</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:53:23</td>
+		<td>2023-02-28 11:54:33</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Diebold</td>
+     <td>88621222</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:53:23</td>
+		<td>2023-02-28 11:54:27</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Diebold</td>
+     <td>88621170</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:53:22</td>
+		<td>2023-02-28 11:54:21</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Diebold</td>
+     <td>88621118</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:53:12</td>
+		<td>2023-02-28 11:54:14</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Diebold</td>
+     <td>88621065</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:52:45</td>
+		<td>2023-02-28 11:54:08</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Diebold</td>
+     <td>88621009</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:52:45</td>
+		<td>2023-02-28 11:54:02</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Diebold</td>
+     <td>88620945</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:52:44</td>
+		<td>2023-02-28 11:53:56</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Diebold</td>
+     <td>88620887</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:52:44</td>
+		<td>2023-02-28 11:53:49</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Diebold</td>
+     <td>88620824</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:52:43</td>
+		<td>2023-02-28 11:53:43</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Diebold</td>
+     <td>88620760</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:52:22</td>
+		<td>2023-02-28 11:53:37</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Diebold</td>
+     <td>88620701</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:52:22</td>
+		<td>2023-02-28 11:53:31</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Diebold</td>
+     <td>88620640</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:52:21</td>
+		<td>2023-02-28 11:53:24</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Diebold</td>
+     <td>88620575</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:52:07</td>
+		<td>2023-02-28 11:53:18</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Diebold</td>
+     <td>88620520</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:52:07</td>
+		<td>2023-02-28 11:53:12</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Diebold</td>
+     <td>88620468</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:52:06</td>
+		<td>2023-02-28 11:53:06</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Diebold</td>
+     <td>88620411</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:51:50</td>
+		<td>2023-02-28 11:53:00</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Diebold</td>
+     <td>88620355</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:51:50</td>
+		<td>2023-02-28 11:52:53</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Diebold</td>
+     <td>88620298</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:51:31</td>
+		<td>2023-02-28 11:52:47</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Diebold</td>
+     <td>88620231</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:51:31</td>
+		<td>2023-02-28 11:52:41</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Diebold</td>
+     <td>88620162</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:51:30</td>
+		<td>2023-02-28 11:52:34</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Diebold</td>
+     <td>88620094</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:51:15</td>
+		<td>2023-02-28 11:52:28</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Diebold</td>
+     <td>88620029</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:51:15</td>
+		<td>2023-02-28 11:52:22</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Diebold</td>
+     <td>88619955</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:51:14</td>
+		<td>2023-02-28 11:52:16</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Diebold</td>
+     <td>88619894</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:50:21</td>
+		<td>2023-02-28 11:52:09</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Diebold</td>
+     <td>88619831</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:50:21</td>
+		<td>2023-02-28 11:52:03</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Diebold</td>
+     <td>88619765</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:50:19</td>
+		<td>2023-02-28 11:51:57</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Diebold</td>
+     <td>88619707</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:50:19</td>
+		<td>2023-02-28 11:51:51</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Diebold</td>
+     <td>88619645</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:50:18</td>
+		<td>2023-02-28 11:51:44</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Diebold</td>
+     <td>88619588</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:50:18</td>
+		<td>2023-02-28 11:51:38</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Diebold</td>
+     <td>88619530</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:50:17</td>
+		<td>2023-02-28 11:51:32</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Diebold</td>
+     <td>88619464</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:50:17</td>
+		<td>2023-02-28 11:51:26</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Diebold</td>
+     <td>88619398</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:50:16</td>
+		<td>2023-02-28 11:51:19</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Diebold</td>
+     <td>88619335</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:49:56</td>
+		<td>2023-02-28 11:51:13</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Diebold</td>
+     <td>88619274</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:49:54</td>
+		<td>2023-02-28 11:51:07</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Diebold</td>
+     <td>88619203</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:49:54</td>
+		<td>2023-02-28 11:51:01</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Diebold</td>
+     <td>88619141</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:49:53</td>
+		<td>2023-02-28 11:50:54</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Diebold</td>
+     <td>88619088</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:49:49</td>
+		<td>2023-02-28 11:50:48</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Diebold</td>
+     <td>88619028</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:49:32</td>
+		<td>2023-02-28 11:50:42</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Diebold</td>
+     <td>88618961</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:49:32</td>
+		<td>2023-02-28 11:50:36</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Diebold</td>
+     <td>88618902</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:49:31</td>
+		<td>2023-02-28 11:50:29</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Diebold</td>
+     <td>88618842</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:48:58</td>
+		<td>2023-02-28 11:50:23</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Diebold</td>
+     <td>88618778</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:48:58</td>
+		<td>2023-02-28 11:50:17</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Diebold</td>
+     <td>88618713</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:48:57</td>
+		<td>2023-02-28 11:50:11</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Diebold</td>
+     <td>88618658</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:48:57</td>
+		<td>2023-02-28 11:50:04</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Diebold</td>
+     <td>88618602</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:48:56</td>
+		<td>2023-02-28 11:49:58</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Diebold</td>
+     <td>88618534</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:48:51</td>
+		<td>2023-02-28 11:49:52</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Diebold</td>
+     <td>88618469</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:48:46</td>
+		<td>2023-02-28 11:49:46</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Diebold</td>
+     <td>88618396</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:48:36</td>
+		<td>2023-02-28 11:49:39</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Diebold</td>
+     <td>88618334</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:48:34</td>
+		<td>2023-02-28 11:49:33</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Diebold</td>
+     <td>88618205</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:47:45</td>
+		<td>2023-02-28 11:49:19</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Diebold</td>
+     <td>88618077</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:47:45</td>
+		<td>2023-02-28 11:49:06</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Diebold</td>
+     <td>88618011</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:47:44</td>
+		<td>2023-02-28 11:49:00</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Diebold</td>
+     <td>88617947</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:47:44</td>
+		<td>2023-02-28 11:48:53</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Diebold</td>
+     <td>88617880</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:47:43</td>
+		<td>2023-02-28 11:48:47</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Diebold</td>
+     <td>88617817</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:47:39</td>
+		<td>2023-02-28 11:48:41</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Diebold</td>
+     <td>88617757</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:47:15</td>
+		<td>2023-02-28 11:48:35</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>165</td>-->
+    <td>Diebold</td>
+     <td>88617695</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:47:14</td>
+		<td>2023-02-28 11:48:28</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>166</td>-->
+    <td>Diebold</td>
+     <td>88617637</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:47:14</td>
+		<td>2023-02-28 11:48:22</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>167</td>-->
+    <td>Diebold</td>
+     <td>88617579</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:47:13</td>
+		<td>2023-02-28 11:48:16</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>168</td>-->
+    <td>Diebold</td>
+     <td>88617522</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:46:48</td>
+		<td>2023-02-28 11:48:10</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>169</td>-->
+    <td>Diebold</td>
+     <td>88617455</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:46:48</td>
+		<td>2023-02-28 11:48:03</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>170</td>-->
+    <td>Diebold</td>
+     <td>88617388</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:46:47</td>
+		<td>2023-02-28 11:47:57</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>171</td>-->
+    <td>Diebold</td>
+     <td>88617324</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:46:47</td>
+		<td>2023-02-28 11:47:51</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>172</td>-->
+    <td>Diebold</td>
+     <td>88617263</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:46:46</td>
+		<td>2023-02-28 11:47:45</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>173</td>-->
+    <td>Diebold</td>
+     <td>88617197</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:46:37</td>
+		<td>2023-02-28 11:47:38</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>174</td>-->
+    <td>Diebold</td>
+     <td>88617137</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:46:06</td>
+		<td>2023-02-28 11:47:32</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>175</td>-->
+    <td>Diebold</td>
+     <td>88617072</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:46:05</td>
+		<td>2023-02-28 11:47:26</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>176</td>-->
+    <td>Diebold</td>
+     <td>88617004</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:46:05</td>
+		<td>2023-02-28 11:47:20</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>177</td>-->
+    <td>Diebold</td>
+     <td>88616817</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:46:04</td>
+		<td>2023-02-28 11:47:03</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>178</td>-->
+    <td>Diebold</td>
+     <td>88616752</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:45:56</td>
+		<td>2023-02-28 11:46:56</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>179</td>-->
+    <td>Diebold</td>
+     <td>88616695</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:45:39</td>
+		<td>2023-02-28 11:46:50</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>180</td>-->
+    <td>Diebold</td>
+     <td>88616630</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:45:39</td>
+		<td>2023-02-28 11:46:44</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>181</td>-->
+    <td>Diebold</td>
+     <td>88616567</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:45:38</td>
+		<td>2023-02-28 11:46:38</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>182</td>-->
+    <td>Diebold</td>
+     <td>88616497</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:45:16</td>
+		<td>2023-02-28 11:46:31</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>183</td>-->
+    <td>Diebold</td>
+     <td>88616429</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:45:15</td>
+		<td>2023-02-28 11:46:25</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>184</td>-->
+    <td>Diebold</td>
+     <td>88616363</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:45:15</td>
+		<td>2023-02-28 11:46:19</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>185</td>-->
+    <td>Diebold</td>
+     <td>88616299</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:45:14</td>
+		<td>2023-02-28 11:46:13</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>186</td>-->
+    <td>Diebold</td>
+     <td>88616232</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:45</td>
+		<td>2023-02-28 11:46:06</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>187</td>-->
+    <td>Diebold</td>
+     <td>88616168</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:45</td>
+		<td>2023-02-28 11:46:00</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>188</td>-->
+    <td>Diebold</td>
+     <td>88616108</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:45</td>
+		<td>2023-02-28 11:45:54</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>189</td>-->
+    <td>Diebold</td>
+     <td>88616043</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:44:44</td>
+		<td>2023-02-28 11:45:48</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>190</td>-->
+    <td>Diebold</td>
+     <td>88615977</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:49</td>
+		<td>2023-02-28 11:45:41</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>191</td>-->
+    <td>Diebold</td>
+     <td>88615911</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:48</td>
+		<td>2023-02-28 11:45:35</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>192</td>-->
+    <td>Diebold</td>
+     <td>88615848</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:48</td>
+		<td>2023-02-28 11:45:29</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>193</td>-->
+    <td>Diebold</td>
+     <td>88615788</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:48</td>
+		<td>2023-02-28 11:45:23</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>194</td>-->
+    <td>Diebold</td>
+     <td>88615733</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:44:47</td>
+		<td>2023-02-28 11:45:16</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>195</td>-->
+    <td>Diebold</td>
+     <td>88615679</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:02</td>
+		<td>2023-02-28 11:45:10</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>196</td>-->
+    <td>Diebold</td>
+     <td>88615619</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:01</td>
+		<td>2023-02-28 11:45:04</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>197</td>-->
+    <td>Diebold</td>
+     <td>88615555</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:01</td>
+		<td>2023-02-28 11:44:58</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>198</td>-->
+    <td>Diebold</td>
+     <td>88615489</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:00</td>
+		<td>2023-02-28 11:44:52</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>199</td>-->
+    <td>Diebold</td>
+     <td>88615425</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:44:00</td>
+		<td>2023-02-28 11:44:45</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>200</td>-->
+    <td>Diebold</td>
+     <td>88615360</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:43:59</td>
+		<td>2023-02-28 11:44:39</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>201</td>-->
+    <td>Diebold</td>
+     <td>88615299</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:43:59</td>
+		<td>2023-02-28 11:44:33</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>202</td>-->
+    <td>Diebold</td>
+     <td>88615231</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:43:58</td>
+		<td>2023-02-28 11:44:26</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>203</td>-->
+    <td>Diebold</td>
+     <td>88615173</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:43:47</td>
+		<td>2023-02-28 11:44:20</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>204</td>-->
+    <td>Diebold</td>
+     <td>88615116</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:43:23</td>
+		<td>2023-02-28 11:44:14</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>205</td>-->
+    <td>Diebold</td>
+     <td>88615060</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:43:23</td>
+		<td>2023-02-28 11:44:08</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>206</td>-->
+    <td>Diebold</td>
+     <td>88615001</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:43:23</td>
+		<td>2023-02-28 11:44:02</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>207</td>-->
+    <td>Diebold</td>
+     <td>88614940</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:43:23</td>
+		<td>2023-02-28 11:43:55</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>208</td>-->
+    <td>Diebold</td>
+     <td>88614878</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:42:38</td>
+		<td>2023-02-28 11:43:49</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>209</td>-->
+    <td>Diebold</td>
+     <td>88614816</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:42:37</td>
+		<td>2023-02-28 11:43:43</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>210</td>-->
+    <td>Diebold</td>
+     <td>88614762</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:42:37</td>
+		<td>2023-02-28 11:43:36</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>211</td>-->
+    <td>Diebold</td>
+     <td>88614701</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:42:36</td>
+		<td>2023-02-28 11:43:30</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>212</td>-->
+    <td>Diebold</td>
+     <td>88614648</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:42:36</td>
+		<td>2023-02-28 11:43:24</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>213</td>-->
+    <td>Diebold</td>
+     <td>88614588</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:42:35</td>
+		<td>2023-02-28 11:43:18</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>214</td>-->
+    <td>Diebold</td>
+     <td>88614526</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:42:35</td>
+		<td>2023-02-28 11:43:11</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>215</td>-->
+    <td>Diebold</td>
+     <td>88614467</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:42:35</td>
+		<td>2023-02-28 11:43:05</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>216</td>-->
+    <td>Diebold</td>
+     <td>88614040</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-02-28 11:41:48</td>
+		<td>2023-02-28 11:42:19</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction as per live,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2023-02-28 12:00:57</td>
+	    <td>2023-02-28 12:00:57*Person doing transaction as per live,*Mahalaxmi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>217</td>-->
+    <td>Diebold</td>
+     <td>88613729</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>System Initialized with default settings.</td>
+	 	<td>System Initialized with default settings.</td>
+        <td>2023-02-28 11:41:17</td>
+		<td>2023-02-28 11:41:48</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>218</td>-->
+    <td>Diebold</td>
+     <td>88613666</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CF</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 11:41:11</td>
+		<td>2023-02-28 11:41:42</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>219</td>-->
+    <td>Diebold</td>
+     <td>88519055</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Kotapet Offsite</td>-->
+    <td>P1DCHY08</td>
+    <td>Shop: 9-116 Kotapet - Opp Petrol Pump 500035</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-02-28 09:00:00</td>
+		<td>2023-02-28 09:00:30</td>
+		<td>28-February-2023</td>
+		<td>10.126.36.44</td>
+		<td>SMART -I</td>	
+		<td>050071</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.126.36.44' and b.receivedtime between '2023-02-28 00:00:00' and '2023-02-28 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

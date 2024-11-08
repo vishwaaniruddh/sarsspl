@@ -1,0 +1,4948 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./MN000588_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./MN000588_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+
+
+  <title>Comfort Techno</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+  <link href="./MN000588_files/css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./MN000588_files/bootstrap.css">
+
+  <link rel="stylesheet" href="./MN000588_files/bootstrap-datepicker.css">
+
+
+
+  <script src="./MN000588_files/jquery.min(1).js.download"></script>
+  <link rel="stylesheet" href="./MN000588_files/bootstrap.min.css">
+  <script src="./MN000588_files/bootstrap.min.js.download"></script>
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="./MN000588_files/style.css">
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <header role="banner">
+
+    <nav class="navbar navbar-expand-lg " style="color:#fff;">
+      <div class="container">
+        <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">
+          <div style="display:inline-block;"><img src="./MN000588_files/download.png" width="32px">Comfort Techno+</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+                
+                  <!-- <a id="1" style="" class="dropdown-item" href="#">Add Site</a> -->
+                                  <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                				                              </div>
+
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                
+
+              </div>
+
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard_all.php">View Sites</a>
+                                  <a id="6" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/lastcommunication.php">Last Communication</a>
+                                  <a id="12" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertviewAsc.php">View Alert Report</a>
+                                  <a id="11" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/def1.php">Mains &amp; UPS Fail</a>
+                                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>
+                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a>
+              </div>
+
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown05">
+                
+                  <a class="dropdown-item" href="http://192.168.100.21:8080/css/allalert_data.php">All Alert</a>
+
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+			  
+			   
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+                                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+              </div>
+            </li><li class="nav-item">
+              <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+
+            </li>
+            <li class="nav-item">
+              &nbsp;&nbsp;&nbsp;Welcome Sandeep Kumbhar
+            </li>
+
+
+          </ul>
+
+
+
+
+
+
+          
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+              <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </li>
+
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
+
+
+  <!-- END slider -->
+
+
+
+
+
+
+
+
+  <!-- END section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./MN000588_files/jquery-3.2.1.min.js.download"></script>
+  <script src="./MN000588_files/popper.min.js.download"></script>
+  <script src="./MN000588_files/bootstrap.min(1).js.download"></script>
+  <script src="./MN000588_files/owl.carousel.min.js.download"></script>
+  <script src="./MN000588_files/bootstrap-datepicker.js.download"></script>
+  <script src="./MN000588_files/jquery.timepicker.min.js.download"></script>
+  <script src="./MN000588_files/jquery.waypoints.min.js.download"></script>
+  <script src="./MN000588_files/main.js.download"></script>
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Hitachi">Hitachi</option>
+ <option value="Diebold">Diebold</option>
+ <option value="FSS">FSS</option>
+ <option value="Euronet">Euronet</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./MN000588_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.169' and b.receivedtime between '2024-05-06 00:00:00' and '2024-05-10 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.25.169&#39; and b.receivedtime between &#39;2024-05-06 00:00:00&#39; and &#39;2024-05-10 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:120</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Hitachi</td>
+     <td>3220393</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 17:16:06</td>
+		<td>2024-05-10 17:15:25</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-10 18:49:37</td>
+	    <td>2024-05-10 18:49:37*as per live no one present at site,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Hitachi</td>
+     <td>3218068</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 16:03:13</td>
+		<td>2024-05-10 16:02:32</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-10 18:49:37</td>
+	    <td>2024-05-10 18:49:37*as per live no one present at site,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Hitachi</td>
+     <td>3216859</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 15:25:24</td>
+		<td>2024-05-10 15:24:44</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>Nikhil</td>
+        <td>2024-05-10 16:07:27</td>
+	    <td>2024-05-10 16:07:27*Person doing transaction,*Nikhil</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Hitachi</td>
+     <td>3216644</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 15:20:31</td>
+		<td>2024-05-10 15:19:52</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>Nikhil</td>
+        <td>2024-05-10 16:07:27</td>
+	    <td>2024-05-10 16:07:27*Person doing transaction,*Nikhil</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Hitachi</td>
+     <td>3215219</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 14:42:38</td>
+		<td>2024-05-10 14:41:58</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-10 14:42:46</td>
+	    <td>2024-05-10 14:42:46*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Hitachi</td>
+     <td>3214552</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 14:22:15</td>
+		<td>2024-05-10 14:21:36</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-10 14:22:02</td>
+	    <td>2024-05-10 14:22:02*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Hitachi</td>
+     <td>3213831</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 14:02:52</td>
+		<td>2024-05-10 14:02:13</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Cash loading person present on site and guard also present at site 2way fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 14:07:32</td>
+	    <td>2024-05-10 14:07:32*Cash loading person present on site and guard also present at site 2way fluctuated,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Hitachi</td>
+     <td>3212209</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 13:22:23</td>
+		<td>2024-05-10 13:21:45</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-10 13:22:09</td>
+	    <td>2024-05-10 13:22:09*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Hitachi</td>
+     <td>3211885</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 13:15:26</td>
+		<td>2024-05-10 13:14:47</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-10 13:16:35</td>
+	    <td>2024-05-10 13:16:35*Guard using backroom,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Hitachi</td>
+     <td>3211265</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 13:03:43</td>
+		<td>2024-05-10 13:03:05</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-10 13:04:23</td>
+	    <td>2024-05-10 13:04:23*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Hitachi</td>
+     <td>3211041</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 12:59:20</td>
+		<td>2024-05-10 12:58:42</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-10 13:04:23</td>
+	    <td>2024-05-10 13:04:23*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Hitachi</td>
+     <td>3208392</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 12:04:42</td>
+		<td>2024-05-10 12:04:04</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-10 12:05:19</td>
+	    <td>2024-05-10 12:05:19*Guard using backroom,*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Hitachi</td>
+     <td>3206809</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:26:18</td>
+		<td>2024-05-10 11:25:41</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-10 11:32:13</td>
+	    <td>2024-05-10 11:32:13*Guard using backroom,*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Hitachi</td>
+     <td>3206327</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:15:25</td>
+		<td>2024-05-10 11:14:49</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-10 11:17:18</td>
+	    <td>2024-05-10 11:17:18*Guard using backroom 2 way done,*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Hitachi</td>
+     <td>3206097</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:10:16</td>
+		<td>2024-05-10 11:09:40</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,2way done</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-10 11:09:48</td>
+	    <td>2024-05-10 11:09:48*Guard using backroom,2way done*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Hitachi</td>
+     <td>3206085</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:09:59</td>
+		<td>2024-05-10 11:09:23</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,2way done</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-10 11:09:42</td>
+	    <td>2024-05-10 11:09:42*Guard using backroom,2way done*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Hitachi</td>
+     <td>3206026</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:08:42</td>
+		<td>2024-05-10 11:08:06</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 11:09:10</td>
+	    <td>2024-05-10 11:09:10*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Hitachi</td>
+     <td>3205816</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 11:04:30</td>
+		<td>2024-05-10 11:03:54</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 11:04:08</td>
+	    <td>2024-05-10 11:04:08*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Hitachi</td>
+     <td>3203135</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 09:56:10</td>
+		<td>2024-05-10 09:55:35</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site 2waydone,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-10 09:57:13</td>
+	    <td>2024-05-10 09:57:13*As Per Live No One Present At Site 2waydone,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Hitachi</td>
+     <td>3201548</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 09:20:37</td>
+		<td>2024-05-10 09:20:02</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sneha</td>
+        <td>2024-05-10 09:18:55</td>
+	    <td>2024-05-10 09:18:55*Guard using backroom,*sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Hitachi</td>
+     <td>3199812</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 08:28:48</td>
+		<td>2024-05-10 08:28:14</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-10 08:30:12</td>
+	    <td>2024-05-10 08:30:12*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Hitachi</td>
+     <td>3199342</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 08:12:01</td>
+		<td>2024-05-10 08:11:27</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom mr. Anil sharma 2 way done,As Per Live</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-10 08:12:04</td>
+	    <td>2024-05-10 08:12:04*Guard using backroom mr. Anil sharma 2 way done,As Per Live*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Hitachi</td>
+     <td>3199104</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 08:05:52</td>
+		<td>2024-05-10 08:05:19</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 08:05:38</td>
+	    <td>2024-05-10 08:05:38*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Hitachi</td>
+     <td>3198176</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-10 07:42:05</td>
+		<td>2024-05-10 07:41:31</td>
+		<td>10-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-10 07:42:26</td>
+	    <td>2024-05-10 07:42:26*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Hitachi</td>
+     <td>3159944</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 17:30:10</td>
+		<td>2024-05-09 17:29:46</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2024-05-09 19:50:50</td>
+	    <td>2024-05-09 19:50:50*Person doing transaction,*helpdesk</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Hitachi</td>
+     <td>3159852</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 17:27:23</td>
+		<td>2024-05-09 17:26:59</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-09 17:29:33</td>
+	    <td>2024-05-09 17:29:33*as per live no one present at site,*ShabbirS</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Hitachi</td>
+     <td>3159360</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 17:14:40</td>
+		<td>2024-05-09 17:14:16</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2024-05-09 17:30:02</td>
+	    <td>2024-05-09 17:30:02*Guard using backroom,*helpdesk</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Hitachi</td>
+     <td>3158934</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 17:00:32</td>
+		<td>2024-05-09 17:00:09</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-09 18:11:59</td>
+	    <td>2024-05-09 18:11:59*as per live no one present at site,*TeamLead</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Hitachi</td>
+     <td>3156458</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 15:37:08</td>
+		<td>2024-05-09 15:36:46</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-09 15:41:36</td>
+	    <td>2024-05-09 15:41:36*as per live no one present at site,*ShabbirS</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Hitachi</td>
+     <td>3153527</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 14:25:14</td>
+		<td>2024-05-09 14:24:52</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-09 14:27:09</td>
+	    <td>2024-05-09 14:27:09*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Hitachi</td>
+     <td>3152833</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 14:10:00</td>
+		<td>2024-05-09 14:09:39</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>,Guard using backroom</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-09 14:17:50</td>
+	    <td>2024-05-09 14:17:50*,Guard using backroom*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Hitachi</td>
+     <td>3152660</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 14:06:33</td>
+		<td>2024-05-09 14:06:12</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sneha</td>
+        <td>2024-05-09 14:05:10</td>
+	    <td>2024-05-09 14:05:10*Guard using backroom 2way done,*sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Hitachi</td>
+     <td>3149274</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 12:52:33</td>
+		<td>2024-05-09 12:52:13</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>,Guard using backroom 2way done</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-09 12:52:30</td>
+	    <td>2024-05-09 12:52:30*,Guard using backroom 2way done*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Hitachi</td>
+     <td>3148029</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 12:30:51</td>
+		<td>2024-05-09 12:30:30</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-09 12:31:10</td>
+	    <td>2024-05-09 12:31:10*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Hitachi</td>
+     <td>3147004</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 12:11:52</td>
+		<td>2024-05-09 12:11:32</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-09 12:11:55</td>
+	    <td>2024-05-09 12:11:55*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Hitachi</td>
+     <td>3146794</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 12:07:35</td>
+		<td>2024-05-09 12:07:15</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-09 12:07:52</td>
+	    <td>2024-05-09 12:07:52*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Hitachi</td>
+     <td>3145134</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 11:32:11</td>
+		<td>2024-05-09 11:31:52</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sneha</td>
+        <td>2024-05-09 11:32:17</td>
+	    <td>2024-05-09 11:32:17*Guard using backroom 2way done,*sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Hitachi</td>
+     <td>3144903</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 11:27:14</td>
+		<td>2024-05-09 11:26:55</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-09 11:27:10</td>
+	    <td>2024-05-09 11:27:10*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Hitachi</td>
+     <td>3140889</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 09:53:14</td>
+		<td>2024-05-09 09:52:56</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sneha</td>
+        <td>2024-05-09 09:52:10</td>
+	    <td>2024-05-09 09:52:10*Guard using backroom 2way done,*sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Hitachi</td>
+     <td>3140741</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 09:50:12</td>
+		<td>2024-05-09 09:49:53</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sneha</td>
+        <td>2024-05-09 09:52:10</td>
+	    <td>2024-05-09 09:52:10*Guard using backroom 2way done,*sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Hitachi</td>
+     <td>3139518</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 09:24:13</td>
+		<td>2024-05-09 09:23:55</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sneha</td>
+        <td>2024-05-09 09:22:58</td>
+	    <td>2024-05-09 09:22:58*Guard using backroom 2way done,*sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Hitachi</td>
+     <td>3139079</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 09:13:46</td>
+		<td>2024-05-09 09:13:28</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2way done,</td>-->
+        <td>Reactive</td>
+        <td>sneha</td>
+        <td>2024-05-09 09:12:39</td>
+	    <td>2024-05-09 09:12:39*Guard using backroom 2way done,*sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Hitachi</td>
+     <td>3138360</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 08:50:42</td>
+		<td>2024-05-09 08:50:25</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Neha</td>
+        <td>2024-05-09 08:50:56</td>
+	    <td>2024-05-09 08:50:56*Guard using backroom,*Neha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Hitachi</td>
+     <td>3137925</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 08:29:34</td>
+		<td>2024-05-09 08:29:18</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-09 08:34:21</td>
+	    <td>2024-05-09 08:34:21*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Hitachi</td>
+     <td>3137075</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-09 08:00:01</td>
+		<td>2024-05-09 07:59:44</td>
+		<td>09-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-09 08:00:32</td>
+	    <td>2024-05-09 08:00:32*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Hitachi</td>
+     <td>3101356</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 18:02:38</td>
+		<td>2024-05-08 18:02:32</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live guard present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-08 18:21:28</td>
+	    <td>2024-05-08 18:21:28*as per live guard present at site,*ShabbirS</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Hitachi</td>
+     <td>3100771</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 17:46:57</td>
+		<td>2024-05-08 17:47:16</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one  present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-08 17:50:09</td>
+	    <td>2024-05-08 17:50:09*as per live no one  present at site,*ShabbirS</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Hitachi</td>
+     <td>3100735</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 17:46:35</td>
+		<td>2024-05-08 17:46:30</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Comfort Engineer Present At Site ID Card Shown 2 Way Done,</td>-->
+        <td>Reactive</td>
+        <td>SahilG</td>
+        <td>2024-05-08 17:51:26</td>
+	    <td>2024-05-08 17:51:26*Comfort Engineer Present At Site ID Card Shown 2 Way Done,*SahilG</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Hitachi</td>
+     <td>3100723</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-05-08 17:46:19</td>
+		<td>2024-05-08 17:46:13</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-08 17:58:37</td>
+	    <td>2024-05-08 17:58:37*As Per Live No One Present At Site,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Hitachi</td>
+     <td>3100690</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2024-05-08 17:45:21</td>
+		<td>2024-05-08 17:45:15</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Comfort Engineer Present At Site ID Card Shown 2 Way Done,</td>-->
+        <td>Reactive</td>
+        <td>SahilG</td>
+        <td>2024-05-08 17:51:26</td>
+	    <td>2024-05-08 17:51:26*Comfort Engineer Present At Site ID Card Shown 2 Way Done,*SahilG</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Hitachi</td>
+     <td>3100066</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2024-05-08 17:28:08</td>
+		<td>2024-05-08 17:28:49</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-08 17:58:37</td>
+	    <td>2024-05-08 17:58:37*As Per Live No One Present At Site,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Hitachi</td>
+     <td>3100055</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-05-08 17:27:39</td>
+		<td>2024-05-08 17:28:45</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Comfort engineer Mr. dhanje kumar present at site 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Nitesh01</td>
+        <td>2024-05-08 17:41:22</td>
+	    <td>2024-05-08 17:41:22*Comfort engineer Mr. dhanje kumar present at site 2 way done,*Nitesh01</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Hitachi</td>
+     <td>3099876</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2024-05-08 17:24:03</td>
+		<td>2024-05-08 17:23:57</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Comfort Engineer Present At Site ID Card Shown 2 Way Done,</td>-->
+        <td>Reactive</td>
+        <td>SahilG</td>
+        <td>2024-05-08 17:27:56</td>
+	    <td>2024-05-08 17:27:56*Comfort Engineer Present At Site ID Card Shown 2 Way Done,*SahilG</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Hitachi</td>
+     <td>3099870</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 17:23:59</td>
+		<td>2024-05-08 17:23:54</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>vijayd</td>
+        <td>2024-05-08 17:29:45</td>
+	    <td>2024-05-08 17:29:45*Guard using backroom,*vijayd</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Hitachi</td>
+     <td>3099773</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-05-08 17:22:12</td>
+		<td>2024-05-08 17:22:06</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 17:46:53</td>
+	    <td>2024-05-08 17:46:53*Guard using backroom,*TeamLead</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Hitachi</td>
+     <td>3099683</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 17:20:34</td>
+		<td>2024-05-08 17:20:29</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 17:46:53</td>
+	    <td>2024-05-08 17:46:53*Guard using backroom,*TeamLead</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Hitachi</td>
+     <td>3099259</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hood Door Open Sensor</td>
+	 	<td>Hood Door Open Sensor</td>
+        <td>2024-05-08 17:12:31</td>
+		<td>2024-05-08 17:12:26</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>comfort engineer person present on site mr dhanjay kumar  id shown 2way done,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-08 17:20:37</td>
+	    <td>2024-05-08 17:20:37*comfort engineer person present on site mr dhanjay kumar  id shown 2way done,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Hitachi</td>
+     <td>3099215</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open Sensor</td>
+	 	<td>Chest Door Open Sensor</td>
+        <td>2024-05-08 17:11:34</td>
+		<td>2024-05-08 17:11:29</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 17:38:49</td>
+	    <td>2024-05-08 17:38:49*As Per Live No One Present At Site,*TeamLead</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Hitachi</td>
+     <td>3098984</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2024-05-08 17:07:00</td>
+		<td>2024-05-08 17:06:55</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>vijayd</td>
+        <td>2024-05-08 17:08:35</td>
+	    <td>2024-05-08 17:08:35*Guard using backroom,*vijayd</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Hitachi</td>
+     <td>3098980</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2024-05-08 17:06:54</td>
+		<td>2024-05-08 17:06:49</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one  present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-08 17:18:51</td>
+	    <td>2024-05-08 17:18:51*as per live no one  present at site,*ShabbirS</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Hitachi</td>
+     <td>3098970</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2024-05-08 17:06:46</td>
+		<td>2024-05-08 17:06:41</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 17:38:49</td>
+	    <td>2024-05-08 17:38:49*As Per Live No One Present At Site,*TeamLead</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Hitachi</td>
+     <td>3097807</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 16:37:11</td>
+		<td>2024-05-08 16:37:07</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>SahilG</td>
+        <td>2024-05-08 16:35:58</td>
+	    <td>2024-05-08 16:35:58*As Per Live No One Present At Site,*SahilG</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Hitachi</td>
+     <td>3097603</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main Door sensor</td>
+	 	<td>Main Door sensor</td>
+        <td>2024-05-08 16:31:22</td>
+		<td>2024-05-08 16:31:18</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one  present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-08 16:35:36</td>
+	    <td>2024-05-08 16:35:36*as per live no one  present at site,*ShabbirS</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Hitachi</td>
+     <td>3097559</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>011</td>
+	<td>FA</td>
+ 	
+    	 
+
+	 
+	 	<td>Smoke Detector</td>
+	 	<td>Smoke Detector</td>
+        <td>2024-05-08 16:30:09</td>
+		<td>2024-05-08 16:30:04</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 16:51:44</td>
+	    <td>2024-05-08 16:51:44*As Per Live No One Present At Site,*TeamLead</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Hitachi</td>
+     <td>3097550</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Vibration</td>
+	 	<td>ATM Vibration</td>
+        <td>2024-05-08 16:29:59</td>
+		<td>2024-05-08 16:29:54</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 16:51:44</td>
+	    <td>2024-05-08 16:51:44*As Per Live No One Present At Site,*TeamLead</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Hitachi</td>
+     <td>3097540</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>005</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM Removal</td>
+	 	<td>ATM Removal</td>
+        <td>2024-05-08 16:29:46</td>
+		<td>2024-05-08 16:29:41</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 16:51:44</td>
+	    <td>2024-05-08 16:51:44*As Per Live No One Present At Site,*TeamLead</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Hitachi</td>
+     <td>3097487</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2024-05-08 16:28:24</td>
+		<td>2024-05-08 16:28:19</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live guard present at site,</td>-->
+        <td>Reactive</td>
+        <td>ShabbirS</td>
+        <td>2024-05-08 16:29:45</td>
+	    <td>2024-05-08 16:29:45*as per live guard present at site,*ShabbirS</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Hitachi</td>
+     <td>3097325</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-05-08 16:24:32</td>
+		<td>2024-05-08 16:24:28</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Wrongly done by customer,</td>-->
+        <td>Reactive</td>
+        <td>Nitesh01</td>
+        <td>2024-05-08 16:26:46</td>
+	    <td>2024-05-08 16:26:46*Wrongly done by customer,*Nitesh01</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Hitachi</td>
+     <td>3097280</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 16:23:23</td>
+		<td>2024-05-08 16:23:19</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>SahilG</td>
+        <td>2024-05-08 16:28:46</td>
+	    <td>2024-05-08 16:28:46*As Per Live No One Present At Site,*SahilG</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Hitachi</td>
+     <td>3089868</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 13:54:12</td>
+		<td>2024-05-08 13:54:10</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-08 13:57:08</td>
+	    <td>2024-05-08 13:57:08*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Hitachi</td>
+     <td>3088381</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 13:25:08</td>
+		<td>2024-05-08 13:25:06</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-08 13:28:23</td>
+	    <td>2024-05-08 13:28:23*Guard using backroom,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Hitachi</td>
+     <td>3087953</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 13:17:05</td>
+		<td>2024-05-08 13:17:04</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2way done,</td>-->
+        <td>Reactive</td>
+        <td>shweta patel</td>
+        <td>2024-05-08 13:25:32</td>
+	    <td>2024-05-08 13:25:32*Guard using backroom 2way done,*shweta patel</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Hitachi</td>
+     <td>3086642</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 12:53:22</td>
+		<td>2024-05-08 12:53:20</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-08 12:54:10</td>
+	    <td>2024-05-08 12:54:10*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Hitachi</td>
+     <td>3085536</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 12:35:09</td>
+		<td>2024-05-08 12:35:08</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-08 12:36:35</td>
+	    <td>2024-05-08 12:36:35*as per live no one present at site,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Hitachi</td>
+     <td>3084698</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 12:20:51</td>
+		<td>2024-05-08 12:20:50</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-08 12:24:21</td>
+	    <td>2024-05-08 12:24:21*Guard using backroom,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Hitachi</td>
+     <td>3084476</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 12:17:24</td>
+		<td>2024-05-08 12:17:23</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>shweta patel</td>
+        <td>2024-05-08 12:16:14</td>
+	    <td>2024-05-08 12:16:14*Guard using backroom,*shweta patel</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Hitachi</td>
+     <td>3078741</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 10:11:58</td>
+		<td>2024-05-08 10:11:58</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-08 10:15:15</td>
+	    <td>2024-05-08 10:15:15*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Hitachi</td>
+     <td>3077797</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 09:50:30</td>
+		<td>2024-05-08 09:50:31</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Hitachi</td>
+     <td>3077296</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 09:39:17</td>
+		<td>2024-05-08 09:39:18</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>shweta patel</td>
+        <td>2024-05-08 09:38:17</td>
+	    <td>2024-05-08 09:38:17*Guard using backroom,*shweta patel</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Hitachi</td>
+     <td>3075426</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 08:49:34</td>
+		<td>2024-05-08 08:49:35</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2 way fluctauted,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-08 08:51:44</td>
+	    <td>2024-05-08 08:51:44*Guard using backroom 2 way fluctauted,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Hitachi</td>
+     <td>3073967</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 07:54:19</td>
+		<td>2024-05-08 07:54:21</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-08 07:57:55</td>
+	    <td>2024-05-08 07:57:55*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Hitachi</td>
+     <td>3073434</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-08 07:39:37</td>
+		<td>2024-05-08 07:39:39</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-08 07:40:07</td>
+	    <td>2024-05-08 07:40:07*Guard using backroom 2 way done,*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Hitachi</td>
+     <td>3030225</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 17:26:46</td>
+		<td>2024-05-07 17:26:11</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Hitachi</td>
+     <td>3029981</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 17:22:34</td>
+		<td>2024-05-07 17:21:59</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Hitachi</td>
+     <td>3028256</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 16:52:45</td>
+		<td>2024-05-07 16:52:10</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live on one person present at site,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2024-05-07 16:52:59</td>
+	    <td>2024-05-07 16:52:59*as per live on one person present at site,*helpdesk</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Hitachi</td>
+     <td>3020878</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 14:46:25</td>
+		<td>2024-05-07 14:45:52</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-07 14:46:04</td>
+	    <td>2024-05-07 14:46:04*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Hitachi</td>
+     <td>3018658</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 14:09:16</td>
+		<td>2024-05-07 14:08:43</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>As per live guard present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-07 14:10:31</td>
+	    <td>2024-05-07 14:10:31*As per live guard present at site,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Hitachi</td>
+     <td>3015662</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 13:22:28</td>
+		<td>2024-05-07 13:21:56</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site   2 way fluctauted,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-07 13:22:38</td>
+	    <td>2024-05-07 13:22:38*as per live no one present at site   2 way fluctauted,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Hitachi</td>
+     <td>3012819</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 12:43:19</td>
+		<td>2024-05-07 12:42:47</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2 way fluctauted,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-07 12:44:37</td>
+	    <td>2024-05-07 12:44:37*Guard using backroom 2 way fluctauted,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Hitachi</td>
+     <td>3010613</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 12:14:31</td>
+		<td>2024-05-07 12:14:00</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>as per live no one present at site   2 way fluctauted,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-07 12:18:04</td>
+	    <td>2024-05-07 12:18:04*as per live no one present at site   2 way fluctauted,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Hitachi</td>
+     <td>3009891</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 12:02:52</td>
+		<td>2024-05-07 12:02:21</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2 way fluctauted,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-07 12:04:47</td>
+	    <td>2024-05-07 12:04:47*Guard using backroom 2 way fluctauted,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Hitachi</td>
+     <td>3009127</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 11:50:00</td>
+		<td>2024-05-07 11:49:29</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>,Guard using backroom</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-07 11:56:48</td>
+	    <td>2024-05-07 11:56:48*,Guard using backroom*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Hitachi</td>
+     <td>3008889</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 11:46:02</td>
+		<td>2024-05-07 11:45:31</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-07 12:29:11</td>
+	    <td>2024-05-07 12:29:11*Guard using backroom 2 way done,*TeamLead</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Hitachi</td>
+     <td>3007135</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 11:18:15</td>
+		<td>2024-05-07 11:17:44</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-07 11:44:06</td>
+	    <td>2024-05-07 11:44:06*Guard using backroom 2 way done,*TeamLead</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Hitachi</td>
+     <td>3006887</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 11:14:57</td>
+		<td>2024-05-07 11:14:26</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-05-07 11:44:06</td>
+	    <td>2024-05-07 11:44:06*Guard using backroom 2 way done,*TeamLead</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Hitachi</td>
+     <td>3006554</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 11:09:04</td>
+		<td>2024-05-07 11:08:34</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-07 11:08:42</td>
+	    <td>2024-05-07 11:08:42*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Hitachi</td>
+     <td>3002058</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 09:57:35</td>
+		<td>2024-05-07 09:57:05</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-07 09:58:18</td>
+	    <td>2024-05-07 09:58:18*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Hitachi</td>
+     <td>3001642</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 09:50:28</td>
+		<td>2024-05-07 09:49:58</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-07 09:51:05</td>
+	    <td>2024-05-07 09:51:05*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Hitachi</td>
+     <td>3000696</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 09:33:18</td>
+		<td>2024-05-07 09:32:49</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-07 09:33:07</td>
+	    <td>2024-05-07 09:33:07*Guard using backroom,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Hitachi</td>
+     <td>3000103</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 09:23:41</td>
+		<td>2024-05-07 09:23:12</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-07 09:23:23</td>
+	    <td>2024-05-07 09:23:23*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Hitachi</td>
+     <td>2999836</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 09:18:49</td>
+		<td>2024-05-07 09:18:20</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Priyankagupta</td>
+        <td>2024-05-07 09:18:32</td>
+	    <td>2024-05-07 09:18:32*Guard using backroom,*Priyankagupta</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Hitachi</td>
+     <td>2997160</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 08:20:15</td>
+		<td>2024-05-07 08:19:47</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-07 08:21:21</td>
+	    <td>2024-05-07 08:21:21*Guard using backroom,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Hitachi</td>
+     <td>2995149</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-07 07:37:16</td>
+		<td>2024-05-07 07:36:48</td>
+		<td>07-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom 2way fluctuated,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-07 07:38:43</td>
+	    <td>2024-05-07 07:38:43*Guard using backroom 2way fluctuated,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Hitachi</td>
+     <td>2946616</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 17:48:08</td>
+		<td>2024-05-06 17:47:50</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-06 17:56:34</td>
+	    <td>2024-05-06 17:56:34*Person doing transaction,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Hitachi</td>
+     <td>2941770</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 16:17:57</td>
+		<td>2024-05-06 16:17:40</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>yuvanraj</td>
+        <td>2024-05-06 16:17:09</td>
+	    <td>2024-05-06 16:17:09*Guard using backroom,*yuvanraj</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Hitachi</td>
+     <td>2925524</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 12:01:14</td>
+		<td>2024-05-06 12:01:00</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Muskaan</td>
+        <td>2024-05-06 12:00:06</td>
+	    <td>2024-05-06 12:00:06*Guard using backroom,*Muskaan</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Hitachi</td>
+     <td>2922509</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 11:14:25</td>
+		<td>2024-05-06 11:14:12</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 11:15:16</td>
+	    <td>2024-05-06 11:15:16*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Hitachi</td>
+     <td>2922376</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 11:12:18</td>
+		<td>2024-05-06 11:12:05</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 11:15:16</td>
+	    <td>2024-05-06 11:15:16*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Hitachi</td>
+     <td>2921127</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 10:51:39</td>
+		<td>2024-05-06 10:51:27</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 10:51:50</td>
+	    <td>2024-05-06 10:51:50*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Hitachi</td>
+     <td>2917212</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 09:44:56</td>
+		<td>2024-05-06 09:44:44</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 09:45:40</td>
+	    <td>2024-05-06 09:45:40*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Hitachi</td>
+     <td>2917009</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 09:41:07</td>
+		<td>2024-05-06 09:40:55</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>sushma</td>
+        <td>2024-05-06 09:43:07</td>
+	    <td>2024-05-06 09:43:07*Guard using backroom,*sushma</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Hitachi</td>
+     <td>2916387</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 09:30:45</td>
+		<td>2024-05-06 09:30:33</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Muskaan</td>
+        <td>2024-05-06 09:29:36</td>
+	    <td>2024-05-06 09:29:36*Guard using backroom,*Muskaan</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Hitachi</td>
+     <td>2916016</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 09:24:52</td>
+		<td>2024-05-06 09:24:40</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>nidhi</td>
+        <td>2024-05-06 09:24:57</td>
+	    <td>2024-05-06 09:24:57*Guard using backroom,*nidhi</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Hitachi</td>
+     <td>2915304</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 09:13:55</td>
+		<td>2024-05-06 09:13:43</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2024-05-06 09:19:44</td>
+	    <td>2024-05-06 09:19:44*Guard using backroom,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Hitachi</td>
+     <td>2912724</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 08:10:01</td>
+		<td>2024-05-06 08:09:50</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-05-06 08:11:28</td>
+	    <td>2024-05-06 08:11:28*Guard using backroom,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Hitachi</td>
+     <td>2911786</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-05-06 07:50:08</td>
+		<td>2024-05-06 07:49:57</td>
+		<td>06-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>Muskaan</td>
+        <td>2024-05-06 07:54:24</td>
+	    <td>2024-05-06 07:54:24*Guard using backroom,*Muskaan</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+    
+  
+  
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Hitachi</td>
+     <td>13290482</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>029</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>AC Mains Fail DI</td>
+	 	<td>AC Mains Fail DI</td>
+        <td>2024-05-08 17:38:02</td>
+		<td>2024-05-08 17:37:57</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Hitachi</td>
+     <td>13290221</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2024-05-08 17:36:31</td>
+		<td>2024-05-08 17:36:25</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Hitachi</td>
+     <td>13285104</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Temprature Sensor</td>
+	 	<td>Lobby Temprature Sensor</td>
+        <td>2024-05-08 16:34:51</td>
+		<td>2024-05-08 16:34:46</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Hitachi</td>
+     <td>13197071</td>
+     <td>North</td>
+     <!-- <td>Faridabad,Haryana</td>
+     <td>New township , 3D/22, NIT - 3, Near SBI </td>-->
+    <td>MN000588</td>
+    <td>New township , 3D/22, NIT - 3, Near SBI &amp; canara bank branch, Faridabad, Haryana- 121001</td>
+	<td>Faridabad</td>
+	<td>Haryana</td>
+	<td>088</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-05-08 08:32:38</td>
+		<td>2024-05-08 08:32:40</td>
+		<td>08-May-2024</td>
+		<td>172.55.25.169</td>
+		<td>RASS</td>	
+		<td>065393</td>
+        <td>indusind</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.169' and b.receivedtime between '2024-05-06 00:00:00' and '2024-05-10 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./MN000588_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

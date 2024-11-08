@@ -1,0 +1,8019 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.21.209' and b.receivedtime between '2022-10-24 00:00:00' and '2022-11-30 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.21.209&#39; and b.receivedtime between &#39;2022-10-24 00:00:00&#39; and &#39;2022-11-30 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:203</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>8001338</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-30 20:51:07</td>
+		<td>2022-11-30 20:55:53</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>7933988</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-30 18:30:00</td>
+		<td>2022-11-30 18:35:53</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>7933970</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-30 18:30:00</td>
+		<td>2022-11-30 18:35:51</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>7886315</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-30 16:51:01</td>
+		<td>2022-11-30 16:55:51</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>7779711</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-30 12:51:44</td>
+		<td>2022-11-30 12:55:48</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>7675495</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-30 08:51:38</td>
+		<td>2022-11-30 08:55:46</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>7535011</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-30 04:51:32</td>
+		<td>2022-11-30 04:55:41</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>7388882</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-30 00:51:26</td>
+		<td>2022-11-30 00:55:39</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>7376875</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-30 00:31:00</td>
+		<td>2022-11-30 00:35:40</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>7376855</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-30 00:31:00</td>
+		<td>2022-11-30 00:35:38</td>
+		<td>30-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>7250775</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-29 20:51:20</td>
+		<td>2022-11-29 20:55:36</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>7181283</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-29 18:32:05</td>
+		<td>2022-11-29 18:31:36</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>7181251</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-11-29 18:31:59</td>
+		<td>2022-11-29 18:31:33</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Cash loading person present on site 2 way flucation</td>-->
+        <td>Reactive</td>
+        <td>sahil</td>
+        <td>2022-11-29 18:31:46</td>
+	    <td>2022-11-29 18:31:46*Cash loading person present on site 2 way flucation*sahil</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>7181228</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-29 18:30:00</td>
+		<td>2022-11-29 18:31:31</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>7181207</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-29 18:30:00</td>
+		<td>2022-11-29 18:31:29</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>7128334</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-29 16:51:14</td>
+		<td>2022-11-29 16:55:33</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>7013306</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-29 12:51:08</td>
+		<td>2022-11-29 12:55:31</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>6981734</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-29 11:53:06</td>
+		<td>2022-11-29 11:52:43</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>6981722</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-29 11:53:06</td>
+		<td>2022-11-29 11:52:42</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>poornima</td>
+        <td>2022-11-29 11:53:01</td>
+	    <td>2022-11-29 11:53:01*Person doing transaction,*poornima</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>6971143</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-29 11:31:20</td>
+		<td>2022-11-29 11:30:59</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>6971120</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-29 11:31:20</td>
+		<td>2022-11-29 11:30:56</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>6967493</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-29 11:23:51</td>
+		<td>2022-11-29 11:23:26</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>swetha</td>
+        <td>2022-11-29 11:32:15</td>
+	    <td>2022-11-29 11:32:15*No Issue found after video verification,*swetha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>6967476</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-29 11:23:49</td>
+		<td>2022-11-29 11:23:24</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>6967458</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-29 11:23:47</td>
+		<td>2022-11-29 11:23:22</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>swetha</td>
+        <td>2022-11-29 11:32:15</td>
+	    <td>2022-11-29 11:32:15*No Issue found after video verification,*swetha</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>6904258</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-29 08:51:02</td>
+		<td>2022-11-29 08:55:27</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>6874291</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-29 05:41:53</td>
+		<td>2022-11-29 05:41:33</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-29 05:41:21</td>
+	    <td>2022-11-29 05:41:21*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>6866589</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-29 04:50:56</td>
+		<td>2022-11-29 04:55:24</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>6832948</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-29 00:50:50</td>
+		<td>2022-11-29 00:55:21</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>6830100</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-29 00:31:00</td>
+		<td>2022-11-29 00:35:23</td>
+		<td>29-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>6805618</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-28 22:01:41</td>
+		<td>2022-11-28 22:01:27</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,as per live</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-11-28 22:01:36</td>
+	    <td>2022-11-28 22:01:36*No Issue found after video verification,as per live*helpdesk</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>6773203</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-28 20:50:44</td>
+		<td>2022-11-28 20:55:20</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>6702086</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-28 18:30:00</td>
+		<td>2022-11-28 18:35:19</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>6702067</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-28 18:30:00</td>
+		<td>2022-11-28 18:35:17</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>6646445</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-28 16:50:38</td>
+		<td>2022-11-28 16:55:17</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>6524583</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-28 12:50:32</td>
+		<td>2022-11-28 12:55:13</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>6406494</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-28 08:50:26</td>
+		<td>2022-11-28 08:55:10</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>6277139</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-11-28 05:36:06</td>
+		<td>2022-11-28 05:36:05</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification as per live,</td>-->
+        <td>Reactive</td>
+        <td>sanjana prajapati</td>
+        <td>2022-11-28 10:18:06</td>
+	    <td>2022-11-28 10:18:06*No Issue found after video verification as per live,*sanjana prajapati</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>6250697</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-28 04:50:20</td>
+		<td>2022-11-28 04:55:07</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>6093203</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-28 00:51:03</td>
+		<td>2022-11-28 00:55:06</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>6079586</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-28 00:31:00</td>
+		<td>2022-11-28 00:35:06</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>6079563</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-28 00:31:00</td>
+		<td>2022-11-28 00:35:04</td>
+		<td>28-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>5942110</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-27 20:50:57</td>
+		<td>2022-11-27 20:55:01</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>5875416</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-27 18:30:00</td>
+		<td>2022-11-27 18:35:02</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>5875396</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-27 18:30:00</td>
+		<td>2022-11-27 18:35:00</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>5824640</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-27 16:50:51</td>
+		<td>2022-11-27 16:54:59</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>5706924</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-27 12:50:45</td>
+		<td>2022-11-27 12:54:56</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>5596491</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-27 08:50:38</td>
+		<td>2022-11-27 08:54:53</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>5537572</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-27 07:11:32</td>
+		<td>2022-11-27 07:11:00</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>qrt arranged mr mohit site shutter down</td>-->
+        <td>Reactive</td>
+        <td>sanjana prajapati</td>
+        <td>2022-11-27 07:23:53</td>
+	    <td>2022-11-27 07:23:53*qrt arranged mr mohit site shutter down*sanjana prajapati</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>5449978</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-27 04:50:32</td>
+		<td>2022-11-27 04:54:50</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>5287681</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-27 00:50:26</td>
+		<td>2022-11-27 00:54:47</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>5273279</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-27 00:31:00</td>
+		<td>2022-11-27 00:34:49</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>5273251</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-27 00:31:00</td>
+		<td>2022-11-27 00:34:47</td>
+		<td>27-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>5132702</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-26 20:50:20</td>
+		<td>2022-11-26 20:54:46</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>5063584</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-26 18:30:00</td>
+		<td>2022-11-26 18:34:45</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>5063566</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-26 18:30:00</td>
+		<td>2022-11-26 18:34:43</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>5009782</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-26 16:50:14</td>
+		<td>2022-11-26 16:56:37</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>4876983</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-26 12:50:08</td>
+		<td>2022-11-26 12:54:39</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>4745549</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-26 08:50:02</td>
+		<td>2022-11-26 08:54:36</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>4582881</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-26 04:49:56</td>
+		<td>2022-11-26 04:54:33</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>4415170</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-26 00:49:50</td>
+		<td>2022-11-26 00:54:30</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>4401103</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-26 00:31:00</td>
+		<td>2022-11-26 00:34:33</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>4401075</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-26 00:31:00</td>
+		<td>2022-11-26 00:34:31</td>
+		<td>26-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>4257864</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-25 20:49:44</td>
+		<td>2022-11-25 20:54:27</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>4184992</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-25 18:30:00</td>
+		<td>2022-11-25 18:34:28</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>4184976</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-25 18:30:00</td>
+		<td>2022-11-25 18:34:26</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>4128427</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 16:49:38</td>
+		<td>2022-11-25 16:54:25</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>4112803</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 16:25:38</td>
+		<td>2022-11-25 16:25:38</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>4112788</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-25 16:25:38</td>
+		<td>2022-11-25 16:25:36</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-25 16:44:51</td>
+	    <td>2022-11-25 16:44:51*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>4106000</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 16:12:35</td>
+		<td>2022-11-25 16:12:35</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>4105978</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 16:12:34</td>
+		<td>2022-11-25 16:12:33</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>4096944</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-25 15:56:24</td>
+		<td>2022-11-25 15:56:23</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-25 17:39:16</td>
+	    <td>2022-11-25 17:39:16*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>4096920</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-25 15:56:22</td>
+		<td>2022-11-25 15:56:21</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>4096898</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-25 15:56:20</td>
+		<td>2022-11-25 15:56:19</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-11-25 17:32:02</td>
+	    <td>2022-11-25 17:32:02*Person doing transaction,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>4015618</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 13:25:33</td>
+		<td>2022-11-25 13:25:36</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>4015598</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-25 13:25:33</td>
+		<td>2022-11-25 13:25:34</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-11-25 13:25:44</td>
+	    <td>2022-11-25 13:25:44*No Issue found after video verification,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>4004094</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 13:03:41</td>
+		<td>2022-11-25 13:03:44</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>4004075</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 13:03:40</td>
+		<td>2022-11-25 13:03:42</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>4003934</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>034</td>
+	<td>TR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 13:03:24</td>
+		<td>2022-11-25 13:03:25</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>4001169</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open ATM1</td>
+	 	<td>Chest Door Open ATM1</td>
+        <td>2022-11-25 12:58:52</td>
+		<td>2022-11-25 12:58:53</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr lokesh id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-11-25 12:58:48</td>
+	    <td>2022-11-25 12:58:48*Comfort engineer at site mr lokesh id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>4001125</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-25 12:58:49</td>
+		<td>2022-11-25 12:58:50</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr lokesh id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-11-25 12:58:48</td>
+	    <td>2022-11-25 12:58:48*Comfort engineer at site mr lokesh id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>4000181</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 12:57:10</td>
+		<td>2022-11-25 12:57:11</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>4000161</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-11-25 12:57:08</td>
+		<td>2022-11-25 12:57:09</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr lokesh id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-11-25 12:58:38</td>
+	    <td>2022-11-25 12:58:38*Comfort engineer at site mr lokesh id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>4000101</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2022-11-25 12:57:02</td>
+		<td>2022-11-25 12:57:02</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr lokesh id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-11-25 12:58:38</td>
+	    <td>2022-11-25 12:58:38*Comfort engineer at site mr lokesh id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>3999449</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-25 12:55:43</td>
+		<td>2022-11-25 12:55:44</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr lokesh id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-11-25 12:55:58</td>
+	    <td>2022-11-25 12:55:58*Comfort engineer at site mr lokesh id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>3999431</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-25 12:55:41</td>
+		<td>2022-11-25 12:55:42</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>3999412</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-25 12:55:39</td>
+		<td>2022-11-25 12:55:40</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr lokesh id shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-11-25 12:55:58</td>
+	    <td>2022-11-25 12:55:58*Comfort engineer at site mr lokesh id shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>3998713</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-25 12:49:32</td>
+		<td>2022-11-25 12:54:22</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>3865124</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 08:50:15</td>
+		<td>2022-11-25 08:54:19</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>3697049</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-25 04:50:09</td>
+		<td>2022-11-25 04:54:16</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>3528583</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 00:50:03</td>
+		<td>2022-11-25 00:54:13</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>3514438</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 00:31:00</td>
+		<td>2022-11-25 00:34:15</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>3514419</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-25 00:31:00</td>
+		<td>2022-11-25 00:34:13</td>
+		<td>25-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>3367013</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 20:49:57</td>
+		<td>2022-11-24 20:54:10</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>3292179</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 18:30:00</td>
+		<td>2022-11-24 18:34:13</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>3292154</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 18:30:00</td>
+		<td>2022-11-24 18:34:10</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>3232665</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 16:49:51</td>
+		<td>2022-11-24 16:54:07</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>3111110</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 12:49:45</td>
+		<td>2022-11-24 12:54:04</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>2981196</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 08:49:39</td>
+		<td>2022-11-24 08:54:02</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>2824372</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-24 04:49:33</td>
+		<td>2022-11-24 04:53:59</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>2666373</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 00:49:27</td>
+		<td>2022-11-24 00:53:57</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>2653777</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 00:31:00</td>
+		<td>2022-11-24 00:33:58</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>2653755</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-24 00:31:00</td>
+		<td>2022-11-24 00:33:56</td>
+		<td>24-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>2600207</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-23 23:11:39</td>
+		<td>2022-11-23 23:11:28</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>rishikeshk</td>
+        <td>2022-11-23 23:14:51</td>
+	    <td>2022-11-23 23:14:51*No Issue found after video verification,*rishikeshk</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>2514603</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-23 20:49:22</td>
+		<td>2022-11-23 20:49:05</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>2514588</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-23 20:49:20</td>
+		<td>2022-11-23 20:49:03</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>2514566</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-23 20:49:17</td>
+		<td>2022-11-23 20:49:00</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>2447081</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-23 18:30:00</td>
+		<td>2022-11-23 18:33:53</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>2447062</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-23 18:30:00</td>
+		<td>2022-11-23 18:33:51</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>2394139</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-23 16:49:15</td>
+		<td>2022-11-23 16:53:51</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>2269063</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-23 12:49:09</td>
+		<td>2022-11-23 12:53:49</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>2162242</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-23 09:38:28</td>
+		<td>2022-11-23 09:38:20</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>2162218</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-23 09:38:25</td>
+		<td>2022-11-23 09:38:17</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>2160689</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-23 09:35:26</td>
+		<td>2022-11-23 09:35:18</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>2160650</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-23 09:35:22</td>
+		<td>2022-11-23 09:35:14</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>2138946</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-23 08:49:03</td>
+		<td>2022-11-23 08:55:17</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>1976210</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-23 04:48:57</td>
+		<td>2022-11-23 04:53:42</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>1810740</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-23 00:48:51</td>
+		<td>2022-11-23 00:53:39</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>1797047</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-23 00:31:00</td>
+		<td>2022-11-23 00:33:41</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>1797019</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-23 00:31:00</td>
+		<td>2022-11-23 00:33:39</td>
+		<td>23-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>1655399</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-22 20:49:34</td>
+		<td>2022-11-22 20:53:39</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>1586039</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-22 18:30:00</td>
+		<td>2022-11-22 18:33:36</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>1586016</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-22 18:30:00</td>
+		<td>2022-11-22 18:33:34</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>1531249</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 16:49:28</td>
+		<td>2022-11-22 16:53:33</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>1517417</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 16:26:06</td>
+		<td>2022-11-22 16:25:29</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>1517400</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 16:26:06</td>
+		<td>2022-11-22 16:25:27</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>1517385</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-22 16:25:53</td>
+		<td>2022-11-22 16:25:25</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>1517368</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 16:25:53</td>
+		<td>2022-11-22 16:25:23</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>1505972</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-22 15:58:24</td>
+		<td>2022-11-22 16:03:34</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>1505953</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 15:58:23</td>
+		<td>2022-11-22 16:03:32</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>1466431</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 14:49:25</td>
+		<td>2022-11-22 14:48:46</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>1466413</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-22 14:49:25</td>
+		<td>2022-11-22 14:48:44</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>lectrician person present at site from css mr harmendar singh idd shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-11-22 14:49:16</td>
+	    <td>2022-11-22 14:49:16*lectrician person present at site from css mr harmendar singh idd shown 2 way done,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>1450616</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-22 14:19:51</td>
+		<td>2022-11-22 14:19:11</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>electrician person present at site from css mr harmendar singh idd shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-11-22 14:24:51</td>
+	    <td>2022-11-22 14:24:51*electrician person present at site from css mr harmendar singh idd shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>1450597</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-22 14:19:50</td>
+		<td>2022-11-22 14:19:09</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>1450561</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-22 14:19:47</td>
+		<td>2022-11-22 14:19:05</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>electrician person present at site from css mr harmendar singh idd shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>Mahalaxmi</td>
+        <td>2022-11-22 14:24:51</td>
+	    <td>2022-11-22 14:24:51*electrician person present at site from css mr harmendar singh idd shown 2 way done,*Mahalaxmi</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>1407101</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-22 12:49:22</td>
+		<td>2022-11-22 12:53:30</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>1362571</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-22 11:23:53</td>
+		<td>2022-11-22 11:23:14</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>1362543</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 11:23:51</td>
+		<td>2022-11-22 11:23:11</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>1288653</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 08:49:16</td>
+		<td>2022-11-22 08:53:28</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>1137083</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-22 04:49:10</td>
+		<td>2022-11-22 04:53:25</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>998542</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-22 01:11:19</td>
+		<td>2022-11-22 01:10:49</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>rishikeshk</td>
+        <td>2022-11-22 01:11:14</td>
+	    <td>2022-11-22 01:11:14*No Issue found after video verification,*rishikeshk</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>987488</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 00:49:04</td>
+		<td>2022-11-22 00:53:26</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>975176</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 00:31:00</td>
+		<td>2022-11-22 00:33:27</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Euronet</td>
+     <td>975119</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-22 00:31:00</td>
+		<td>2022-11-22 00:33:22</td>
+		<td>22-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Euronet</td>
+     <td>844838</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-21 20:48:58</td>
+		<td>2022-11-21 20:53:20</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Euronet</td>
+     <td>821227</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>DR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 20:00:41</td>
+		<td>2022-11-21 20:00:13</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Euronet</td>
+     <td>821208</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2022-11-21 20:00:39</td>
+		<td>2022-11-21 20:00:11</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Tejesh</td>
+        <td>2022-11-21 20:00:12</td>
+	    <td>2022-11-21 20:00:12*No Issue found after video verification,*Tejesh</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Euronet</td>
+     <td>807420</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 19:31:34</td>
+		<td>2022-11-21 19:31:07</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Euronet</td>
+     <td>807387</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 19:31:30</td>
+		<td>2022-11-21 19:31:03</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Euronet</td>
+     <td>799686</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 19:13:48</td>
+		<td>2022-11-21 19:13:22</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Euronet</td>
+     <td>799657</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 19:13:45</td>
+		<td>2022-11-21 19:13:18</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Euronet</td>
+     <td>795025</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 19:03:47</td>
+		<td>2022-11-21 19:03:21</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Euronet</td>
+     <td>795005</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 19:03:44</td>
+		<td>2022-11-21 19:03:18</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Euronet</td>
+     <td>790350</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 18:53:47</td>
+		<td>2022-11-21 18:53:20</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Euronet</td>
+     <td>790326</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 18:53:44</td>
+		<td>2022-11-21 18:53:17</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Euronet</td>
+     <td>785762</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 18:43:49</td>
+		<td>2022-11-21 18:43:23</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Euronet</td>
+     <td>785747</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 18:43:48</td>
+		<td>2022-11-21 18:43:21</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Euronet</td>
+     <td>785730</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 18:43:45</td>
+		<td>2022-11-21 18:43:19</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Euronet</td>
+     <td>785716</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 18:43:44</td>
+		<td>2022-11-21 18:43:17</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Euronet</td>
+     <td>780748</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>104</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-21 18:30:00</td>
+		<td>2022-11-21 18:33:19</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Euronet</td>
+     <td>780729</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-21 18:30:00</td>
+		<td>2022-11-21 18:33:17</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Euronet</td>
+     <td>775236</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 18:23:46</td>
+		<td>2022-11-21 18:23:20</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Euronet</td>
+     <td>775214</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 18:23:43</td>
+		<td>2022-11-21 18:23:17</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Euronet</td>
+     <td>727773</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 16:48:52</td>
+		<td>2022-11-21 16:53:16</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Euronet</td>
+     <td>712593</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 16:23:43</td>
+		<td>2022-11-21 16:23:19</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>165</td>-->
+    <td>Euronet</td>
+     <td>712563</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 16:23:40</td>
+		<td>2022-11-21 16:23:16</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>166</td>-->
+    <td>Euronet</td>
+     <td>684824</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 15:33:43</td>
+		<td>2022-11-21 15:33:19</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>167</td>-->
+    <td>Euronet</td>
+     <td>684790</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 15:33:40</td>
+		<td>2022-11-21 15:33:16</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>168</td>-->
+    <td>Euronet</td>
+     <td>679367</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 15:23:40</td>
+		<td>2022-11-21 15:23:17</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>169</td>-->
+    <td>Euronet</td>
+     <td>679346</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 15:23:39</td>
+		<td>2022-11-21 15:23:15</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>170</td>-->
+    <td>Euronet</td>
+     <td>631851</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 14:00:50</td>
+		<td>2022-11-21 14:00:57</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>171</td>-->
+    <td>Euronet</td>
+     <td>631817</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 14:00:48</td>
+		<td>2022-11-21 14:00:55</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>172</td>-->
+    <td>Euronet</td>
+     <td>631792</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 14:00:22</td>
+		<td>2022-11-21 14:00:53</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>173</td>-->
+    <td>Euronet</td>
+     <td>631744</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 14:00:20</td>
+		<td>2022-11-21 14:00:51</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>174</td>-->
+    <td>Euronet</td>
+     <td>631707</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:49:51</td>
+		<td>2022-11-21 14:00:49</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>175</td>-->
+    <td>Euronet</td>
+     <td>631672</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:49:48</td>
+		<td>2022-11-21 14:00:47</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>176</td>-->
+    <td>Euronet</td>
+     <td>631637</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:47:38</td>
+		<td>2022-11-21 14:00:45</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>177</td>-->
+    <td>Euronet</td>
+     <td>631600</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:47:37</td>
+		<td>2022-11-21 14:00:43</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>178</td>-->
+    <td>Euronet</td>
+     <td>631551</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:31:39</td>
+		<td>2022-11-21 14:00:40</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>179</td>-->
+    <td>Euronet</td>
+     <td>631495</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:31:36</td>
+		<td>2022-11-21 14:00:38</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>180</td>-->
+    <td>Euronet</td>
+     <td>631459</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:31:14</td>
+		<td>2022-11-21 14:00:36</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>181</td>-->
+    <td>Euronet</td>
+     <td>631424</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:31:13</td>
+		<td>2022-11-21 14:00:34</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>182</td>-->
+    <td>Euronet</td>
+     <td>631395</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:24:38</td>
+		<td>2022-11-21 14:00:32</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>183</td>-->
+    <td>Euronet</td>
+     <td>631335</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:24:37</td>
+		<td>2022-11-21 14:00:30</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>184</td>-->
+    <td>Euronet</td>
+     <td>631307</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:24:12</td>
+		<td>2022-11-21 14:00:28</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>185</td>-->
+    <td>Euronet</td>
+     <td>631262</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:24:11</td>
+		<td>2022-11-21 14:00:26</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>186</td>-->
+    <td>Euronet</td>
+     <td>631210</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:23:20</td>
+		<td>2022-11-21 14:00:24</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>187</td>-->
+    <td>Euronet</td>
+     <td>631184</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:23:19</td>
+		<td>2022-11-21 14:00:22</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>188</td>-->
+    <td>Euronet</td>
+     <td>631133</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:17:08</td>
+		<td>2022-11-21 14:00:20</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>189</td>-->
+    <td>Euronet</td>
+     <td>631071</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:13:45</td>
+		<td>2022-11-21 14:00:18</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>190</td>-->
+    <td>Euronet</td>
+     <td>631045</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 13:11:09</td>
+		<td>2022-11-21 14:00:16</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>191</td>-->
+    <td>Euronet</td>
+     <td>630994</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 13:07:43</td>
+		<td>2022-11-21 14:00:14</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>192</td>-->
+    <td>Euronet</td>
+     <td>630932</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 12:59:28</td>
+		<td>2022-11-21 14:00:12</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>193</td>-->
+    <td>Euronet</td>
+     <td>630897</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 12:59:27</td>
+		<td>2022-11-21 14:00:10</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>194</td>-->
+    <td>Euronet</td>
+     <td>630832</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 12:52:50</td>
+		<td>2022-11-21 14:00:08</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>195</td>-->
+    <td>Euronet</td>
+     <td>630761</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 12:49:26</td>
+		<td>2022-11-21 14:00:06</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>196</td>-->
+    <td>Euronet</td>
+     <td>630718</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-11-21 12:48:46</td>
+		<td>2022-11-21 14:00:04</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>197</td>-->
+    <td>Euronet</td>
+     <td>630651</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 12:46:53</td>
+		<td>2022-11-21 14:00:02</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>198</td>-->
+    <td>Euronet</td>
+     <td>630537</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 12:46:51</td>
+		<td>2022-11-21 14:00:00</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>199</td>-->
+    <td>Euronet</td>
+     <td>630450</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 12:41:28</td>
+		<td>2022-11-21 13:59:58</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>200</td>-->
+    <td>Euronet</td>
+     <td>630391</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 12:41:27</td>
+		<td>2022-11-21 13:59:56</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>201</td>-->
+    <td>Euronet</td>
+     <td>630282</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AT</td>
+ 	
+    	 
+
+	 
+	 	<td>UPS O/P Fail DI</td>
+	 	<td>UPS O/P Fail DI</td>
+        <td>2022-11-21 12:04:37</td>
+		<td>2022-11-21 13:59:54</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>202</td>-->
+    <td>Euronet</td>
+     <td>630178</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>030</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-11-21 12:04:36</td>
+		<td>2022-11-21 13:59:51</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>203</td>-->
+    <td>Euronet</td>
+     <td>630018</td>
+     <td>North</td>
+     <!-- <td>Meerut,Uttar Pradesh</td>
+     <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>-->
+    <td>P3ENME27</td>
+    <td>shop no 2 sarda shopping complex bypass chowk meerut up 25001</td>
+	<td>Meerut</td>
+	<td>Uttar Pradesh</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-11-21 14:00:10</td>
+		<td>2022-11-21 13:59:48</td>
+		<td>21-November-2022</td>
+		<td>172.55.21.209</td>
+		<td>RASS</td>	
+		<td>080559</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.21.209' and b.receivedtime between '2022-10-24 00:00:00' and '2022-11-30 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

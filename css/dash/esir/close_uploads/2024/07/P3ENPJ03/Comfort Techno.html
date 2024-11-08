@@ -1,0 +1,8202 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+
+
+  <title>Comfort Techno</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+  <link href="./Comfort Techno_files/css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+
+  <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+
+
+
+  <script src="./Comfort Techno_files/jquery.min(1).js.download"></script>
+  <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+  <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <header role="banner">
+
+    <nav class="navbar navbar-expand-lg " style="color:#fff;">
+      <div class="container">
+        <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">
+          <div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+                                  <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                				                              </div>
+
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                
+
+              </div>
+
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard_all.php">View Sites</a>
+                                  <a id="6" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/lastcommunication.php">Last Communication</a>
+                                  <a id="12" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertviewAsc.php">View Alert Report</a>
+                                  <a id="11" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/def1.php">Mains &amp; UPS Fail</a>
+                                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>
+                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a>
+              </div>
+
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown05">
+                
+                  <a class="dropdown-item" href="http://192.168.100.21:8080/css/allalert_data.php">All Alert</a>
+
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+			  
+			   
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+                                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+              </div>
+            </li><li class="nav-item">
+              <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+
+            </li>
+            <li class="nav-item">
+              &nbsp;&nbsp;&nbsp;Welcome Sandeep Kumbhar
+            </li>
+
+
+          </ul>
+
+
+
+
+
+
+          
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+              <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </li>
+
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
+
+
+  <!-- END slider -->
+
+
+
+
+
+
+
+
+  <!-- END section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+  <script src="./Comfort Techno_files/popper.min.js.download"></script>
+  <script src="./Comfort Techno_files/bootstrap.min(1).js.download"></script>
+  <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+  <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+  <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+  <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+  <script src="./Comfort Techno_files/main.js.download"></script>
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Hitachi">Hitachi</option>
+ <option value="Diebold">Diebold</option>
+ <option value="FSS">FSS</option>
+ <option value="Euronet">Euronet</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.235' and b.receivedtime between '2024-07-27 00:00:00' and '2024-07-27 23:59:59'
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.25.235&#39; and b.receivedtime between &#39;2024-07-27 00:00:00&#39; and &#39;2024-07-27 23:59:59&#39;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:208</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>8862461</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:53:12</td>
+		<td>2024-07-27 01:53:09</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:53:39</td>
+	    <td>2024-07-27 01:53:39*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>8862499</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:53:48</td>
+		<td>2024-07-27 01:53:46</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:54:21</td>
+	    <td>2024-07-27 01:54:21*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>8862525</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:54:10</td>
+		<td>2024-07-27 01:54:08</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:54:21</td>
+	    <td>2024-07-27 01:54:21*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>8862580</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:55:12</td>
+		<td>2024-07-27 01:55:09</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:55:24</td>
+	    <td>2024-07-27 01:55:24*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>8862624</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:56:00</td>
+		<td>2024-07-27 01:55:57</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:56:15</td>
+	    <td>2024-07-27 01:56:15*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>8862664</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:56:46</td>
+		<td>2024-07-27 01:56:43</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:57:32</td>
+	    <td>2024-07-27 01:57:32*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>8862753</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:58:20</td>
+		<td>2024-07-27 01:58:18</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:58:34</td>
+	    <td>2024-07-27 01:58:34*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>8862761</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:58:27</td>
+		<td>2024-07-27 01:58:25</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:58:34</td>
+	    <td>2024-07-27 01:58:34*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>8862769</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:58:38</td>
+		<td>2024-07-27 01:58:37</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:59:27</td>
+	    <td>2024-07-27 01:59:27*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>8862777</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:58:46</td>
+		<td>2024-07-27 01:58:44</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:59:27</td>
+	    <td>2024-07-27 01:59:27*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>8862819</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:59:32</td>
+		<td>2024-07-27 01:59:30</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 01:59:36</td>
+	    <td>2024-07-27 01:59:36*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>8862829</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 01:59:48</td>
+		<td>2024-07-27 01:59:45</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:00:33</td>
+	    <td>2024-07-27 02:00:33*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>8862844</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:00:05</td>
+		<td>2024-07-27 02:00:03</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:00:33</td>
+	    <td>2024-07-27 02:00:33*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>8862849</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:00:16</td>
+		<td>2024-07-27 02:00:14</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:00:33</td>
+	    <td>2024-07-27 02:00:33*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>8863301</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:09:03</td>
+		<td>2024-07-27 02:09:00</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 02:13:26</td>
+	    <td>2024-07-27 02:13:26*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>8863313</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:09:15</td>
+		<td>2024-07-27 02:09:13</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 02:13:26</td>
+	    <td>2024-07-27 02:13:26*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>8863365</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:10:31</td>
+		<td>2024-07-27 02:10:28</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 02:13:26</td>
+	    <td>2024-07-27 02:13:26*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>8863374</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:10:36</td>
+		<td>2024-07-27 02:10:33</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 02:13:26</td>
+	    <td>2024-07-27 02:13:26*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>8863453</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:12:23</td>
+		<td>2024-07-27 02:12:20</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 02:13:26</td>
+	    <td>2024-07-27 02:13:26*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>8863488</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:13:09</td>
+		<td>2024-07-27 02:13:06</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 02:13:26</td>
+	    <td>2024-07-27 02:13:26*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>8863529</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:13:54</td>
+		<td>2024-07-27 02:13:52</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 02:22:28</td>
+	    <td>2024-07-27 02:22:28*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>8863739</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:18:21</td>
+		<td>2024-07-27 02:18:18</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>8863749</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:18:28</td>
+		<td>2024-07-27 02:18:25</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>8863759</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:18:36</td>
+		<td>2024-07-27 02:18:33</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>8863771</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:18:48</td>
+		<td>2024-07-27 02:18:45</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>8863780</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:18:59</td>
+		<td>2024-07-27 02:18:56</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>8863789</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:19:09</td>
+		<td>2024-07-27 02:19:07</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>8863796</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:19:14</td>
+		<td>2024-07-27 02:19:11</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>8863817</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:19:45</td>
+		<td>2024-07-27 02:19:44</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>8863822</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:19:55</td>
+		<td>2024-07-27 02:19:52</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>8863828</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:20:02</td>
+		<td>2024-07-27 02:19:59</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>8863836</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:20:12</td>
+		<td>2024-07-27 02:20:09</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>8863842</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:20:19</td>
+		<td>2024-07-27 02:20:16</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>8863851</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:20:34</td>
+		<td>2024-07-27 02:20:31</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>8863858</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:20:40</td>
+		<td>2024-07-27 02:20:37</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>8863870</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:20:56</td>
+		<td>2024-07-27 02:20:53</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>8863889</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:21:31</td>
+		<td>2024-07-27 02:21:28</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:25:37</td>
+	    <td>2024-07-27 02:25:37*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>8864222</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:28:21</td>
+		<td>2024-07-27 02:28:18</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:28:27</td>
+	    <td>2024-07-27 02:28:27*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>8864289</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:29:29</td>
+		<td>2024-07-27 02:29:26</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:30:09</td>
+	    <td>2024-07-27 02:30:09*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>8864294</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:29:37</td>
+		<td>2024-07-27 02:29:34</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:30:09</td>
+	    <td>2024-07-27 02:30:09*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>8864314</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:29:58</td>
+		<td>2024-07-27 02:29:55</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:30:09</td>
+	    <td>2024-07-27 02:30:09*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>8864318</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:30:04</td>
+		<td>2024-07-27 02:30:01</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:30:45</td>
+	    <td>2024-07-27 02:30:45*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>8864324</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:30:10</td>
+		<td>2024-07-27 02:30:07</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:30:45</td>
+	    <td>2024-07-27 02:30:45*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>8864328</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:30:16</td>
+		<td>2024-07-27 02:30:13</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:30:45</td>
+	    <td>2024-07-27 02:30:45*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>8864727</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:38:58</td>
+		<td>2024-07-27 02:38:55</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:39:06</td>
+	    <td>2024-07-27 02:39:06*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>8864736</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:39:09</td>
+		<td>2024-07-27 02:39:05</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:39:21</td>
+	    <td>2024-07-27 02:39:21*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>8864741</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:39:15</td>
+		<td>2024-07-27 02:39:12</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:39:21</td>
+	    <td>2024-07-27 02:39:21*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>8864746</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:39:21</td>
+		<td>2024-07-27 02:39:17</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:39:25</td>
+	    <td>2024-07-27 02:39:25*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>8864755</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:39:29</td>
+		<td>2024-07-27 02:39:25</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:39:35</td>
+	    <td>2024-07-27 02:39:35*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>8864760</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:39:34</td>
+		<td>2024-07-27 02:39:31</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:39:41</td>
+	    <td>2024-07-27 02:39:41*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>8864768</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:39:41</td>
+		<td>2024-07-27 02:39:38</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:39:51</td>
+	    <td>2024-07-27 02:39:51*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>8864773</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:39:48</td>
+		<td>2024-07-27 02:39:44</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 02:39:57</td>
+	    <td>2024-07-27 02:39:57*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>8865225</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:48:41</td>
+		<td>2024-07-27 02:48:37</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:49:10</td>
+	    <td>2024-07-27 02:49:10*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>8865233</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:48:47</td>
+		<td>2024-07-27 02:48:44</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:49:09</td>
+	    <td>2024-07-27 02:49:09*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>8865237</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:48:55</td>
+		<td>2024-07-27 02:48:52</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:49:17</td>
+	    <td>2024-07-27 02:49:17*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>8865243</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:49:06</td>
+		<td>2024-07-27 02:49:02</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:49:17</td>
+	    <td>2024-07-27 02:49:17*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>8865255</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:49:17</td>
+		<td>2024-07-27 02:49:13</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:49:30</td>
+	    <td>2024-07-27 02:49:30*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>8865261</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:49:22</td>
+		<td>2024-07-27 02:49:19</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:49:38</td>
+	    <td>2024-07-27 02:49:38*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>8865295</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 02:50:01</td>
+		<td>2024-07-27 02:49:57</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site</td>-->
+        <td>Reactive</td>
+        <td>vasims</td>
+        <td>2024-07-27 02:50:25</td>
+	    <td>2024-07-27 02:50:25*As Per Live No One Present At Site*vasims</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>8867766</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 03:38:11</td>
+		<td>2024-07-27 03:38:07</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,AS PER LIVE NO ONE PRESENT AT SITE</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 03:41:11</td>
+	    <td>2024-07-27 03:41:11*,AS PER LIVE NO ONE PRESENT AT SITE*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>8868220</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 03:47:29</td>
+		<td>2024-07-27 03:47:25</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 03:49:27</td>
+	    <td>2024-07-27 03:49:27*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>8868233</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 03:47:39</td>
+		<td>2024-07-27 03:47:36</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 03:49:27</td>
+	    <td>2024-07-27 03:49:27*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>8868275</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 03:48:17</td>
+		<td>2024-07-27 03:48:14</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 03:49:27</td>
+	    <td>2024-07-27 03:49:27*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>8868343</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 03:49:22</td>
+		<td>2024-07-27 03:49:19</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 03:49:27</td>
+	    <td>2024-07-27 03:49:27*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>8868996</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 04:02:24</td>
+		<td>2024-07-27 04:02:20</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 04:03:54</td>
+	    <td>2024-07-27 04:03:54*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>8869346</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 04:09:27</td>
+		<td>2024-07-27 04:09:23</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 04:12:05</td>
+	    <td>2024-07-27 04:12:05*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>8871068</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 04:38:12</td>
+		<td>2024-07-27 04:38:08</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>AS PER LIVE NO ONE PRESENT AT SITE,</td>-->
+        <td>Reactive</td>
+        <td>Aqib</td>
+        <td>2024-07-27 04:38:53</td>
+	    <td>2024-07-27 04:38:53*AS PER LIVE NO ONE PRESENT AT SITE,*Aqib</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>8872555</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 05:01:33</td>
+		<td>2024-07-27 05:01:29</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 05:03:00</td>
+	    <td>2024-07-27 05:03:00*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>8874428</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 05:28:14</td>
+		<td>2024-07-27 05:28:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 05:33:37</td>
+	    <td>2024-07-27 05:33:37*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>8875883</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 05:48:14</td>
+		<td>2024-07-27 05:48:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 05:54:53</td>
+	    <td>2024-07-27 05:54:53*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>8876757</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:00:34</td>
+		<td>2024-07-27 06:00:29</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:04:23</td>
+	    <td>2024-07-27 06:04:23*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>8876808</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:01:23</td>
+		<td>2024-07-27 06:01:19</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:04:23</td>
+	    <td>2024-07-27 06:04:23*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>8876844</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:02:00</td>
+		<td>2024-07-27 06:01:56</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:04:23</td>
+	    <td>2024-07-27 06:04:23*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>8876874</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:02:22</td>
+		<td>2024-07-27 06:02:19</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:04:23</td>
+	    <td>2024-07-27 06:04:23*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>8876888</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:02:38</td>
+		<td>2024-07-27 06:02:34</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:04:23</td>
+	    <td>2024-07-27 06:04:23*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>8876940</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:03:30</td>
+		<td>2024-07-27 06:03:25</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:04:23</td>
+	    <td>2024-07-27 06:04:23*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>8876955</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:03:46</td>
+		<td>2024-07-27 06:03:42</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:04:23</td>
+	    <td>2024-07-27 06:04:23*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>8876996</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:04:32</td>
+		<td>2024-07-27 06:04:28</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:04:58</td>
+	    <td>2024-07-27 06:04:58*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>8877028</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:05:09</td>
+		<td>2024-07-27 06:05:05</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:17:11</td>
+	    <td>2024-07-27 06:17:11*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>8877082</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:06:05</td>
+		<td>2024-07-27 06:06:01</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:17:11</td>
+	    <td>2024-07-27 06:17:11*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>8877143</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:07:02</td>
+		<td>2024-07-27 06:06:58</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:17:11</td>
+	    <td>2024-07-27 06:17:11*As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>8879690</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 06:58:14</td>
+		<td>2024-07-27 06:58:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>,As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 06:59:14</td>
+	    <td>2024-07-27 06:59:14*,As per live no one present at site*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>8879785</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 07:00:57</td>
+		<td>2024-07-27 07:00:53</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>site received Panic alert as per live site shutter is down qrt not responding 	Ramkesh Babu	9317718008</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 07:09:02</td>
+	    <td>2024-07-27 07:09:02*site received Panic alert as per live site shutter is down qrt not responding 	Ramkesh Babu	9317718008*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>8879832</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 07:02:16</td>
+		<td>2024-07-27 07:02:12</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>site received Panic alert as per live site shutter is down qrt not responding 	Ramkesh Babu	9317718008</td>-->
+        <td>Reactive</td>
+        <td>TeamLead</td>
+        <td>2024-07-27 07:09:02</td>
+	    <td>2024-07-27 07:09:02*site received Panic alert as per live site shutter is down qrt not responding 	Ramkesh Babu	9317718008*TeamLead</td>
+		<td>192.168.100.58</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>8880801</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 07:29:15</td>
+		<td>2024-07-27 07:29:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site 2waydone</td>-->
+        <td>Reactive</td>
+        <td>kiran</td>
+        <td>2024-07-27 07:33:41</td>
+	    <td>2024-07-27 07:33:41*As Per Live No One Present At Site 2waydone*kiran</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>8881312</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>011</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Housekeeper Using Back Room</td>
+	 	<td>Housekeeper Using Back Room</td>
+        <td>2024-07-27 07:39:59</td>
+		<td>2024-07-27 07:39:54</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Sneha</td>
+        <td>2024-07-27 07:40:26</td>
+	    <td>2024-07-27 07:40:26*As Per Live No One Present At Site 2way done,*Sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>8881469</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>011</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Housekeeper Using Back Room</td>
+	 	<td>Housekeeper Using Back Room</td>
+        <td>2024-07-27 07:43:51</td>
+		<td>2024-07-27 07:43:46</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>Sneha</td>
+        <td>2024-07-27 07:42:35</td>
+	    <td>2024-07-27 07:42:35*Person doing transaction,*Sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>8882730</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-07-27 08:13:50</td>
+		<td>2024-07-27 08:13:46</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Sneha</td>
+        <td>2024-07-27 08:12:48</td>
+	    <td>2024-07-27 08:12:48*As Per Live No One Present At Site 2way done,*Sneha</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>8904843</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:02:53</td>
+		<td>2024-07-27 15:02:46</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>8904852</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:03:02</td>
+		<td>2024-07-27 15:02:55</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>8904857</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:03:07</td>
+		<td>2024-07-27 15:03:00</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>8904861</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:03:13</td>
+		<td>2024-07-27 15:03:06</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>8904868</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:03:19</td>
+		<td>2024-07-27 15:03:12</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>8904876</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:03:25</td>
+		<td>2024-07-27 15:03:18</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>8904883</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:03:31</td>
+		<td>2024-07-27 15:03:24</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>8905150</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:07:17</td>
+		<td>2024-07-27 15:07:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>8905156</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:07:23</td>
+		<td>2024-07-27 15:07:16</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>8905166</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:07:29</td>
+		<td>2024-07-27 15:07:22</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>8905169</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:07:35</td>
+		<td>2024-07-27 15:07:27</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>8905185</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:07:42</td>
+		<td>2024-07-27 15:07:35</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>8905193</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:07:49</td>
+		<td>2024-07-27 15:07:42</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>8905202</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:07:56</td>
+		<td>2024-07-27 15:07:49</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>8905214</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:08:05</td>
+		<td>2024-07-27 15:07:58</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>8905222</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:08:10</td>
+		<td>2024-07-27 15:08:03</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>8905226</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:08:15</td>
+		<td>2024-07-27 15:08:08</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>8905244</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:08:23</td>
+		<td>2024-07-27 15:08:16</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>8905249</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:08:28</td>
+		<td>2024-07-27 15:08:21</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>8905259</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:08:34</td>
+		<td>2024-07-27 15:08:27</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>8905267</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:08:39</td>
+		<td>2024-07-27 15:08:32</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>8905276</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Alert</td>
+	 	<td>Panic Alert</td>
+        <td>2024-07-27 15:08:46</td>
+		<td>2024-07-27 15:08:39</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>8905505</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2024-07-27 15:12:19</td>
+		<td>2024-07-27 15:12:11</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>8905747</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-07-27 15:16:58</td>
+		<td>2024-07-27 15:16:51</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>8905888</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2024-07-27 15:19:35</td>
+		<td>2024-07-27 15:19:28</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>8906058</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-07-27 15:22:31</td>
+		<td>2024-07-27 15:22:24</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>8906078</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-07-27 15:22:50</td>
+		<td>2024-07-27 15:22:42</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>8906651</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-07-27 15:31:08</td>
+		<td>2024-07-27 15:31:01</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>8906654</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open Sensor</td>
+	 	<td>Chest Door Open Sensor</td>
+        <td>2024-07-27 15:31:11</td>
+		<td>2024-07-27 15:31:04</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>8906659</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-07-27 15:31:13</td>
+		<td>2024-07-27 15:31:06</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>8906663</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2024-07-27 15:31:13</td>
+		<td>2024-07-27 15:31:08</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>8906667</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass Break Sensor</td>
+	 	<td>Glass Break Sensor</td>
+        <td>2024-07-27 15:31:13</td>
+		<td>2024-07-27 15:31:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+    
+  
+  
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>7251571</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:53:14</td>
+		<td>2024-07-27 01:53:11</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>7252028</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:53:51</td>
+		<td>2024-07-27 01:53:48</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>7252317</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:54:13</td>
+		<td>2024-07-27 01:54:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>7253070</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:55:14</td>
+		<td>2024-07-27 01:55:11</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>7253734</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:56:02</td>
+		<td>2024-07-27 01:56:03</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>7254262</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:56:48</td>
+		<td>2024-07-27 01:56:45</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>7255500</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:58:23</td>
+		<td>2024-07-27 01:58:20</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>7255590</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:58:30</td>
+		<td>2024-07-27 01:58:27</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>7255733</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:58:41</td>
+		<td>2024-07-27 01:58:39</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>7255823</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:58:49</td>
+		<td>2024-07-27 01:58:46</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>7256381</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:59:35</td>
+		<td>2024-07-27 01:59:32</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>7256557</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 01:59:50</td>
+		<td>2024-07-27 01:59:47</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>7256788</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:00:08</td>
+		<td>2024-07-27 02:00:06</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>7260167</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:04:36</td>
+		<td>2024-07-27 02:04:33</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>7263617</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:09:05</td>
+		<td>2024-07-27 02:09:02</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>7263773</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:09:18</td>
+		<td>2024-07-27 02:09:15</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>7264732</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:10:33</td>
+		<td>2024-07-27 02:10:30</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>7264810</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:10:39</td>
+		<td>2024-07-27 02:10:36</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>7266121</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:12:25</td>
+		<td>2024-07-27 02:12:22</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>7266698</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:13:12</td>
+		<td>2024-07-27 02:13:09</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Euronet</td>
+     <td>7267284</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:13:57</td>
+		<td>2024-07-27 02:13:54</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Euronet</td>
+     <td>7270636</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:18:23</td>
+		<td>2024-07-27 02:18:20</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Euronet</td>
+     <td>7270730</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:18:30</td>
+		<td>2024-07-27 02:18:27</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Euronet</td>
+     <td>7270836</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:18:39</td>
+		<td>2024-07-27 02:18:36</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Euronet</td>
+     <td>7270986</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:18:50</td>
+		<td>2024-07-27 02:18:47</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Euronet</td>
+     <td>7271142</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:19:02</td>
+		<td>2024-07-27 02:18:59</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Euronet</td>
+     <td>7271266</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:19:11</td>
+		<td>2024-07-27 02:19:09</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Euronet</td>
+     <td>7271319</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:19:16</td>
+		<td>2024-07-27 02:19:13</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Euronet</td>
+     <td>7271740</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:19:48</td>
+		<td>2024-07-27 02:19:46</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Euronet</td>
+     <td>7271850</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:19:57</td>
+		<td>2024-07-27 02:19:54</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Euronet</td>
+     <td>7271934</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:20:04</td>
+		<td>2024-07-27 02:20:01</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Euronet</td>
+     <td>7272067</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:20:14</td>
+		<td>2024-07-27 02:20:11</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Euronet</td>
+     <td>7272170</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:20:21</td>
+		<td>2024-07-27 02:20:18</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Euronet</td>
+     <td>7272349</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:20:36</td>
+		<td>2024-07-27 02:20:33</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Euronet</td>
+     <td>7272426</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:20:43</td>
+		<td>2024-07-27 02:20:39</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Euronet</td>
+     <td>7272628</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:20:58</td>
+		<td>2024-07-27 02:20:55</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Euronet</td>
+     <td>7278084</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:28:08</td>
+		<td>2024-07-27 02:28:05</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Euronet</td>
+     <td>7278268</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:28:23</td>
+		<td>2024-07-27 02:28:20</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Euronet</td>
+     <td>7279140</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:29:31</td>
+		<td>2024-07-27 02:29:29</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Euronet</td>
+     <td>7279227</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:29:39</td>
+		<td>2024-07-27 02:29:36</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Euronet</td>
+     <td>7279493</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:30:02</td>
+		<td>2024-07-27 02:29:58</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Euronet</td>
+     <td>7279575</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:30:08</td>
+		<td>2024-07-27 02:30:04</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Euronet</td>
+     <td>7279643</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:30:13</td>
+		<td>2024-07-27 02:30:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Euronet</td>
+     <td>7279720</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:30:20</td>
+		<td>2024-07-27 02:30:16</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>165</td>-->
+    <td>Euronet</td>
+     <td>7285788</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:39:02</td>
+		<td>2024-07-27 02:38:59</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>166</td>-->
+    <td>Euronet</td>
+     <td>7285903</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:39:11</td>
+		<td>2024-07-27 02:39:08</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>167</td>-->
+    <td>Euronet</td>
+     <td>7285979</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:39:18</td>
+		<td>2024-07-27 02:39:14</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>168</td>-->
+    <td>Euronet</td>
+     <td>7286044</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:39:23</td>
+		<td>2024-07-27 02:39:19</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>169</td>-->
+    <td>Euronet</td>
+     <td>7286144</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:39:31</td>
+		<td>2024-07-27 02:39:27</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>170</td>-->
+    <td>Euronet</td>
+     <td>7286215</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:39:37</td>
+		<td>2024-07-27 02:39:33</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>171</td>-->
+    <td>Euronet</td>
+     <td>7286307</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:39:44</td>
+		<td>2024-07-27 02:39:40</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>172</td>-->
+    <td>Euronet</td>
+     <td>7290611</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:45:40</td>
+		<td>2024-07-27 02:45:37</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>173</td>-->
+    <td>Euronet</td>
+     <td>7292849</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:48:43</td>
+		<td>2024-07-27 02:48:39</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>174</td>-->
+    <td>Euronet</td>
+     <td>7292944</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:48:50</td>
+		<td>2024-07-27 02:48:46</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>175</td>-->
+    <td>Euronet</td>
+     <td>7293046</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:48:58</td>
+		<td>2024-07-27 02:48:54</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>176</td>-->
+    <td>Euronet</td>
+     <td>7293179</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:49:08</td>
+		<td>2024-07-27 02:49:06</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>177</td>-->
+    <td>Euronet</td>
+     <td>7293321</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:49:20</td>
+		<td>2024-07-27 02:49:16</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>178</td>-->
+    <td>Euronet</td>
+     <td>7293401</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:49:26</td>
+		<td>2024-07-27 02:49:23</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>179</td>-->
+    <td>Euronet</td>
+     <td>7293862</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 02:50:03</td>
+		<td>2024-07-27 02:50:00</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>180</td>-->
+    <td>Euronet</td>
+     <td>7329847</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 03:38:13</td>
+		<td>2024-07-27 03:38:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>181</td>-->
+    <td>Euronet</td>
+     <td>7336635</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 03:47:31</td>
+		<td>2024-07-27 03:47:27</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>182</td>-->
+    <td>Euronet</td>
+     <td>7336763</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 03:47:42</td>
+		<td>2024-07-27 03:47:38</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>183</td>-->
+    <td>Euronet</td>
+     <td>7337219</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 03:48:20</td>
+		<td>2024-07-27 03:48:16</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>184</td>-->
+    <td>Euronet</td>
+     <td>7337968</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 03:49:25</td>
+		<td>2024-07-27 03:49:21</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>185</td>-->
+    <td>Euronet</td>
+     <td>7347035</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 04:02:26</td>
+		<td>2024-07-27 04:02:22</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>186</td>-->
+    <td>Euronet</td>
+     <td>7352226</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 04:09:29</td>
+		<td>2024-07-27 04:09:25</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>187</td>-->
+    <td>Euronet</td>
+     <td>7373238</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 04:38:14</td>
+		<td>2024-07-27 04:38:10</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>188</td>-->
+    <td>Euronet</td>
+     <td>7390321</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 05:01:35</td>
+		<td>2024-07-27 05:01:31</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>189</td>-->
+    <td>Euronet</td>
+     <td>7409758</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 05:28:18</td>
+		<td>2024-07-27 05:28:13</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>190</td>-->
+    <td>Euronet</td>
+     <td>7424400</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 05:48:17</td>
+		<td>2024-07-27 05:48:13</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>191</td>-->
+    <td>Euronet</td>
+     <td>7433298</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:00:35</td>
+		<td>2024-07-27 06:00:31</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>192</td>-->
+    <td>Euronet</td>
+     <td>7433901</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:01:25</td>
+		<td>2024-07-27 06:01:21</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>193</td>-->
+    <td>Euronet</td>
+     <td>7434349</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:02:02</td>
+		<td>2024-07-27 06:01:58</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>194</td>-->
+    <td>Euronet</td>
+     <td>7434639</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:02:24</td>
+		<td>2024-07-27 06:02:21</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>195</td>-->
+    <td>Euronet</td>
+     <td>7434841</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:02:40</td>
+		<td>2024-07-27 06:02:36</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>196</td>-->
+    <td>Euronet</td>
+     <td>7435484</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:03:31</td>
+		<td>2024-07-27 06:03:27</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>197</td>-->
+    <td>Euronet</td>
+     <td>7435693</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:03:48</td>
+		<td>2024-07-27 06:03:44</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>198</td>-->
+    <td>Euronet</td>
+     <td>7436247</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:04:34</td>
+		<td>2024-07-27 06:04:30</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>199</td>-->
+    <td>Euronet</td>
+     <td>7436714</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:05:11</td>
+		<td>2024-07-27 06:05:07</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>200</td>-->
+    <td>Euronet</td>
+     <td>7437400</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:06:07</td>
+		<td>2024-07-27 06:06:03</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>201</td>-->
+    <td>Euronet</td>
+     <td>7438098</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:07:04</td>
+		<td>2024-07-27 06:07:00</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>202</td>-->
+    <td>Euronet</td>
+     <td>7475239</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 06:58:17</td>
+		<td>2024-07-27 06:58:13</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>203</td>-->
+    <td>Euronet</td>
+     <td>7477263</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 07:01:00</td>
+		<td>2024-07-27 07:00:56</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>204</td>-->
+    <td>Euronet</td>
+     <td>7478217</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 07:02:18</td>
+		<td>2024-07-27 07:02:14</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>205</td>-->
+    <td>Euronet</td>
+     <td>7500719</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 07:34:20</td>
+		<td>2024-07-27 07:34:16</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>206</td>-->
+    <td>Euronet</td>
+     <td>7528310</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-07-27 08:13:50</td>
+		<td>2024-07-27 08:13:48</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>207</td>-->
+    <td>Euronet</td>
+     <td>7616835</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>015</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA OR BANK Using Backroom</td>
+	 	<td>CRA OR BANK Using Backroom</td>
+        <td>2024-07-27 14:47:27</td>
+		<td>2024-07-27 14:47:21</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>208</td>-->
+    <td>Euronet</td>
+     <td>7619571</td>
+     <td>North</td>
+     <!-- <td>Jalandhar,Punjab</td>
+     <td>Basti peer daad road</td>-->
+    <td>P3ENPJ03</td>
+    <td>shop no 1 basti peer daad road,rajan colony, leather complex jalandhar (PB) 144021</td>
+	<td>Jalandhar</td>
+	<td>Punjab</td>
+	<td>015</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA OR BANK Using Backroom</td>
+	 	<td>CRA OR BANK Using Backroom</td>
+        <td>2024-07-27 15:22:51</td>
+		<td>2024-07-27 15:22:44</td>
+		<td>27-July-2024</td>
+		<td>172.55.25.235</td>
+		<td>RASS</td>	
+		<td>070094</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.25.235' and b.receivedtime between '2024-07-27 00:00:00' and '2024-07-27 23:59:59'" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

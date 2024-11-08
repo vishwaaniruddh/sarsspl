@@ -1,0 +1,6783 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-emotion="css" data-s=""></style>
+	
+	<script src="./p1dchy10_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./p1dchy10_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+<style data-styled="active" data-styled-version="5.3.3">.uOMfS{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border-radius:6px;border:none;outline:none;height:40px;line-height:inherit;font-size:14px;font-weight:500;padding:0 10px;width:auto;cursor:pointer;-webkit-transition-property:background-color,color,opacity;transition-property:background-color,color,opacity;-webkit-transition-duration:0.2s;transition-duration:0.2s;white-space:nowrap;background-color:#000000;color:#FFFFFF;}.uOMfS:hover,.uOMfS:active,.uOMfS:focus{background-color:#DA3832;}.iYQUeS{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border-radius:6px;border:none;outline:none;height:40px;line-height:inherit;font-size:14px;font-weight:500;padding:0 10px;width:auto;cursor:pointer;-webkit-transition-property:background-color,color,opacity;transition-property:background-color,color,opacity;-webkit-transition-duration:0.2s;transition-duration:0.2s;white-space:nowrap;background-color:rgba(0,0,0,0.1);color:#000000;}.iYQUeS:hover,.iYQUeS:active,.iYQUeS:focus{background-color:rgba(0,0,0,0.2);}.dzDeEC{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-flex:1;-ms-flex:1;flex:1;min-height:0;}.dzDeEC *{box-sizing:border-box;font-family:'Inter',sans-serif;}.byJoZn{width:24px;height:24px;-webkit-mask-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/close.svg);mask-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/close.svg);-webkit-mask-position:center center;mask-position:center center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:cover;mask-size:cover;background-color:#8C8B8A;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;cursor:pointer;}.ldaHcz{width:16px;height:16px;-webkit-mask-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/arrow_right.svg);mask-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/arrow_right.svg);-webkit-mask-position:center center;mask-position:center center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:cover;mask-size:cover;background-color:#FFFFFF;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}.lislWp{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;cursor:default;}.eYpEHH{width:20px;height:20px;background-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/vn_logo.svg);background-position:center center;background-repeat:no-repeat;background-size:cover;}.kgdrvO{cursor:pointer;max-width:240px;-webkit-transition:0.5s max-width;transition:0.5s max-width;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;background:#C3312B;border-radius:4px;}.kgdrvO img{width:24px;height:24px;}.epHIdV{white-space:nowrap;color:#FFFFFF;font-weight:500;font-size:12px;line-height:14px;padding:0 6px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.cAOaUG{margin-left:3px;}.hnnvXu{display:none;position:fixed;z-index:99999;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.4);}.mUSYJ{background-color:#fefefe;padding:20px;border:1px solid #888888;width:360px;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-animation-name:animatetop;animation-name:animatetop;-webkit-animation-duration:0.4s;animation-duration:0.4s;border-radius:12px;}@media (max-width:812px){.mUSYJ{width:85% !important;}}.mUSYJ > div:not(:last-child){margin-bottom:30px;}.ebGlfm{padding:0;}.iTHnUS{margin:0;font-weight:600;font-size:20px;line-height:26px;color:#000000;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.chCMEa{position:absolute;top:10px;right:10px;}.jLNXHY{padding:0;}.ktSabt{padding:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;gap:5px;}.eQJVCO{width:40px;display:inline-block;}.jQNPJF{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;min-height:0;border-radius:10px;background:none !important;}.jQNPJF:host{background:none !important;}</style><style data-styled="active" data-styled-version="5.3.8"></style></head>
+      <body style="background-color: #dce079"><div id="rootReactVNB" class="rootReactVNB"><div style="display: none; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 2000000000; background: red; opacity: 0;"></div><div class="ModalOverlay-sc-lt8nmb hnnvXu"><div width="360px" class="ModalContent-sc-br369m mUSYJ"><div class="ModalHeader-sc-r4qzzc ebGlfm"><h5 class="ModalHeading-sc-1ol29yo iTHnUS"><div class="LogoWrapper-sc-13h69sk lislWp StyledLogo-sc-qyyxcm eQJVCO"><div class="Image-sc-182qk4e eYpEHH"></div></div>We need your help:</h5><div class="CloseButton-sc-bc93b5 chCMEa"><div class="IconImage-sc-1m5nclz byJoZn" color="grey100" width="24px" height="24px"></div></div></div><div class="ModalBody-sc-1b6j1jy jLNXHY">Video Notebook needs access to your Google Drive to link your notes on Google Meet to recordings stored on Google Drive</div><div class="ModalFooter-sc-1bvucrj ktSabt"><button type="primary" width="auto" height="40px" loading="false" class="ButtonContainer-sc-zfw2ho uOMfS">Authorize</button><button type="secondary" width="auto" height="40px" loading="false" class="ButtonContainer-sc-zfw2ho iYQUeS">Not now...</button><button type="secondary" width="auto" height="40px" loading="false" class="ButtonContainer-sc-zfw2ho iYQUeS">Don't ask me anymore</button></div></div></div><link rel="stylesheet" type="text/css" href="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/css/fonts.css"><style>
+  :not(body) #rootReactVNB {
+    position: static;
+  }
+  
+  #dialogContainer {
+    flex-grow: 1 !important;
+    position: fixed !important;
+    background: rgba(255, 255, 255, 1) !important;
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+    border-radius: 10px !important;
+    display: flex;
+    flex-direction: column !important;
+    box-shadow: 0 0 5px rgba(35, 35, 35, 0.5) !important;
+    transition: transform 0.5s;
+  }
+  
+  #dialogContainer:not(.dialogMinimized) {
+    min-width: 295px !important;
+  }
+  
+  .VN--hide {
+    display:none !important;
+  }
+  
+  .VN--show {
+    display: flex !important;
+  }
+  
+  #dialogContainer:not(.dialogMinimized) {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0) !important;
+    transition-property: background, border;
+    transition-duration: 0.2s;
+  }
+  
+  #dialogContainer:not(.dialogMinimized):hover,
+  #dialogContainer:not(.dialogMinimized)[is-active="true"] {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+  }
+  
+  #dialogContainer:not(.dialogMinimized) > div > div:not([class^="AddonHeader__HeaderDivStyle"]) {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  
+  #dialogContainer:not(.dialogMinimized):hover > div > div,
+  #dialogContainer:not(.dialogMinimized)[is-active="true"] > div > div {
+    opacity: 1;
+  }
+  
+  #dialogContainer:not(.dialogMinimized) div[class^="ButtonsWrapper"] {
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+  }
+  
+  #dialogContainer:not(.dialogMinimized):hover div[class^="ButtonsWrapper"],
+  #dialogContainer:not(.dialogMinimized)[is-active="true"] div[class^="ButtonsWrapper"] {
+    background-color: #dddddd;
+  }
+  
+  #dialogContainer:not(.dialogMinimized) div[class^="AddonFooter__DivStyled"] {
+    opacity: 0.5;
+    background-color: transparent;
+    transition-property: background-color, opacity;
+    transition-duration: 0.2s;
+  }
+  
+  #dialogContainer:not(.dialogMinimized):hover div[class^="AddonFooter__DivStyled"],
+  #dialogContainer:not(.dialogMinimized)[is-active="true"] div[class^="AddonFooter__DivStyled"] {
+    background-color: #dddddd;
+    opacity: 1;
+  }
+  
+  #dialogContainer:not(.dialogMinimized) span[class^="ControlContainer"] {
+    border-color: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  #dialogContainer:not(.dialogMinimized):hover span[class^="ControlContainer"],
+  #dialogContainer:not(.dialogMinimized)[is-active="true"] span[class^="ControlContainer"] {
+    border-color: #dddddd;
+  }
+  
+  #dialogContainer:not(.dialogMinimized) div[class*="SeparatorStyledDiv"] {
+    border-color: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  #dialogContainer:not(.dialogMinimized):hover div[class*="SeparatorStyledDiv"],
+  #dialogContainer:not(.dialogMinimized)[is-active="true"] div[class*="SeparatorStyledDiv"] {
+    border-color: #bbbbbb;
+  }
+  
+  #dialogContainer .ProseMirror strong {
+    font-family: 'Roboto-bold', sans-serif;
+  }
+  
+  #dialogContainer.positionRightTop{
+    top: 10px;
+    right: 10px;
+    max-height: 600px;
+    min-height: fit-content;
+  }
+  
+  #dialogContainer.positionRightTop.gmeet{
+    //top: 50px !important;
+  }
+  
+  #dialogContainer.positionLeftTop{
+    top: 10px;
+    left: 10px;
+    max-height: 600px;
+    min-height: fit-content;
+  }
+  
+  #dialogContainer {
+    z-index: 1000000000000 !important;
+  }
+  
+  #dialogContainer.dialogMinimized{
+    max-width: 210px;
+    width: auto !important;
+    transform: translate(0px, 0px);
+    position: absolute !important;
+    top: 6px !important;
+    right: 6px !important;
+    left: auto !important;
+    bottom: auto !important;
+    box-shadow: none !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    z-index: 2019 !important;
+  }
+  
+  #dialogContainer.positionRightBottom{
+    right: 10px;
+    bottom: 10px;
+    max-height: 400px;
+    min-height: 63px;
+  }
+  
+  #dialogContainer.positionLeftBottom{
+    left: 10px;
+    bottom: 10px;
+    max-height: 400px;
+    min-height: 63px;
+  }
+  
+  .overflow{
+    height: 270px;
+    overflow-y: auto !important;
+  }
+  
+  .VN--hide {
+    display:none!important;
+    visibility: hidden;
+  }
+  
+  .VN--show {
+    display: flex;
+  }
+</style><div id="dialogContainer" class="VN--hide positionRightTop react-draggable" style="transform: translate(0px, 0px);"><div id="workAroundDiv" class="WorkAroundDivStyled-sc-5d5kqr jQNPJF"><template shadowrootmode="open"><div id="styleContainer"><style data-styled="active" data-styled-version="5.3.3">.jfVoPo{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border-radius:6px;border:none;outline:none;height:40px;line-height:40px;font-size:14px;font-weight:500;padding:0 10px;width:100%;cursor:pointer;-webkit-transition-property:background-color,color,opacity;transition-property:background-color,color,opacity;-webkit-transition-duration:0.2s;transition-duration:0.2s;white-space:nowrap;background-color:#000000;color:#FFFFFF;}.jfVoPo:hover,.jfVoPo:active,.jfVoPo:focus{background-color:#DA3832;}.dzDeEC{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-flex:1;-ms-flex:1;flex:1;min-height:0;}.dzDeEC *{box-sizing:border-box;font-family:'Inter',sans-serif;}.UmsBe{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:auto;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;}.dJDYKy{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:auto;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;}.bTLFaV{font-weight:600;font-size:14px;cursor:pointer;color:#DA3832;-webkit-text-decoration:none;text-decoration:none;}.ldaHcz{width:16px;height:16px;-webkit-mask-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/arrow_right.svg);mask-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/arrow_right.svg);-webkit-mask-position:center center;mask-position:center center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:cover;mask-size:cover;background-color:#FFFFFF;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}.ezKAAE{width:24px;height:24px;-webkit-mask-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/eye.svg);mask-image:url(chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/eye.svg);-webkit-mask-position:center center;mask-position:center center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:cover;mask-size:cover;background-color:#8C8B8A;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;cursor:pointer;}.hnvPAF{background:transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iMTIiIGZpbGw9IiNDRUNFQ0UiLz4KPHBhdGggZD0iTTggMTZMMTYgOCIgc3Ryb2tlPSIjRkFGQUZBIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTYgMTZMOCA4IiBzdHJva2U9IiNGQUZBRkEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=) no-repeat center;border-radius:50%;-webkit-order:1;-ms-flex-order:1;order:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:20px;height:20px;margin-left:10px;position:relative;visibility:hidden;-webkit-transition:visibility 0.2s;transition:visibility 0.2s;}.hnvPAF:active{visibility:visible;}.hCVcRg{border:none;padding:0;display:block;-webkit-order:0;-ms-flex-order:0;order:0;width:100%;height:40px;font-size:16px;-webkit-letter-spacing:-0.02em;-moz-letter-spacing:-0.02em;-ms-letter-spacing:-0.02em;letter-spacing:-0.02em;color:inherit;background-color:transparent;cursor:pointer;}.hCVcRg::-webkit-input-placeholder{-webkit-transition:color 0.2s;transition:color 0.2s;color:#8C8B8A;}.hCVcRg::-moz-placeholder{-webkit-transition:color 0.2s;transition:color 0.2s;color:#8C8B8A;}.hCVcRg:-ms-input-placeholder{-webkit-transition:color 0.2s;transition:color 0.2s;color:#8C8B8A;}.hCVcRg::placeholder{-webkit-transition:color 0.2s;transition:color 0.2s;color:#8C8B8A;}.cyfBNT{-webkit-order:-1;-ms-flex-order:-1;order:-1;margin-right:12px;}.dQVVDg{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:40px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.CgvCt{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;border-radius:8px;width:100%;height:100%;padding:9px 12px;background-color:#FAFAFA;-webkit-transition:background 0.2s;transition:background 0.2s;cursor:pointer;}.CgvCt:hover{color:#211E1C;background-color:#EDEDED;}.CgvCt:hover .OrderedIcon-sc-1grsssz{background-color:#211E1C;}.CgvCt:hover .Input-sc-10ue8yb::-webkit-input-placeholder{color:#211E1C;}.CgvCt:hover .Input-sc-10ue8yb::-moz-placeholder{color:#211E1C;}.CgvCt:hover .Input-sc-10ue8yb:-ms-input-placeholder{color:#211E1C;}.CgvCt:hover .Input-sc-10ue8yb::placeholder{color:#211E1C;}.CgvCt:active .Input-sc-10ue8yb::-webkit-input-placeholder{color:transparent;}.CgvCt:active .Input-sc-10ue8yb::-moz-placeholder{color:transparent;}.CgvCt:active .Input-sc-10ue8yb:-ms-input-placeholder{color:transparent;}.CgvCt:active .Input-sc-10ue8yb::placeholder{color:transparent;}.CgvCt .Input-sc-10ue8yb:focus{outline:none;border:none;box-shadow:none;}.CgvCt .Input-sc-10ue8yb:focus::-webkit-input-placeholder{color:transparent;}.CgvCt .Input-sc-10ue8yb:focus::-moz-placeholder{color:transparent;}.CgvCt .Input-sc-10ue8yb:focus:-ms-input-placeholder{color:transparent;}.CgvCt .Input-sc-10ue8yb:focus::placeholder{color:transparent;}.dutIYL{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;border-radius:8px;width:100%;height:100%;padding:9px 12px;background-color:#FAFAFA;-webkit-transition:background 0.2s;transition:background 0.2s;cursor:pointer;}.dutIYL:hover{color:#211E1C;background-color:#EDEDED;}.dutIYL:hover .OrderedIcon-sc-1grsssz{background-color:#211E1C;}.dutIYL:hover .Input-sc-10ue8yb::-webkit-input-placeholder{color:#211E1C;}.dutIYL:hover .Input-sc-10ue8yb::-moz-placeholder{color:#211E1C;}.dutIYL:hover .Input-sc-10ue8yb:-ms-input-placeholder{color:#211E1C;}.dutIYL:hover .Input-sc-10ue8yb::placeholder{color:#211E1C;}.dutIYL:active .Input-sc-10ue8yb::-webkit-input-placeholder{color:transparent;}.dutIYL:active .Input-sc-10ue8yb::-moz-placeholder{color:transparent;}.dutIYL:active .Input-sc-10ue8yb:-ms-input-placeholder{color:transparent;}.dutIYL:active .Input-sc-10ue8yb::placeholder{color:transparent;}.dutIYL .Input-sc-10ue8yb:focus{outline:none;border:none;box-shadow:none;}.dutIYL .Input-sc-10ue8yb:focus::-webkit-input-placeholder{color:transparent;}.dutIYL .Input-sc-10ue8yb:focus::-moz-placeholder{color:transparent;}.dutIYL .Input-sc-10ue8yb:focus:-ms-input-placeholder{color:transparent;}.dutIYL .Input-sc-10ue8yb:focus::placeholder{color:transparent;}.dutIYL .OrderedIcon-sc-1grsssz{-webkit-order:2;-ms-flex-order:2;order:2;margin-right:0;margin-left:8px;}.ftkmqy{width:100%;min-height:800px;padding:139px 44px 24px;box-shadow:0 20px 30px 0 rgba(46,42,79,0.15);border:1px solid #CECECE;border-radius:20px;position:relative;min-height:auto;max-width:300px;border:none;padding:0;background-color:transparent;box-shadow:none;}.ftkmqy::before,.ftkmqy::after{content:'';position:absolute;z-index:-1;left:-348px;bottom:-20px;width:483px;height:686px;background:url(eb398044a7d9129e6542641f0cfe8983.svg) center;}.ftkmqy::after{background-image:url(55ec3367395b02d581c3ce85a1eb800b.svg);width:700px;height:843px;left:89px;bottom:-16px;}.bXuTAn{text-align:center;font-weight:600;font-size:24px;line-height:29px;text-align:center;-webkit-letter-spacing:-0.01em;-moz-letter-spacing:-0.01em;-ms-letter-spacing:-0.01em;letter-spacing:-0.01em;color:#211E1C;margin-bottom:14px;}.gzkdEU{text-align:center;font-size:14px;line-height:140%;text-align:center;-webkit-letter-spacing:-0.02em;-moz-letter-spacing:-0.02em;-ms-letter-spacing:-0.02em;letter-spacing:-0.02em;color:#211E1C;margin-bottom:44px;}.fYOGyw{width:100%;margin-bottom:15px;margin-top:-15px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-flow:column nowrap;-ms-flex-flow:column nowrap;flex-flow:column nowrap;}.eXcLaF{color:#DA3832;font-weight:normal;font-size:12px;line-height:100%;text-align:right;-webkit-letter-spacing:0.004em;-moz-letter-spacing:0.004em;-ms-letter-spacing:0.004em;letter-spacing:0.004em;-webkit-text-decoration-line:underline;text-decoration-line:underline;margin:8px 12px;display:inline-block;}.blYWgV{margin-top:24px;}.hAJufO{width:100%;}.EBIQb{margin-top:14px;}.fykNil{padding-left:20px;padding-right:20px;}.dseAXu{width:14px;height:20px;cursor:pointer;}.fTlyJk{cursor:pointer;max-width:20px;-webkit-transition:0.5s max-width;transition:0.5s max-width;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#C3312B;border-radius:4px;}.fTlyJk img{width:20px;height:20px;}.kGxMQE{margin-left:3px;}.bFBjMq{white-space:nowrap;color:#FFFFFF;font-weight:500;font-size:12px;line-height:14px;padding:0 6px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.laXwhK{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.dfpgPu{padding:10px 5px;height:36px;background:#fcfcfc;margin-bottom:0px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;position:relative;z-index:100;border-top-left-radius:10px;border-top-right-radius:10px;cursor:move;}.hCxZaG{margin-left:4px;width:18px;height:18px;cursor:pointer;}.eceNc{position:absolute;top:50%;right:10px;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.cuwkq{width:100%;height:0px;margin-bottom:10px;margin-top:-10px;z-index:10000000;}.elewpf{width:16px;height:8px;display:block;float:left;left:10px;cursor:nesw-resize;-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg);}.fzyCwv{width:16px;height:8px;margin-bottom:5px;float:right;right:-5px;display:block;cursor:nwse-resize;}.jQNPJF{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;min-height:0;border-radius:10px;background:none !important;}.jQNPJF:host{background:none !important;}</style></div><style>
+  :host {
+    all: initial;
+    color: black;
+    background: white;
+  }
+  
+  #rootReactVNB * { 
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  @keyframes blinker {
+    66% {
+      opacity: 0;
+    }
+  }
+</style><link rel="stylesheet" type="text/css" href="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/css/button.css"><link rel="stylesheet" type="text/css" href="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/css/react-prosemirror-eaton/prosemirror-view/prosemirror.css"><link rel="stylesheet" type="text/css" href="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/css/react-prosemirror-eaton/Editor.css"><link rel="stylesheet" type="text/css" href="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/css/react-prosemirror-eaton/MenuBar.module.css"><link rel="stylesheet" type="text/css" href="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/css/fonts.css"><link rel="stylesheet" type="text/css" href="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/css/@szhin-react-menu/index.css"><iframe src="about:blank" aria-hidden="true" tabindex="-1" frameborder="0" style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"></iframe><div class="DivContainerFlex-sc-stiknw dzDeEC"><div id="addon-grip" draggable="false" class="HeaderDivStyle-sc-1yfva1e dfpgPu"><div class="Row-sc-azyx18 laXwhK"><div class="Row-sc-azyx18 laXwhK"><div class="Container-sc-1ey1aw0 fTlyJk"><img src="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/vn_logo.svg"><div class="OpenContainer-sc-1mlshmw bFBjMq"><span>Go to notes</span><div class="IconImage-sc-1m5nclz ldaHcz ArrowIcon-sc-xxc8sn kGxMQE" color="whiteBase" width="16px" height="16px"></div></div></div></div></div><span class="SpanStyled-sc-ngljmj eceNc"><img src="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/hamburger.svg" class="HamburgerIconStyled-sc-g0ex7r dseAXu"><div class="rc-menu-container" role="presentation" style="display: inline;"></div><img src="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/icons/close.svg" class="CloseIconStyled-sc-ayu0ep hCxZaG"></span></div><div class="Container-sc-lgx58s fykNil"><div width="100%" class="Column-sc-voflyp FormContainer-sc-ifox8p dJDYKy ftkmqy"><div class="FormHeader-sc-1rdjjt5 bXuTAn">Sign in</div><div class="FormHeaderSubtitle-sc-1xh8vib gzkdEU">Use your credentials to sign in to your Video Notebook account</div><div class="MessageContainer-sc-1xvmf2l fYOGyw"></div><div class="InputsContainer-sc-1sb4l41 hAJufO"><span><div class="InputWrapper-sc-1ygoxc6 dQVVDg StyledTextInput-sc-ar9okk EBIQb"><div class="InputFieldContainer-sc-1qpr1qb CgvCt"><input placeholder="Email address" name="email" type="email" class="Input-sc-10ue8yb hCVcRg" value=""><div class="ResetButton-sc-fyjo1y hnvPAF"></div></div></div></span><span><div class="InputWrapper-sc-1ygoxc6 dQVVDg StyledTextInput-sc-ar9okk EBIQb"><div class="InputFieldContainer-sc-1qpr1qb dutIYL"><div class="IconImage-sc-1m5nclz ezKAAE OrderedIcon-sc-1grsssz cyfBNT" color="grey100" width="24px" height="24px"></div><input placeholder="Password" name="password" type="password" class="Input-sc-10ue8yb hCVcRg" value=""><div class="ResetButton-sc-fyjo1y hnvPAF"></div></div></div></span><div class="Row-sc-1vp7yok UmsBe"><div class="Container-sc-l5gchd gVgNig"><a href="https://app.videonotebook.com/forgot-password" target="_blank" class="TextLinkExternal-sc-1j20fw0 bTLFaV ForgotPasswordLink-sc-z6eirh eXcLaF">Forgot password?</a></div></div><div class="SubmitWrapper-sc-1392mxk blYWgV"><button type="primary" width="100%" height="40px" loading="false" class="ButtonContainer-sc-zfw2ho jfVoPo">Sign In</button></div></div></div></div></div><div class="DivStyled-sc-x5h2sa cuwkq"><img draggable="false" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg08IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNiwgRXhwb3J0IFNWRyBFeHRlbnNpb24gYnkgQWFyb24gQmVhbGwgKGh0dHA6Ly9maXJld29ya3MuYWJlYWxsLmNvbSkgLiBWZXJzaW9uOiAwLjYuMSAgLS0+DTwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DTxzdmcgaWQ9IlVudGl0bGVkLVBhZ2UlMjAxIiB2aWV3Qm94PSIwIDAgNiA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSINCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiDQl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjZweCIgaGVpZ2h0PSI2cHgiDT4NCTxnIG9wYWNpdHk9IjAuMzAyIj4NCQk8cGF0aCBkPSJNIDYgNiBMIDAgNiBMIDAgNC4yIEwgNCA0LjIgTCA0LjIgNC4yIEwgNC4yIDAgTCA2IDAgTCA2IDYgTCA2IDYgWiIgZmlsbD0iIzAwMDAwMCIvPg0JPC9nPg08L3N2Zz4=" class="LeftImgStyled-sc-1amcejg elewpf"><img draggable="false" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg08IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNiwgRXhwb3J0IFNWRyBFeHRlbnNpb24gYnkgQWFyb24gQmVhbGwgKGh0dHA6Ly9maXJld29ya3MuYWJlYWxsLmNvbSkgLiBWZXJzaW9uOiAwLjYuMSAgLS0+DTwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DTxzdmcgaWQ9IlVudGl0bGVkLVBhZ2UlMjAxIiB2aWV3Qm94PSIwIDAgNiA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSINCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiDQl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjZweCIgaGVpZ2h0PSI2cHgiDT4NCTxnIG9wYWNpdHk9IjAuMzAyIj4NCQk8cGF0aCBkPSJNIDYgNiBMIDAgNiBMIDAgNC4yIEwgNCA0LjIgTCA0LjIgNC4yIEwgNC4yIDAgTCA2IDAgTCA2IDYgTCA2IDYgWiIgZmlsbD0iIzAwMDAwMCIvPg0JPC9nPg08L3N2Zz4=" class="RightImgStyled-sc-17b52c2 fzyCwv"></div></template></div></div></div>&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./p1dchy10_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./p1dchy10_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./p1dchy10_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./p1dchy10_files/jquery.min(1).js.download"></script>
+     <link rel="stylesheet" href="./p1dchy10_files/bootstrap.min.css"><link rel="stylesheet" href="chrome-extension://hbklahkfbghjgbclbfcnhpfmajkagnci/css/iframe.css" id="videoNoteFrameStyle">
+     <script src="./p1dchy10_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./p1dchy10_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./p1dchy10_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				   
+
+				  <!-- <a id="1" style="" class="dropdown-item" href="#">Add Site</a> -->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                    <a id="21" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/Project_Add.php">Project Add</a>
+				  				<!-- <a   class="dropdown-item" href="addDvrSite.php">Add DVR Site</a>
+                 <a   class="dropdown-item" href="ViewDvrSite.php">View DVR Site</a>-->
+                  <a id="22" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/customerDataMaintain.php">Customer Data Maintain</a>
+				                    <a id="23" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewcustomerDataMaintain.php">View Customer Data Maintain</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                  <a id="3" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addusers.php">Add user</a>
+				                    <a id="4" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewusers.php">View user</a>
+				                   
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                   
+                 <a id="6" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/lastcommunication.php">Last Communication</a>
+				                     <a id="7" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/ebmisnew.php">Count call close by</a>
+					                    <a id="8" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/newview.php">HZ /HL View</a>
+					                    <a id="9" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/panelcount.php">Description Count</a>
+										<a id="10" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/useralertreport.php">call alert report</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertviewAsc.php">View Alert Report</a>
+					                    <a id="11" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/def1.php">Mains &amp; UPS Fail</a>
+					                    <a id="13" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/graph.php">view Graph</a> 
+					                      <a id="14" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/qrtsites.php">QRT Excel upload</a>
+					                        <a id="15" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/mailcount.php">Mail Count</a>
+					                   <a id="16" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                  	
+                  <a class="dropdown-item" href="http://192.168.100.21:8080/css/allalert_data.php">All Alert</a>
+
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                                        <a id="18" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/old_alert.php">Archive Alert</a>
+					 					 <a id="19" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/bypass.php">By Pass Alert</a>
+					 					   <a id="20" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/old_alert_SendIP.php">Archive Alert SendIP</a>
+					  					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				  <a id="24" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/logoutByAdmin.php">User Logout</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Ashish Mourya				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./p1dchy10_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./p1dchy10_files/popper.min.js.download"></script>
+    <script src="./p1dchy10_files/bootstrap.min(1).js.download"></script>
+    <script src="./p1dchy10_files/owl.carousel.min.js.download"></script>
+    <script src="./p1dchy10_files/bootstrap-datepicker.js.download"></script>
+    <script src="./p1dchy10_files/jquery.timepicker.min.js.download"></script>
+    <script src="./p1dchy10_files/jquery.waypoints.min.js.download"></script>
+    <script src="./p1dchy10_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Hitachi">Hitachi</option>
+ <option value="Diebold">Diebold</option>
+ <option value="FSS">FSS</option>
+ <option value="Euronet">Euronet</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="multifix">multifix</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./p1dchy10_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.51.14.125' and b.receivedtime between '2023-12-17 00:00:00' and '2023-12-17 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.51.14.125&#39; and b.receivedtime between &#39;2023-12-17 00:00:00&#39; and &#39;2023-12-17 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:164</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Diebold</td>
+     <td>22054166</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:11:30</td>
+		<td>2023-12-17 23:11:33</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Diebold</td>
+     <td>22054067</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:11:24</td>
+		<td>2023-12-17 23:11:27</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Diebold</td>
+     <td>22053946</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:11:16</td>
+		<td>2023-12-17 23:11:18</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Diebold</td>
+     <td>22053774</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:11:04</td>
+		<td>2023-12-17 23:11:07</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Diebold</td>
+     <td>22053657</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:10:56</td>
+		<td>2023-12-17 23:10:59</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Diebold</td>
+     <td>22053299</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:10:32</td>
+		<td>2023-12-17 23:10:35</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Diebold</td>
+     <td>22053202</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:10:26</td>
+		<td>2023-12-17 23:10:28</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Diebold</td>
+     <td>22053069</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:10:16</td>
+		<td>2023-12-17 23:10:19</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Diebold</td>
+     <td>22052956</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:10:09</td>
+		<td>2023-12-17 23:10:12</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:29</td>
+	    <td>2023-12-18 00:34:29*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Diebold</td>
+     <td>22052786</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:09:58</td>
+		<td>2023-12-17 23:10:00</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:30</td>
+	    <td>2023-12-18 00:34:30*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Diebold</td>
+     <td>22052665</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:09:49</td>
+		<td>2023-12-17 23:09:52</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:30</td>
+	    <td>2023-12-18 00:34:30*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Diebold</td>
+     <td>22052427</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:09:33</td>
+		<td>2023-12-17 23:09:35</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:30</td>
+	    <td>2023-12-18 00:34:30*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Diebold</td>
+     <td>22052294</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:09:23</td>
+		<td>2023-12-17 23:09:26</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:30</td>
+	    <td>2023-12-18 00:34:30*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Diebold</td>
+     <td>22052172</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:09:15</td>
+		<td>2023-12-17 23:09:18</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:30</td>
+	    <td>2023-12-18 00:34:30*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Diebold</td>
+     <td>22052020</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:09:04</td>
+		<td>2023-12-17 23:09:07</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As Per Live No One Present At Site,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-18 00:34:30</td>
+	    <td>2023-12-18 00:34:30*As Per Live No One Present At Site,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Diebold</td>
+     <td>22051552</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:08:29</td>
+		<td>2023-12-17 23:08:33</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-17 23:08:53</td>
+	    <td>2023-12-17 23:08:53*Person doing transaction,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Diebold</td>
+     <td>22051196</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:08:05</td>
+		<td>2023-12-17 23:08:08</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-17 23:08:23</td>
+	    <td>2023-12-17 23:08:23*Person doing transaction,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Diebold</td>
+     <td>22051021</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:07:52</td>
+		<td>2023-12-17 23:07:54</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>sagar</td>
+        <td>2023-12-17 23:08:23</td>
+	    <td>2023-12-17 23:08:23*Person doing transaction,*sagar</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Diebold</td>
+     <td>22050851</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:07:39</td>
+		<td>2023-12-17 23:07:42</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-18 00:27:23</td>
+	    <td>2023-12-18 00:27:23*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Diebold</td>
+     <td>22050688</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:07:28</td>
+		<td>2023-12-17 23:07:30</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:08:36</td>
+	    <td>2023-12-17 23:08:36*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Diebold</td>
+     <td>22050594</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:07:21</td>
+		<td>2023-12-17 23:07:24</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:08:36</td>
+	    <td>2023-12-17 23:08:36*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Diebold</td>
+     <td>22050422</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:07:09</td>
+		<td>2023-12-17 23:07:12</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:08:36</td>
+	    <td>2023-12-17 23:08:36*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Diebold</td>
+     <td>22050295</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:07:01</td>
+		<td>2023-12-17 23:07:03</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:08:36</td>
+	    <td>2023-12-17 23:08:36*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Diebold</td>
+     <td>22050050</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:06:43</td>
+		<td>2023-12-17 23:06:47</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:07:31</td>
+	    <td>2023-12-17 23:07:31*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Diebold</td>
+     <td>22049963</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:06:38</td>
+		<td>2023-12-17 23:06:40</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:07:31</td>
+	    <td>2023-12-17 23:07:31*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Diebold</td>
+     <td>22049816</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:06:27</td>
+		<td>2023-12-17 23:06:30</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:07:31</td>
+	    <td>2023-12-17 23:07:31*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Diebold</td>
+     <td>22049504</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:06:06</td>
+		<td>2023-12-17 23:06:09</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:07:31</td>
+	    <td>2023-12-17 23:07:31*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Diebold</td>
+     <td>22049164</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:05:43</td>
+		<td>2023-12-17 23:05:46</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:06:24</td>
+	    <td>2023-12-17 23:06:24*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Diebold</td>
+     <td>22048722</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:05:14</td>
+		<td>2023-12-17 23:05:17</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:06:24</td>
+	    <td>2023-12-17 23:06:24*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Diebold</td>
+     <td>22048630</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:05:08</td>
+		<td>2023-12-17 23:05:11</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:06:24</td>
+	    <td>2023-12-17 23:06:24*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Diebold</td>
+     <td>22048272</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:04:44</td>
+		<td>2023-12-17 23:04:47</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:05:49</td>
+	    <td>2023-12-17 23:05:49*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Diebold</td>
+     <td>22048177</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:04:38</td>
+		<td>2023-12-17 23:04:41</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:05:49</td>
+	    <td>2023-12-17 23:05:49*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Diebold</td>
+     <td>22047954</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:04:23</td>
+		<td>2023-12-17 23:04:26</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:59</td>
+	    <td>2023-12-17 23:04:59*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Diebold</td>
+     <td>22047800</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:04:13</td>
+		<td>2023-12-17 23:04:15</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:59</td>
+	    <td>2023-12-17 23:04:59*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Diebold</td>
+     <td>22047702</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:04:07</td>
+		<td>2023-12-17 23:04:09</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:38</td>
+	    <td>2023-12-17 23:04:38*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Diebold</td>
+     <td>22047584</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:03:58</td>
+		<td>2023-12-17 23:04:01</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:38</td>
+	    <td>2023-12-17 23:04:38*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Diebold</td>
+     <td>22047334</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:03:41</td>
+		<td>2023-12-17 23:03:43</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:38</td>
+	    <td>2023-12-17 23:04:38*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Diebold</td>
+     <td>22047218</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:03:32</td>
+		<td>2023-12-17 23:03:35</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:38</td>
+	    <td>2023-12-17 23:04:38*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Diebold</td>
+     <td>22047092</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:03:23</td>
+		<td>2023-12-17 23:03:26</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:38</td>
+	    <td>2023-12-17 23:04:38*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Diebold</td>
+     <td>22047002</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:03:17</td>
+		<td>2023-12-17 23:03:19</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:38</td>
+	    <td>2023-12-17 23:04:38*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Diebold</td>
+     <td>22046501</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2023-12-17 23:02:40</td>
+		<td>2023-12-17 23:02:43</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 23:04:38</td>
+	    <td>2023-12-17 23:04:38*Person doing transaction,*comfort</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Diebold</td>
+     <td>21944051</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 21:00:00</td>
+		<td>2023-12-17 21:00:02</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Diebold</td>
+     <td>21821559</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 18:00:00</td>
+		<td>2023-12-17 18:00:15</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Diebold</td>
+     <td>21821423</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 18:00:00</td>
+		<td>2023-12-17 18:00:09</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Diebold</td>
+     <td>21821290</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 18:00:00</td>
+		<td>2023-12-17 18:00:03</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Diebold</td>
+     <td>21762993</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 16:31:16</td>
+		<td>2023-12-17 16:31:18</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Diebold</td>
+     <td>21762785</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 16:30:43</td>
+		<td>2023-12-17 16:30:58</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Diebold</td>
+     <td>21762725</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open Sensor</td>
+	 	<td>Backroom Door Open Sensor</td>
+        <td>2023-12-17 16:30:43</td>
+		<td>2023-12-17 16:30:52</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 16:31:42</td>
+	    <td>2023-12-17 16:31:42*As per live no one present at site,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Diebold</td>
+     <td>21762661</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>System Arm for Backroom</td>
+	 	<td>System Arm for Backroom</td>
+        <td>2023-12-17 16:30:43</td>
+		<td>2023-12-17 16:30:46</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 16:31:42</td>
+	    <td>2023-12-17 16:31:42*As per live no one present at site,*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Diebold</td>
+     <td>21745357</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:59:53</td>
+		<td>2023-12-17 16:03:16</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Diebold</td>
+     <td>21745289</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>058</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-12-17 15:59:53</td>
+		<td>2023-12-17 16:03:10</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Diebold</td>
+     <td>21745223</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:59:44</td>
+		<td>2023-12-17 16:03:03</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Diebold</td>
+     <td>21745151</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:59:42</td>
+		<td>2023-12-17 16:02:57</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Diebold</td>
+     <td>21745087</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-12-17 15:59:42</td>
+		<td>2023-12-17 16:02:51</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:04:26</td>
+	    <td>2023-12-17 16:04:26*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Diebold</td>
+     <td>21745021</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:59:35</td>
+		<td>2023-12-17 16:02:45</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Diebold</td>
+     <td>21744959</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:59:28</td>
+		<td>2023-12-17 16:02:38</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Diebold</td>
+     <td>21744898</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>System Disarm for Backroom</td>
+	 	<td>System Disarm for Backroom</td>
+        <td>2023-12-17 15:59:28</td>
+		<td>2023-12-17 16:02:32</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:04:26</td>
+	    <td>2023-12-17 16:04:26*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Diebold</td>
+     <td>21744834</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:59:28</td>
+		<td>2023-12-17 16:02:26</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:04:26</td>
+	    <td>2023-12-17 16:04:26*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Diebold</td>
+     <td>21744771</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-12-17 15:59:22</td>
+		<td>2023-12-17 16:02:20</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:04:26</td>
+	    <td>2023-12-17 16:04:26*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Diebold</td>
+     <td>21744702</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:59:16</td>
+		<td>2023-12-17 16:02:13</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Diebold</td>
+     <td>21744639</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:59:10</td>
+		<td>2023-12-17 16:02:07</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Diebold</td>
+     <td>21744578</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>System Disarm for Backroom</td>
+	 	<td>System Disarm for Backroom</td>
+        <td>2023-12-17 15:59:10</td>
+		<td>2023-12-17 16:02:01</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:04:26</td>
+	    <td>2023-12-17 16:04:26*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Diebold</td>
+     <td>21744511</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:59:10</td>
+		<td>2023-12-17 16:01:55</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:04:26</td>
+	    <td>2023-12-17 16:04:26*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Diebold</td>
+     <td>21744444</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:59:02</td>
+		<td>2023-12-17 16:01:48</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Diebold</td>
+     <td>21744374</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:58:56</td>
+		<td>2023-12-17 16:01:42</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Diebold</td>
+     <td>21744308</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>System Disarm for Backroom</td>
+	 	<td>System Disarm for Backroom</td>
+        <td>2023-12-17 15:58:56</td>
+		<td>2023-12-17 16:01:36</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:04:26</td>
+	    <td>2023-12-17 16:04:26*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Diebold</td>
+     <td>21744240</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:58:56</td>
+		<td>2023-12-17 16:01:30</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:04:26</td>
+	    <td>2023-12-17 16:04:26*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Diebold</td>
+     <td>21744173</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>058</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-12-17 15:54:50</td>
+		<td>2023-12-17 16:01:23</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Diebold</td>
+     <td>21744107</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:48</td>
+		<td>2023-12-17 16:01:17</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Diebold</td>
+     <td>21744044</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>018</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:44</td>
+		<td>2023-12-17 16:01:11</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Diebold</td>
+     <td>21743982</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>024</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:41</td>
+		<td>2023-12-17 16:01:05</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Diebold</td>
+     <td>21743918</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:41</td>
+		<td>2023-12-17 16:00:58</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Diebold</td>
+     <td>21743846</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:40</td>
+		<td>2023-12-17 16:00:52</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Diebold</td>
+     <td>21743767</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>058</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-12-17 15:54:40</td>
+		<td>2023-12-17 16:00:46</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Diebold</td>
+     <td>21743683</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:54:38</td>
+		<td>2023-12-17 16:00:40</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Diebold</td>
+     <td>21743598</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV1+CCTV2+CCTV3Removal Sensor</td>
+	 	<td>CCTV1+CCTV2+CCTV3Removal Sensor</td>
+        <td>2023-12-17 15:54:38</td>
+		<td>2023-12-17 16:00:33</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:01:10</td>
+	    <td>2023-12-17 16:01:10*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Diebold</td>
+     <td>21743517</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:54:38</td>
+		<td>2023-12-17 16:00:27</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Diebold</td>
+     <td>21743431</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Open</td>
+	 	<td>ATM 1 Hood Door Open</td>
+        <td>2023-12-17 15:54:38</td>
+		<td>2023-12-17 16:00:21</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:01:10</td>
+	    <td>2023-12-17 16:01:10*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Diebold</td>
+     <td>21743336</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>018</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:37</td>
+		<td>2023-12-17 16:00:15</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Diebold</td>
+     <td>21743244</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:37</td>
+		<td>2023-12-17 16:00:08</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Diebold</td>
+     <td>21743157</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:35</td>
+		<td>2023-12-17 16:00:02</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Diebold</td>
+     <td>21743054</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>058</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-12-17 15:54:35</td>
+		<td>2023-12-17 15:59:56</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Diebold</td>
+     <td>21742979</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:54:33</td>
+		<td>2023-12-17 15:59:50</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Diebold</td>
+     <td>21742903</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>018</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>CCTV1+CCTV2+CCTV3Removal Sensor</td>
+	 	<td>CCTV1+CCTV2+CCTV3Removal Sensor</td>
+        <td>2023-12-17 15:54:33</td>
+		<td>2023-12-17 15:59:43</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 16:01:10</td>
+	    <td>2023-12-17 16:01:10*As per live no one present at site,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Diebold</td>
+     <td>21742827</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:29</td>
+		<td>2023-12-17 15:59:37</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Diebold</td>
+     <td>21742748</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>058</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-12-17 15:54:29</td>
+		<td>2023-12-17 15:59:31</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Diebold</td>
+     <td>21742677</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:54:28</td>
+		<td>2023-12-17 15:59:25</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Diebold</td>
+     <td>21739849</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>014</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Chest Door Open Sensor</td>
+	 	<td>ATM 1 Chest Door Open Sensor</td>
+        <td>2023-12-17 15:54:28</td>
+		<td>2023-12-17 15:54:55</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>comfort engineer present at site 2way done mr yashvanth,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 15:55:45</td>
+	    <td>2023-12-17 15:55:45*comfort engineer present at site 2way done mr yashvanth,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Diebold</td>
+     <td>21739782</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:54:28</td>
+		<td>2023-12-17 15:54:49</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Diebold</td>
+     <td>21739713</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Thermal Sensor</td>
+	 	<td>ATM 1 Thermal Sensor</td>
+        <td>2023-12-17 15:54:28</td>
+		<td>2023-12-17 15:54:42</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>comfort engineer present at site 2way done mr yashvanth,</td>-->
+        <td>Reactive</td>
+        <td>Nihal</td>
+        <td>2023-12-17 15:55:45</td>
+	    <td>2023-12-17 15:55:45*comfort engineer present at site 2way done mr yashvanth,*Nihal</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Diebold</td>
+     <td>21739649</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>014</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:26</td>
+		<td>2023-12-17 15:54:36</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Diebold</td>
+     <td>21739584</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>013</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:54:26</td>
+		<td>2023-12-17 15:54:30</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Diebold</td>
+     <td>21738052</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:51:53</td>
+		<td>2023-12-17 15:52:03</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Diebold</td>
+     <td>21737988</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>058</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-12-17 15:51:53</td>
+		<td>2023-12-17 15:51:57</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Diebold</td>
+     <td>21737873</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:51:31</td>
+		<td>2023-12-17 15:51:46</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Diebold</td>
+     <td>21737805</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Hood Door Open</td>
+	 	<td>ATM 1 Hood Door Open</td>
+        <td>2023-12-17 15:51:31</td>
+		<td>2023-12-17 15:51:40</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr.yashwant mobile no:-Yeshwanth Kumar	8341221943	2 way done,</td>-->
+        <td>Reactive</td>
+        <td>sahil</td>
+        <td>2023-12-17 15:53:41</td>
+	    <td>2023-12-17 15:53:41*Comfort engineer at site mr.yashwant mobile no:-Yeshwanth Kumar	8341221943	2 way done,*sahil</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Diebold</td>
+     <td>21737731</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:51:31</td>
+		<td>2023-12-17 15:51:34</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Diebold</td>
+     <td>21735142</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:47:04</td>
+		<td>2023-12-17 15:47:36</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Diebold</td>
+     <td>21735065</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:46:57</td>
+		<td>2023-12-17 15:47:30</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Diebold</td>
+     <td>21734997</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>System Disarm for Backroom</td>
+	 	<td>System Disarm for Backroom</td>
+        <td>2023-12-17 15:46:57</td>
+		<td>2023-12-17 15:47:24</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU 9440078875</td>-->
+        <td>Reactive</td>
+        <td>sahil</td>
+        <td>2023-12-17 15:48:28</td>
+	    <td>2023-12-17 15:48:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU 9440078875*sahil</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Diebold</td>
+     <td>21734917</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:46:57</td>
+		<td>2023-12-17 15:47:18</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU 9440078875</td>-->
+        <td>Reactive</td>
+        <td>sahil</td>
+        <td>2023-12-17 15:48:28</td>
+	    <td>2023-12-17 15:48:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU 9440078875*sahil</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Diebold</td>
+     <td>21734851</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZT</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:46:55</td>
+		<td>2023-12-17 15:47:11</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Diebold</td>
+     <td>21734771</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:46:49</td>
+		<td>2023-12-17 15:47:05</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Diebold</td>
+     <td>21734695</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>System Disarm for Backroom</td>
+	 	<td>System Disarm for Backroom</td>
+        <td>2023-12-17 15:46:49</td>
+		<td>2023-12-17 15:46:59</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU 9440078875</td>-->
+        <td>Reactive</td>
+        <td>sahil</td>
+        <td>2023-12-17 15:48:28</td>
+	    <td>2023-12-17 15:48:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU 9440078875*sahil</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Diebold</td>
+     <td>21734627</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:46:49</td>
+		<td>2023-12-17 15:46:53</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU 9440078875</td>-->
+        <td>Reactive</td>
+        <td>sahil</td>
+        <td>2023-12-17 15:48:28</td>
+	    <td>2023-12-17 15:48:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU 9440078875*sahil</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Diebold</td>
+     <td>21734357</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:46:19</td>
+		<td>2023-12-17 15:46:29</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Diebold</td>
+     <td>21734284</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:46:19</td>
+		<td>2023-12-17 15:46:22</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:46</td>
+	    <td>2023-12-17 15:47:46*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Diebold</td>
+     <td>21733913</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-12-17 15:45:38</td>
+		<td>2023-12-17 15:45:50</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:46</td>
+	    <td>2023-12-17 15:47:46*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Diebold</td>
+     <td>21733846</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:45:34</td>
+		<td>2023-12-17 15:45:44</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Diebold</td>
+     <td>21733772</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:45:34</td>
+		<td>2023-12-17 15:45:38</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:46</td>
+	    <td>2023-12-17 15:47:46*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Diebold</td>
+     <td>21733484</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:45:05</td>
+		<td>2023-12-17 15:45:10</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Diebold</td>
+     <td>21733412</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:45:00</td>
+		<td>2023-12-17 15:45:04</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Diebold</td>
+     <td>21733342</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:44:48</td>
+		<td>2023-12-17 15:44:58</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Diebold</td>
+     <td>21733279</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:44:48</td>
+		<td>2023-12-17 15:44:52</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:47</td>
+	    <td>2023-12-17 15:47:47*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Diebold</td>
+     <td>21733201</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:44:38</td>
+		<td>2023-12-17 15:44:44</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Diebold</td>
+     <td>21733142</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:44:35</td>
+		<td>2023-12-17 15:44:38</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Diebold</td>
+     <td>21732164</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:42:55</td>
+		<td>2023-12-17 15:43:04</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Diebold</td>
+     <td>21732099</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:42:55</td>
+		<td>2023-12-17 15:42:58</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:47</td>
+	    <td>2023-12-17 15:47:47*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Diebold</td>
+     <td>21731388</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:41:27</td>
+		<td>2023-12-17 15:41:52</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Diebold</td>
+     <td>21731325</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:41:27</td>
+		<td>2023-12-17 15:41:45</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:47</td>
+	    <td>2023-12-17 15:47:47*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Diebold</td>
+     <td>21731261</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:41:20</td>
+		<td>2023-12-17 15:41:39</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Diebold</td>
+     <td>21731196</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:41:20</td>
+		<td>2023-12-17 15:41:33</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:47</td>
+	    <td>2023-12-17 15:47:47*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Diebold</td>
+     <td>21731125</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-12-17 15:41:16</td>
+		<td>2023-12-17 15:41:27</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:47</td>
+	    <td>2023-12-17 15:47:47*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Diebold</td>
+     <td>21731057</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:41:06</td>
+		<td>2023-12-17 15:41:20</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Diebold</td>
+     <td>21730993</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter Sense (Sounder Trouble)</td>
+	 	<td>Hooter Sense (Sounder Trouble)</td>
+        <td>2023-12-17 15:41:05</td>
+		<td>2023-12-17 15:41:14</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Diebold</td>
+     <td>21730930</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:41:04</td>
+		<td>2023-12-17 15:41:08</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Diebold</td>
+     <td>21730342</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter Sense (Sounder Trouble)</td>
+	 	<td>Hooter Sense (Sounder Trouble)</td>
+        <td>2023-12-17 15:39:56</td>
+		<td>2023-12-17 15:40:11</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Diebold</td>
+     <td>21730278</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:39:56</td>
+		<td>2023-12-17 15:40:04</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Diebold</td>
+     <td>21730218</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter Sense (Sounder Trouble)</td>
+	 	<td>Hooter Sense (Sounder Trouble)</td>
+        <td>2023-12-17 15:39:55</td>
+		<td>2023-12-17 15:39:58</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Diebold</td>
+     <td>21730119</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:39:44</td>
+		<td>2023-12-17 15:39:48</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Diebold</td>
+     <td>21729757</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter Sense (Sounder Trouble)</td>
+	 	<td>Hooter Sense (Sounder Trouble)</td>
+        <td>2023-12-17 15:39:08</td>
+		<td>2023-12-17 15:39:11</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Diebold</td>
+     <td>21729621</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:38:47</td>
+		<td>2023-12-17 15:38:58</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Diebold</td>
+     <td>21729552</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:38:47</td>
+		<td>2023-12-17 15:38:51</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Diebold</td>
+     <td>21729485</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-12-17 15:38:42</td>
+		<td>2023-12-17 15:38:45</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Diebold</td>
+     <td>21729159</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:38:01</td>
+		<td>2023-12-17 15:38:11</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Diebold</td>
+     <td>21729095</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:38:01</td>
+		<td>2023-12-17 15:38:04</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Diebold</td>
+     <td>21728574</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:36:42</td>
+		<td>2023-12-17 15:37:12</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Diebold</td>
+     <td>21728507</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:36:42</td>
+		<td>2023-12-17 15:37:06</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Diebold</td>
+     <td>21728439</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-12-17 15:36:35</td>
+		<td>2023-12-17 15:37:00</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Diebold</td>
+     <td>21728371</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>017</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 15:36:28</td>
+		<td>2023-12-17 15:36:54</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Diebold</td>
+     <td>21728312</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Authorize card</td>
+	 	<td>Authorize card</td>
+        <td>2023-12-17 15:36:28</td>
+		<td>2023-12-17 15:36:48</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Diebold</td>
+     <td>21728242</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-12-17 15:36:02</td>
+		<td>2023-12-17 15:36:41</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Diebold</td>
+     <td>21728180</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:35:55</td>
+		<td>2023-12-17 15:36:35</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Diebold</td>
+     <td>21728118</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>058</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-12-17 15:35:55</td>
+		<td>2023-12-17 15:36:29</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Diebold</td>
+     <td>21728045</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:35:52</td>
+		<td>2023-12-17 15:36:22</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Diebold</td>
+     <td>21727977</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>013</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Thermal Sensor</td>
+	 	<td>ATM 1 Thermal Sensor</td>
+        <td>2023-12-17 15:35:52</td>
+		<td>2023-12-17 15:36:16</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Diebold</td>
+     <td>21727904</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>024</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Chest Door Open Sensor</td>
+	 	<td>ATM 2 Chest Door Open Sensor</td>
+        <td>2023-12-17 15:35:46</td>
+		<td>2023-12-17 15:36:10</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Diebold</td>
+     <td>21727832</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Hood Door Open</td>
+	 	<td>ATM 2 Hood Door Open</td>
+        <td>2023-12-17 15:35:46</td>
+		<td>2023-12-17 15:36:04</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Diebold</td>
+     <td>21727760</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:35:33</td>
+		<td>2023-12-17 15:35:57</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Diebold</td>
+     <td>21727692</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>058</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Silence Key</td>
+	 	<td>Silence Key</td>
+        <td>2023-12-17 15:35:33</td>
+		<td>2023-12-17 15:35:51</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Diebold</td>
+     <td>21727622</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-12-17 15:35:29</td>
+		<td>2023-12-17 15:35:45</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Diebold</td>
+     <td>21727555</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Hooter ON Locally</td>
+	 	<td>Hooter ON Locally</td>
+        <td>2023-12-17 15:35:29</td>
+		<td>2023-12-17 15:35:39</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Diebold</td>
+     <td>21727482</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2023-12-17 15:35:29</td>
+		<td>2023-12-17 15:35:32</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Diebold</td>
+     <td>21727336</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>ZZ</td>
+ 	
+    	 
+
+	 
+	 	<td>Unuthorize Card</td>
+	 	<td>Unuthorize Card</td>
+        <td>2023-12-17 15:35:15</td>
+		<td>2023-12-17 15:35:19</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td>site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2023-12-17 15:47:28</td>
+	    <td>2023-12-17 15:47:28*site recived authorize card alert someone present at site 2 way issue qrt arranged K RAMESH NAIDU	9440078875*comfort</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Diebold</td>
+     <td>21583959</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 12:00:00</td>
+		<td>2023-12-17 12:00:40</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Diebold</td>
+     <td>21583849</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 12:00:00</td>
+		<td>2023-12-17 12:00:34</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Diebold</td>
+     <td>21412120</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 08:00:00</td>
+		<td>2023-12-17 08:00:40</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Diebold</td>
+     <td>21412022</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 08:00:00</td>
+		<td>2023-12-17 08:00:34</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Diebold</td>
+     <td>21200539</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 04:00:00</td>
+		<td>2023-12-17 04:00:39</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Diebold</td>
+     <td>21200437</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 04:00:00</td>
+		<td>2023-12-17 04:00:33</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Diebold</td>
+     <td>20998741</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>007</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 00:00:00</td>
+		<td>2023-12-17 00:00:51</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Diebold</td>
+     <td>20998609</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>ZH</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 00:00:00</td>
+		<td>2023-12-17 00:00:45</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Diebold</td>
+     <td>20998443</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>005</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 00:00:00</td>
+		<td>2023-12-17 00:00:39</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Diebold</td>
+     <td>20998284</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>Champapet Offsite</td>-->
+    <td>P1DCHY10</td>
+    <td>Ho No 9 - 1 - 158 </td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>ZL</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-12-17 00:00:00</td>
+		<td>2023-12-17 00:00:32</td>
+		<td>17-December-2023</td>
+		<td>172.51.14.125</td>
+		<td>SMART -I</td>	
+		<td>050054</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.51.14.125' and b.receivedtime between '2023-12-17 00:00:00' and '2023-12-17 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./p1dchy10_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+<div></div><div id="compose-ai-general-snackbar-root"></div><div id="Chat-Plugin-Root" class="compose-root-component"></div><div id="InlineText-Plugin-Root" class="compose-root-component"><div class="compose-root-component"></div></div><div id="intellisense-root"></div></body></html>

@@ -1,0 +1,2025 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.94' and b.receivedtime between '2022-12-01 00:00:00' and '2022-12-01 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.26.94&#39; and b.receivedtime between &#39;2022-12-01 00:00:00&#39; and &#39;2022-12-01 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:41</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>8665173</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-12-01 16:28:05</td>
+		<td>2022-12-01 16:27:38</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr kabir. 2way done. id card shown.,</td>-->
+        <td>Reactive</td>
+        <td>Vinay</td>
+        <td>2022-12-01 16:29:11</td>
+	    <td>2022-12-01 16:29:11*Comfort engineer at site mr kabir. 2way done. id card shown.,*Vinay</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>8665146</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 16:28:03</td>
+		<td>2022-12-01 16:27:35</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>8663932</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-12-01 16:25:29</td>
+		<td>2022-12-01 16:25:02</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr kabir. 2way done. id card shown.,</td>-->
+        <td>Reactive</td>
+        <td>Vinay</td>
+        <td>2022-12-01 16:29:11</td>
+	    <td>2022-12-01 16:29:11*Comfort engineer at site mr kabir. 2way done. id card shown.,*Vinay</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>8663909</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 16:25:27</td>
+		<td>2022-12-01 16:24:59</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>8663861</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:25:22</td>
+		<td>2022-12-01 16:24:54</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>Comfort engineer at site mr kabir. 2way done. id card shown.,</td>-->
+        <td>Reactive</td>
+        <td>Vinay</td>
+        <td>2022-12-01 16:29:11</td>
+	    <td>2022-12-01 16:29:11*Comfort engineer at site mr kabir. 2way done. id card shown.,*Vinay</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>8663806</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 16:25:14</td>
+		<td>2022-12-01 16:24:47</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>8660929</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 16:19:22</td>
+		<td>2022-12-01 16:18:57</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>8660905</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 16:19:22</td>
+		<td>2022-12-01 16:18:55</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>8659972</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>006</td>
+	<td>DF</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2022-12-01 16:17:25</td>
+		<td>2022-12-01 16:16:58</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>8659949</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:17:22</td>
+		<td>2022-12-01 16:16:55</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>8659122</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open ATM1</td>
+	 	<td>Chest Door Open ATM1</td>
+        <td>2022-12-01 16:15:37</td>
+		<td>2022-12-01 16:15:10</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>8659102</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:15:34</td>
+		<td>2022-12-01 16:15:07</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>8658996</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+	 	<td>ATM 1/2 Hood Door Sensor</td>
+        <td>2022-12-01 16:15:20</td>
+		<td>2022-12-01 16:14:53</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>8658967</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:15:17</td>
+		<td>2022-12-01 16:14:50</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>8657260</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>034</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Tamper Switch</td>
+	 	<td>Panel Tamper Switch</td>
+        <td>2022-12-01 16:11:54</td>
+		<td>2022-12-01 16:11:26</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>8656972</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:11:20</td>
+		<td>2022-12-01 16:10:52</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>8656938</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 16:11:16</td>
+		<td>2022-12-01 16:10:48</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>8536397</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 12:19:17</td>
+		<td>2022-12-01 12:18:54</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>8536377</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 12:19:17</td>
+		<td>2022-12-01 12:18:52</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>8449099</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 09:23:14</td>
+		<td>2022-12-01 09:22:52</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>8449083</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 09:23:14</td>
+		<td>2022-12-01 09:22:50</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 09:24:52</td>
+	    <td>2022-12-01 09:24:52*Person doing transaction,*comfort</td>
+		<td>192.168.100.56</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>8436273</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 08:59:05</td>
+		<td>2022-12-01 08:58:42</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>8432793</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 08:53:19</td>
+		<td>2022-12-01 08:52:56</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-12-01 08:53:24</td>
+	    <td>2022-12-01 08:53:24*No Issue found after video verification,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>8432748</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>019</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Door Open</td>
+	 	<td>Backroom Door Open</td>
+        <td>2022-12-01 08:53:16</td>
+		<td>2022-12-01 08:52:52</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-12-01 08:53:24</td>
+	    <td>2022-12-01 08:53:24*No Issue found after video verification,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>8412921</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 08:19:12</td>
+		<td>2022-12-01 08:18:51</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>8412900</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 08:19:12</td>
+		<td>2022-12-01 08:18:49</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>8367366</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 07:01:00</td>
+		<td>2022-12-01 07:00:38</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>8367334</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 07:01:00</td>
+		<td>2022-12-01 07:00:36</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>8304470</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 05:19:54</td>
+		<td>2022-12-01 05:19:32</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 05:19:19</td>
+	    <td>2022-12-01 05:19:19*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>8282356</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 04:44:57</td>
+		<td>2022-12-01 04:44:34</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 04:44:27</td>
+	    <td>2022-12-01 04:44:27*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>8273055</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 04:29:57</td>
+		<td>2022-12-01 04:29:35</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 04:29:46</td>
+	    <td>2022-12-01 04:29:46*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>8266595</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>103</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 04:19:08</td>
+		<td>2022-12-01 04:18:48</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>8266570</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 04:19:08</td>
+		<td>2022-12-01 04:18:46</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>8258838</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 04:06:37</td>
+		<td>2022-12-01 04:06:15</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-01 04:06:24</td>
+	    <td>2022-12-01 04:06:24*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>8225323</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 03:09:53</td>
+		<td>2022-12-01 03:09:32</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 03:10:04</td>
+	    <td>2022-12-01 03:10:04*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>8219735</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 02:59:57</td>
+		<td>2022-12-01 02:59:36</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-01 02:59:38</td>
+	    <td>2022-12-01 02:59:38*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>8184188</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 01:59:49</td>
+		<td>2022-12-01 01:59:27</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>ravi</td>
+        <td>2022-12-01 01:59:10</td>
+	    <td>2022-12-01 01:59:10*No Issue found after video verification,*ravi</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>8178205</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 01:49:49</td>
+		<td>2022-12-01 01:49:28</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Yasha</td>
+        <td>2022-12-01 01:49:47</td>
+	    <td>2022-12-01 01:49:47*No Issue found after video verification,*Yasha</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>8143171</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>JP</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby PIR Motion sensor</td>
+	 	<td>Lobby PIR Motion sensor</td>
+        <td>2022-12-01 00:49:49</td>
+		<td>2022-12-01 00:49:30</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-12-01 00:49:31</td>
+	    <td>2022-12-01 00:49:31*No Issue found after video verification,*helpdesk</td>
+		<td>192.168.100.57</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>8123980</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2022-12-01 00:19:03</td>
+		<td>2022-12-01 00:18:45</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>8123961</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>karmika nagar Hyderabad</td>-->
+    <td>P3ENHE09</td>
+    <td>karmika nagar Hyderabad</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>102</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-01 00:19:03</td>
+		<td>2022-12-01 00:18:43</td>
+		<td>01-December-2022</td>
+		<td>172.55.26.94</td>
+		<td>RASS</td>	
+		<td>077777</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.94' and b.receivedtime between '2022-12-01 00:00:00' and '2022-12-01 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

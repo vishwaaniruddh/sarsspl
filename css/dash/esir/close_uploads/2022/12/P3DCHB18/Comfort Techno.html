@@ -1,0 +1,7390 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                 
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                   <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Vipul				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="AGS">AGS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.35' and b.receivedtime between '2022-12-08 00:00:00' and '2022-12-08 23:59:59' order by receivedtime desc;
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.26.35&#39; and b.receivedtime between &#39;2022-12-08 00:00:00&#39; and &#39;2022-12-08 23:59:59&#39; order by receivedtime desc;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:186</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Diebold</td>
+     <td>13890246</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>012</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Chest door </td>
+	 	<td>ATM2 Chest door </td>
+        <td>2022-12-08 16:27:42</td>
+		<td>2022-12-08 16:28:15</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Diebold</td>
+     <td>13890228</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest door </td>
+	 	<td>ATM1 Chest door </td>
+        <td>2022-12-08 16:27:42</td>
+		<td>2022-12-08 16:28:13</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Diebold</td>
+     <td>13890206</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2022-12-08 16:27:42</td>
+		<td>2022-12-08 16:28:11</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Diebold</td>
+     <td>13890186</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:40</td>
+		<td>2022-12-08 16:28:09</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Diebold</td>
+     <td>13890165</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:40</td>
+		<td>2022-12-08 16:28:07</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Diebold</td>
+     <td>13890138</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>030</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque drop box open</td>
+	 	<td>Cheque drop box open Restoral</td>
+        <td>2022-12-08 16:27:40</td>
+		<td>2022-12-08 16:28:05</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Diebold</td>
+     <td>13890120</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>029</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque drop box removal</td>
+	 	<td>Cheque drop box removal</td>
+        <td>2022-12-08 16:27:40</td>
+		<td>2022-12-08 16:28:03</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Diebold</td>
+     <td>13890095</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>028</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC /UPS removal</td>
+	 	<td>AC /UPS removal</td>
+        <td>2022-12-08 16:27:40</td>
+		<td>2022-12-08 16:28:00</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Diebold</td>
+     <td>13890075</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td> ATM3 Chest door</td>
+	 	<td> ATM3 Chest door Restoral</td>
+        <td>2022-12-08 16:27:40</td>
+		<td>2022-12-08 16:27:58</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Diebold</td>
+     <td>13890059</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:40</td>
+		<td>2022-12-08 16:27:56</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Diebold</td>
+     <td>13890040</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:40</td>
+		<td>2022-12-08 16:27:54</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Diebold</td>
+     <td>13890023</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>508</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:52</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Diebold</td>
+     <td>13890009</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:49</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Diebold</td>
+     <td>13889992</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:47</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Diebold</td>
+     <td>13889971</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>031</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1Hood Door Sensor</td>
+	 	<td>ATM 1Hood Door Sensor</td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:45</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Diebold</td>
+     <td>13889959</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>030</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Cheque drop box open</td>
+	 	<td>Cheque drop box open</td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:43</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Diebold</td>
+     <td>13889943</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>027</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td> ATM3 Chest door</td>
+	 	<td> ATM3 Chest door</td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:41</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Diebold</td>
+     <td>13889926</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom door Open</td>
+	 	<td>Backroom door Open</td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:39</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Diebold</td>
+     <td>13889915</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>012</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Chest door </td>
+	 	<td>ATM2 Chest door </td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:37</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Diebold</td>
+     <td>13889890</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest door </td>
+	 	<td>ATM1 Chest door </td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:34</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Diebold</td>
+     <td>13889868</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>004</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main door shutter (Normally NO type)</td>
+	 	<td>Main door shutter (Normally NO type)</td>
+        <td>2022-12-08 16:27:30</td>
+		<td>2022-12-08 16:27:32</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Diebold</td>
+     <td>13889851</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>026</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 3 Thermal/ Heat</td>
+	 	<td>ATM 3 Thermal/ Heat Restoral</td>
+        <td>2022-12-08 16:27:25</td>
+		<td>2022-12-08 16:27:30</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Diebold</td>
+     <td>13889832</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>025</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 3 Vibration</td>
+	 	<td>ATM 3 Vibration Restoral</td>
+        <td>2022-12-08 16:27:25</td>
+		<td>2022-12-08 16:27:28</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Diebold</td>
+     <td>13889816</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>024</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 3 Removal</td>
+	 	<td>ATM 3 Removal Restoral</td>
+        <td>2022-12-08 16:27:25</td>
+		<td>2022-12-08 16:27:25</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Diebold</td>
+     <td>13889798</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:25</td>
+		<td>2022-12-08 16:27:23</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Diebold</td>
+     <td>13889778</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:25</td>
+		<td>2022-12-08 16:27:21</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Diebold</td>
+     <td>13889762</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:15</td>
+		<td>2022-12-08 16:27:19</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Diebold</td>
+     <td>13889745</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:15</td>
+		<td>2022-12-08 16:27:17</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Diebold</td>
+     <td>13889720</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:27:15</td>
+		<td>2022-12-08 16:27:14</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Diebold</td>
+     <td>13889294</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>010</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Vibration</td>
+	 	<td>ATM 2 Vibration Restoral</td>
+        <td>2022-12-08 16:26:13</td>
+		<td>2022-12-08 16:26:26</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Diebold</td>
+     <td>13889271</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Removal</td>
+	 	<td>ATM2 Removal Restoral</td>
+        <td>2022-12-08 16:26:13</td>
+		<td>2022-12-08 16:26:23</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Diebold</td>
+     <td>13889250</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:26:11</td>
+		<td>2022-12-08 16:26:21</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Diebold</td>
+     <td>13889219</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:26:11</td>
+		<td>2022-12-08 16:26:19</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Diebold</td>
+     <td>13889200</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>011</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Thermal/ Heat</td>
+	 	<td>ATM 2 Thermal/ Heat</td>
+        <td>2022-12-08 16:26:11</td>
+		<td>2022-12-08 16:26:17</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Diebold</td>
+     <td>13889184</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>010</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Vibration</td>
+	 	<td>ATM 2 Vibration</td>
+        <td>2022-12-08 16:26:11</td>
+		<td>2022-12-08 16:26:15</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Diebold</td>
+     <td>13889160</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Removal</td>
+	 	<td>ATM2 Removal</td>
+        <td>2022-12-08 16:26:11</td>
+		<td>2022-12-08 16:26:13</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Diebold</td>
+     <td>13889139</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>009</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Removal</td>
+	 	<td>ATM2 Removal</td>
+        <td>2022-12-08 16:26:06</td>
+		<td>2022-12-08 16:26:11</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Site recieved panic switch alert 2wzy not responding qrt arranged mr ramesh naidu</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-12-08 16:26:17</td>
+	    <td>2022-12-08 16:26:17*Site recieved panic switch alert 2wzy not responding qrt arranged mr ramesh naidu*helpdesk</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Diebold</td>
+     <td>13889120</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>010</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Vibration</td>
+	 	<td>ATM 2 Vibration</td>
+        <td>2022-12-08 16:26:06</td>
+		<td>2022-12-08 16:26:08</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Site recieved panic switch alert 2wzy not responding qrt arranged mr ramesh naidu</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-12-08 16:26:17</td>
+	    <td>2022-12-08 16:26:17*Site recieved panic switch alert 2wzy not responding qrt arranged mr ramesh naidu*helpdesk</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Diebold</td>
+     <td>13889095</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:26:05</td>
+		<td>2022-12-08 16:26:06</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Diebold</td>
+     <td>13889078</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:26:05</td>
+		<td>2022-12-08 16:26:04</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Diebold</td>
+     <td>13889060</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>011</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 2 Thermal/ Heat</td>
+	 	<td>ATM 2 Thermal/ Heat</td>
+        <td>2022-12-08 16:26:05</td>
+		<td>2022-12-08 16:26:02</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Site recieved panic switch alert 2wzy not responding qrt arranged mr ramesh naidu</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-12-08 16:26:17</td>
+	    <td>2022-12-08 16:26:17*Site recieved panic switch alert 2wzy not responding qrt arranged mr ramesh naidu*helpdesk</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Diebold</td>
+     <td>13889033</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>012</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM2 Chest door </td>
+	 	<td>ATM2 Chest door  Restoral</td>
+        <td>2022-12-08 16:26:05</td>
+		<td>2022-12-08 16:25:59</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Diebold</td>
+     <td>13887902</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch Restoral</td>
+        <td>2022-12-08 16:23:58</td>
+		<td>2022-12-08 16:23:56</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Diebold</td>
+     <td>13887875</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:23:58</td>
+		<td>2022-12-08 16:23:54</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Diebold</td>
+     <td>13887857</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:23:58</td>
+		<td>2022-12-08 16:23:52</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Diebold</td>
+     <td>13887810</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:23:48</td>
+		<td>2022-12-08 16:23:47</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Diebold</td>
+     <td>13887789</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:23:48</td>
+		<td>2022-12-08 16:23:44</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Diebold</td>
+     <td>13887754</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>003</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch</td>
+	 	<td>Panic Switch</td>
+        <td>2022-12-08 16:23:48</td>
+		<td>2022-12-08 16:23:42</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Site recieved panic switch alert 2way not responding qrt arranged mr ramesh naidu</td>-->
+        <td>Reactive</td>
+        <td>helpdesk</td>
+        <td>2022-12-08 16:25:17</td>
+	    <td>2022-12-08 16:25:17*Site recieved panic switch alert 2way not responding qrt arranged mr ramesh naidu*helpdesk</td>
+		<td>192.168.100.53</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Diebold</td>
+     <td>13886542</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:21:32</td>
+		<td>2022-12-08 16:21:26</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Diebold</td>
+     <td>13886522</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:21:27</td>
+		<td>2022-12-08 16:21:24</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Diebold</td>
+     <td>13886506</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:21:27</td>
+		<td>2022-12-08 16:21:21</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Diebold</td>
+     <td>13875177</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 16:00:00</td>
+		<td>2022-12-08 15:59:54</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Diebold</td>
+     <td>13874548</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 15:59:00</td>
+		<td>2022-12-08 15:58:54</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Diebold</td>
+     <td>13747381</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 12:00:00</td>
+		<td>2022-12-08 11:59:55</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Diebold</td>
+     <td>13746791</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 11:59:00</td>
+		<td>2022-12-08 11:58:57</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Diebold</td>
+     <td>13746738</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 11:59:00</td>
+		<td>2022-12-08 11:58:54</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Diebold</td>
+     <td>13620869</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 08:00:00</td>
+		<td>2022-12-08 07:59:55</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Diebold</td>
+     <td>13600185</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor Restoral</td>
+        <td>2022-12-08 07:23:34</td>
+		<td>2022-12-08 07:23:33</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Diebold</td>
+     <td>13600166</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 07:23:34</td>
+		<td>2022-12-08 07:23:31</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Diebold</td>
+     <td>13600142</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 07:23:34</td>
+		<td>2022-12-08 07:23:29</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Diebold</td>
+     <td>13600116</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 07:23:24</td>
+		<td>2022-12-08 07:23:26</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Diebold</td>
+     <td>13600089</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 07:23:24</td>
+		<td>2022-12-08 07:23:24</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Diebold</td>
+     <td>13600070</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>002</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Glass break sensor</td>
+	 	<td>Glass break sensor</td>
+        <td>2022-12-08 07:23:24</td>
+		<td>2022-12-08 07:23:21</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>divyan</td>
+        <td>2022-12-08 07:22:45</td>
+	    <td>2022-12-08 07:22:45*Person doing transaction,*divyan</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Diebold</td>
+     <td>13551858</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>510</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 06:00:00</td>
+		<td>2022-12-08 05:59:55</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Diebold</td>
+     <td>13521024</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 05:08:17</td>
+		<td>2022-12-08 05:08:17</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Diebold</td>
+     <td>13521007</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 05:08:17</td>
+		<td>2022-12-08 05:08:15</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Diebold</td>
+     <td>13520987</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 05:08:17</td>
+		<td>2022-12-08 05:08:12</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Diebold</td>
+     <td>13520939</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 05:08:07</td>
+		<td>2022-12-08 05:08:07</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Diebold</td>
+     <td>13520919</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 05:08:07</td>
+		<td>2022-12-08 05:08:05</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Diebold</td>
+     <td>13520900</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 05:08:07</td>
+		<td>2022-12-08 05:08:02</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-08 05:12:08</td>
+	    <td>2022-12-08 05:12:08*No Issue found after video verification,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Diebold</td>
+     <td>13520379</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 05:07:07</td>
+		<td>2022-12-08 05:07:07</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Diebold</td>
+     <td>13520358</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 05:07:07</td>
+		<td>2022-12-08 05:07:04</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Diebold</td>
+     <td>13520336</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 05:07:07</td>
+		<td>2022-12-08 05:07:02</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Diebold</td>
+     <td>13520283</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 05:06:57</td>
+		<td>2022-12-08 05:06:57</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Diebold</td>
+     <td>13520262</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 05:06:57</td>
+		<td>2022-12-08 05:06:54</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Diebold</td>
+     <td>13520245</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 05:06:57</td>
+		<td>2022-12-08 05:06:52</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>comfort</td>
+        <td>2022-12-08 05:06:31</td>
+	    <td>2022-12-08 05:06:31*Person doing transaction,*comfort</td>
+		<td>192.168.100.51</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Diebold</td>
+     <td>13481976</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:59:00</td>
+		<td>2022-12-08 03:58:55</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Diebold</td>
+     <td>13468925</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 03:35:27</td>
+		<td>2022-12-08 03:35:27</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Diebold</td>
+     <td>13468906</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:35:27</td>
+		<td>2022-12-08 03:35:25</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Diebold</td>
+     <td>13468885</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:35:27</td>
+		<td>2022-12-08 03:35:22</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Diebold</td>
+     <td>13468829</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:35:17</td>
+		<td>2022-12-08 03:35:17</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Diebold</td>
+     <td>13468807</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:35:17</td>
+		<td>2022-12-08 03:35:15</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Diebold</td>
+     <td>13468786</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 03:35:17</td>
+		<td>2022-12-08 03:35:13</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-08 03:34:36</td>
+	    <td>2022-12-08 03:34:36*HK person on site,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Diebold</td>
+     <td>13468490</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 03:34:41</td>
+		<td>2022-12-08 03:34:41</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Diebold</td>
+     <td>13468466</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:34:41</td>
+		<td>2022-12-08 03:34:39</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Diebold</td>
+     <td>13468444</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:34:41</td>
+		<td>2022-12-08 03:34:37</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Diebold</td>
+     <td>13468393</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:34:31</td>
+		<td>2022-12-08 03:34:32</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Diebold</td>
+     <td>13468376</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:34:31</td>
+		<td>2022-12-08 03:34:29</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Diebold</td>
+     <td>13468352</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 03:34:31</td>
+		<td>2022-12-08 03:34:27</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-08 03:34:28</td>
+	    <td>2022-12-08 03:34:28*HK person on site,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Diebold</td>
+     <td>13468033</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 03:33:52</td>
+		<td>2022-12-08 03:33:52</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Diebold</td>
+     <td>13468014</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:33:52</td>
+		<td>2022-12-08 03:33:50</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Diebold</td>
+     <td>13467991</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:33:52</td>
+		<td>2022-12-08 03:33:47</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Diebold</td>
+     <td>13467941</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:33:42</td>
+		<td>2022-12-08 03:33:42</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Diebold</td>
+     <td>13467923</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:33:42</td>
+		<td>2022-12-08 03:33:40</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Diebold</td>
+     <td>13467897</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 03:33:42</td>
+		<td>2022-12-08 03:33:37</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-08 03:34:29</td>
+	    <td>2022-12-08 03:34:29*HK person on site,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Diebold</td>
+     <td>13467645</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 03:33:11</td>
+		<td>2022-12-08 03:33:11</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Diebold</td>
+     <td>13467624</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:33:11</td>
+		<td>2022-12-08 03:33:09</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Diebold</td>
+     <td>13467605</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:33:11</td>
+		<td>2022-12-08 03:33:06</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Diebold</td>
+     <td>13467548</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:33:01</td>
+		<td>2022-12-08 03:33:01</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Diebold</td>
+     <td>13467529</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:33:01</td>
+		<td>2022-12-08 03:32:59</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Diebold</td>
+     <td>13467507</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 03:33:01</td>
+		<td>2022-12-08 03:32:57</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-08 03:32:08</td>
+	    <td>2022-12-08 03:32:08*No Issue found after video verification,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Diebold</td>
+     <td>13467118</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 03:32:14</td>
+		<td>2022-12-08 03:32:14</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Diebold</td>
+     <td>13467098</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:32:14</td>
+		<td>2022-12-08 03:32:12</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Diebold</td>
+     <td>13467076</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:32:14</td>
+		<td>2022-12-08 03:32:09</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Diebold</td>
+     <td>13467022</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:32:04</td>
+		<td>2022-12-08 03:32:04</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Diebold</td>
+     <td>13467001</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:32:04</td>
+		<td>2022-12-08 03:32:02</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Diebold</td>
+     <td>13466981</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 03:32:04</td>
+		<td>2022-12-08 03:32:00</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-08 03:31:12</td>
+	    <td>2022-12-08 03:31:12*HK person on site,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Diebold</td>
+     <td>13466754</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 03:31:32</td>
+		<td>2022-12-08 03:31:35</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Diebold</td>
+     <td>13466732</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:31:32</td>
+		<td>2022-12-08 03:31:33</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Diebold</td>
+     <td>13466713</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:31:32</td>
+		<td>2022-12-08 03:31:31</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Diebold</td>
+     <td>13466695</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:31:29</td>
+		<td>2022-12-08 03:31:28</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Diebold</td>
+     <td>13466673</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>503</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:31:24</td>
+		<td>2022-12-08 03:31:26</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Diebold</td>
+     <td>13466655</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>562</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:31:24</td>
+		<td>2022-12-08 03:31:24</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Diebold</td>
+     <td>13466635</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:31:22</td>
+		<td>2022-12-08 03:31:22</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Diebold</td>
+     <td>13466615</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 03:31:22</td>
+		<td>2022-12-08 03:31:20</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Diebold</td>
+     <td>13466592</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 03:31:22</td>
+		<td>2022-12-08 03:31:18</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>Akashb</td>
+        <td>2022-12-08 03:31:05</td>
+	    <td>2022-12-08 03:31:05*HK person on site,*Akashb</td>
+		<td>192.168.100.52</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Diebold</td>
+     <td>13386015</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 01:10:18</td>
+		<td>2022-12-08 01:10:18</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Diebold</td>
+     <td>13385995</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:10:18</td>
+		<td>2022-12-08 01:10:16</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Diebold</td>
+     <td>13385972</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:10:18</td>
+		<td>2022-12-08 01:10:14</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Diebold</td>
+     <td>13385916</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:10:08</td>
+		<td>2022-12-08 01:10:08</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Diebold</td>
+     <td>13385892</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:10:08</td>
+		<td>2022-12-08 01:10:06</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Diebold</td>
+     <td>13385870</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 01:10:08</td>
+		<td>2022-12-08 01:10:04</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 01:09:49</td>
+	    <td>2022-12-08 01:09:49*No Issue found after video verification,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Diebold</td>
+     <td>13385631</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 01:09:37</td>
+		<td>2022-12-08 01:09:38</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Diebold</td>
+     <td>13385610</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:09:37</td>
+		<td>2022-12-08 01:09:35</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Diebold</td>
+     <td>13385587</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:09:37</td>
+		<td>2022-12-08 01:09:33</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Diebold</td>
+     <td>13385537</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:09:27</td>
+		<td>2022-12-08 01:09:28</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Diebold</td>
+     <td>13385508</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:09:27</td>
+		<td>2022-12-08 01:09:26</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Diebold</td>
+     <td>13385489</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 01:09:27</td>
+		<td>2022-12-08 01:09:23</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 01:08:55</td>
+	    <td>2022-12-08 01:08:55*No Issue found after video verification,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Diebold</td>
+     <td>13385255</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 01:08:57</td>
+		<td>2022-12-08 01:08:57</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Diebold</td>
+     <td>13385230</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:08:57</td>
+		<td>2022-12-08 01:08:55</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Diebold</td>
+     <td>13385207</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:08:57</td>
+		<td>2022-12-08 01:08:53</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Diebold</td>
+     <td>13385154</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:08:47</td>
+		<td>2022-12-08 01:08:47</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Diebold</td>
+     <td>13385137</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 01:08:47</td>
+		<td>2022-12-08 01:08:45</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Diebold</td>
+     <td>13385118</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 01:08:47</td>
+		<td>2022-12-08 01:08:43</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 01:08:55</td>
+	    <td>2022-12-08 01:08:55*No Issue found after video verification,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Diebold</td>
+     <td>13370916</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 00:42:54</td>
+		<td>2022-12-08 00:42:54</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Diebold</td>
+     <td>13370894</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:42:54</td>
+		<td>2022-12-08 00:42:52</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Diebold</td>
+     <td>13370875</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:42:54</td>
+		<td>2022-12-08 00:42:50</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Diebold</td>
+     <td>13370823</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:42:44</td>
+		<td>2022-12-08 00:42:44</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Diebold</td>
+     <td>13370805</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:42:44</td>
+		<td>2022-12-08 00:42:42</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Diebold</td>
+     <td>13370782</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 00:42:44</td>
+		<td>2022-12-08 00:42:40</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 00:43:45</td>
+	    <td>2022-12-08 00:43:45*No Issue found after video verification,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>141</td>-->
+    <td>Diebold</td>
+     <td>13370558</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 00:42:14</td>
+		<td>2022-12-08 00:42:14</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>142</td>-->
+    <td>Diebold</td>
+     <td>13370536</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:42:14</td>
+		<td>2022-12-08 00:42:12</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>143</td>-->
+    <td>Diebold</td>
+     <td>13370517</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:42:14</td>
+		<td>2022-12-08 00:42:10</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>144</td>-->
+    <td>Diebold</td>
+     <td>13370469</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:42:04</td>
+		<td>2022-12-08 00:42:04</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>145</td>-->
+    <td>Diebold</td>
+     <td>13370448</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:42:04</td>
+		<td>2022-12-08 00:42:02</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>146</td>-->
+    <td>Diebold</td>
+     <td>13370426</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 00:42:04</td>
+		<td>2022-12-08 00:42:00</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 00:40:56</td>
+	    <td>2022-12-08 00:40:56*Person doing transaction,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>147</td>-->
+    <td>Diebold</td>
+     <td>13370132</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 00:41:26</td>
+		<td>2022-12-08 00:41:26</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>148</td>-->
+    <td>Diebold</td>
+     <td>13370110</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:41:26</td>
+		<td>2022-12-08 00:41:24</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>149</td>-->
+    <td>Diebold</td>
+     <td>13370092</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:41:26</td>
+		<td>2022-12-08 00:41:22</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>150</td>-->
+    <td>Diebold</td>
+     <td>13370045</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:41:16</td>
+		<td>2022-12-08 00:41:17</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>151</td>-->
+    <td>Diebold</td>
+     <td>13370020</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:41:16</td>
+		<td>2022-12-08 00:41:14</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>152</td>-->
+    <td>Diebold</td>
+     <td>13369999</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 00:41:16</td>
+		<td>2022-12-08 00:41:12</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 00:40:53</td>
+	    <td>2022-12-08 00:40:53*Person doing transaction,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>153</td>-->
+    <td>Diebold</td>
+     <td>13369779</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 00:40:46</td>
+		<td>2022-12-08 00:40:46</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>154</td>-->
+    <td>Diebold</td>
+     <td>13369760</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:40:46</td>
+		<td>2022-12-08 00:40:44</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>155</td>-->
+    <td>Diebold</td>
+     <td>13369739</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:40:46</td>
+		<td>2022-12-08 00:40:42</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>156</td>-->
+    <td>Diebold</td>
+     <td>13369682</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:40:36</td>
+		<td>2022-12-08 00:40:36</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>157</td>-->
+    <td>Diebold</td>
+     <td>13369665</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:40:36</td>
+		<td>2022-12-08 00:40:34</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>158</td>-->
+    <td>Diebold</td>
+     <td>13369648</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 00:40:36</td>
+		<td>2022-12-08 00:40:32</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 00:40:53</td>
+	    <td>2022-12-08 00:40:53*Person doing transaction,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>159</td>-->
+    <td>Diebold</td>
+     <td>13369346</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 00:40:02</td>
+		<td>2022-12-08 00:40:01</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>160</td>-->
+    <td>Diebold</td>
+     <td>13369323</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:40:01</td>
+		<td>2022-12-08 00:39:59</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>161</td>-->
+    <td>Diebold</td>
+     <td>13369304</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:40:01</td>
+		<td>2022-12-08 00:39:57</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>162</td>-->
+    <td>Diebold</td>
+     <td>13369247</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:39:51</td>
+		<td>2022-12-08 00:39:51</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>163</td>-->
+    <td>Diebold</td>
+     <td>13369229</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:39:51</td>
+		<td>2022-12-08 00:39:49</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>164</td>-->
+    <td>Diebold</td>
+     <td>13369210</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 00:39:51</td>
+		<td>2022-12-08 00:39:47</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 00:39:22</td>
+	    <td>2022-12-08 00:39:22*Person doing transaction,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>165</td>-->
+    <td>Diebold</td>
+     <td>13368866</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 00:39:08</td>
+		<td>2022-12-08 00:39:08</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>166</td>-->
+    <td>Diebold</td>
+     <td>13368848</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:39:08</td>
+		<td>2022-12-08 00:39:06</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>167</td>-->
+    <td>Diebold</td>
+     <td>13368826</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:39:08</td>
+		<td>2022-12-08 00:39:04</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>168</td>-->
+    <td>Diebold</td>
+     <td>13368776</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:38:58</td>
+		<td>2022-12-08 00:38:58</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>169</td>-->
+    <td>Diebold</td>
+     <td>13368758</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:38:58</td>
+		<td>2022-12-08 00:38:56</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>170</td>-->
+    <td>Diebold</td>
+     <td>13368737</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 00:38:58</td>
+		<td>2022-12-08 00:38:54</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>Person doing transaction,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 00:39:22</td>
+	    <td>2022-12-08 00:39:22*Person doing transaction,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>171</td>-->
+    <td>Diebold</td>
+     <td>13359700</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-08 00:23:19</td>
+		<td>2022-12-08 00:23:19</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>172</td>-->
+    <td>Diebold</td>
+     <td>13359681</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:23:19</td>
+		<td>2022-12-08 00:23:17</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>173</td>-->
+    <td>Diebold</td>
+     <td>13359662</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:23:19</td>
+		<td>2022-12-08 00:23:15</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>174</td>-->
+    <td>Diebold</td>
+     <td>13359619</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>502</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:23:09</td>
+		<td>2022-12-08 00:23:10</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>175</td>-->
+    <td>Diebold</td>
+     <td>13359603</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>501</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:23:09</td>
+		<td>2022-12-08 00:23:08</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>176</td>-->
+    <td>Diebold</td>
+     <td>13359582</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-08 00:23:09</td>
+		<td>2022-12-08 00:23:05</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td>No Issue found after video verification,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2022-12-08 00:25:22</td>
+	    <td>2022-12-08 00:25:22*No Issue found after video verification,*surajj</td>
+		<td>192.168.100.50</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>177</td>-->
+    <td>Diebold</td>
+     <td>13347148</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:00:00</td>
+		<td>2022-12-08 00:00:19</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>178</td>-->
+    <td>Diebold</td>
+     <td>13347101</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>511</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:00:00</td>
+		<td>2022-12-08 00:00:17</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>179</td>-->
+    <td>Diebold</td>
+     <td>13347029</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>510</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-08 00:00:00</td>
+		<td>2022-12-08 00:00:15</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>180</td>-->
+    <td>Diebold</td>
+     <td>13346938</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>512</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-07 23:59:00</td>
+		<td>2022-12-08 00:00:13</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>181</td>-->
+    <td>Diebold</td>
+     <td>13346848</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>510</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-07 23:59:00</td>
+		<td>2022-12-08 00:00:11</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>182</td>-->
+    <td>Diebold</td>
+     <td>13346740</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>504</td>
+	<td>RO</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-07 23:56:49</td>
+		<td>2022-12-08 00:00:09</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>183</td>-->
+    <td>Diebold</td>
+     <td>13346623</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>504</td>
+	<td>RC</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2022-12-07 23:56:39</td>
+		<td>2022-12-08 00:00:07</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>184</td>-->
+    <td>Diebold</td>
+     <td>13346502</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-07 23:53:20</td>
+		<td>2022-12-08 00:00:04</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>185</td>-->
+    <td>Diebold</td>
+     <td>13346370</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>DO</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor</td>
+        <td>2022-12-07 23:53:20</td>
+		<td>2022-12-08 00:00:02</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>186</td>-->
+    <td>Diebold</td>
+     <td>13346226</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Telangana</td>
+     <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>-->
+    <td>P3DCHB18</td>
+    <td>1-4-765, Opp Sree Sai Raja Theatre, Musheerabad Main Road, Hyderabad.</td>
+	<td>Hyderabad</td>
+	<td>Telangana</td>
+	<td>001</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td>Motion Sensor</td>
+	 	<td>Motion Sensor Restoral</td>
+        <td>2022-12-07 23:51:32</td>
+		<td>2022-12-08 00:00:00</td>
+		<td>08-December-2022</td>
+		<td>172.55.26.35</td>
+		<td>securico_gx4816</td>	
+		<td>090282</td>
+        <td>HDFC</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.26.35' and b.receivedtime between '2022-12-08 00:00:00' and '2022-12-08 23:59:59' order by receivedtime desc;" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

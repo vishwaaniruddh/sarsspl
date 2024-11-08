@@ -1,0 +1,3457 @@
+
+<!-- saved from url=(0044)http://192.168.100.23:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+  
+    <title>Comfort Techno</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	
+	<link href="./Comfort Techno_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+  
+    <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+  
+
+  
+   <script src="./Comfort Techno_files/jquery.min.js(1).download"></script>
+     <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+     <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+	
+	
+	 
+	
+	
+  
+  
+     
+	
+	
+	
+	
+    <header role="banner">
+      
+      <nav class="navbar navbar-expand-lg " style="color:#fff;">
+        <div class="container">
+          <a class="navbar-brand" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;"><div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>  </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="http://192.168.100.23:8080/css/alertview.php#" style="color:#fff;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+				   
+				  <a id="1" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php#">Add Site</a>
+				                    <a id="2" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsite.php">View Site</a>
+                                    <a id="21" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Project_Add.php">Project Add</a>
+				  				<!-- <a   class="dropdown-item" href="addDvrSite.php">Add DVR Site</a>
+                 <a   class="dropdown-item" href="ViewDvrSite.php">View DVR Site</a>-->
+                  <a id="22" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/customerDataMaintain.php">Customer Data Maintain</a>
+				                    <a id="23" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewcustomerDataMaintain.php">View Customer Data Maintain</a>
+                                  </div>
+
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+				                  <a id="3" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addusers.php">Add user</a>
+				                    <a id="4" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewusers.php">View user</a>
+				                   
+                 
+                </div>
+
+              </li>
+			  
+			  
+			     <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                   
+                 <a id="6" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/lastcommunication.php">Last Communication</a>
+				                     <a id="7" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/ebmisnew.php">Count call close by</a>
+					                    <a id="8" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/newview.php">HZ /HL View</a>
+					                    <a id="9" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/panelcount.php">Description Count</a>
+										<a id="10" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/useralertreport.php">call alert report</a>
+										<a id="12" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertviewAsc.php">View Alert Report</a>
+					                    <a id="11" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/Mains_UPS_Fail.php">Mains &amp; UPS Fail</a>
+					                    <a id="13" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/graph.php">view Graph</a> 
+					                      <a id="14" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/qrtsites.php">QRT Excel upload</a>
+					                        <a id="15" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/mailcount.php">Mail Count</a>
+					                   <a id="16" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/testsite.php">site visit</a>					  
+				                   <a id="17" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/sitetest_view.php">view site test details</a>  
+				                    <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/dashboard.php">Dashboard</a>  
+				  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a> 
+                </div>
+
+              </li>
+			  
+			  
+			  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                   <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/vm_alert.php">View Monitoring Alert</a>
+                   					 <a id="19" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/bypass.php">By Pass Alert</a>
+					 					   <a id="20" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/old_alert_SendIP.php">Archive Alert SendIP</a>
+					  					 <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/alertview_CMS.php">CMS View Alert</a>
+					  <a id="" class="dropdown-item" href="http://192.168.100.23:8080/css/testing_count_Report.php">Testing count Report</a>
+
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/test_alert.php">Test Alert</a>
+				       <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/current_alert.php">Current Alert</a>
+					   <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewsitelog.php">Site Log Report</a>
+			   </div>
+              </li>
+             
+			 
+			 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://192.168.100.23:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  
+                  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcity.php">Add City</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addcustomer.php">Add Customer</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/add_dvr.php">Add DVR</a>
+				  <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/view_qrt.php">View Qrt</a>
+				
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/addemp.php">Emp Details</a>
+				  <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/viewemp.php">View Emp Details</a>
+				  				  <a id="24" style="" class="dropdown-item" href="http://192.168.100.23:8080/css/logoutByAdmin.php">User Logout</a>
+				  				    <a style="" class="dropdown-item" href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+                </div>
+				</li><li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+				
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://192.168.100.23:8080/css/logout.php" style="color:#fff;">LogOut</a>
+				
+              </li>
+			  <li class="nav-item">
+                &nbsp;&nbsp;&nbsp;Welcome Rohit Bhardwaj				
+              </li>
+			  
+			 
+            </ul>
+			
+			
+			
+			
+			
+			
+						
+			
+			 <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="http://192.168.100.23:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+          <ul class="dropdown-menu">
+		   <li class="nav-item">
+               <a href="http://192.168.100.23:8080/css/RenewalSite.php">Renewal Site</a>
+			   </li>
+		  
+		  
+		  </ul>
+         </li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    
+   
+    <!-- END slider -->
+
+
+ 
+               
+
+  
+
+    
+    <!-- END section -->
+
+  
+  
+ 
+
+  
+
+
+  
+
+
+
+
+    
+
+    <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./Comfort Techno_files/popper.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap.min.js(1).download"></script>
+    <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+    <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+    <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+    <script src="./Comfort Techno_files/main.js.download"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.23:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Diebold">Diebold</option>
+ <option value="Hitachi">Hitachi</option>
+ <option value="Euronet">Euronet</option>
+ <option value="FSS">FSS</option>
+ <option value="PNB">PNB</option>
+ <option value="FIS">FIS</option>
+ <option value="Kotak">Kotak</option>
+ <option value="EPS">EPS</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+ <option value="Axis">Axis</option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="RASS">RASS</option>
+ <option value="RASSN">RASSN</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="Raxx">Raxx</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;172.55.20.155&#39; and b.receivedtime between &#39;2023-06-15 00:00:00&#39; and &#39;2023-06-15 23:59:59&#39;">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:79</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Hitachi</td>
+     <td>66115127</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>009</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Temper Switch</td>
+	 	<td>Panel Temper Switch</td>
+        <td>2023-06-15 14:26:30</td>
+		<td>2023-06-15 14:25:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Hitachi</td>
+     <td>66115263</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>018</td>
+	<td>ET</td>
+ 	
+    	 
+
+	 
+	 	<td>Other Engineers Switch</td>
+	 	<td>Other Engineers Switch</td>
+        <td>2023-06-15 14:27:00</td>
+		<td>2023-06-15 14:25:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Hitachi</td>
+     <td>66115267</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch &amp; CRA Panic Switch</td>
+	 	<td>Panic Switch &amp; CRA Panic Switch</td>
+        <td>2023-06-15 14:26:59</td>
+		<td>2023-06-15 14:25:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Hitachi</td>
+     <td>66115268</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:27:00</td>
+		<td>2023-06-15 14:25:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Hitachi</td>
+     <td>66115397</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td>House Keeping Switch</td>
+	 	<td>House Keeping Switch</td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Hitachi</td>
+     <td>66115398</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>018</td>
+	<td>EN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Hitachi</td>
+     <td>66115399</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>019</td>
+	<td>BN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Hitachi</td>
+     <td>66115401</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>017</td>
+	<td>IT</td>
+ 	
+    	 
+
+	 
+	 	<td>IT Team Switch</td>
+	 	<td>IT Team Switch</td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Hitachi</td>
+     <td>66115402</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>002</td>
+	<td>SA</td>
+ 	
+    	 
+
+	 
+	 	<td>Main Door shutter Normally NO type</td>
+	 	<td>Main Door shutter Normally NO type</td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Hitachi</td>
+     <td>66115403</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>ST</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA Switch</td>
+	 	<td>CRA Switch</td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Hitachi</td>
+     <td>66115410</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Hitachi</td>
+     <td>66115411</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Hitachi</td>
+     <td>66115412</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>017</td>
+	<td>IN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Hitachi</td>
+     <td>66115413</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Hitachi</td>
+     <td>66115416</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Hitachi</td>
+     <td>66115432</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:27:30</td>
+		<td>2023-06-15 14:26:14</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Hitachi</td>
+     <td>66115539</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:27:59</td>
+		<td>2023-06-15 14:26:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Hitachi</td>
+     <td>66115543</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>002</td>
+	<td>SR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:28:00</td>
+		<td>2023-06-15 14:26:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Hitachi</td>
+     <td>66115639</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:28:29</td>
+		<td>2023-06-15 14:27:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Hitachi</td>
+     <td>66115641</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>005</td>
+	<td>CA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-06-15 14:28:29</td>
+		<td>2023-06-15 14:27:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Hitachi</td>
+     <td>66115642</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Hood Door Sensor</td>
+	 	<td>ATM1 Hood Door Sensor</td>
+        <td>2023-06-15 14:28:30</td>
+		<td>2023-06-15 14:27:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Hitachi</td>
+     <td>66115691</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>005</td>
+	<td>CR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:28:59</td>
+		<td>2023-06-15 14:27:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Hitachi</td>
+     <td>66115694</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>005</td>
+	<td>CR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:28:59</td>
+		<td>2023-06-15 14:27:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Hitachi</td>
+     <td>66115696</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>005</td>
+	<td>CA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-06-15 14:29:00</td>
+		<td>2023-06-15 14:27:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Hitachi</td>
+     <td>66115738</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:29:29</td>
+		<td>2023-06-15 14:28:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Hitachi</td>
+     <td>66115739</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>012</td>
+	<td>VR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:29:30</td>
+		<td>2023-06-15 14:28:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Hitachi</td>
+     <td>66115741</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-15 14:29:30</td>
+		<td>2023-06-15 14:28:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Hitachi</td>
+     <td>66115743</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>012</td>
+	<td>VA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-06-15 14:29:30</td>
+		<td>2023-06-15 14:28:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:47</td>
+	    <td>2023-06-15 14:43:47**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Hitachi</td>
+     <td>66115744</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:29:30</td>
+		<td>2023-06-15 14:28:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Hitachi</td>
+     <td>66115750</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>JA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC1 Removal &amp; AC2 Removal</td>
+	 	<td>AC1 Removal &amp; AC2 Removal</td>
+        <td>2023-06-15 14:29:30</td>
+		<td>2023-06-15 14:28:14</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:46</td>
+	    <td>2023-06-15 14:43:46**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Hitachi</td>
+     <td>66115810</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>022</td>
+	<td>DN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:30:00</td>
+		<td>2023-06-15 14:28:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Hitachi</td>
+     <td>66115811</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>022</td>
+	<td>DT</td>
+ 	
+    	 
+
+	 
+	 	<td>Outside Camera Removal</td>
+	 	<td>Outside Camera Removal</td>
+        <td>2023-06-15 14:30:00</td>
+		<td>2023-06-15 14:28:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:46</td>
+	    <td>2023-06-15 14:43:46**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Hitachi</td>
+     <td>66115814</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>021</td>
+	<td>RT</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Camera Removal</td>
+	 	<td>Backroom Camera Removal</td>
+        <td>2023-06-15 14:30:00</td>
+		<td>2023-06-15 14:28:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:46</td>
+	    <td>2023-06-15 14:43:46**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Hitachi</td>
+     <td>66115817</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>021</td>
+	<td>RN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:30:00</td>
+		<td>2023-06-15 14:28:44</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Hitachi</td>
+     <td>66115855</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-06-15 14:30:30</td>
+		<td>2023-06-15 14:29:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>*this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>kashish</td>
+        <td>2023-06-15 14:43:46</td>
+	    <td>2023-06-15 14:43:46**this site recived panic switch alert someone present at site 2 way n/w qrt not responding*kashish</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Hitachi</td>
+     <td>66115863</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:30:30</td>
+		<td>2023-06-15 14:29:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Hitachi</td>
+     <td>66116488</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>HR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Hitachi</td>
+     <td>66116492</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Hitachi</td>
+     <td>66116493</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch &amp; CRA Panic Switch</td>
+	 	<td>Panic Switch &amp; CRA Panic Switch</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Hitachi</td>
+     <td>66116494</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>012</td>
+	<td>VA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM 1 Vibration</td>
+	 	<td>ATM 1 Vibration</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Hitachi</td>
+     <td>66116497</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>012</td>
+	<td>VR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Hitachi</td>
+     <td>66116498</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Hitachi</td>
+     <td>66116499</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>005</td>
+	<td>CA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Chest Door Open</td>
+	 	<td>ATM1 Chest Door Open</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Hitachi</td>
+     <td>66116502</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>004</td>
+	<td>HA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Hood Door Sensor</td>
+	 	<td>ATM1 Hood Door Sensor</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Hitachi</td>
+     <td>66116504</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>006</td>
+	<td>JA</td>
+ 	
+    	 
+
+	 
+	 	<td>AC1 Removal &amp; AC2 Removal</td>
+	 	<td>AC1 Removal &amp; AC2 Removal</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Hitachi</td>
+     <td>66116508</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>005</td>
+	<td>CR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Hitachi</td>
+     <td>66116510</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Hitachi</td>
+     <td>66116524</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>AR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:34:00</td>
+		<td>2023-06-15 14:32:44</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Hitachi</td>
+     <td>66116623</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>018</td>
+	<td>EN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:11</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Hitachi</td>
+     <td>66116624</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>020</td>
+	<td>LN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Hitachi</td>
+     <td>66116625</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>016</td>
+	<td>KN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Hitachi</td>
+     <td>66116626</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>017</td>
+	<td>IT</td>
+ 	
+    	 
+
+	 
+	 	<td>IT Team Switch</td>
+	 	<td>IT Team Switch</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Hitachi</td>
+     <td>66116627</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Hitachi</td>
+     <td>66116628</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>020</td>
+	<td>LT</td>
+ 	
+    	 
+
+	 
+	 	<td>Lobby Camera Removal</td>
+	 	<td>Lobby Camera Removal</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Hitachi</td>
+     <td>66116631</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>022</td>
+	<td>DN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Hitachi</td>
+     <td>66116633</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td>House Keeping Switch</td>
+	 	<td>House Keeping Switch</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Hitachi</td>
+     <td>66116634</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>022</td>
+	<td>DT</td>
+ 	
+    	 
+
+	 
+	 	<td>Outside Camera Removal</td>
+	 	<td>Outside Camera Removal</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Hitachi</td>
+     <td>66116636</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>021</td>
+	<td>RT</td>
+ 	
+    	 
+
+	 
+	 	<td>Backroom Camera Removal</td>
+	 	<td>Backroom Camera Removal</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Hitachi</td>
+     <td>66116637</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Hitachi</td>
+     <td>66116638</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>019</td>
+	<td>BN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Hitachi</td>
+     <td>66116639</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>018</td>
+	<td>ET</td>
+ 	
+    	 
+
+	 
+	 	<td>Other Engineers Switch</td>
+	 	<td>Other Engineers Switch</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Hitachi</td>
+     <td>66116640</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>021</td>
+	<td>RN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Hitachi</td>
+     <td>66116641</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>017</td>
+	<td>IN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Hitachi</td>
+     <td>66116643</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>ST</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA Switch</td>
+	 	<td>CRA Switch</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Hitachi</td>
+     <td>66116644</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>024</td>
+	<td>ER</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Hitachi</td>
+     <td>66116645</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>024</td>
+	<td>EA</td>
+ 	
+    	 
+
+	 
+	 	<td>Heat Detector (True Safe)</td>
+	 	<td>Heat Detector (True Safe)</td>
+        <td>2023-06-15 14:34:30</td>
+		<td>2023-06-15 14:33:12</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:13</td>
+	    <td>2023-06-15 14:38:13*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Hitachi</td>
+     <td>66117245</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>009</td>
+	<td>TA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panel Temper Switch</td>
+	 	<td>Panel Temper Switch</td>
+        <td>2023-06-15 14:37:00</td>
+		<td>2023-06-15 14:35:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td>this site recived panic switch alert someone present at site 2 way n/w qrt not responding</td>-->
+        <td>Reactive</td>
+        <td>akanshag</td>
+        <td>2023-06-15 14:38:29</td>
+	    <td>2023-06-15 14:38:29*this site recived panic switch alert someone present at site 2 way n/w qrt not responding*akanshag</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Hitachi</td>
+     <td>66117248</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>008</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back Door Open</td>
+	 	<td>Back Door Open</td>
+        <td>2023-06-15 14:37:00</td>
+		<td>2023-06-15 14:35:41</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Hitachi</td>
+     <td>66119083</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>016</td>
+	<td>KN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Hitachi</td>
+     <td>66119090</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>019</td>
+	<td>BN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Hitachi</td>
+     <td>66119093</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>SN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Hitachi</td>
+     <td>66119096</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>017</td>
+	<td>IT</td>
+ 	
+    	 
+
+	 
+	 	<td>IT Team Switch</td>
+	 	<td>IT Team Switch</td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Hitachi</td>
+     <td>66119097</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>PR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Hitachi</td>
+     <td>66119098</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>016</td>
+	<td>KT</td>
+ 	
+    	 
+
+	 
+	 	<td>House Keeping Switch</td>
+	 	<td>House Keeping Switch</td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Hitachi</td>
+     <td>66119099</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>001</td>
+	<td>PA</td>
+ 	
+    	 
+
+	 
+	 	<td>Panic Switch &amp; CRA Panic Switch</td>
+	 	<td>Panic Switch &amp; CRA Panic Switch</td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.75</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Hitachi</td>
+     <td>66119100</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>015</td>
+	<td>ST</td>
+ 	
+    	 
+
+	 
+	 	<td>CRA Switch</td>
+	 	<td>CRA Switch</td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Hitachi</td>
+     <td>66119102</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>019</td>
+	<td>BT</td>
+ 	
+    	 
+
+	 
+	 	<td>Bank Person Switch</td>
+	 	<td>Bank Person Switch</td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.73</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Hitachi</td>
+     <td>66119104</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>003</td>
+	<td>AA</td>
+ 	
+    	 
+
+	 
+	 	<td>ATM1 Removal</td>
+	 	<td>ATM1 Removal</td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td>192.168.100.74</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Hitachi</td>
+     <td>66119106</td>
+     <td>South</td>
+     <!-- <td>Hyderabad,Andhra Pradesh</td>
+     <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>-->
+    <td>N2782600</td>
+    <td>BO:ANAKAPALLY ,D NO 12-10-3, VEDULAVARI STREET, ANAKAPALLY  </td>
+	<td>Hyderabad</td>
+	<td>Andhra Pradesh</td>
+	<td>018</td>
+	<td>EN</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td></td>
+        <td>2023-06-15 14:48:00</td>
+		<td>2023-06-15 14:46:42</td>
+		<td>15-June-2023</td>
+		<td>172.55.20.155</td>
+		<td>comfort</td>	
+		<td>093010</td>
+        <td>PNB</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='172.55.20.155' and b.receivedtime between '2023-06-15 00:00:00' and '2023-06-15 23:59:59'" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

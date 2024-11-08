@@ -1,0 +1,5697 @@
+
+<!-- saved from url=(0044)http://192.168.100.21:8080/css/alertview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+
+	
+	
+       
+        <script>
+        
+            function a(strPage,perpg){
+			
+               var panelid=document.getElementById("panelid").value;
+               var ATMID=document.getElementById("ATMID").value;
+               var compy=document.getElementById("compy").value;
+               var DVRIP=document.getElementById("DVRIP").value;
+               var from=document.getElementById("fromdate").value;
+               var to=document.getElementById("todate").value;
+               var viewalert=document.getElementById("viewalert").value;
+               var panelmak=document.getElementById("panelmak").value;
+       
+            $('#loadingmessage').show();  // show the loading message.
+          
+          perp='30';
+
+var Page="";
+if(strPage!="")
+{
+Page=strPage;
+}
+         
+             
+             $.ajax({
+               
+            type:'POST',    
+   url:'viewalert_process.php',
+   data:'panelid='+panelid+'&ATMID='+ATMID+'&DVRIP='+DVRIP+'&from='+from+'&to='+to+'&Page='+Page+'&perpg='+perp+'&compy='+compy+'&viewalert='+viewalert+'&panelmak='+panelmak,
+
+   success: function(msg){
+  // alert(msg);
+    $('#loadingmessage').hide(); // hide the loading message
+   document.getElementById("show").innerHTML=msg;
+   
+   
+} })
+            }
+        </script>
+        
+        
+        
+        	<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+
+ <script type="text/javascript">
+
+var tableToExcel = (function() {
+//alert("hii");
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
+</script>
+	
+        
+</head>
+      <body style="background-color: #dce079">&nbsp;&nbsp;&nbsp;
+        <!--<body onload="a('','')" style="background-color: #dce079">-->
+		
+		       
+
+
+
+  <title>Comfort Techno</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+  <link href="./Comfort Techno_files/css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.css">
+
+  <link rel="stylesheet" href="./Comfort Techno_files/bootstrap-datepicker.css">
+
+
+
+  <script src="./Comfort Techno_files/jquery.min(1).js.download"></script>
+  <link rel="stylesheet" href="./Comfort Techno_files/bootstrap.min.css">
+  <script src="./Comfort Techno_files/bootstrap.min.js.download"></script>
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="./Comfort Techno_files/style.css">
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <header role="banner">
+
+    <nav class="navbar navbar-expand-lg " style="color:#fff;">
+      <div class="container">
+        <a class="navbar-brand" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">
+          <div style="display:inline-block;"><img src="./Comfort Techno_files/download.png" width="32px">Comfort Techno+</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://192.168.100.21:8080/css/alertview.php#" style="color:#fff;">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="hdm1" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Site</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <!--<a id="1" style="display:none;" class="dropdown-item" href="addsite.php">Add Site</a>-->
+                                  <a id="2" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsite.php">View Site</a>
+                				                              </div>
+
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                
+
+              </div>
+
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm4" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard_all.php">View Sites</a>
+                                  <a id="6" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/lastcommunication.php">Last Communication</a>
+                                  <a id="12" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertviewAsc.php">View Alert Report</a>
+                                  <a id="11" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/def1.php">Mains &amp; UPS Fail</a>
+                                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/dashboard.php">Dashboard</a>
+                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/atm_wise_alert_count.php">ATM Wise Alert Count</a>
+              </div>
+
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/doctors.html" id="hdm3" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alert</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown05">
+                
+                  <a class="dropdown-item" href="http://192.168.100.21:8080/css/allalert_data.php">All Alert</a>
+
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview.php">View alert</a>
+                  <a id="5" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/vm_alert.php">View Monitoring Alert</a>
+                                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/alertview_CMS.php">CMS View Alert</a>
+                <a id="" class="dropdown-item" href="http://192.168.100.21:8080/css/testing_count_Report.php">Testing count Report</a>
+
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/test_alert.php">Test Alert</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/current_alert.php">Current Alert</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewsitelog.php">Site Log Report</a>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://192.168.100.21:8080/css/services.html" id="hdm2" style="color:#fff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+			  
+			   
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcity.php">Add City</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addcustomer.php">Add Customer</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/add_dvr.php">Add DVR</a>
+                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/view_qrt.php">View Qrt</a>
+
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/addemp.php">Emp Details</a>
+                <a target="_blank" style="" class="dropdown-item" href="http://192.168.100.21:8080/css/viewemp.php">View Emp Details</a>
+                                <a style="" class="dropdown-item" href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+              </div>
+            </li><li class="nav-item">
+              <a class="nav-link" href="http://192.168.100.21:8080/css/dbsync.php" style="color:#fff;">Sync Data</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://192.168.100.21:8080/css/logout.php" style="color:#fff;">LogOut</a>
+
+            </li>
+            <li class="nav-item">
+              &nbsp;&nbsp;&nbsp;Welcome Sandeep Kumbhar
+            </li>
+
+
+          </ul>
+
+
+
+
+
+
+          
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="http://192.168.100.21:8080/css/RenewalSite.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;">0</span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+              <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a href="http://192.168.100.21:8080/css/RenewalSite.php">Renewal Site</a>
+                </li>
+
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
+
+
+  <!-- END slider -->
+
+
+
+
+
+
+
+
+  <!-- END section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./Comfort Techno_files/jquery-3.2.1.min.js.download"></script>
+  <script src="./Comfort Techno_files/popper.min.js.download"></script>
+  <script src="./Comfort Techno_files/bootstrap.min(1).js.download"></script>
+  <script src="./Comfort Techno_files/owl.carousel.min.js.download"></script>
+  <script src="./Comfort Techno_files/bootstrap-datepicker.js.download"></script>
+  <script src="./Comfort Techno_files/jquery.timepicker.min.js.download"></script>
+  <script src="./Comfort Techno_files/jquery.waypoints.min.js.download"></script>
+  <script src="./Comfort Techno_files/main.js.download"></script>
+
+
+<form id="formf" name="formf" method="post" action="http://192.168.100.21:8080/css/css_View_alert_export.php">
+
+            <div>
+			<center><h1 style="margin-top:70px; color:#fff;"><b> View Alert</b></h1></center>
+			
+<hr>
+<a type="button" href="http://192.168.100.21:8080/css/alertview_new.php#tabletop" rel="noopener noreferrer" style="
+    border: 1px solid gray;
+    padding: 10px;
+    background: #f0f0f0;
+    color: black;
+    border-radius: 3px;
+    margin: 10px;
+">View version 2</a>
+
+      <input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: right;height:30px"><button onclick="myFunction()" style="float: right;height:30px">Print this page</button><table border="1" style="margin-top:40px; width:90%; " align="center">          
+     
+     
+      
+               
+<tbody><tr style="background-color:#8cb77e">
+
+
+<td> view :<select id="viewalert" name="viewalert">                      
+ 
+  <option value="1">All alert</option>
+ <option value="2">Open alert</option>
+ <option value="3">Close alert</option>
+  <option value="4">ATM Chest Door Alert</option>
+  <option value="12">Hood Door</option>
+ <option value="5">AC Mains Fail</option>
+ <option value="6">Backroom Door Open Sensor</option>
+ <option value="7">Panic Switch</option>
+ <option value="8">UPS Fail</option>
+ <option value="9">Low Battery</option>
+ <option value="10">Shutter Sensor</option>
+ <option value="11">Lobby Temperature</option>
+ <option value="13">ATM Vibration Sensor</option>
+ <option value="14">ATM Thermal Sensor</option>
+ <option value="15">ATM Removal Sensor</option>
+ <option value="16">Glass break sensor</option>
+ <option value="17">Motion Sensor</option>
+ <option value="18">Hooter Sensor</option>
+  <option value="19">Smoke Detector</option>
+</select></td>
+
+<td> panel id :<input type="text" name="panelid" id="panelid"></td>
+<td> DVRIP:<input type="text" name="DVRIP" id="DVRIP"></td>
+<td> Company:<select id="compy" name="compy">                      
+  <option value="">--Select Company--</option>
+  
+     <option value="Hitachi">Hitachi</option>
+ <option value="Diebold">Diebold</option>
+ <option value="FSS">FSS</option>
+ <option value="Euronet">Euronet</option>
+ <option value="AGS">AGS</option>
+ <option value="TATA">TATA</option>
+ <option value=""></option>
+</select></td>
+
+<td> Panel Make:<select id="panelmak" name="panelmak">                      
+  <option value="">--Select Panel--</option>
+  
+     <option value=""></option>
+ <option value="comfort">comfort</option>
+ <option value="comfort_hdfc">comfort_hdfc</option>
+ <option value="comfort_sbitom2">comfort_sbitom2</option>
+ <option value="RASS">RASS</option>
+ <option value="rass_boi">rass_boi</option>
+ <option value="rass_cloud">rass_cloud</option>
+ <option value="rass_pnb">rass_pnb</option>
+ <option value="rass_sbi">rass_sbi</option>
+ <option value="SEC">SEC</option>
+ <option value="securico_gx4816">securico_gx4816</option>
+ <option value="sec_sbi">sec_sbi</option>
+ <option value="SMART -I">SMART -I</option>
+ <option value="SMART-IN">SMART-IN</option>
+ <option value="smarti_boi">smarti_boi</option>
+ <option value="smarti_hdfc32">smarti_hdfc32</option>
+ <option value="smarti_pnb">smarti_pnb</option>
+</select></td>
+<td> ATMID:<input type="text" name="ATMID" id="ATMID"></td>
+<!--<td> date:<input type="text" name="date" id="date" ></td>-->
+<td>From Date:<input type="date" id="fromdate"></td>
+<td>To Date:<input type="date" id="todate"></td>
+        <td><input type="button" name="submit" onclick="a(&#39;&#39;,&#39;&#39;)" value="search"></td>
+		
+
+
+
+
+
+</tr>
+</tbody></table>
+            </div>
+            	<!--============== code for loader (Start)===================-->
+
+			<div id="loadingmessage" style="display: none;">
+                <img src="./Comfort Techno_files/loading.gif" style="position:center;left:50%;margin-left:550px; ">
+            </div>
+          <!--============== code for loader (End) =====================-->
+            
+            
+            <div id="show">SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.109.10.16' and b.receivedtime between '2024-08-23 00:00:00' and '2024-08-26 23:59:59' order by receivedtime desc
+
+
+<style>
+table{
+	width:100%;
+}
+td{
+	padding:10px;
+	font-size:12px;
+	font-weight: bold;
+	color:#000;
+}
+
+tr:hover {
+background-color:#eee !important;
+}
+tr,th{
+	padding:10px;
+	background-color:#8cb77e; 
+	color:#fff;
+	font-size:12px;
+}
+</style>
+
+<input type="hidden" name="expqry" id="expqry" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP=&#39;10.109.10.16&#39; and b.receivedtime between &#39;2024-08-23 00:00:00&#39; and &#39;2024-08-26 23:59:59&#39; order by receivedtime desc">
+<button id="myButtonControlID" onclick="expfunc();">Export Table data into Excel</button>
+
+<div align="center">total records:140</div>
+  <table border="1" style="margin-top:30px">
+  <tbody><tr>
+  <!--<th>sr</th>-->
+      <th>Client Name</th>
+      <th> Incident Number</th>
+      <th>Region</th>
+      <!--<th>Circle</th>
+      <th>Location</th>-->
+      
+    
+   
+      
+    <th>ATMID</th>
+      <th>Address</th>
+	  <th>City</th>
+	  <th>State</th>
+	  <th>Zone</th>
+	  <th>Alarm</th>
+	  
+     <th>Incident Category</th>
+      <th>Alarm Message</th>
+       <th>Incident Date Time</th>
+    <th>Alarm Received Date Time</th>
+    <th> Close Date Time</th>
+       <th>DVRIP</th>
+       <th>Panel_make</th>
+	   <th>panelid</th>
+   
+   
+      <th>Bank</th>
+	 <!--<th>comment</th>-->
+	 <th>Reactive</th>
+   <th>Closed By</th>
+	 <th>Closed Date</th>
+     <th>Remark</th> 
+	 <th>Send Ip</th>
+	 <th>TestingByServiceTeam</th>
+     <th>Testing Remark</th>
+       
+       
+  </tr>
+
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>1</td>-->
+    <td>Euronet</td>
+     <td>1721368</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-26 08:55:32</td>
+		<td>2024-08-26 08:54:48</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-26 09:11:29</td>
+	    <td>2024-08-26 09:11:29*As per live no one present at site 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>2</td>-->
+    <td>Euronet</td>
+     <td>1719558</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-26 08:26:19</td>
+		<td>2024-08-26 08:25:35</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-26 08:26:07</td>
+	    <td>2024-08-26 08:26:07*HK person on site as per live 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>3</td>-->
+    <td>Euronet</td>
+     <td>1719552</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-26 08:26:16</td>
+		<td>2024-08-26 08:25:31</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-26 08:26:07</td>
+	    <td>2024-08-26 08:26:07*HK person on site as per live 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>4</td>-->
+    <td>Euronet</td>
+     <td>1712561</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-26 06:37:29</td>
+		<td>2024-08-26 06:36:46</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-26 07:09:57</td>
+	    <td>2024-08-26 07:09:57*As per live no one present at site*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>5</td>-->
+    <td>Euronet</td>
+     <td>1710714</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-26 06:08:01</td>
+		<td>2024-08-26 06:07:19</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>salmans</td>
+        <td>2024-08-26 06:07:37</td>
+	    <td>2024-08-26 06:07:37*As per live no one present at site*salmans</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>6</td>-->
+    <td>Euronet</td>
+     <td>1710711</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-26 06:07:58</td>
+		<td>2024-08-26 06:07:15</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>salmans</td>
+        <td>2024-08-26 06:07:37</td>
+	    <td>2024-08-26 06:07:37*As per live no one present at site*salmans</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>7</td>-->
+    <td>Euronet</td>
+     <td>1681757</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 23:32:18</td>
+		<td>2024-08-25 23:31:41</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>salmans</td>
+        <td>2024-08-25 23:51:20</td>
+	    <td>2024-08-25 23:51:20*As per live no one present at site*salmans</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>8</td>-->
+    <td>Euronet</td>
+     <td>1680291</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 23:03:18</td>
+		<td>2024-08-25 23:02:41</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>salmans</td>
+        <td>2024-08-25 23:51:20</td>
+	    <td>2024-08-25 23:51:20*As per live no one present at site*salmans</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>9</td>-->
+    <td>Euronet</td>
+     <td>1680281</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 23:03:14</td>
+		<td>2024-08-25 23:02:37</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>salmans</td>
+        <td>2024-08-25 23:51:20</td>
+	    <td>2024-08-25 23:51:20*As per live no one present at site*salmans</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>10</td>-->
+    <td>Euronet</td>
+     <td>1675027</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 21:30:15</td>
+		<td>2024-08-25 21:29:40</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-25 21:30:20</td>
+	    <td>2024-08-25 21:30:20*As per live no one present at site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>11</td>-->
+    <td>Euronet</td>
+     <td>1673439</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 21:00:32</td>
+		<td>2024-08-25 20:59:58</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-25 21:11:51</td>
+	    <td>2024-08-25 21:11:51*As per live no one present at site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>12</td>-->
+    <td>Euronet</td>
+     <td>1673436</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 21:00:28</td>
+		<td>2024-08-25 20:59:54</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-25 21:11:51</td>
+	    <td>2024-08-25 21:11:51*As per live no one present at site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>13</td>-->
+    <td>Euronet</td>
+     <td>1666702</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 18:59:12</td>
+		<td>2024-08-25 18:58:38</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-25 19:01:20</td>
+	    <td>2024-08-25 19:01:20*As per live no one present at site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>14</td>-->
+    <td>Euronet</td>
+     <td>1665056</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 18:29:22</td>
+		<td>2024-08-25 18:28:52</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-25 18:29:07</td>
+	    <td>2024-08-25 18:29:07*Guard using backroom,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>15</td>-->
+    <td>Euronet</td>
+     <td>1665049</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 18:29:19</td>
+		<td>2024-08-25 18:28:45</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-25 18:29:02</td>
+	    <td>2024-08-25 18:29:02*Guard using backroom,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>16</td>-->
+    <td>Euronet</td>
+     <td>1630974</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 08:42:56</td>
+		<td>2024-08-25 08:42:29</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>Sneha</td>
+        <td>2024-08-25 08:43:00</td>
+	    <td>2024-08-25 08:43:00*As per live no one present at site 2way done,*Sneha</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>17</td>-->
+    <td>Euronet</td>
+     <td>1629217</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 08:13:22</td>
+		<td>2024-08-25 08:12:55</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>neha</td>
+        <td>2024-08-25 08:13:45</td>
+	    <td>2024-08-25 08:13:45*HK person on site 2way done,*neha</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>18</td>-->
+    <td>Euronet</td>
+     <td>1629209</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 08:13:18</td>
+		<td>2024-08-25 08:12:51</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site 2way done,</td>-->
+        <td>Reactive</td>
+        <td>neha</td>
+        <td>2024-08-25 08:13:45</td>
+	    <td>2024-08-25 08:13:45*HK person on site 2way done,*neha</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>19</td>-->
+    <td>Euronet</td>
+     <td>1624658</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 06:46:53</td>
+		<td>2024-08-25 06:46:28</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-25 06:46:51</td>
+	    <td>2024-08-25 06:46:51*As per live no one present at site*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>20</td>-->
+    <td>Euronet</td>
+     <td>1623192</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 06:17:47</td>
+		<td>2024-08-25 06:17:21</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-25 06:18:07</td>
+	    <td>2024-08-25 06:18:07*HK person on site,*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>21</td>-->
+    <td>Euronet</td>
+     <td>1623187</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-25 06:17:43</td>
+		<td>2024-08-25 06:17:17</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-25 06:18:07</td>
+	    <td>2024-08-25 06:18:07*HK person on site,*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>22</td>-->
+    <td>Euronet</td>
+     <td>1598358</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 23:40:43</td>
+		<td>2024-08-24 23:40:22</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-24 23:41:15</td>
+	    <td>2024-08-24 23:41:15*As per live no one present at site*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>23</td>-->
+    <td>Euronet</td>
+     <td>1597318</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 23:11:33</td>
+		<td>2024-08-24 23:11:13</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-24 23:13:26</td>
+	    <td>2024-08-24 23:13:26*HK person on site,*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>24</td>-->
+    <td>Euronet</td>
+     <td>1597314</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 23:11:29</td>
+		<td>2024-08-24 23:11:09</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-24 23:13:26</td>
+	    <td>2024-08-24 23:13:26*HK person on site,*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>25</td>-->
+    <td>Euronet</td>
+     <td>1592189</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 21:10:39</td>
+		<td>2024-08-24 21:10:20</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-25 03:11:53</td>
+	    <td>2024-08-25 03:11:53*As per live no one present at site*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>26</td>-->
+    <td>Euronet</td>
+     <td>1590434</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 20:41:28</td>
+		<td>2024-08-24 20:41:10</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-24 20:43:44</td>
+	    <td>2024-08-24 20:43:44*Guard using backroom,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>27</td>-->
+    <td>Euronet</td>
+     <td>1590428</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 20:41:25</td>
+		<td>2024-08-24 20:41:06</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-24 20:43:44</td>
+	    <td>2024-08-24 20:43:44*Guard using backroom,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>28</td>-->
+    <td>Euronet</td>
+     <td>1582585</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 18:26:35</td>
+		<td>2024-08-24 18:26:19</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-24 18:31:24</td>
+	    <td>2024-08-24 18:31:24*As per live no one present at site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>29</td>-->
+    <td>Euronet</td>
+     <td>1580941</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 17:57:25</td>
+		<td>2024-08-24 17:57:34</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-24 18:12:01</td>
+	    <td>2024-08-24 18:12:01*As per live no one present at site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>30</td>-->
+    <td>Euronet</td>
+     <td>1580915</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 17:57:23</td>
+		<td>2024-08-24 17:57:06</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-24 18:12:01</td>
+	    <td>2024-08-24 18:12:01*As per live no one present at site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>31</td>-->
+    <td>Euronet</td>
+     <td>1558498</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 11:31:25</td>
+		<td>2024-08-24 11:31:13</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-24 11:31:55</td>
+	    <td>2024-08-24 11:31:55*As per live no one present at site*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>32</td>-->
+    <td>Euronet</td>
+     <td>1556320</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 11:01:30</td>
+		<td>2024-08-24 11:01:18</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-24 11:02:48</td>
+	    <td>2024-08-24 11:02:48*Guard using backroom as per live 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>33</td>-->
+    <td>Euronet</td>
+     <td>1556310</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 11:01:26</td>
+		<td>2024-08-24 11:01:14</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-24 11:02:48</td>
+	    <td>2024-08-24 11:02:48*Guard using backroom as per live 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>34</td>-->
+    <td>Euronet</td>
+     <td>1544032</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 08:12:20</td>
+		<td>2024-08-24 08:12:10</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site2way done</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-24 08:12:45</td>
+	    <td>2024-08-24 08:12:45*As per live no one present at site2way done*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>35</td>-->
+    <td>Euronet</td>
+     <td>1541827</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 07:42:28</td>
+		<td>2024-08-24 07:42:19</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site as per live,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-24 07:54:20</td>
+	    <td>2024-08-24 07:54:20*HK person on site as per live,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>36</td>-->
+    <td>Euronet</td>
+     <td>1541823</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 07:42:25</td>
+		<td>2024-08-24 07:42:15</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site as per live,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-24 07:54:20</td>
+	    <td>2024-08-24 07:54:20*HK person on site as per live,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>37</td>-->
+    <td>Euronet</td>
+     <td>1536399</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 06:27:17</td>
+		<td>2024-08-24 06:27:10</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>38</td>-->
+    <td>Euronet</td>
+     <td>1534092</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 05:57:33</td>
+		<td>2024-08-24 05:57:25</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-24 05:59:31</td>
+	    <td>2024-08-24 05:59:31*HK person on site,*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>39</td>-->
+    <td>Euronet</td>
+     <td>1534084</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-24 05:57:30</td>
+		<td>2024-08-24 05:57:21</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-24 05:59:31</td>
+	    <td>2024-08-24 05:59:31*HK person on site,*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>40</td>-->
+    <td>Euronet</td>
+     <td>1501075</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 21:37:04</td>
+		<td>2024-08-23 21:37:02</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-24 02:07:32</td>
+	    <td>2024-08-24 02:07:32*As per live no one present at site*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>41</td>-->
+    <td>Euronet</td>
+     <td>1499350</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 21:07:31</td>
+		<td>2024-08-23 21:07:30</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-23 21:07:57</td>
+	    <td>2024-08-23 21:07:57*Guard using backroom,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>42</td>-->
+    <td>Euronet</td>
+     <td>1499345</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 21:07:28</td>
+		<td>2024-08-23 21:07:25</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-23 21:07:57</td>
+	    <td>2024-08-23 21:07:57*Guard using backroom,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>43</td>-->
+    <td>Euronet</td>
+     <td>1496495</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>015</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Chest Door Open Sensor</td>
+	 	<td>Chest Door Open Sensor</td>
+        <td>2024-08-23 20:16:03</td>
+		<td>2024-08-23 20:16:02</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Cash loading person present on site . ID card shown 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-23 20:16:52</td>
+	    <td>2024-08-23 20:16:52*Cash loading person present on site . ID card shown 2 way done,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>44</td>-->
+    <td>Euronet</td>
+     <td>1489005</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 18:04:59</td>
+		<td>2024-08-23 18:04:59</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-23 18:59:30</td>
+	    <td>2024-08-23 18:59:30*As per live no one present at site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>45</td>-->
+    <td>Euronet</td>
+     <td>1487293</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 17:35:55</td>
+		<td>2024-08-23 17:36:21</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-23 17:36:59</td>
+	    <td>2024-08-23 17:36:59*HK person on site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>46</td>-->
+    <td>Euronet</td>
+     <td>1487268</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 17:35:52</td>
+		<td>2024-08-23 17:35:53</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>SahilK</td>
+        <td>2024-08-23 17:36:59</td>
+	    <td>2024-08-23 17:36:59*HK person on site,*SahilK</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>47</td>-->
+    <td>Euronet</td>
+     <td>1472825</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 13:44:52</td>
+		<td>2024-08-23 13:44:56</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Person doing transaction as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 13:45:27</td>
+	    <td>2024-08-23 13:45:27*Person doing transaction as per live 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>48</td>-->
+    <td>Euronet</td>
+     <td>1471149</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 13:16:23</td>
+		<td>2024-08-23 13:15:36</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 13:16:21</td>
+	    <td>2024-08-23 13:16:21*Guard using backroom 2 way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>49</td>-->
+    <td>Euronet</td>
+     <td>1471144</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 13:16:18</td>
+		<td>2024-08-23 13:15:32</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>Guard using backroom 2 way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 13:16:21</td>
+	    <td>2024-08-23 13:16:21*Guard using backroom 2 way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>50</td>-->
+    <td>Euronet</td>
+     <td>1465850</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 11:48:39</td>
+		<td>2024-08-23 11:47:54</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>as per live no one present at site 2way done</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 12:01:18</td>
+	    <td>2024-08-23 12:01:18*as per live no one present at site 2way done*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>51</td>-->
+    <td>Euronet</td>
+     <td>1463918</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 11:19:32</td>
+		<td>2024-08-23 11:18:47</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 11:20:16</td>
+	    <td>2024-08-23 11:20:16*HK person on site as per live 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>52</td>-->
+    <td>Euronet</td>
+     <td>1463913</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 11:19:28</td>
+		<td>2024-08-23 11:18:43</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site as per live 2way done,</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 11:20:16</td>
+	    <td>2024-08-23 11:20:16*HK person on site as per live 2way done,*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>53</td>-->
+    <td>Euronet</td>
+     <td>1455701</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 08:47:35</td>
+		<td>2024-08-23 08:46:52</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>as per live no one present at site  2way done</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 08:47:58</td>
+	    <td>2024-08-23 08:47:58*as per live no one present at site  2way done*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>54</td>-->
+    <td>Euronet</td>
+     <td>1454153</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 08:17:56</td>
+		<td>2024-08-23 08:17:13</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>as per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 08:27:25</td>
+	    <td>2024-08-23 08:27:25*as per live no one present at site*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>55</td>-->
+    <td>Euronet</td>
+     <td>1454150</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 08:17:53</td>
+		<td>2024-08-23 08:17:09</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>as per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 08:27:25</td>
+	    <td>2024-08-23 08:27:25*as per live no one present at site*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>56</td>-->
+    <td>Euronet</td>
+     <td>1454138</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 08:17:33</td>
+		<td>2024-08-23 08:16:50</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>as per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>pushpa</td>
+        <td>2024-08-23 08:27:25</td>
+	    <td>2024-08-23 08:27:25*as per live no one present at site*pushpa</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>57</td>-->
+    <td>Euronet</td>
+     <td>1448672</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>001</td>
+	<td>CL</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 06:39:31</td>
+		<td>2024-08-23 06:38:50</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>As per live no one present at site</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-23 06:39:27</td>
+	    <td>2024-08-23 06:39:27*As per live no one present at site*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>58</td>-->
+    <td>Euronet</td>
+     <td>1446893</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 06:10:11</td>
+		<td>2024-08-23 06:09:30</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-23 06:09:46</td>
+	    <td>2024-08-23 06:09:46*HK person on site,*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>59</td>-->
+    <td>Euronet</td>
+     <td>1446888</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>003</td>
+	<td>OA</td>
+ 	
+    	 
+
+	 
+	 	<td>Back room Door sensor</td>
+	 	<td>Back room Door sensor</td>
+        <td>2024-08-23 06:10:07</td>
+		<td>2024-08-23 06:09:26</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td>HK person on site,</td>-->
+        <td>Reactive</td>
+        <td>surajj</td>
+        <td>2024-08-23 06:09:41</td>
+	    <td>2024-08-23 06:09:41*HK person on site,*surajj</td>
+		<td>192.168.100.54</td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+    
+  
+  
+  
+ <tr style="background-color:#cfe8c7">
+    <!--<td>60</td>-->
+    <td>Euronet</td>
+     <td>8696909</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 08:55:34</td>
+		<td>2024-08-26 08:54:52</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>61</td>-->
+    <td>Euronet</td>
+     <td>8696876</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 08:55:32</td>
+		<td>2024-08-26 08:54:50</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>62</td>-->
+    <td>Euronet</td>
+     <td>8675310</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 08:28:56</td>
+		<td>2024-08-26 08:28:14</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>63</td>-->
+    <td>Euronet</td>
+     <td>8675283</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 08:28:56</td>
+		<td>2024-08-26 08:28:12</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>64</td>-->
+    <td>Euronet</td>
+     <td>8581742</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 06:37:29</td>
+		<td>2024-08-26 06:36:48</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>65</td>-->
+    <td>Euronet</td>
+     <td>8558410</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 06:09:07</td>
+		<td>2024-08-26 06:08:26</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>66</td>-->
+    <td>Euronet</td>
+     <td>8558383</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 06:09:06</td>
+		<td>2024-08-26 06:08:24</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>67</td>-->
+    <td>Euronet</td>
+     <td>8304400</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 00:55:20</td>
+		<td>2024-08-26 01:03:48</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>68</td>-->
+    <td>Euronet</td>
+     <td>8279911</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 00:31:00</td>
+		<td>2024-08-26 00:33:48</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>69</td>-->
+    <td>Euronet</td>
+     <td>8257959</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-26 00:00:00</td>
+		<td>2024-08-26 00:03:47</td>
+		<td>26-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>70</td>-->
+    <td>Euronet</td>
+     <td>8241986</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 23:32:18</td>
+		<td>2024-08-25 23:31:43</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>71</td>-->
+    <td>Euronet</td>
+     <td>8234286</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 23:08:10</td>
+		<td>2024-08-25 23:07:39</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>72</td>-->
+    <td>Euronet</td>
+     <td>8234279</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 23:08:10</td>
+		<td>2024-08-25 23:07:37</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>73</td>-->
+    <td>Euronet</td>
+     <td>8234258</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 23:08:09</td>
+		<td>2024-08-25 23:07:33</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>74</td>-->
+    <td>Euronet</td>
+     <td>8184097</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 21:30:15</td>
+		<td>2024-08-25 21:30:05</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>75</td>-->
+    <td>Euronet</td>
+     <td>8168822</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 21:06:28</td>
+		<td>2024-08-25 21:05:54</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>76</td>-->
+    <td>Euronet</td>
+     <td>8168799</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 21:06:28</td>
+		<td>2024-08-25 21:05:52</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>77</td>-->
+    <td>Euronet</td>
+     <td>8105498</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 18:59:12</td>
+		<td>2024-08-25 18:58:41</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>78</td>-->
+    <td>Euronet</td>
+     <td>8093431</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 18:34:29</td>
+		<td>2024-08-25 18:34:21</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>79</td>-->
+    <td>Euronet</td>
+     <td>8093198</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 18:34:29</td>
+		<td>2024-08-25 18:33:56</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>80</td>-->
+    <td>Euronet</td>
+     <td>8046398</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 16:55:08</td>
+		<td>2024-08-25 17:03:42</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>81</td>-->
+    <td>Euronet</td>
+     <td>8017433</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Relay On</td>
+	 	<td>Relay On</td>
+        <td>2024-08-25 16:00:00</td>
+		<td>2024-08-25 16:03:41</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>82</td>-->
+    <td>Euronet</td>
+     <td>7792312</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 08:54:56</td>
+		<td>2024-08-25 09:03:36</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>83</td>-->
+    <td>Euronet</td>
+     <td>7774907</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 08:42:56</td>
+		<td>2024-08-25 08:42:31</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>84</td>-->
+    <td>Euronet</td>
+     <td>7754974</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 08:19:28</td>
+		<td>2024-08-25 08:19:03</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>85</td>-->
+    <td>Euronet</td>
+     <td>7754943</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 08:19:28</td>
+		<td>2024-08-25 08:19:01</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>86</td>-->
+    <td>Euronet</td>
+     <td>7678599</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 06:46:53</td>
+		<td>2024-08-25 06:46:30</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>87</td>-->
+    <td>Euronet</td>
+     <td>7657724</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 06:20:14</td>
+		<td>2024-08-25 06:19:50</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>88</td>-->
+    <td>Euronet</td>
+     <td>7657694</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 06:20:14</td>
+		<td>2024-08-25 06:19:48</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>89</td>-->
+    <td>Euronet</td>
+     <td>7403270</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 00:54:45</td>
+		<td>2024-08-25 01:03:29</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>90</td>-->
+    <td>Euronet</td>
+     <td>7381433</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 00:31:00</td>
+		<td>2024-08-25 00:33:29</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>91</td>-->
+    <td>Euronet</td>
+     <td>7364344</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-25 00:00:00</td>
+		<td>2024-08-25 00:03:29</td>
+		<td>25-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>92</td>-->
+    <td>Euronet</td>
+     <td>7358200</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 23:40:43</td>
+		<td>2024-08-24 23:40:24</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>93</td>-->
+    <td>Euronet</td>
+     <td>7353186</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 23:15:02</td>
+		<td>2024-08-24 23:14:44</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>94</td>-->
+    <td>Euronet</td>
+     <td>7353183</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 23:15:01</td>
+		<td>2024-08-24 23:14:42</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>95</td>-->
+    <td>Euronet</td>
+     <td>7302801</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 21:10:39</td>
+		<td>2024-08-24 21:10:22</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>96</td>-->
+    <td>Euronet</td>
+     <td>7297968</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 20:54:39</td>
+		<td>2024-08-24 21:03:26</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>97</td>-->
+    <td>Euronet</td>
+     <td>7289759</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 20:46:59</td>
+		<td>2024-08-24 20:46:43</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>98</td>-->
+    <td>Euronet</td>
+     <td>7289735</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 20:46:58</td>
+		<td>2024-08-24 20:46:40</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>99</td>-->
+    <td>Euronet</td>
+     <td>7216260</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 18:26:35</td>
+		<td>2024-08-24 18:26:45</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>100</td>-->
+    <td>Euronet</td>
+     <td>7205532</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 18:06:59</td>
+		<td>2024-08-24 18:06:45</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>101</td>-->
+    <td>Euronet</td>
+     <td>7205515</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 18:06:59</td>
+		<td>2024-08-24 18:06:43</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>102</td>-->
+    <td>Euronet</td>
+     <td>7140606</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Relay On</td>
+	 	<td>Relay On</td>
+        <td>2024-08-24 16:00:00</td>
+		<td>2024-08-24 16:03:22</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>103</td>-->
+    <td>Euronet</td>
+     <td>7049177</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 12:54:27</td>
+		<td>2024-08-24 13:03:22</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>104</td>-->
+    <td>Euronet</td>
+     <td>6996158</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 11:31:25</td>
+		<td>2024-08-24 11:31:15</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>105</td>-->
+    <td>Euronet</td>
+     <td>6979587</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 11:02:25</td>
+		<td>2024-08-24 11:02:16</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>106</td>-->
+    <td>Euronet</td>
+     <td>6979569</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 11:02:24</td>
+		<td>2024-08-24 11:02:13</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>107</td>-->
+    <td>Euronet</td>
+     <td>6868742</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 08:12:20</td>
+		<td>2024-08-24 08:12:12</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>108</td>-->
+    <td>Euronet</td>
+     <td>6862863</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 08:05:25</td>
+		<td>2024-08-24 08:05:18</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>109</td>-->
+    <td>Euronet</td>
+     <td>6862834</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 08:05:25</td>
+		<td>2024-08-24 08:05:15</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>110</td>-->
+    <td>Euronet</td>
+     <td>6777914</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 06:27:17</td>
+		<td>2024-08-24 06:27:13</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>111</td>-->
+    <td>Euronet</td>
+     <td>6757945</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 06:04:02</td>
+		<td>2024-08-24 06:03:56</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>112</td>-->
+    <td>Euronet</td>
+     <td>6757914</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 06:04:02</td>
+		<td>2024-08-24 06:03:54</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>113</td>-->
+    <td>Euronet</td>
+     <td>6704638</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 04:54:15</td>
+		<td>2024-08-24 05:03:13</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>114</td>-->
+    <td>Euronet</td>
+     <td>6468357</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 00:31:00</td>
+		<td>2024-08-24 00:33:10</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>115</td>-->
+    <td>Euronet</td>
+     <td>6446428</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-24 00:00:00</td>
+		<td>2024-08-24 00:03:10</td>
+		<td>24-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>116</td>-->
+    <td>Euronet</td>
+     <td>6380689</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 21:37:04</td>
+		<td>2024-08-23 21:37:06</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>117</td>-->
+    <td>Euronet</td>
+     <td>6364439</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 21:14:43</td>
+		<td>2024-08-23 21:14:42</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>118</td>-->
+    <td>Euronet</td>
+     <td>6364413</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 21:14:42</td>
+		<td>2024-08-23 21:14:40</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>119</td>-->
+    <td>Euronet</td>
+     <td>6356562</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 20:54:03</td>
+		<td>2024-08-23 21:03:07</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>120</td>-->
+    <td>Euronet</td>
+     <td>6335008</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>015</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 20:19:15</td>
+		<td>2024-08-23 20:19:13</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>121</td>-->
+    <td>Euronet</td>
+     <td>6262200</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 18:04:59</td>
+		<td>2024-08-23 18:05:01</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>122</td>-->
+    <td>Euronet</td>
+     <td>6248383</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 17:40:17</td>
+		<td>2024-08-23 17:40:19</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>123</td>-->
+    <td>Euronet</td>
+     <td>6248362</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 17:40:16</td>
+		<td>2024-08-23 17:40:17</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>124</td>-->
+    <td>Euronet</td>
+     <td>6191657</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>101</td>
+	<td>BA</td>
+ 	
+    	 
+
+	 
+	 	<td>Relay On</td>
+	 	<td>Relay On</td>
+        <td>2024-08-23 16:00:00</td>
+		<td>2024-08-23 16:03:03</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>125</td>-->
+    <td>Euronet</td>
+     <td>6114304</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 13:44:52</td>
+		<td>2024-08-23 13:45:21</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>126</td>-->
+    <td>Euronet</td>
+     <td>6097407</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 13:16:40</td>
+		<td>2024-08-23 13:15:55</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>127</td>-->
+    <td>Euronet</td>
+     <td>6097386</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 13:16:39</td>
+		<td>2024-08-23 13:15:53</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>128</td>-->
+    <td>Euronet</td>
+     <td>6089995</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 12:54:41</td>
+		<td>2024-08-23 13:03:01</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>129</td>-->
+    <td>Euronet</td>
+     <td>6048184</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 11:48:39</td>
+		<td>2024-08-23 11:47:57</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>130</td>-->
+    <td>Euronet</td>
+     <td>6032623</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 11:20:21</td>
+		<td>2024-08-23 11:19:38</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>131</td>-->
+    <td>Euronet</td>
+     <td>6032608</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 11:20:20</td>
+		<td>2024-08-23 11:19:36</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>132</td>-->
+    <td>Euronet</td>
+     <td>5944427</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 08:47:35</td>
+		<td>2024-08-23 08:46:54</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>133</td>-->
+    <td>Euronet</td>
+     <td>5921787</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 08:20:30</td>
+		<td>2024-08-23 08:19:49</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>134</td>-->
+    <td>Euronet</td>
+     <td>5921760</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 08:20:30</td>
+		<td>2024-08-23 08:19:47</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>135</td>-->
+    <td>Euronet</td>
+     <td>5836481</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>900</td>
+	<td>JR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 06:39:31</td>
+		<td>2024-08-23 06:38:52</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>136</td>-->
+    <td>Euronet</td>
+     <td>5813030</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>023</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 06:11:34</td>
+		<td>2024-08-23 06:10:54</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>137</td>-->
+    <td>Euronet</td>
+     <td>5812998</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>103</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 06:11:33</td>
+		<td>2024-08-23 06:10:52</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>138</td>-->
+    <td>Euronet</td>
+     <td>5755567</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>102</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 04:54:29</td>
+		<td>2024-08-23 05:02:55</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>139</td>-->
+    <td>Euronet</td>
+     <td>5530605</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>104</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 00:31:00</td>
+		<td>2024-08-23 00:32:51</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+
+ <tr style="background-color:#cfe8c7">
+    <!--<td>140</td>-->
+    <td>Euronet</td>
+     <td>5508626</td>
+     <td>North</td>
+     <!-- <td>Rewari,Haryana</td>
+     <td>jharjhar chowk riwadi haryana 123401</td>-->
+    <td>SECNT131</td>
+    <td>jharjhar chowk riwadi haryana 123401</td>
+	<td>Rewari</td>
+	<td>Haryana</td>
+	<td>101</td>
+	<td>BR</td>
+ 	
+    	 
+
+	 
+	 	<td></td>
+	 	<td> Restoral</td>
+        <td>2024-08-23 00:00:00</td>
+		<td>2024-08-23 00:02:51</td>
+		<td>23-August-2024</td>
+		<td>10.109.10.16</td>
+		<td>RASS</td>	
+		<td>090117</td>
+        <td>ICICI</td>
+	    <!--<td></td>-->
+        <td>Non-Reactive</td>
+        <td></td>
+        <td></td>
+	    <td>**</td>
+		<td></td>
+		<td></td>
+		<td></td>
+  </tr>
+	
+	
+    
+
+</tbody></table>
+
+ 
+
+ <!--<form name="frm" method="post" action="exportram.php" target="_new">
+<input type="hidden" name="qr" value="SELECT  a.Customer,a.Bank,a.ATMID,a.ATMShortName,a.SiteAddress,a.DVRIP,a.Panel_make,a.zone as zon,a.City,a.State,b.id,b.panelid,b.createtime,b.receivedtime,b.comment,b.zone,b.alarm,b.closedBy,b.closedtime,b.sendip FROM sites a,`alerts` b WHERE (a.OldPanelID=b.panelid or a.NewPanelID=b.panelid)  and a.DVRIP='10.109.10.16' and b.receivedtime between '2024-08-23 00:00:00' and '2024-08-26 23:59:59' order by receivedtime desc" readonly>
+<input type="submit" name="cmdsub" value="Export" ></span>
+</form>-->
+
+
+
+
+
+	
+
+
+
+
+
+
+
+</div>
+            
+			
+			<div><input type="button" onclick="tableToExcel(&#39;show&#39;, &#39;W3C Example Table&#39;)" value="Export to Excel" style="float: left;height:30px">
+			<button onclick="myFunction()" style="float: left;height:30px">Print this page</button>
+</div>
+			
+           </form>   
+
+
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+
+
+
+			
+			  
+        
+    
+
+<script src="./Comfort Techno_files/jquery.min.js.download"></script>
+<script>
+
+       
+function expfunc()
+{
+$('#formf').attr('action', 'css_View_alert_export.php').attr('target','_blank');
+$('#formf').submit();
+
+   
+}   
+	
+</script>
+
+
+
+
+
+
+</body></html>

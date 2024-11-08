@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://103.141.218.26/comforttechnonew/ticketview.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button[not:disabled]:hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel[not:disabled]:hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger[not:disabled]:hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button:not([disabled]):hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel:not([disabled]):hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger:not([disabled]):hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+        <!-- Required meta tags -->
+        
+            <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+                <title>
+                    Comfort Techno Services Pvt Ltd - admin                </title>
+                <!-- plugins:css -->
+                <link href="./Comfort Techno Services Pvt Ltd - admin_files/all.min.css" rel="stylesheet">
+                    <link href="./Comfort Techno Services Pvt Ltd - admin_files/vendor.bundle.base.css" rel="stylesheet">
+                        <link href="./Comfort Techno Services Pvt Ltd - admin_files/vendor.bundle.addons.css" rel="stylesheet">
+                            <!-- endinject -->
+                            <!-- plugin css for this page -->
+                            <!-- End plugin css for this page -->
+                            <!-- inject:css -->
+							<link rel="stylesheet" href="./Comfort Techno Services Pvt Ltd - admin_files/lightgallery.css">
+                            <link href="./Comfort Techno Services Pvt Ltd - admin_files/style.css" rel="stylesheet">
+                                <!-- endinject -->
+                               <!-- <link href="media/comfort.ico" rel="shortcut icon"/>-->
+                                <link rel="shortcut icon" href="https://103.141.218.26/comforttechnonew/images/favicon.png">
+                            
+                        
+                    
+                
+				<style>
+				.content-wrapper{padding: 5.5rem 1.7rem !important;}
+				</style>
+				<!--<link href="sweetalert/sweetalert.css" rel="stylesheet">-->
+                <script src="./Comfort Techno Services Pvt Ltd - admin_files/sweetalert.min.js.download"></script><style>@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('chrome-extension://egopeokecbgdiiofbemdgbofafjepang/public/fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2') format('woff2');
+}
+  
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}  
+</style>      
+            
+        
+    <style>
+		.bt{
+				border-top: 1px solid #1e1f33;
+		  }
+		  .br
+		  {
+				border-right: 1px solid #282844;
+		  }
+		   div.card-body {
+		/*	margin:4px, 4px;
+			padding:4px;
+			background-color: green;
+			width: 500px;  
+			height: 210px;
+			overflow-x: hidden;
+			overflow-y: scroll; */
+			text-align:justify;
+		}
+	</style><style>
+		.menu-icon
+		{
+			width: 33px;
+			margin-right: 7%;
+		}
+		th, td {
+			white-space: nowrap;
+		}
+	</style><style>
+      #load{
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    z-index:9999;
+   /* background:url("image/Circle.svg") no-repeat center center rgba(0,0,0,0.25) */
+}
+    </style><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><style type="text/css">span.im-caret {
+    -webkit-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+span.im-static {
+    color: grey;
+}
+
+div.im-colormask {
+    display: inline-block;
+    border-style: inset;
+    border-width: 2px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+div.im-colormask > input {
+    position: absolute;
+    display: inline-block;
+    background-color: transparent;
+    color: transparent;
+    -webkit-appearance: caret;
+    -moz-appearance: caret;
+    appearance: caret;
+    border-style: none;
+    left: 0; /*calculated*/
+}
+
+div.im-colormask > input:focus {
+    outline: none;
+}
+
+div.im-colormask > input::-moz-selection{
+    background: none;
+}
+
+div.im-colormask > input::selection{
+    background: none;
+}
+div.im-colormask > input::-moz-selection{
+    background: none;
+}
+
+div.im-colormask > div {
+    color: black;
+    display: inline-block;
+    width: 100px; /*calculated*/
+}</style><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head><search-panel><template shadowrootmode="open"><style>@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('chrome-extension://egopeokecbgdiiofbemdgbofafjepang/public/fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2') format('woff2');
+}
+  
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}  
+</style><style>.search-tool {
+    width: 885px;
+    margin: auto;
+    margin-top: 47px;
+}
+
+i {
+    font-size: 1.69em !important;
+}
+
+.lite-search-bar__input {
+    font-size: 1.334em !important;
+}
+
+.background-cover {
+    position: absolute !important;
+}
+
+.modal *,.search-tool *{box-sizing:border-box;outline:none}.background-cover{background:rgba(0,0,0,.5)}.customized-fadeIn{animation-fill-mode:none;animation-duration:.1s}.lds-dual-ring{display:inline-block;width:80px;height:80px}.lds-dual-ring:after{content:" ";display:block;width:64px;height:64px;border-radius:50%;border-color:hsla(0,0%,100%,.9) transparent;border-style:solid;border-width:6px;animation:lds-dual-ring 1.2s linear infinite}@keyframes lds-dual-ring{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.menu-block{position:absolute;right:15px;top:45px;width:345px;background-color:#181c1f;border-radius:12px;padding:25px 0;box-shadow:0 4px 8px 0 rgba(0,0,0,.32);z-index:1}.menu-context{z-index:1;top:unset;width:110px;right:-32px;padding:5px 0}.context-menu-list{padding:0;margin:0;list-style-type:none}.context-menu-list__item{display:flex;align-items:center;padding:10px;cursor:pointer}.context-menu-list__item:hover{background-color:hsla(0,0%,100%,.04)}.context-menu-list__text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-left:5px}.context-menu-list__icon{font-size:15px!important}.search-tool{position:relative;color:hsla(0,0%,100%,.9);z-index:10001}.sections__button_focusable:focus{box-shadow:0 2px 8px 0 #027aff}.search-panel{background-color:#181c1f;border-radius:25px;overflow:hidden;padding-bottom:17px}.search-panel__container{padding:0 11px 0 17px}.lite-search-bar{display:flex;height:50px;margin-bottom:5px}.circle-button{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:none;cursor:pointer;border-radius:20px}.spinner{width:50px;height:40px;text-align:center}.spinner>div{background-color:#fff;height:100%;width:6px;display:inline-block;margin:0 3px 0 0;-webkit-animation:sk-stretchdelay 1.2s ease-in-out infinite;animation:sk-stretchdelay 1.2s ease-in-out infinite}.spinner .rect2{-webkit-animation-delay:-1.1s;animation-delay:-1.1s}.spinner .rect3{-webkit-animation-delay:-1s;animation-delay:-1s}.spinner .rect4{-webkit-animation-delay:-.9s;animation-delay:-.9s}.spinner .rect5{-webkit-animation-delay:-.8s;animation-delay:-.8s}@-webkit-keyframes sk-stretchdelay{0%,40%,to{-webkit-transform:scaleY(.4)}20%{-webkit-transform:scaleY(1)}}@keyframes sk-stretchdelay{0%,40%,to{transform:scaleY(.4);-webkit-transform:scaleY(.4)}20%{transform:scaleY(1);-webkit-transform:scaleY(1)}}.sections{display:flex;flex-wrap:wrap;list-style-type:none;margin:0;padding:0}.sections__button{border:none;display:flex;align-items:center;cursor:pointer;background-color:#171b1f;border-radius:14px;padding:1px 5px;color:hsla(0,0%,84.7%,.56);font-size:inherit;font-family:inherit;box-shadow:0 0 10px rgba(0,0,0,.3);max-width:140px}.info-list-title{color:#fff;font-size:1.5em;font-weight:500;padding:8px 17px}.sections__button_gray{background-color:#282e32;color:#d6d6d6;box-shadow:0 0 10px rgba(0,0,0,.3)}.search-panel-sections__tab:hover,.sections__button_active{background-color:#027aff;color:#fff}.search-panel-sections{margin-bottom:10px}.sections__button_hoverable:hover .sections__text:before{content:"";width:100%;background-color:#027aff;height:2px;position:absolute;bottom:0;left:0}.sections__item{margin-right:8px}.circle-sm{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border:none;cursor:pointer;border-radius:50%;font-size:14.32px;flex:0 0 auto}.circle-sm_active{background-color:#027aff;color:#000}.sections__text{position:relative;color:hsla(0,0%,100%,.9);padding:6px 6px 6px 2px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.sections__text_active:before{content:"";width:90%;background-color:#027aff;height:2px;position:absolute;bottom:0;left:5%}.section__context:hover{color:#fff}.section__context{display:flex;align-items:center;justify-content:center;border-bottom-right-radius:12px;border-top-right-radius:12px;width:1%;margin-left:auto;position:absolute;right:8px;opacity:0}.section__context-button{position:relative;padding-right:15px}.sections__item_add{display:flex;align-items:center;margin-right:0}.sections__add-button{border:none;display:flex;align-items:center;cursor:pointer;background-color:rgba(23,27,31,.64);border-radius:12px;padding:0;color:hsla(0,0%,84.7%,.56)}.circle-sm_regular{background-color:hsla(0,0%,84.7%,.56);color:#000}.circle-sm_regular:hover{background-color:#fff}.circle-sm__icon{font-size:120%!important}.circle-button_bg-transparent{background-color:transparent}.lite-search-bar__icon{padding:0;width:auto;height:auto}.lite-search-bar__side-element{flex:0 1 auto;align-self:center}.circle-button__icon{color:hsla(0,0%,84.7%,.56)}.circle-button__icon:hover{color:#fff}.lite-search-bar__input{flex:1 1 auto;padding:0 11.8px;border:0;background:transparent;color:#fff;font-size:1.35em;min-width:0;font-family:inherit}.lite-search-bar__nav{display:flex;align-items:center}.lite-search-bar__info{margin-right:10px}.lite-search-bar__tab{padding:5px 10px;border:1px solid #979797;border-radius:4px;margin-left:3px}.lite-search-bar__search-button{background-color:#282e32;color:#fff;border-radius:14px;border:none;padding:7px 12px;cursor:pointer;font-size:inherit}.lite-search-bar__search-button:hover{box-shadow:0 2px 8px 0 #027aff}.search-panel__engines{display:flex;justify-content:space-between;align-items:center;height:74px;margin-top:-5px}.search-panel__engines .cards-focusable{position:relative}.search-panel__engines .cards-focusable:after{content:" ";position:absolute;top:-9px;bottom:-11px;right:-12px;width:58px;background:linear-gradient(270deg,#181c1f 10.42%,rgba(24,28,31,0));border-radius:13px;pointer-events:none}.cards-focusable{padding:0;margin:0;list-style-type:none;display:flex;align-items:center}.cards-focusable__item{cursor:pointer}.cards-focusable__item+.cards-focusable__item{margin-left:7px}.cards-focusable__card{width:70px;height:48px;display:flex;border-radius:10px;background-color:#027aff;align-items:center;justify-content:center}.cards-focusable__card_main:focus,.cards-focusable__card_main:hover{box-shadow:0 2px 8px 0 #027aff}.not-active{background-color:#282e32}.not-active:focus,.not-active:hover{box-shadow:0 2px 8px 0 #027aff;opacity:1}.cards-focusable_big{width:80px;height:58px;position:relative;transition:width .1s;opacity:1}.cards-focusable_big:before{content:"";width:75%;background-color:#027aff;height:2px;position:absolute;bottom:-7px}.cards-focusable__card-content{display:flex;flex-direction:column;align-items:center;overflow:hidden;padding:3px 12px}.cards-focusable__icon{margin-bottom:5px}.cards-focusable__icon_16{width:16px;height:16px}.cards-focusable__icon_32{width:32px;height:32px}.cards-focusable__text{width:100%;flex:0 0 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;color:#d6d6d6;font-size:.8em}.info-list{margin:0;padding:0;list-style-type:none}.info-list__item{display:flex;align-items:flex-start;padding:8px 17px;cursor:pointer}.info-list__item:focus,.info-list__item:hover{background-color:hsla(0,0%,100%,.08)}.info-list__icon-container{display:flex;align-items:center;margin-right:12px;color:hsla(0,0%,100%,.32)}.info-list__text{font-size:1.37em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.info-list__text-container{overflow:hidden}.info-list__subtext{color:#02a4ff;font-size:1.1em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.search-panel__spinner{margin:20px auto}.input-bottom-bordered{position:relative}.input-bottom-bordered__input_active .input-bottom-bordered__label{top:0;transform:translateY(-50%) scale(.8) translateX(-14%);font-weight:500}.input-bottom-bordered__input{border:none;border-bottom:1px solid #838587;background:transparent;caret-color:#838587;color:inherit;width:100%;padding:10px 0;font-size:inherit}.input-bottom-bordered__label{position:absolute;left:0;pointer-events:none;top:50%;transform:translateY(-50%);transition:transform .2s ease-out,color .2s ease-out;transition:top .2s ease-out,color .2s ease-out;color:#838587;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.color-danger{color:#f01515}.engines-modal{margin-top:10%;padding:13px 14px;width:67%;border-radius:14px;box-shadow:0 0 10px rgba(0,0,0,.3);background-color:#181c1f}.engines-modal__add-caption{margin-top:5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.engines-modal__add-card{background-color:rgba(24,28,31,.5)!important;flex-direction:column;color:#d6d6d6}.engines-modal__context{position:absolute;background-color:rgba(0,0,0,.2);height:13px;z-index:1;right:3px;top:3px;width:13px;padding:2px;border-radius:50%;opacity:0;display:flex;justify-content:center;align-items:center}.engines-modal__context .material-icons{font-size:17px!important}.engines-modal__context:hover{background-color:rgba(0,0,0,.3)}.cards-focusable__helper:hover .engines-modal__context{opacity:1}.engines-modal__add-card:hover{color:#fff}.engines-modal__engines-instruction-container{margin-bottom:10px;display:flex;align-items:center;color:#fff}.engines-modal__engines-instruction-text{margin-left:5px;font-size:1.0843em;word-break:break-all}.engines-modal__circle{width:22px;height:22px;font-size:10.32px;background-color:rgba(0,0,0,.5);color:hsla(0,0%,100%,.8)}.engines-modal__circle:hover{background-color:rgba(0,0,0,.6);color:hsla(0,0%,100%,.9)}.engines-modal__header{display:flex;justify-content:space-between;align-items:center;color:hsla(0,0%,100%,.32)}.engines-modal__header-caption{color:#fff;font-size:1.3333em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.engines-modal__close{cursor:pointer;color:#fff;opacity:.8}.engines-modal__close:hover{color:#fff;opacity:1}.engines-modal__body{margin:20px 0;overflow:auto;max-height:300px}.engines-modal__cards{margin-left:-3px;margin-top:-5px;flex-wrap:wrap}.engines-modal__item-tools{position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;padding:4px 8px;z-index:1;background-color:rgba(0,0,0,.2);border-radius:12px}.engines-modal__item-tools:hover{opacity:1}.engines-modal__tool-up{display:flex;justify-content:space-between}.engines-modal__tool-down{display:flex;justify-content:center}.engines-modal__card{position:relative;background-color:#282e32;width:86px;height:60px}.engines-modal__card-item{margin-left:10px!important;margin-top:10px;list-style-type:none}.modal{width:355px;border-radius:14px;box-shadow:0 0 10px rgba(0,0,0,.3);background-color:#181c1f;color:#fff}.modal__close{cursor:pointer;color:#fff;opacity:.8}.modal__close:hover{color:#fff;opacity:1}.modal__header{padding:20px 25px;display:flex;justify-content:space-between;color:#fff;align-items:center}.modal__header-title{font-size:16px}.modal__body{padding:0 25px}.modal__bottom{display:flex;justify-content:center;padding:29px 0}.button-md{border-radius:14px;padding:7px 20px;box-shadow:0 2px 4px 0 rgb(0 0 0/50%);background-color:#027aff;border:none;color:#fff;font-size:inherit;cursor:pointer;max-width:105px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.input-bottom-bordered__input_error{border-color:red}.button-md:disabled{background-color:#4d5156}.button-md:active{opacity:.7}.engines-modal__info-input-container{position:absolute;bottom:5px;right:0;color:#838587;cursor:pointer}.engines-modal__info-input-text{display:none;font-weight:300;position:absolute;right:0;width:300px;border-radius:14px;box-shadow:0 0 20px 5px rgba(2,122,255,.3);background-color:#282e32;padding:20px;line-height:16px;white-space:pre-line;color:#fff}.engines-modal__info-input-container:hover .engines-modal__info-input-text{display:block}.engines-modal__info-input-container:hover i{color:#fff}.draggable .card__label{pointer-events:none}.draggable{position:relative;transform:translate(0)}.draggable.left-stick:before{left:-10px}.draggable.left-stick:before,.draggable.right-stick:before{content:"";position:absolute;background-color:#027aff;height:100%;width:5px;z-index:1}.draggable.right-stick:before{right:-10px}.draggable.left-stick-engine:before{left:-7px}.draggable.left-stick-engine:before,.draggable.right-stick-engine:before{content:"";position:absolute;background-color:#027aff;height:100%;width:3px;z-index:1}.draggable.right-stick-engine:before{right:-7px}.button-md_red{background-color:#f01515}.button-md__left{margin-right:30px}.modal_question{box-shadow:0 0 20px 5px rgba(255,2,2,.3)}.modal_question .modal__body{padding-top:25px;font-size:14px;text-align:center;line-height:24px}</style><style>.root-element {
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    color: #4c4c4c;
+    line-height: 1;
+}
+
+.search-tool {
+    width: 885px;
+    margin: auto;
+    margin-top: 47px;
+}
+
+i {
+    font-size: 1.69em !important;
+}
+
+.lite-search-bar__input {
+    font-size: 1.334em !important;
+}</style><div class="root-element"></div></template></search-panel>	
+	  
+	
+	
+     
+<body class="sidebar-light" data-new-gr-c-s-check-loaded="14.1131.0" data-gr-ext-installed="">
+        <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo" href="https://103.141.218.26/comforttechnonew/home_dashboard.php">
+                        <img alt="logo" src="./Comfort Techno Services Pvt Ltd - admin_files/logo.png">
+                    </a>
+                    <a class="navbar-brand brand-logo-mini" href="https://103.141.218.26/comforttechnonew/home_dashboard.php">
+                        <img alt="logo" src="./Comfort Techno Services Pvt Ltd - admin_files/logo.png">
+                    </a>
+                </div>
+                <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                    <button class="navbar-toggler navbar-toggler align-self-center" data-toggle="minimize" type="button">
+                        <span class="fas fa-bars">
+                        </span>
+                    </button>
+                    <!--<ul class="navbar-nav navbar-nav-left">
+                        <li class="nav-item nav-search d-none d-md-flex">
+                            <div class="nav-link">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-search">
+                                            </i>
+                                        </span>
+                                    </div>
+                                    <input aria-label="Search" class="form-control" placeholder="Search" type="text">
+                                    </input>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-ellipsis-v">
+                                </i>
+                            </a>
+                        </li>
+                    </ul>-->
+					<button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+					  <span class="fas fa-bars"></span>
+					</button>
+                </div>
+            </nav>
+            <!-- partial -->
+			<div id="load" style="display: none;">
+			   <!-- <div class="loader-demo-box">
+                        <div class="circle-loader"></div>
+                      </div>  -->
+					  <div class="loader-demo-box">
+				<div class="loading">
+					<p>Please wait</p>
+					<span><i></i><i></i><i></i></span>
+				</div>	 
+                       </div>     				
+			</div>            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+                <!-- partial:partials/_settings-panel.html -->
+                <!-- partial -->
+                <!-- partial:partials/_sidebar.html -->
+                
+<nav class="sidebar sidebar-offcanvas bt" id="sidebar">
+                    <ul class="nav">
+					     <li class="nav-item nav-profile">
+                            <div class="nav-link">
+                              <div class="profile-image">
+                                <img src="./Comfort Techno Services Pvt Ltd - admin_files/userprofile.jpg" alt="image">
+                              </div>
+                              <div class="profile-name">
+                                <p class="name">
+                                  Welcome admin                                </p>
+                                <p class="designation">
+                                                                  </p>
+                              </div>
+                            </div>
+                        </li>
+                        						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Dashboard" aria-expanded="false" aria-controls="Dashboard">
+							  <i class="fa fa-tachometer-alt menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Dashboard</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Dashboard">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/panel_dashboard.php">Panel Dashboard</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/panel_communication.php">Panel Communication</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dvrhealthDashboard.php">DVR Health</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dashboard1.php">DVR Dashboard</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/home_dashboard.php">Home</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dash_board.php">AI Dashboard</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/theft_ticket_raise_list.php">Theft Ticket List</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/site_health.php">Site-Health</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Add" aria-expanded="false" aria-controls="Add">
+							  <i class="fa fa-plus-circle menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Add</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Add">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/newsite.php">Add Site</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/add_ticket.php">Raise Service Request</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_request.php">Add Footage Request</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_request_bulk_upload.php">Bulk Footage Request</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/add_theft_history.php">Raise Theft Report</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item active">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#View" aria-expanded="false" aria-controls="View">
+							  <i class="fa fa-eye menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">View</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse show" id="View">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/viewsitenew.php">View Site</a></li>
+																								    								<li class="nav-item"> <a class="nav-link" target="_blank" href="http://103.141.218.26:8080/ComfortTechnoNew/live_view.php">Live View</a></li>	
+															    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/panel_health.php">Panel Health</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/view_alert_ticket.php">Ticket Raise History</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/view_ticket.php">Ticket</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/locations.php">Site Location</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link active" href="https://103.141.218.26/comforttechnonew/aiticketview.php">AI Alerts</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link active" href="https://103.141.218.26/comforttechnonew/ticketview.php">Ticket View</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_request_list_logic.php">Footage Request</a></li>
+																								    	
+								   								   <li class="nav-item"> <a class="nav-link" target="_blank" href="http://103.141.218.26:8080/ComfortTechnoNew/viewlive.php">View Live</a></li>
+									  																    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/ticketview1.php">Bulk Ticket View</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_request_process_list.php">Footage Process Request</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data.php">Footage Download</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_ob.php">All  Footage Download</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_24hrs_tbl_bank.php">Footage 24Hrs</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_rejected_tbl_bank.php">Footage Rejected</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_dispute_tbl_bank.php">Footage Dispute</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_24hrs_tbl_1.php">Footage Comfort 24hrs</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_rejected_tbl_1.php">Footage Comfort Rejected</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_list_data_dispute_tbl_1.php">Footage Comfort Dispute</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/footage_start_zip_report.php">Footage Zipped Report</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#EMS" aria-expanded="false" aria-controls="EMS">
+							  <i class="fa fa-bolt menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">EMS</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="EMS">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/ems_dash.php">EMS Dashboard</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Reports" aria-expanded="false" aria-controls="Reports">
+							  <i class="fa fa-file menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Reports</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Reports">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/sitehealth.php">Site Health</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/networkreport.php">Network Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/theft_ticket_raise_c_list.php">Theft Ticket List History</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/esurveillance_penalty.php">E-surv Penalty</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dash_board_ftp_video.php">Footage Stats</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/dash_board_ftp_video_past.php">Footage Stats 24 Hour Ago</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/newnetworkreporthourly.php">Network Report Hourly Wise</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/newnetworkreporthourly_withpenalty.php">Penalty Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/daily_down_report.php">Daily Down Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/daily_availability_report_new.php">Daily Availability Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/penalty_calculation_sheet_new.php">Penalty Calculation Sheet</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/daily_camera_wise_report.php">Daily Camera Wise Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/date_wise_ticket_report.php">Date Wise Ticket Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/network_report2.php">Cloud Network Report</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								   <li class="nav-item"> <a class="nav-link" target="_blank" href="http://103.141.218.26:8080/ComfortTechnoNew/live_view_fss.php">Live-View </a></li>
+									  																    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/pmcReportList.php">PMC Report</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Playback" aria-expanded="false" aria-controls="Playback">
+							  <i class="fa fa-file-video menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Playback</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Playback">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/ffmpeg/bin/pagination_ftp.php">Archive</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Snaps" aria-expanded="false" aria-controls="Snaps">
+							  <i class="fa fa-file-image menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Snaps</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Snaps">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/snaps.php">Snaps</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="https://103.141.218.26/comforttechnonew/ticketview.php#Configuration" aria-expanded="false" aria-controls="Configuration">
+							  <i class="fa fa-cog menu-icon fa-3x" style="font-size: 2em;"></i>
+							  <span class="menu-title">Configuration</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="Configuration">
+							  <ul class="nav flex-column sub-menu">
+							    							    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/menu_perm.php">Menu Permission</a></li>
+																								    	
+								   								   								 <!-- <li class="nav-item"> <a class="nav-link" href="#"></a></li> -->
+								  								<!-- <li class="nav-item"> <a class="nav-link" href=""></a></li> -->
+								  								 								    <li class="nav-item"> <a class="nav-link" href="https://103.141.218.26/comforttechnonew/escalationlist.php">Escalation Matrix</a></li>
+																								  </ul>
+							</div>
+						  </li>
+						  						<!--<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#add" aria-expanded="false" aria-controls="add">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Add</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="add">
+							  <ul class="nav flex-column sub-menu">
+							    <li class="nav-item"> <a class="nav-link" href="newsite.php">Site</a></li>
+								<li class="nav-item"> <a class="nav-link" href="add_ticket.php">Ticket</a></li>
+								
+								<li class="nav-item"> <a class="nav-link" href="js-grid.html">Js-grid</a></li>
+								<li class="nav-item"> <a class="nav-link" href="sortable-table.html">Sortable table</a></li>
+							  </ul>
+							</div>
+						  </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="EMS/" target="_blank">
+                                <i class="fa fa-microchip menu-icon">
+                                </i>
+                                <span class="menu-title">
+                                    EMS
+                                </span>
+                            </a>
+                        </li>
+						 <li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">View</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="tables">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="viewsitenew.php">Site</a></li>
+								<li class="nav-item"> <a class="nav-link" href="panel_health.php">Panel Health</a></li>
+								<li class="nav-item"> <a class="nav-link" href="view_ticket.php">Ticket</a></li>
+								<li class="nav-item"> <a class="nav-link" href="view_alert_ticket.php">Alert Ticket</a></li>
+							  </ul>
+							</div>
+						  </li>
+                          <li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#views" aria-expanded="false" aria-controls="views">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Views</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="views">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="sitehealth.php">Site Health</a></li>
+								<li class="nav-item"> <a class="nav-link" href="ticketview.php">Ticket View</a></li>
+								<li class="nav-item"> <a class="nav-link" href="aiticketview.php">AI Ticket View</a></li>
+								<li class="nav-item"> <a class="nav-link" href="live_view.php">Live View</a></li>
+								<li class="nav-item"> <a class="nav-link" href="locations.php">Location</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="ticketviewservice.php">Ticket View Service</a></li>
+								<li class="nav-item"> <a class="nav-link" href="queryticketdata.php">Query Ticket Data</a></li>
+								<li class="nav-item"> <a class="nav-link" href="supervisor.php">Supervisor Screen</a></li>
+								<li class="nav-item"> <a class="nav-link" href="servicecall.php">Service Call</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="installationcall.php">Installation Call</a></li>
+								<li class="nav-item"> <a class="nav-link" href="materialrequire.php">Material Required</a></li>
+							  </ul>
+							</div>
+						  </li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#configuration" aria-expanded="false" aria-controls="configuration">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Configuration</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="configuration">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="sitelist.php">Site</a></li>
+								<li class="nav-item"> <a class="nav-link" href="userlist.php">User</a></li>
+								<li class="nav-item"> <a class="nav-link" href="rolelist.php">Role</a></li>
+								<li class="nav-item"> <a class="nav-link" href="movelist.php">Move Site</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="resetpassword.php">Reset Password</a></li>
+								
+								<li class="nav-item"> <a class="nav-link" href="escalationlist.php">Escalation Matrix</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="adcommentlist.php">AD Comment</a></li>
+								<li class="nav-item"> <a class="nav-link" href="zoneconfiguration.php">Zone Configuration</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="panellistconfiguration.php">Panel Configuration</a></li>
+								<li class="nav-item"> <a class="nav-link" href="aduser.php">AD User</a></li>
+							  </ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#reports" aria-expanded="false" aria-controls="reports">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Reports</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="reports">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="dvrhealthreport.php">DVR Health Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="ticketreport.php">Ticket View Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="cmereport.php">CME Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="panelstatusreport.php">Panel Status Report</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="sitenetworkstatus.php">Site Network Status</a></li>
+								<li class="nav-item"> <a class="nav-link" href="dvrreport.php">DVR Report</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="zonestatusreport.php">Zone Status Report</a></li>
+								<li class="nav-item"> <a class="nav-link" href="excelreport.php">Excel Reports</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="sitedownreport.php">Site Down Report</a></li>
+							  </ul>
+							</div>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#changepassword" aria-expanded="false" aria-controls="changepassword">
+							  <i class="fas fa-table menu-icon"></i>
+							  <span class="menu-title">Utility</span>
+							  <i class="menu-arrow"></i>
+							</a>
+							<div class="collapse" id="changepassword">
+							  <ul class="nav flex-column sub-menu">
+								<li class="nav-item"> <a class="nav-link" href="ChangePassword.php">Change Password</a></li>
+								
+							  </ul>
+							</div>
+						</li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fa fa-home menu-icon">
+                                </i>
+                                <span class="menu-title">
+                                    E-surveillance
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/widgets.html">
+                                <img alt="Watching" class="menu-icon" src="fonts/menu-icon/watch.png">
+                                    <span class="menu-title">
+                                        Watching
+                                    </span>
+                                </img>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/widgets.html">
+                                <img alt="Archive" class="menu-icon" src="fonts/menu-icon/archive.png">
+                                    <span class="menu-title">
+                                        Archive
+                                    </span>
+                                </img>
+                            </a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link" href="ffmpeg/bin/pagination.php">
+							    <i class="fa fa-file-video menu-icon">
+                                </i>
+                                <span class="menu-title">
+                                    Video Archive
+                                </span>
+                               
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="snaps.php">
+							
+							<i class="fas fa-images menu-icon">
+                                </i>
+                                <span class="menu-title">
+                                    Snaps
+                                </span>
+                              
+                            </a>
+                        </li> -->
+						<li class="nav-item icons-list">
+                            <a class="nav-link" href="https://103.141.218.26/comforttechnonew/logout.php">
+                                <i class="fa fa-sign-out-alt menu-icon fa-3x" style="font-size: 2em;">
+                                </i>
+                                <span class="menu-title">
+                                    Logout
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav bt">
+                        <!-- <li class="nav-item nav-settings d-none d-lg-block" style="margin: 0 auto;margin-top: 3%;">
+                            <button class="btn btn-primary btn-rounded btn-icon" type="button">
+                                <i class="fa fa-bell">
+                                </i>
+                            </button>
+                        </li> -->
+                        <li class="nav-item nav-settings d-none d-lg-block" style="margin: 0 auto;margin-top: 3%;">
+                            <button class="btn btn-primary btn-rounded btn-icon" type="button">
+                                <i class="fa fa-bell">
+                                </i>
+                            </button>
+                            <!-- <span class="count text-white">16</span> -->
+                        </li>
+                    </ul>
+                    <ul class="nav bt">
+                        <li class="nav-item nav-settings d-none d-lg-block" style="margin: 0 auto;margin-top: 3%;">
+                            <h5 class="text-white">
+                                Wednesday 5:40 pm
+                            </h5>
+                            <h5 class="text-white">
+                                25 August, 2021
+                            </h5>
+                        </li>
+                    </ul>
+                </nav>
+				                <!-- partial -->
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                    <h4 class="card-title">Ticket View</h4>
+
+                    <div class="card">
+    <div class="col-12 grid-margin">
+		    
+			<div class="row">
+			    <div class="col-md-3">
+					<div class="form-group row">
+						<label class="col-sm-6 col-form-label">Select Client<br></label>
+							<div class="col-sm-8">
+								<select name="client" id="Client" class="form-control" onchange="onchangebank()">
+								    <option value="">Select</option> 
+									AGS									   <option value="AGS">AGS</option> 
+									Diebold									   <option value="Diebold">Diebold</option> 
+									Euronet									   <option value="Euronet">Euronet</option> 
+									FSS									   <option value="FSS">FSS</option> 
+									Hitachi									   <option value="Hitachi">Hitachi</option> 
+									TATA									   <option value="TATA">TATA</option> 
+																	</select>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group row">
+						<label class="col-sm-6 col-form-label">Select Bank<br></label>
+							<div class="col-sm-8">
+								<select name="Bank" id="Bank" class="form-control" onchange="onchangecircle()">
+<option value="">Select</option><option value="Axis">Axis</option><option value="BOI">BOI</option><option value="ICICI">ICICI</option><option value="IndusInd">IndusInd</option><option value="PNB">PNB</option><option value="SBI">SBI</option><option value="Yes Bank">Yes Bank</option></select>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group row">
+						<label class="col-sm-6 col-form-label">Select Circle<br></label>
+							<div class="col-sm-8">
+								<select name="Circle" id="Circle" class="form-control" onchange="onchangeatmid()"><option value="">All Circle</option></select>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group row">
+						<label class="col-sm-6 col-form-label">Select Atm<br></label>
+							<div class="col-sm-8">
+								<select name="atmid" id="AtmID" class="form-control js-example-basic-single w-100 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+
+
+( ! ) Notice: Undefined variable: circlesql in C:\wamp64\www\ComfortTechnoNew\globalfunctions.php on line 140
+Call Stack
+#TimeMemoryFunctionLocation
+10.0004270632{main}(  )...\getMasterData.php:0
+20.0029466984getAtmidList(  )...\getMasterData.php:22
+
+
+
+( ! ) Warning: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\wamp64\www\ComfortTechnoNew\globalfunctions.php on line 140
+Call Stack
+#TimeMemoryFunctionLocation
+10.0004270632{main}(  )...\getMasterData.php:0
+20.0029466984getAtmidList(  )...\getMasterData.php:22
+30.0046467824mysqli_num_rows
+(  )...\globalfunctions.php:140
+
+<option value="">All Site</option><option value="ZID8052">ZID8052</option><option value="ZKO8052">ZKO8052</option><option value="ZCE8115">ZCE8115</option><option value="ZLU8015">ZLU8015</option><option value="ZCE8119">ZCE8119</option><option value="ZDD8011">ZDD8011</option><option value="ZLU8014">ZLU8014</option><option value="ZKO8049">ZKO8049</option><option value="ZBB8045">ZBB8045</option><option value="ZPT8077">ZPT8077</option><option value="ZMU8019">ZMU8019</option><option value="ZCE8123">ZCE8123</option><option value="ZUJ8040">ZUJ8040</option><option value="ZHW8082">ZHW8082</option><option value="ZBB8044">ZBB8044</option><option value="ZMU8023">ZMU8023</option><option value="ZKO8060">ZKO8060</option><option value="ZVD8033">ZVD8033</option><option value="ZAG8029">ZAG8029</option><option value="ZKO8065">ZKO8065</option><option value="ZHB8022">ZHB8022</option><option value="ZRA8018">ZRA8018</option><option value="ZBL8034">ZBL8034</option><option value="ZCE8110">ZCE8110</option><option value="ZBB8051">ZBB8051</option><option value="ZND8058">ZND8058</option><option value="ZCH8016">ZCH8016</option><option value="ZCB8063">ZCB8063</option><option value="ZCB8033">ZCB8033</option><option value="ZCB8041">ZCB8041</option><option value="ZCB8040">ZCB8040</option><option value="ZCB8037">ZCB8037</option><option value="ZBB8050">ZBB8050</option><option value="ZKO8054">ZKO8054</option><option value="ZHW8053">ZHW8053</option><option value="ZND8080">ZND8080</option><option value="ZCE8107">ZCE8107</option><option value="ZAG8034">ZAG8034</option><option value="ZHW8085">ZHW8085</option><option value="ZGZ8022">ZGZ8022</option><option value="ZCB8047">ZCB8047</option><option value="ZRA8026">ZRA8026</option><option value="ZCB8058">ZCB8058</option><option value="ZND8062">ZND8062</option><option value="ZBL8033">ZBL8033</option><option value="ZBD8062">ZBD8062</option><option value="ZHW8054">ZHW8054</option><option value="ZND8072">ZND8072</option><option value="ZKL8053">ZKL8053</option><option value="ZKA9083">ZKA9083</option><option value="ZBB8041">ZBB8041</option><option value="ZHW8073">ZHW8073</option><option value="ZBB8049">ZBB8049</option><option value="ZLU8013">ZLU8013</option><option value="ZBD8039">ZBD8039</option><option value="ZKL8050">ZKL8050</option><option value="ZND8043">ZND8043</option><option value="ZMD8065">ZMD8065</option><option value="ZPU8087">ZPU8087</option><option value="ZCB8048">ZCB8048</option><option value="ZGZ8019">ZGZ8019</option><option value="ZTS8070">ZTS8070</option><option value="ZMD8071">ZMD8071</option><option value="ZHW8060">ZHW8060</option><option value="ZKE8039">ZKE8039</option><option value="ZCH8019">ZCH8019</option><option value="ZBD8046">ZBD8046</option><option value="ZBB8043">ZBB8043</option><option value="ZKE8055">ZKE8055</option><option value="ZCB8039">ZCB8039</option><option value="ZKH8016">ZKH8016</option><option value="ZSO8044">ZSO8044</option><option value="ZDD8010">ZDD8010</option><option value="ZPU9129">ZPU9129</option><option value="ZND8050">ZND8050</option><option value="ZPU8076">ZPU8076</option><option value="ZND8074">ZND8074</option><option value="ZDD8008">ZDD8008</option><option value="ZMD8080">ZMD8080</option><option value="ZKJ8026">ZKJ8026</option><option value="ZPU8083">ZPU8083</option><option value="ZND8055">ZND8055</option><option value="ZKE8058">ZKE8058</option><option value="ZKE8038">ZKE8038</option><option value="ZCH8018">ZCH8018</option><option value="ZKA8051">ZKA8051</option><option value="ZCB8051">ZCB8051</option><option value="ZAG8033">ZAG8033</option><option value="ZCH8020">ZCH8020</option><option value="ZGZ8024">ZGZ8024</option><option value="ZCB8059">ZCB8059</option><option value="ZKJ8039">ZKJ8039</option><option value="ZPT8083">ZPT8083</option><option value="ZKE8085">ZKE8085</option><option value="ZND8048">ZND8048</option><option value="ZND8085">ZND8085</option><option value="ZMU8031">ZMU8031</option><option value="ZKE8043">ZKE8043</option><option value="ZKJ8028">ZKJ8028</option><option value="ZVS8029">ZVS8029</option><option value="ZCB8056">ZCB8056</option><option value="ZVS8044">ZVS8044</option><option value="ZKJ8018">ZKJ8018</option><option value="ZKJ8020">ZKJ8020</option><option value="ZAG8024">ZAG8024</option><option value="ZAG8023">ZAG8023</option><option value="ZGZ9066">ZGZ9066</option><option value="ZKJ8029">ZKJ8029</option><option value="ZCB8038">ZCB8038</option><option value="ZPT8086">ZPT8086</option><option value="ZKJ8030">ZKJ8030</option><option value="ZMD8070">ZMD8070</option><option value="ZGZ9062">ZGZ9062</option><option value="ZLU8016">ZLU8016</option><option value="ZPU8067">ZPU8067</option><option value="ZKJ8032">ZKJ8032</option><option value="ZKJ8035">ZKJ8035</option><option value="ZKA8047">ZKA8047</option><option value="ZMD8072">ZMD8072</option><option value="ZND8086">ZND8086</option><option value="ZDD8009">ZDD8009</option><option value="ZHW8070">ZHW8070</option><option value="ZAG8020">ZAG8020</option><option value="ZHW8048">ZHW8048</option><option value="ZND8059">ZND8059</option><option value="ZBG8012">ZBG8012</option><option value="ZBD8041">ZBD8041</option><option value="ZBL8032">ZBL8032</option><option value="ZCB8042">ZCB8042</option><option value="ZGZ8017">ZGZ8017</option><option value="ZRA9053">ZRA9053</option><option value="ZHB8023">ZHB8023</option><option value="ZBB9065">ZBB9065</option><option value="ZMD8075">ZMD8075</option><option value="ZMU8036">ZMU8036</option><option value="ZHW8081">ZHW8081</option><option value="ZBD8059">ZBD8059</option><option value="ZAG8022">ZAG8022</option><option value="ZHW8068">ZHW8068</option><option value="ZHW8058">ZHW8058</option><option value="ZMU8007">ZMU8007</option><option value="ZBB8042">ZBB8042</option><option value="ZHW8083">ZHW8083</option><option value="ZHW8063">ZHW8063</option><option value="ZBB8047">ZBB8047</option><option value="ZMU8032">ZMU8032</option><option value="ZBD8055">ZBD8055</option><option value="ZPT8084">ZPT8084</option><option value="ZBD8049">ZBD8049</option><option value="ZBB8048">ZBB8048</option><option value="ZRP9069">ZRP9069</option><option value="ZAG8027">ZAG8027</option><option value="ZCE8125">ZCE8125</option><option value="ZMU8009">ZMU8009</option><option value="ZHB9047">ZHB9047</option><option value="ZKE8063">ZKE8063</option><option value="ZND8053">ZND8053</option><option value="ZBG8016">ZBG8016</option><option value="ZLU9033">ZLU9033</option><option value="ZMD8078">ZMD8078</option><option value="ZBD8073">ZBD8073</option><option value="ZRP9067">ZRP9067</option><option value="ZLU9032">ZLU9032</option><option value="ZJD8024">ZJD8024</option><option value="ZKE8053">ZKE8053</option><option value="ZSB8013">ZSB8013</option><option value="ZGA9062">ZGA9062</option><option value="ZBD8066">ZBD8066</option><option value="ZMD8074">ZMD8074</option><option value="ZGA9059">ZGA9059</option><option value="ZGA9060">ZGA9060</option><option value="ZRA9054">ZRA9054</option><option value="ZBO9094">ZBO9094</option><option value="ZBD8060">ZBD8060</option><option value="ZLC9099">ZLC9099</option><option value="ZBD8038">ZBD8038</option><option value="ZND8067">ZND8067</option><option value="ZCB8036">ZCB8036</option><option value="ZCB8050">ZCB8050</option><option value="ZLC9103">ZLC9103</option><option value="ZKE8072">ZKE8072</option><option value="ZRA9057">ZRA9057</option><option value="ZID9087">ZID9087</option><option value="ZCB8052">ZCB8052</option><option value="ZLU9030">ZLU9030</option><option value="ZMD8061">ZMD8061</option><option value="ZND8076">ZND8076</option><option value="ZND8078">ZND8078</option><option value="ZND8083">ZND8083</option><option value="ZBD8048">ZBD8048</option><option value="ZLU9031">ZLU9031</option><option value="ZBB9066">ZBB9066</option><option value="ZTS8058">ZTS8058</option><option value="ZJP9079">ZJP9079</option><option value="ZVN9071">ZVN9071</option><option value="ZHW8076">ZHW8076</option><option value="ZBO9090">ZBO9090</option><option value="ZTS8079">ZTS8079</option><option value="ZLU9024">ZLU9024</option><option value="ZMD8076">ZMD8076</option><option value="ZMD8060">ZMD8060</option><option value="ZPT9108">ZPT9108</option><option value="ZVN9070">ZVN9070</option><option value="ZBD8040">ZBD8040</option><option value="ZVN8041">ZVN8041</option><option value="ZID9078">ZID9078</option><option value="ZGZ9059">ZGZ9059</option><option value="ZBB9062">ZBB9062</option><option value="ZID9081">ZID9081</option><option value="ZUJ9092">ZUJ9092</option><option value="ZBD8044">ZBD8044</option><option value="ZBL9076">ZBL9076</option><option value="ZCB8054">ZCB8054</option><option value="ZVN9084">ZVN9084</option><option value="ZKE8079">ZKE8079</option><option value="ZRP9073">ZRP9073</option><option value="ZBO9089">ZBO9089</option><option value="ZBO9083">ZBO9083</option><option value="ZPT9106">ZPT9106</option><option value="ZCE8108">ZCE8108</option><option value="ZVN9076">ZVN9076</option><option value="ZBD8067">ZBD8067</option><option value="ZVN9074">ZVN9074</option><option value="ZTS8059">ZTS8059</option><option value="ZMS9051">ZMS9051</option><option value="ZRP9074">ZRP9074</option><option value="ZVN9077">ZVN9077</option><option value="ZMS9050">ZMS9050</option><option value="ZRP9075">ZRP9075</option><option value="ZDD9020">ZDD9020</option><option value="ZHW8047">ZHW8047</option><option value="ZKE8094">ZKE8094</option><option value="ZBD8053">ZBD8053</option><option value="ZLC9107">ZLC9107</option><option value="ZLU9027">ZLU9027</option><option value="ZBD8037">ZBD8037</option><option value="ZRJ9089">ZRJ9089</option><option value="ZMD8058">ZMD8058</option><option value="ZKH9056">ZKH9056</option><option value="ZLU9029">ZLU9029</option><option value="ZBL9084">ZBL9084</option><option value="ZBL9078">ZBL9078</option><option value="ZBD8043">ZBD8043</option><option value="ZLU9028">ZLU9028</option><option value="ZJS9055">ZJS9055</option><option value="ZAG9068">ZAG9068</option><option value="ZKE8105">ZKE8105</option><option value="ZLU9026">ZLU9026</option><option value="ZJB9033">ZJB9033</option><option value="ZKE8104">ZKE8104</option><option value="ZLU9025">ZLU9025</option><option value="ZMD8069">ZMD8069</option><option value="ZMD8077">ZMD8077</option><option value="ZND8084">ZND8084</option><option value="ZPT9111">ZPT9111</option><option value="ZRJ9093">ZRJ9093</option><option value="ZAG9066">ZAG9066</option><option value="ZBG8013">ZBG8013</option><option value="ZDD8007">ZDD8007</option><option value="ZPT8073">ZPT8073</option><option value="ZMU8010">ZMU8010</option><option value="ZBL9072">ZBL9072</option><option value="ZMU8033">ZMU8033</option><option value="ZGZ9065">ZGZ9065</option><option value="ZID9080">ZID9080</option><option value="ZCE8130">ZCE8130</option><option value="ZJB9034">ZJB9034</option><option value="ZNM9062">ZNM9062</option><option value="ZRP9066">ZRP9066</option><option value="ZBB8046">ZBB8046</option><option value="ZAH9070">ZAH9070</option><option value="ZHW8075">ZHW8075</option><option value="ZBD8052">ZBD8052</option><option value="ZAH9072">ZAH9072</option><option value="ZKA9074">ZKA9074</option><option value="ZBO9092">ZBO9092</option><option value="ZMN9073">ZMN9073</option><option value="ZGZ9061">ZGZ9061</option><option value="ZGO9048">ZGO9048</option><option value="ZKA9078">ZKA9078</option><option value="ZMN9072">ZMN9072</option><option value="ZAG9063">ZAG9063</option><option value="ZKA9081">ZKA9081</option><option value="ZPT8082">ZPT8082</option><option value="ZBD8065">ZBD8065</option><option value="ZVJ8032">ZVJ8032</option><option value="ZBB9064">ZBB9064</option><option value="ZAM9018">ZAM9018</option><option value="ZMD8067">ZMD8067</option><option value="ZAG9064">ZAG9064</option><option value="ZBO9081">ZBO9081</option><option value="ZAG8032">ZAG8032</option><option value="ZGO9051">ZGO9051</option><option value="ZAH9075">ZAH9075</option><option value="ZJP8046">ZJP8046</option><option value="ZKA9080">ZKA9080</option><option value="ZRA9059">ZRA9059</option><option value="ZPU9128">ZPU9128</option><option value="ZMN9075">ZMN9075</option><option value="ZKA9079">ZKA9079</option><option value="ZCB8046">ZCB8046</option><option value="ZNS9049">ZNS9049</option><option value="ZKA9082">ZKA9082</option><option value="ZJP9074">ZJP9074</option><option value="ZMD8063">ZMD8063</option><option value="ZNS9047">ZNS9047</option><option value="ZVN9082">ZVN9082</option><option value="ZJP9073">ZJP9073</option><option value="ZGA9064">ZGA9064</option><option value="ZKA9075">ZKA9075</option><option value="ZGO9052">ZGO9052</option><option value="ZRA9056">ZRA9056</option><option value="ZHW8052">ZHW8052</option><option value="ZHW8072">ZHW8072</option><option value="ZVA9066">ZVA9066</option><option value="ZLU9034">ZLU9034</option><option value="ZAG9072">ZAG9072</option><option value="ZVA9062">ZVA9062</option><option value="ZMD8062">ZMD8062</option><option value="ZAG9070">ZAG9070</option><option value="ZDB9052">ZDB9052</option><option value="ZBO9091">ZBO9091</option><option value="ZMN9077">ZMN9077</option><option value="ZVA9061">ZVA9061</option><option value="ZHW8087">ZHW8087</option><option value="ZVN9075">ZVN9075</option><option value="ZKA8043">ZKA8043</option><option value="ZLC9098">ZLC9098</option><option value="ZNG9096">ZNG9096</option><option value="ZJP9078">ZJP9078</option><option value="ZHW8051">ZHW8051</option><option value="ZNG9095">ZNG9095</option><option value="ZHB9053">ZHB9053</option><option value="ZBD8071">ZBD8071</option><option value="ZVD9062">ZVD9062</option><option value="ZVA9060">ZVA9060</option><option value="ZAM9015">ZAM9015</option><option value="ZAG9071">ZAG9071</option><option value="ZVA9067">ZVA9067</option><option value="ZBD8042">ZBD8042</option><option value="ZGZ9054">ZGZ9054</option><option value="ZGZ9057">ZGZ9057</option><option value="ZRJ9092">ZRJ9092</option><option value="ZKA9073">ZKA9073</option><option value="ZKE8099">ZKE8099</option><option value="ZBD8072">ZBD8072</option><option value="ZBO9082">ZBO9082</option><option value="ZPU9130">ZPU9130</option><option value="ZAM9016">ZAM9016</option><option value="ZAG9073">ZAG9073</option><option value="ZHW8078">ZHW8078</option><option value="ZBG8014">ZBG8014</option><option value="ZPU9135">ZPU9135</option><option value="ZHB9051">ZHB9051</option><option value="ZSB9024">ZSB9024</option><option value="ZGZ9069">ZGZ9069</option><option value="ZHW8071">ZHW8071</option><option value="ZLC9101">ZLC9101</option><option value="ZBD8057">ZBD8057</option><option value="ZHB9049">ZHB9049</option><option value="ZBD8058">ZBD8058</option><option value="ZPU9136">ZPU9136</option><option value="ZVJ8038">ZVJ8038</option><option value="ZBD8050">ZBD8050</option><option value="ZJP8044">ZJP8044</option><option value="ZBD8070">ZBD8070</option><option value="ZAG9067">ZAG9067</option><option value="ZJP8043">ZJP8043</option><option value="ZJP8045">ZJP8045</option><option value="ZJP8052">ZJP8052</option><option value="ZGZ9058">ZGZ9058</option><option value="ZJP9075">ZJP9075</option><option value="ZKA9072">ZKA9072</option><option value="ZLC9100">ZLC9100</option><option value="ZGW9028">ZGW9028</option><option value="ZMN9071">ZMN9071</option><option value="ZPT8072">ZPT8072</option><option value="ZKH9052">ZKH9052</option><option value="ZRP3570">ZRP3570</option><option value="ZKO9101">ZKO9101</option><option value="ZMD8064">ZMD8064</option><option value="ZVN9072">ZVN9072</option><option value="ZKJ8017">ZKJ8017</option><option value="ZVN9083">ZVN9083</option><option value="ZLC9105">ZLC9105</option><option value="ZID9082">ZID9082</option><option value="ZSG8030">ZSG8030</option><option value="ZLC9104">ZLC9104</option><option value="ZGZ9068">ZGZ9068</option><option value="ZKH9051">ZKH9051</option><option value="ZKJ8023">ZKJ8023</option><option value="ZKJ8025">ZKJ8025</option><option value="ZHB9052">ZHB9052</option><option value="ZVN9081">ZVN9081</option><option value="ZBL9077">ZBL9077</option><option value="ZKE8103">ZKE8103</option><option value="ZKJ8037">ZKJ8037</option><option value="ZKJ8019">ZKJ8019</option><option value="ZKJ8038">ZKJ8038</option><option value="ZKJ8022">ZKJ8022</option><option value="ZKJ9067">ZKJ9067</option><option value="ZBG9034">ZBG9034</option><option value="ZGZ9063">ZGZ9063</option><option value="ZKJ8033">ZKJ8033</option><option value="ZKH9050">ZKH9050</option><option value="ZGZ9060">ZGZ9060</option><option value="ZSO9072">ZSO9072</option><option value="ZKJ9061">ZKJ9061</option><option value="ZRA9055">ZRA9055</option><option value="ZUJ9091">ZUJ9091</option><option value="ZHD9033">ZHD9033</option><option value="ZAG8028">ZAG8028</option><option value="ZGZ8020">ZGZ8020</option><option value="ZCE8105">ZCE8105</option><option value="ZRN8023">ZRN8023</option><option value="ZSB9022">ZSB9022</option><option value="ZBG8017">ZBG8017</option><option value="ZRA9060">ZRA9060</option><option value="ZBL9079">ZBL9079</option><option value="ZSB9025">ZSB9025</option><option value="ZKH9055">ZKH9055</option><option value="ZHD9030">ZHD9030</option><option value="ZRJ9091">ZRJ9091</option><option value="ZKE8086">ZKE8086</option><option value="ZVA9059">ZVA9059</option><option value="ZBL9074">ZBL9074</option><option value="ZRG9042">ZRG9042</option><option value="ZGO9041">ZGO9041</option><option value="ZVS8035">ZVS8035</option><option value="ZSO9074">ZSO9074</option><option value="ZJP8049">ZJP8049</option><option value="ZAM9017">ZAM9017</option><option value="TESTDEMO1388">TESTDEMO1388</option><option value="ZJB9207">ZJB9207</option><option value="ZID9208">ZID9208</option><option value="ZID9207">ZID9207</option><option value="ZKH9211">ZKH9211</option><option value="ZID9212">ZID9212</option><option value="ZUJ9220">ZUJ9220</option><option value="ZKH9201">ZKH9201</option><option value="ZBO8229">ZBO8229</option><option value="ZUJ9201">ZUJ9201</option><option value="ZUJ9207">ZUJ9207</option><option value="ZUJ9212">ZUJ9212</option><option value="ZID9206">ZID9206</option><option value="ZID9213">ZID9213</option><option value="ZUJ9208">ZUJ9208</option><option value="ZUJ9211">ZUJ9211</option><option value="ZJB9204">ZJB9204</option><option value="ZKH9208">ZKH9208</option></select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 269.4px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-AtmID-container"><span class="select2-selection__rendered" id="select2-AtmID-container" title="ZKJ8030">ZKJ8030</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group row">
+					    <label class="col-sm-6 col-form-label">Select Portal</label>
+					        <div class="col-sm-9">
+					            <select name="portal" id="portal" class="form-control">
+					                <option value="all">All</option>
+					                <option value="active">Ticket Active</option>
+					                <option value="closed">Ticket Closed</option>
+	            				</select>
+					        </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+				    <div class="form-group row">
+					    <label class="col-sm-6 col-form-label">Select From &amp; To</label>
+					        <div class="col-sm-9">
+								<div id="reportrange" class="form-control" data-cancel-class="btn-light" style="float:right;">
+									<i class="fa fa-calendar"></i>&nbsp;
+									<span id="selectedValue">Sep 14,2023 - Oct 14,2023</span> 
+								</div>
+
+								<input type="hidden" id="start" name="start" value="2023-09-14">
+								<input type="hidden" id="end" name="end" value="2023-10-14">
+							</div>
+				    </div>
+			    </div>	
+				
+					<!--
+					<div class="col-sm-6 grid-margin"><br> <br>
+					<div class="form-group row" >
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input"  name="optionsRadios" id="optionsRadios1" value="">
+					   All
+					</label>
+					</div>
+					
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+					Ticket Active
+					</label>
+					</div> 
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+					Ticket Closed
+					</label>
+					</div>
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+					Notification
+					</label>
+					</div>
+					<div class="form-check col md-1">
+					<label class="form-check-label" >
+					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+					Restore
+					</label>
+					</div>
+
+					</div>          
+					</div>  -->
+					
+					</div>
+					<div class="row">
+					    <div class="col-sm-3">
+						   <button class="btn btn-primary" id="Button" onclick="getTicketDetails()">Show</button>
+						</div>
+					</div>
+				
+					</div>
+</div><br>					
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Ticket Details From:</h4>
+               <div class="row" style="margin-bottom:10px;">
+			    <div class="col-md-6"></div>
+			   <!-- <div class="col-md-6">
+			     <div id="reportrange" class="form-control"   data-cancel-class="btn-light"  style="float:right;">
+                        <i class="fa fa-calendar"></i>&nbsp;
+                        <span id="selectedValue"></span> 
+                    </div>
+
+                    <input type="hidden" id="start" name="start" value="2023-10-14">
+                    <input type="hidden" id="end" name="end" value="2023-10-14">
+			    </div>	-->
+			   </div>
+              
+              <div class="row">
+                <div class="col-12" id="ticketview_tbody"><div class="table-responsive">
+                    <div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer"><div class="dt-buttons"><button class="dt-button buttons-excel buttons-html5" tabindex="0" aria-controls="order-listing" type="button"><span>Excel</span></button> </div><div id="order-listing_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="order-listing"></label></div><table id="order-listing" class="table dataTable no-footer" role="grid" aria-describedby="order-listing_info">
+                      <thead>
+                        <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-sort="descending" aria-label="ATM ID: activate to sort column ascending" style="width: 55.6833px;">ATM ID</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Alert Type: activate to sort column ascending" style="width: 139.983px;">Alert Type</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Panel ID: activate to sort column ascending" style="width: 65.9667px;">Panel ID</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Location: activate to sort column ascending" style="width: 299.617px;">Location</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="width: 299.617px;">Address</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="State: activate to sort column ascending" style="width: 43.5667px;">State</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="City: activate to sort column ascending" style="width: 72.05px;">City</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Branch Code: activate to sort column ascending" style="width: 299.617px;">Branch Code</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Alarm Status: activate to sort column ascending" style="width: 107.983px;">Alarm Status</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Zone Status: activate to sort column ascending" style="width: 97.1833px;">Zone Status</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Send To IP: activate to sort column ascending" style="width: 82.4833px;">Send To IP</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Ticket DateTime: activate to sort column ascending" style="width: 133.317px;">Ticket DateTime</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Closure DateTime: activate to sort column ascending" style="width: 146.75px;">Closure DateTime</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Duration (HH:MM): activate to sort column ascending" style="width: 148.3px;">Duration (HH:MM)</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="DVR IP: activate to sort column ascending" style="width: 59.1333px;">DVR IP</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Remark: activate to sort column ascending" style="width: 248.7px;">Remark</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Ticket ID: activate to sort column ascending" style="width: 69.85px;">Ticket ID</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Closed By User: activate to sort column ascending" style="width: 121.117px;">Closed By User</th></tr>
+                      </thead>
+                      <tbody>
+					    							   
+								
+													   
+								
+													   
+								
+													   
+								
+													   
+								
+													   
+								
+													   
+								
+													   
+								
+						                      <tr role="row" class="odd">
+							    <td class="sorting_1">ZKJ8030</td>
+								 <td>Lobby PIR Motion sensor</td>
+								<td>091110</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>Orissa</td>
+				  <td>KHIREITANGIRI</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+                 
+				  <td>JP</td>
+				  <td>001</td>
+				  <td>192.168.100.75</td>
+                  <td>2023-10-13 00:20:14</td>
+                  <td>2023-10-13 00:41:14</td>
+				  <td>00:21</td>
+			      <td>172.55.27.54</td>
+                  <td>As Per Live No One Person Present At Site,</td>
+                  <td>122507157</td>
+                  <td>sohel</td>
+                  
+								</tr><tr role="row" class="even">
+							    <td class="sorting_1">ZKJ8030</td>
+								 <td>Backroom Door Open</td>
+								<td>091110</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>Orissa</td>
+				  <td>KHIREITANGIRI</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+                 
+				  <td>CL</td>
+				  <td>001</td>
+				  <td>192.168.100.75</td>
+                  <td>2023-10-11 09:26:28</td>
+                  <td></td>
+				  <td></td>
+			      <td>172.55.27.54</td>
+                  <td></td>
+                  <td>121810089</td>
+                  <td></td>
+                  
+								</tr><tr role="row" class="odd">
+							    <td class="sorting_1">ZKJ8030</td>
+								 <td>Backroom Door Open</td>
+								<td>091110</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>Orissa</td>
+				  <td>KHIREITANGIRI</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+                 
+				  <td>CL</td>
+				  <td>001</td>
+				  <td>192.168.100.76</td>
+                  <td>2023-10-04 09:53:10</td>
+                  <td></td>
+				  <td></td>
+			      <td>172.55.27.54</td>
+                  <td></td>
+                  <td>117830567</td>
+                  <td></td>
+                  
+								</tr><tr role="row" class="even">
+							    <td class="sorting_1">ZKJ8030</td>
+								 <td>Backroom Door Open</td>
+								<td>091110</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>Orissa</td>
+				  <td>KHIREITANGIRI</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+                 
+				  <td>CL</td>
+				  <td>001</td>
+				  <td>192.168.100.75</td>
+                  <td>2023-10-03 22:08:37</td>
+                  <td>2023-10-03 22:10:29</td>
+				  <td>00:01</td>
+			      <td>172.55.27.54</td>
+                  <td>As Per Live No One Person Present At Site,</td>
+                  <td>117646326</td>
+                  <td>mazhar</td>
+                  
+								</tr><tr role="row" class="odd">
+							    <td class="sorting_1">ZKJ8030</td>
+								 <td>Backroom Door Open</td>
+								<td>091110</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>Orissa</td>
+				  <td>KHIREITANGIRI</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+                 
+				  <td>CL</td>
+				  <td>001</td>
+				  <td>192.168.100.75</td>
+                  <td>2023-10-03 18:12:32</td>
+                  <td>2023-10-03 20:59:16</td>
+				  <td>02:46</td>
+			      <td>172.55.27.54</td>
+                  <td>As Per Live No One Person Present At Site,</td>
+                  <td>117586202</td>
+                  <td>mazhar</td>
+                  
+								</tr><tr role="row" class="even">
+							    <td class="sorting_1">ZKJ8030</td>
+								 <td>Low Battery</td>
+								<td>091110</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>Orissa</td>
+				  <td>KHIREITANGIRI</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+                 
+				  <td>YT</td>
+				  <td>998</td>
+				  <td>192.168.100.76</td>
+                  <td>2023-10-03 09:33:24</td>
+                  <td></td>
+				  <td></td>
+			      <td>172.55.27.54</td>
+                  <td></td>
+                  <td>117450202</td>
+                  <td></td>
+                  
+								</tr><tr role="row" class="odd">
+							    <td class="sorting_1">ZKJ8030</td>
+								 <td>Backroom Door Open</td>
+								<td>091110</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>Orissa</td>
+				  <td>KHIREITANGIRI</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+                 
+				  <td>CL</td>
+				  <td>001</td>
+				  <td>192.168.100.76</td>
+                  <td>2023-10-03 09:25:42</td>
+                  <td></td>
+				  <td></td>
+			      <td>172.55.27.54</td>
+                  <td></td>
+                  <td>117448443</td>
+                  <td></td>
+                  
+								</tr><tr role="row" class="even">
+							    <td class="sorting_1">ZKJ8030</td>
+								 <td>Backroom Door Open</td>
+								<td>091110</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+				  <td>Orissa</td>
+				  <td>KHIREITANGIRI</td>
+                  <td>AT/PO-KHIREITANGIRI,DIST-KEONJHAR,PIN-758046</td>
+                 
+				  <td>CL</td>
+				  <td>001</td>
+				  <td>192.168.100.74</td>
+                  <td>2023-10-03 08:35:40</td>
+                  <td>2023-10-03 08:40:09</td>
+				  <td>00:04</td>
+			      <td>172.55.27.54</td>
+                  <td>dvr not login qrt not responding,</td>
+                  <td>117437296</td>
+                  <td>kashish</td>
+                  
+								</tr></tbody>
+                    </table><div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">Showing 1 to 8 of 8 entries</div><div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="order-listing_previous"><a href="https://103.141.218.26/comforttechnonew/ticketview.php#" aria-controls="order-listing" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="https://103.141.218.26/comforttechnonew/ticketview.php#" aria-controls="order-listing" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="order-listing_next"><a href="https://103.141.218.26/comforttechnonew/ticketview.php#" aria-controls="order-listing" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div>
+                  </div>
+
+</div>
+
+              </div>
+            </div>
+          </div>
+        
+          
+                    </div>
+                                        <footer class="footer">
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">
+                                Copyright © 2021
+                                <a href="https://103.141.218.26/comforttechnonew/ticketview.php#" target="_blank">
+                                    Comfort Techno Services Pvt Ltd
+                                </a>
+                                . All rights reserved.
+                            </span>
+                           <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                                Hand-crafted & made with
+                                <i class="far fa-heart text-danger">
+                                </i>
+                            </span>-->
+                        </div>
+                    </footer>
+					                </div>
+            </div>
+        </div>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/vendor.bundle.base.js.download">
+        </script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/vendor.bundle.addons.js.download">
+        </script>
+
+
+<link rel="stylesheet" type="text/css" href="./Comfort Techno Services Pvt Ltd - admin_files/daterangepicker.css">
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+	<script type="text/javascript" src="./Comfort Techno Services Pvt Ltd - admin_files/moment.min.js.download"></script>
+	<script type="text/javascript" src="./Comfort Techno Services Pvt Ltd - admin_files/daterangepicker.min.js.download"></script>
+	
+		
+<script>
+                    $(function() {
+
+                        var start = moment().subtract(30, 'days');
+                        var end = moment();
+
+            function cb(start, end) {
+                $('#reportrange span').html(start.format('MMM DD,YYYY') + ' - ' + end.format('MMM DD,YYYY'));
+                $("#start").val(start.format('YYYY-MM-DD'));
+                $("#end").val(end.format('YYYY-MM-DD'));
+               // get_ticketview();
+            }
+
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                "showDropdowns": true,
+                "autoApply": true,
+                 maxDate: new Date(),
+                ranges: {
+                   'Today': [moment(), moment()],
+                //   'Yesterday': [moment().subtract(1, 'days'), moment()],
+                   'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                   'Last 7 Days': [moment().subtract(7, 'days'), moment()],
+                   'Last 30 Days': [moment().subtract(30, 'days'), moment()],
+                 //  'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 //  'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+
+
+
+            }, cb);
+
+            cb(start, end);
+
+
+        });
+</script>
+
+        
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/off-canvas.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/hoverable-collapse.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/misc.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/settings.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/todolist.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/dashboard.js.download"></script>
+		<script src="./Comfort Techno Services Pvt Ltd - admin_files/client_bank_circle_atmid.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/ticketview.js.download"></script>
+        <script src="./Comfort Techno Services Pvt Ltd - admin_files/data-table.js.download"></script>
+         <script src="./Comfort Techno Services Pvt Ltd - admin_files/select2.js.download"></script>
+      
+        
+    
+
+<div class="daterangepicker ltr auto-apply show-ranges opensright" style="display: none; top: 321.4px; left: 721.783px; right: auto;"><div class="ranges"><ul><li data-range-key="Today">Today</li><li data-range-key="Yesterday">Yesterday</li><li data-range-key="Last 7 Days">Last 7 Days</li><li data-range-key="Last 30 Days" class="active">Last 30 Days</li><li data-range-key="Custom Range">Custom Range</li></ul></div><div class="drp-calendar left"><div class="calendar-table"><table class="table-condensed"><thead><tr><th class="prev available"><span></span></th><th colspan="5" class="month"><select class="monthselect"><option value="0">Jan</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8" selected="selected">Sep</option><option value="9">Oct</option><option value="10" disabled="disabled">Nov</option><option value="11" disabled="disabled">Dec</option></select><select class="yearselect"><option value="1923">1923</option><option value="1924">1924</option><option value="1925">1925</option><option value="1926">1926</option><option value="1927">1927</option><option value="1928">1928</option><option value="1929">1929</option><option value="1930">1930</option><option value="1931">1931</option><option value="1932">1932</option><option value="1933">1933</option><option value="1934">1934</option><option value="1935">1935</option><option value="1936">1936</option><option value="1937">1937</option><option value="1938">1938</option><option value="1939">1939</option><option value="1940">1940</option><option value="1941">1941</option><option value="1942">1942</option><option value="1943">1943</option><option value="1944">1944</option><option value="1945">1945</option><option value="1946">1946</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option><option value="1966">1966</option><option value="1967">1967</option><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023" selected="selected">2023</option></select></th><th></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off ends available" data-title="r0c0">27</td><td class="off ends available" data-title="r0c1">28</td><td class="off ends available" data-title="r0c2">29</td><td class="off ends available" data-title="r0c3">30</td><td class="off ends available" data-title="r0c4">31</td><td class="available" data-title="r0c5">1</td><td class="weekend available" data-title="r0c6">2</td></tr><tr><td class="weekend available" data-title="r1c0">3</td><td class="available" data-title="r1c1">4</td><td class="available" data-title="r1c2">5</td><td class="available" data-title="r1c3">6</td><td class="available" data-title="r1c4">7</td><td class="available" data-title="r1c5">8</td><td class="weekend available" data-title="r1c6">9</td></tr><tr><td class="weekend available" data-title="r2c0">10</td><td class="available" data-title="r2c1">11</td><td class="available" data-title="r2c2">12</td><td class="available" data-title="r2c3">13</td><td class="active start-date available" data-title="r2c4">14</td><td class="in-range available" data-title="r2c5">15</td><td class="weekend in-range available" data-title="r2c6">16</td></tr><tr><td class="weekend in-range available" data-title="r3c0">17</td><td class="in-range available" data-title="r3c1">18</td><td class="in-range available" data-title="r3c2">19</td><td class="in-range available" data-title="r3c3">20</td><td class="in-range available" data-title="r3c4">21</td><td class="in-range available" data-title="r3c5">22</td><td class="weekend in-range available" data-title="r3c6">23</td></tr><tr><td class="weekend in-range available" data-title="r4c0">24</td><td class="in-range available" data-title="r4c1">25</td><td class="in-range available" data-title="r4c2">26</td><td class="in-range available" data-title="r4c3">27</td><td class="in-range available" data-title="r4c4">28</td><td class="in-range available" data-title="r4c5">29</td><td class="weekend in-range available" data-title="r4c6">30</td></tr><tr><td class="weekend off ends in-range available" data-title="r5c0">1</td><td class="off ends in-range available" data-title="r5c1">2</td><td class="off ends in-range available" data-title="r5c2">3</td><td class="off ends in-range available" data-title="r5c3">4</td><td class="off ends in-range available" data-title="r5c4">5</td><td class="off ends in-range available" data-title="r5c5">6</td><td class="weekend off ends in-range available" data-title="r5c6">7</td></tr></tbody></table></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"><table class="table-condensed"><thead><tr><th></th><th colspan="5" class="month"><select class="monthselect"><option value="0" disabled="disabled">Jan</option><option value="1" disabled="disabled">Feb</option><option value="2" disabled="disabled">Mar</option><option value="3" disabled="disabled">Apr</option><option value="4" disabled="disabled">May</option><option value="5" disabled="disabled">Jun</option><option value="6" disabled="disabled">Jul</option><option value="7" disabled="disabled">Aug</option><option value="8">Sep</option><option value="9" selected="selected">Oct</option><option value="10" disabled="disabled">Nov</option><option value="11" disabled="disabled">Dec</option></select><select class="yearselect"><option value="2023" selected="selected">2023</option></select></th><th></th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="weekend off ends in-range available" data-title="r0c0">24</td><td class="off ends in-range available" data-title="r0c1">25</td><td class="off ends in-range available" data-title="r0c2">26</td><td class="off ends in-range available" data-title="r0c3">27</td><td class="off ends in-range available" data-title="r0c4">28</td><td class="off ends in-range available" data-title="r0c5">29</td><td class="weekend off ends in-range available" data-title="r0c6">30</td></tr><tr><td class="weekend in-range available" data-title="r1c0">1</td><td class="in-range available" data-title="r1c1">2</td><td class="in-range available" data-title="r1c2">3</td><td class="in-range available" data-title="r1c3">4</td><td class="in-range available" data-title="r1c4">5</td><td class="in-range available" data-title="r1c5">6</td><td class="weekend in-range available" data-title="r1c6">7</td></tr><tr><td class="weekend in-range available" data-title="r2c0">8</td><td class="in-range available" data-title="r2c1">9</td><td class="in-range available" data-title="r2c2">10</td><td class="in-range available" data-title="r2c3">11</td><td class="in-range available" data-title="r2c4">12</td><td class="in-range available" data-title="r2c5">13</td><td class="today weekend active end-date in-range available" data-title="r2c6">14</td></tr><tr><td class="weekend off disabled" data-title="r3c0">15</td><td class="off disabled" data-title="r3c1">16</td><td class="off disabled" data-title="r3c2">17</td><td class="off disabled" data-title="r3c3">18</td><td class="off disabled" data-title="r3c4">19</td><td class="off disabled" data-title="r3c5">20</td><td class="weekend off disabled" data-title="r3c6">21</td></tr><tr><td class="weekend off disabled" data-title="r4c0">22</td><td class="off disabled" data-title="r4c1">23</td><td class="off disabled" data-title="r4c2">24</td><td class="off disabled" data-title="r4c3">25</td><td class="off disabled" data-title="r4c4">26</td><td class="off disabled" data-title="r4c5">27</td><td class="weekend off disabled" data-title="r4c6">28</td></tr><tr><td class="weekend off disabled" data-title="r5c0">29</td><td class="off disabled" data-title="r5c1">30</td><td class="off disabled" data-title="r5c2">31</td><td class="off ends off disabled" data-title="r5c3">1</td><td class="off ends off disabled" data-title="r5c4">2</td><td class="off ends off disabled" data-title="r5c5">3</td><td class="weekend off ends off disabled" data-title="r5c6">4</td></tr></tbody></table></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected">09/14/2023 - 10/14/2023</span><button class="cancelBtn btn btn-sm btn-light" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" type="button">Apply</button> </div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
