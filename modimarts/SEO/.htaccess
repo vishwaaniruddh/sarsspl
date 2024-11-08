@@ -1,0 +1,43 @@
+# Rewrite to www
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+
+
+# 301 Redirect Old File
+Redirect 301 http://allmart.world/ https://allmart.world/
+
+# 301 Redirect Entire Directory
+RedirectMatch 301 http://allmart.world/(.*) https://allmart.world/$1
+
+# Custom 400 errors
+ErrorDocument 400 http://allmart.world/
+
+# Custom 401 errors
+ErrorDocument 401 http://allmart.world/
+
+
+# Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# Prevent directory listings
+Options All -Indexes
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+
+
+RewriteRule list/(.*)/(.*) new_product.php?catname=$1&catid=$2
+
+RewriteRule product/(.*)/(.*) product.php?catname=$1&catid=$2
+
+RewriteRule (.*)/P/(.*)/(.*)/(.*) product_detail.php?&prodnm=$1&pid=$2&catid=$3&prod_id=$4

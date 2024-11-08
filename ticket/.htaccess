@@ -1,0 +1,13 @@
+# Enable RewriteEngine
+RewriteEngine On
+
+# Redirect when accessing /ticket/ directly to /ticket/public/login.php
+RewriteCond %{REQUEST_URI} ^/ticket/?$
+RewriteRule ^$ /ticket/public/login.php [L,R=302]
+
+# Redirect when accessing /ticket/public/ directly to /ticket/public/login.php
+RewriteCond %{REQUEST_URI} ^/ticket/public/?$
+RewriteRule ^$ /ticket/public/login.php [L,R=302]
+
+# Handle forbidden errors (403) by redirecting to /ticket/public/login.php
+ErrorDocument 403 /ticket/public/login.php

@@ -1,0 +1,11 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^loyaltician\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.loyaltician\.com$
+RewriteRule ^/?$ "https\:\/\/loyaltician\.com\/" [R=301,L]
+
+<FilesMatch "\.(php4|php5|php3|php2|php|phtml)$">
+SetHandler application/x-lsphp74
+</FilesMatch>
