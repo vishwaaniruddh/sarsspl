@@ -1,0 +1,322 @@
+div#dt-1505569133010-6337076e-26ee img{
+    width:100px ! important;
+}
+
+   p,li{
+        color:black;
+    }
+.after-loop {
+    padding: 3rem 0 5rem;
+}
+
+.after-loop a.after-loop-item {
+    color: #fff;
+    position: relative;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: .15s box-shadow ease,.15s transform ease;
+    -moz-transition: .15s box-shadow ease,.15s transform ease;
+}
+.after-loop .card-templates {
+    background-color: #2092ed;
+}
+
+.after-loop .card-snippets {
+    background-color: #ffc107;
+}
+
+.after-loop .card-maths {
+    background-color: #ff5722;
+}
+
+
+
+.after-loop .card-guides {
+    background-color: #28a745;
+}
+.shadow-lg {
+    box-shadow: 0 2rem 1.5rem -1.5rem rgba(33,37,41,.15),0 0 1.5rem .5rem rgba(33,37,41,.05)!important;
+}
+.border-0 {
+    border: 0!important;
+}
+
+
+
+.text-right {
+    text-align: right!important;
+}
+.align-items-end {
+    align-items: flex-end!important;
+}
+.flex-column {
+    flex-direction: column!important;
+}
+.d-flex {
+    display: flex!important;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+
+
+.after-loop a.after-loop-item .card-body p {
+    color: rgba(255,255,255,.7);
+    font-weight: 600;
+}
+
+.w-75 {
+    width: 100%!important;
+}
+
+.after-loop a.after-loop-item .card-body i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    left: 1rem;
+    color: rgba(255,255,255,.2);
+    transition: .15s all ease;
+}
+
+.fal, .far {
+    font-family: "Font Awesome 5 Pro";
+}
+.fal {
+    font-weight: 300;
+}
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa-pencil-ruler:before {
+    content: "\f5ae";
+}
+
+.fa-books:before {
+    content: "\f5db";
+}
+
+
+
+.after-loop a.after-loop-item .card-body i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    left: 1rem;
+    color: rgba(255,255,255,.2);
+    transition: .15s all ease;
+}
+
+.fal, .far {
+    font-family: "Font Awesome 5 Pro";
+}
+.fal {
+    font-weight: 300;
+}
+
+
+
+.card-body h4{
+    color:white;
+}
+.ml-auto, .mx-auto{
+    margin:5%;
+}
+
+
+
+.banner img{
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner{
+    position:relative;
+    height:700px;
+}
+.custom_margin{
+    margin:3% auto;
+}
+.banner h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size:48px;
+}
+.edit_btn{
+    float:right;
+}
+.edit_btn img{
+    height: 30px;
+}
+
+.profile_head{
+        margin: auto;
+    padding: 5%;
+}
+#menu-main-menu{
+    display:flex ! important;
+}
+div#dt-1505569420380-855692fb-3388 ul.dt-primary-nav > li > a{
+    padding:10px ! important;
+}
+
+#header{
+    float:none ! important;
+}
+
+
+
+
+
+
+/*friends Page*/
+ .friends_img img{
+      width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: gray;
+    }
+    .invite{
+      height: 100px;
+    }
+    .invite div{
+      display: flex;
+    }
+    .facebook_invite{
+      background: #3b579d;
+       height: 100px;
+      }
+    .email_invite{
+      background: #da4338;
+       height: 100px;
+      }
+    .whatsapp_invite{
+      background: #39dd56;
+       height: 100px;
+      }
+
+    .invite p{
+      color: white;
+      text-align: center;
+      margin: auto;
+    }
+    .h1_friend{
+        text-align:center;
+        color:#4ac1f7;
+    }
+    /*End Friends Page*/
+    
+    
+    
+    
+    
+    .text-center{
+        color:white;
+    }
+    .text-center h4{
+        color:white;
+    }
+    .row{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+    .custom_col{
+        background: #1586f0;
+        color: white;
+        padding: 5%;
+        border-radius: 10px;
+        margin: 1%;
+    }
+    .name{
+        font-size:30px;
+    }
+    .subject{
+        font-size:25px;
+    }
+    .topic{
+        font-size:20px;
+    }
+    .Physics{
+         
+         background: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.9)
+        ),
+        url(http://sarmicrosystems.in/quiztest/web/asset/physics.png);
+        background-size: cover;
+
+    }
+     .Chemistry{
+         
+         background: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.9)
+        ),
+        url(http://sarmicrosystems.in/quiztest/web/asset/chemistry.png);
+        background-size: cover;
+
+    }
+    .Maths{
+         
+         background: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.9)
+        ),
+        url(http://sarmicrosystems.in/quiztest/web/asset/maths.png);
+        background-size: cover;
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+
+
+.sound_control h5{
+    margin:2%;
+}
+    .quiz label p{
+        color:white;
+    }
+        .quiz p{
+        background-color: #4ac1f7 ;
+        }
+        .active_option{
+            background-color: #007bff ! important;
+        }
+        #post-8700{
+            background:white;
+        }
+        .column .blog-entry, .wpb_column .blog-entry {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.weather .blog-entry {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0,.1);
+    -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0,.1);
+    -webkit-box-shadow: 4px 11px 13px 4px rgba(2, 1, 1, 1);
+}

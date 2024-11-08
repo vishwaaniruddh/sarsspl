@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Navigation Styles */
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    text-align: center;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.card p {
+    margin: 5px 0 0;
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+}
+
+form input, form select, form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: #f2f2f2;
+}
+
+.quick-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin: 10px 0;
+}
+
+.quick-links li a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.quick-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: #f2f2f2;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.container {
+    max-width: 1300px; /* Maximum width for the dashboard */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+}
+
+.card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Inner padding for the card */
+    margin-bottom: 20px; /* Space between cards */
+    text-align: center; /* Center the text */
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.card h3 {
+    font-size: 24px; /* Heading size */
+    color: white; /* Darker color for the heading */
+}
+
+.card p {
+    font-size: 16px; /* Regular text size */
+    color: white; /* Grey color for the text */
+}
+
+.ticket-table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Remove space between borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+.ticket-table th, .ticket-table td {
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 10px; /* Inner padding for cells */
+    text-align: left; /* Align text to the left */
+}
+
+.ticket-table th {
+    background-color: #f2f2f2; /* Light grey background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+.pagination {
+    display: flex; /* Flexbox for pagination */
+    justify-content: center; /* Center align pagination items */
+    margin-top: 20px; /* Space above pagination */
+}
+
+.pagination a {
+    padding: 8px 12px; /* Padding for pagination buttons */
+    margin: 0 5px; /* Margin between buttons */
+    background-color: #007bff; /* Blue background for buttons */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners for buttons */
+}
+
+.pagination a.active {
+    background-color: #0056b3; /* Darker blue for active page */
+}
+
+.pagination a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: white; /* Ensure text remains white on hover */
+}

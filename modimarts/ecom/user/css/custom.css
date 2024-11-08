@@ -1,0 +1,18 @@
+.modal-css{
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 25px;
+}
+.list-gap{
+    margin: 0 21px 0 0;
+}
+ .show#userSettingss{
+    position: absolute;
+    right: 5%;
+    box-shadow: rgb(136, 136, 136) 2px 2px;
+    background: white;
+}
+/*welcome*/
+.margin-prop{
+    margin: 10px;
+}

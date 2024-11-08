@@ -1,0 +1,350 @@
+	.outer{
+    height: 714px;
+    width: 1000px;
+	}	
+	.inner{
+		height: 100%;
+    border: 1px solid red;
+background-image: linear-gradient(#ea5b2c,#e45327, #c5412a);
+    padding: 2%;
+	}
+	.inner-curve{
+    height: 100%;
+    border: 4px solid white;
+    border-radius: 2%;
+    position: relative;
+
+	}
+
+	.watermark:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: url(../img/certificate_0004_Logo.png);
+    opacity: 0.1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 85%;
+    height: 85%;
+    margin: auto;
+
+
+
+	}
+img{
+width: 50%;
+
+}
+	.left-top{
+			background: url(certificate_0005_border.png);
+	}
+		.heading h2{
+			font-weight: 500;
+
+		}
+		.heading h1{
+			font-weight: 600;
+			
+		}
+	.heading h1,.heading h2{
+		text-align: center;
+		color: white;
+
+	}
+
+	.left-logo{
+		/*background: url();*/
+	}	
+
+	.right-logo{
+		/*background: url(certificate_0004_Logo.png);*/
+	}
+    .header{
+        height: 25%;
+    }
+
+	.header .col-md-3{
+	display: flex;
+	/*justify-content: center;*/
+	}
+	.heading hr{
+width: 50%;
+border-top: 3px solid white;
+	}
+
+.inner-curve, .left-logo,.right-logo{
+position: relative;
+}
+
+.left-top{
+position: absolute;
+    background: url(../img/1.png);
+    height: 100px;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.right-top{
+position: absolute;
+    background: url(../img/2.png);
+    height: 100px;
+    right: 10px;
+    top: 10px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bottom-left{
+position: absolute;
+    background: url(../img/3.png);
+    height: 100px;
+    left: 10px;
+    bottom: 10px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bottom-right{
+position: absolute;
+    background: url(../img/4.png);
+    height: 100px;
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.left-logo .logo {
+   position: absolute;
+    width: 140px;
+    background: url(../img/hindi-logo.png) 1% 11%;
+    height: 140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 26%;
+    top: 19%;
+}
+
+.right-logo .logo{
+    position: absolute;
+    width: 140px;
+    background: url(../img/certificate_0003_SB-Logo.png) 1% 11%;
+    height: 140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 26%;
+    top: 19%;
+}
+.name {
+   height: 20%;
+    color: white;
+    text-align: center;
+        margin-right: 5%;
+}
+.heading{
+	    display: flex;
+    justify-content: center;
+}
+.heading img {
+    width: 65%;
+    /* height: 60%; */
+    height: 65%;
+    margin-top: 8%;
+}
+
+.anoop,.member-praman, .something{
+	position: relative;
+}
+/*.anoop{
+	position: absolute;
+	background: url(img/certificate_0011_Anup-ji.png);
+	height: 200px;
+    left: -40px;
+    top: 14px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+*/
+.anoops, .member-praman {
+height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.anoops img, .member-praman img {
+
+    width: 80%;
+}
+.member-praman img{
+    margin-right: 10%;
+
+}
+.name img{
+    width: 90%;
+}
+.anoops img
+{
+    margin-left: 10%;
+    }    
+
+.name h3{
+	    font-size: 28px;
+    font-weight: 600;
+    margin: 6px auto;
+}
+.name p{
+	    /*font-size: 15px;*/
+    font-weight: 500;
+    margin: 0;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+    height: 100%;
+    border: 1px solid black ! important;
+}
+td, th {
+    border: 1px solid black ! important;
+    text-align: left;
+    padding: 1px;
+    text-align: left;
+    /*background: white;*/
+    color: black;
+    width: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+th{
+        background: #d44949;
+        color: white;
+}
+
+tbody{
+    color: white;
+
+}
+.heading-tr {
+    background: red;
+    color: white;
+}
+
+/*td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+  text-align: center;
+}*/
+
+tbody{
+    background:white;
+}
+.shyam-heading p{
+	    text-shadow: 0 0 3px #ffffff;
+margin: 0;
+    text-align: center;
+    font-size: 37px;
+    color: red;
+}
+.shyam-heading{
+	    display: flex;
+    justify-content: center;
+
+}
+.custom_table img{
+	width: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 14px;
+
+}
+.custom_body{
+height: 40%;
+}
+.custom_table{
+    /*height: 100%;*/
+    z-index: 100;
+    padding: 0;
+}
+.member-address {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    /*margin-top: 5%;*/
+    line-height: 0.8;
+}
+.member-address p{
+    margin: 6px;
+    line-height: 1.2;
+}
+.custom_body .col-md-3{
+    width: 27.5%;
+    height:100%;
+}
+.custom_body .col-md-6{
+width: 45%;
+height:100%;
+}
+.shyam-heading img{
+    width: 65%;
+}
+.committee_position{
+    font-size: 16px;
+}
+.name p.committee_number{
+    font-size: 18px;
+    font-weight:700;
+}
+.table_place{
+    width: 1px;
+}
+
+tr td:first-child{
+    text-align:center;
+}
+.anoops-image{
+    background: url(../img/certificate_0011_Anup-ji.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+
+}
+
+.members-image{
+    background-size: cover; background-repeat: no-repeat; height: 100%; width: 100%;
+}
+.margin{
+    height: 5%;
+}
+.anoops{
+        margin-left: 5%;
+}
+.member-praman{
+    /*margin-right:5%;*/
+}

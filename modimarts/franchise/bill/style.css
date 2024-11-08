@@ -1,0 +1,206 @@
+.outer{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: pink;
+
+}
+
+
+.inner{
+    border: 1px solid black;
+    background-color: white;
+}
+
+/* -----------head------------- */
+.logo{
+    border: 1px solid black;
+    float: left;
+    display: block;
+
+}
+
+#logo_id{
+    width: 140px;
+}
+
+
+.head_line{
+    border: 1px solid black;
+    height: 90px;
+    padding-top: 5px;
+    background-color: red;
+    color: white;
+}
+
+.head_line_1,.head_line_2{
+    text-align: center;
+    display: block;
+    line-height: 35px;
+}
+
+#head_line_1_p{
+    font-size: 40px;
+}
+#head_line_2_p{
+    font-size: 20px;
+}
+
+.enterprise{
+    text-align: center;
+    border: 1px solid black;
+    display: flex-end;
+    align-content: center;
+    background-color: pink;
+
+}
+
+#enterprise_id{
+    font-size:20px ;
+    text-align: center;
+    
+}
+
+
+/* ------------------head css end------------------ */
+
+.address{
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+.contact {
+    border: 1px solid black;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    padding: 0.5%;
+}
+
+#contact_space{
+    margin: 2px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.e_commerce{
+    text-align: center;
+    border: 1px solid black;
+    background-color: pink;
+}
+
+.gst{
+    text-align: center;
+    border: 1px solid black
+}
+
+/* ------------------------------------ */
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 3px;
+    text-align: left;    
+  }
+
+  th{
+      background-color: pink;
+  }
+
+
+
+/* ------------------------------------ */
+.note{
+    border: 1px solid black;
+    text-align: center;
+}
+
+.recieved{
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
+/* ---------------------------------- */
+
+
+@media only screen and (max-width: 768px) {
+    
+.outer{
+    padding: 5px;
+    background-color: pink;
+    margin:10px;
+    font-size: 10px;
+}
+
+.inner{
+    background-color: white;
+}
+
+/* ---------------------------------- */
+
+.logo{
+    display: flex;
+}
+
+#logo_id{
+    width: 100px;
+ }
+
+/* ---------------------------------- */
+
+.head_line{
+    border: 1px solid black;
+    height: 60px;
+    padding-top: 5px;
+    background-color: red;
+    color: white;
+ }
+
+.head_line_1,.head_line_2{
+    text-align: center;
+    display: block;
+    line-height: 15px;
+}
+
+#head_line_1_p{
+    font-size: 25px;
+}
+#head_line_2_p{
+    font-size: 15px;
+}
+
+/* ---------------------------------- */
+
+.enterprise{
+    text-align: center;
+    border: 1px solid black;
+    display: flex-end;
+    align-content: center;
+
+
+}
+
+#enterprise_id{
+    font-size:15px ;
+    text-align: center;
+    
+}
+
+/* ---------------------------------- */
+
+
+.contact{
+    text-align: center;
+     display: block;
+}
+
+/* ---------------------------------- */
+
+
+}

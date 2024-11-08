@@ -1,0 +1,89 @@
+
+
+.inner{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 2px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+/* 
+.bg_image{
+    background-image: url('offer.jpeg'); 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: 550px 630px;
+
+} */
+
+.photo{
+    width: 100%;
+    height: auto;
+}
+
+.character{
+    width: 90px;
+}
+
+/* ---------------------------------- */
+
+
+@media only screen and (max-width: 1024px) {
+
+    .inner{
+        font-size: 10px;
+        margin-left: 20%;
+        margin-right:20%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 2px;
+        border: 1px solid black;
+        
+    }
+
+/* .bg_image{
+    background-image: url('offer.jpeg'); 
+    background-repeat: no-repeat;
+    height: 530px;
+    width: auto;
+    background-position: center;
+    background-size: 480px 530px;
+} */
+
+.character{
+    width: 80px;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .inner{
+        font-size: 7px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 2px;
+        border: 1px solid black;
+    
+    }
+
+/* .bg_image{
+    background-image: url('offer.jpeg'); 
+    background-repeat: no-repeat;
+    height: 530px;
+    width: auto;
+    background-position: center;
+    background-size: 400px 530px;
+} */
+
+.character{
+    width: 60px;
+}
+
+}

@@ -1,0 +1,92 @@
+
+/* customize for body,body #page */ 
+body,body #page { 
+font-family:inherit 
+} 
+
+/* customize for .product-block .name a */ 
+.product-block .name a { 
+color:#e300e3 
+} 
+
+/* customize for .price */ 
+.price { 
+color:#0b20de 
+} 
+
+/* customize for .price .price-new */ 
+.price .price-new { 
+color:#f20303 
+} 
+
+/* customize for .price .price-old */ 
+.price .price-old { 
+color:#0ffa13 
+} 
+
+/* customize for 
+				.btn.btn-shopping-cart .fa,.product-block .product-icon
+			 */ 
+
+				.btn.btn-shopping-cart .fa,.product-block .product-icon
+			 { 
+color:#00fcda 
+} 
+
+/* customize for 
+				.btn.btn-shopping-cart span + span
+			 */ 
+
+				.btn.btn-shopping-cart span + span
+			 { 
+color:#ff0000 
+} 
+
+/* customize for 
+				.btn.btn-shopping-cart .fa
+			 */ 
+
+				.btn.btn-shopping-cart .fa
+			 { 
+background-color:#0066ff;
+color:#fafa00 
+} 
+
+/* customize for 
+				.btn.btn-shopping-cart span + span,.product-block .product-icon
+			 */ 
+
+				.btn.btn-shopping-cart span + span,.product-block .product-icon
+			 { 
+border-color:#ff0000 
+} 
+
+/* customize for 
+				.product-label
+			 */ 
+
+				.product-label
+			 { 
+border-top-color:#004dff 
+} 
+
+/* customize for .product-label-special */ 
+.product-label-special { 
+color:#0512ff 
+} 
+
+/* customize for .product-block .pav-colorbox */ 
+.product-block .pav-colorbox { 
+background-color:#e60e18 
+} 
+
+/* customize for 
+				.product-block .pav-colorbox,.product-block .pav-colorbox .fa,
+				.product-block .pav-colorbox span
+			 */ 
+
+				.product-block .pav-colorbox,.product-block .pav-colorbox .fa,
+				.product-block .pav-colorbox span
+			 { 
+color:#0080ff 
+} 

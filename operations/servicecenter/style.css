@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+background-image: url(images/bg.jpg);
+background-repeat: repeat-x;
+margin-top: 0px;
+}
+
+h2{color:#fff;}
+	
+#header {
+width: 760px; background-color:#f0edda;
+background-repeat: repeat-x;
+-webkit-border-radius:15px;
+border-radius:15px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+-moz-box-shadow:0px 0px 2px #000;
+-webkit-box-shadow:0px 0px 2px #000;
+box-shadow:0px 0px 2px #000;
+margin-right: auto;
+margin-bottom: auto;
+margin-left: auto;
+padding-top: 0em;
+padding-right: 4em;
+padding-bottom: 1em;
+padding-left: 4em;
+-moz-border-radius-bottomleft: 50px;
+-moz-border-radius-topright: 50px;
+margin-top: 30px;
+border: 10px solid #FFFFFF;
+box-shadow: 0 45px 60px -50px #000000;
+}
+
+.readbutton {
+border-top: 1px solid #f2d309;
+background: #ed9d13;
+background: -webkit-gradient(linear, left top, left bottom, from(#f2ce18), to(#ed9d13));
+background: -webkit-linear-gradient(top, #f2ce18, #ed9d13);
+background: -moz-linear-gradient(top, #f2ce18, #ed9d13);
+background: -ms-linear-gradient(top, #f2ce18, #ed9d13);
+background: -o-linear-gradient(top, #f2ce18, #ed9d13);
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+box-shadow: rgba(0,0,0,1) 0 1px 0;
+text-shadow: rgba(0,0,0,.4) 0 1px 0;
+color: #735509;
+font-size: 14px;
+font-family: Georgia, serif;
+text-decoration: none;
+vertical-align: middle;
+float: left;
+height: 30px;
+width: 86px;
+padding-top: 5px;
+padding-right: 10px;
+padding-bottom: 5px;
+padding-left: 10px;
+text-align: center; cursor:pointer;
+}
+
+th{ text-align:left;}
+
+.se input{ width:73px;}

@@ -1,0 +1,23 @@
+.logo-image{
+    width : 70px !important;
+}
+
+.price span.old {
+  text-decoration: line-through;
+  opacity: .6;
+  margin-right: 2px;
+}
+
+.menu > ul > li >ul > li > ul > li a font{
+    margin-left: 0 !important;
+}
+
+.menu > ul > li >ul {
+    max-height : calc(100vh - 100px);
+    overflow-y : scroll;
+}
+
+
+ul .bread-list li{
+        margin: auto 1% !important;
+}

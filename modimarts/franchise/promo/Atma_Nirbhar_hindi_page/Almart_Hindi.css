@@ -1,0 +1,104 @@
+
+
+.inner{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* padding: 2px;
+    border: 1px solid black; */
+    font-size: 15px;
+    letter-spacing:1px;
+    font-weight: 500;
+}
+
+.mob_btn{
+    font-size: 16px;
+    font-weight: 550;
+    border:1px solid white;
+    margin-bottom: 5px;
+    width: 180px;
+}
+
+.photo{
+    width: 100%;
+    height: auto;
+}
+
+.logo{
+    width: 100px;
+    padding: 5px;
+}
+
+.character{
+    width: 100px;
+}
+
+/* ---------------------------------- */
+
+
+@media only screen and (max-width: 1024px) {
+
+    .inner{
+        font-size: 11px;
+        font-weight: 500;
+        margin-left: 20%;
+        margin-right:20%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        letter-spacing:1px;
+        /* padding: 2px;
+        border: 1px solid black; */
+        
+    }
+
+    .mob_btn{
+        font-size: 11px;
+        border:1px solid white;
+        margin-bottom: 5px;
+        width: 140px;
+    }
+
+    .logo{
+        width: 80px;
+        padding: 5px;
+    }
+
+    .character{
+        width: 80px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .inner{
+        font-size: 8px;
+        font-weight: 500;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        letter-spacing:1px;
+        /* padding: 2px;
+        border: 1px solid black; */
+
+    }
+
+    .mob_btn{
+        font-size: 9px;
+        border:1px solid white; 
+        margin-bottom: 5px;
+        width: 100px;
+    }
+
+    .logo{
+        width: 70px;
+        padding: 5px;
+    }
+    
+    .character{
+        width: 60px;
+    }
+
+}

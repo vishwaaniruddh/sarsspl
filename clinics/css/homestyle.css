@@ -1,0 +1,62 @@
+.style1 {
+  color: #ff0000;
+}
+
+.style4 {
+  color: #000000;
+  font-weight: bold;
+}
+
+.style8 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.style10 {
+  color: #993399;
+}
+
+#ajax_listOfOptions {
+  position: absolute;
+  /* Never change this one */
+  width: 175px;
+  /* Width of box */
+  height: 250px;
+  /* Height of box */
+  overflow: auto;
+  /* Scrolling features */
+  border: 1px solid #317082;
+  /* Dark green border */
+  background-color: #fff;
+  /* White background color */
+  text-align: left;
+  font-size: 0.9em;
+  z-index: 100000;
+}
+
+#ajax_listOfOptions div {
+  /* General rule for both .optionDiv and .optionDivSelected */
+  margin: 1px;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+#ajax_listOfOptions .optionDiv {
+  /* Div for each item in list */
+}
+
+#ajax_listOfOptions .optionDivSelected {
+  /* Selected item in the list */
+  background-color: #317082;
+  color: #fff;
+}
+
+#ajax_listOfOptions_iframe {
+  background-color: #f00;
+  position: absolute;
+  z-index: 5;
+}
+
+form {
+  display: inline;
+}
